@@ -1,2 +1,2 @@
-# kb
-Base de conhecimento.
+# tyuatsu
+Arte Ninja de Documentar
