@@ -2,7 +2,7 @@ Utilizando o "Read the Docs" by Tyuatsu
 ===============================
 Escrever é uma tarefa difícil. Isso torna a documentação uma arte. Para isto, algumas soluções a auxiliam. Uma delas é o https://readthedocs.org/.
 
-* GitHub
+* GitHub, GiLab ou Bitbucket
 * Read the Docs
 * Sphinx
 
