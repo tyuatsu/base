@@ -2,7 +2,7 @@ Bem-Vindo a "Base de Conhecimento do Tyuatsu"
 ==================================
 Esta é uma documentação pessoal sobre assuntos de informática/TI.
 
-.. note:: Este conteúdo está publicado em http://base-de-conhecimento.readthedocs.io/
+.. note:: Este conteúdo está publicado em http://tyuatsu.readthedocs.io/
 
 Conteúdos:
 
