@@ -1,4 +1,4 @@
-Bem-Vindo a "Base de Conhecimento do Tyuatsu"
+Bem-Vindo a "Base de Conhecimento do Tyuatsu 2.0"
 ==================================
 Esta é uma documentação pessoal sobre assuntos de informática/TI.
 

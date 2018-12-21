@@ -1,11 +1,13 @@
 Gateway de Acesso com Guacamole
-===============================
+================================
+
 Veja como instalar e configurar um gateway de acesso utilizando o software `Guacamole <https://guacamole.incubator.apache.org/>`_.
 
-.. nota:: Para utilizá-lo com a VPN deverá gerar antes, os devidos certificados digitais.
+.. note:: Para utilizá-lo com a VPN deverá gerar antes, os devidos certificados digitais.
 
 Visão Geral
 -----------
+
 Em resumo, a :ref:`instalação` e a :ref:`configuração` da solução será:
 
 * **Sistema Operacional**: CentoOS 7
@@ -618,6 +620,7 @@ Altere permissão::
      chown tomcat:tomcat ../webapps/guacamole-0.9.9/error.html
 
 * **Ajustes Finos**
+
 **Imagens** - substitua as imagens padrão para as novas (envie as suas imagens)::
 
     cd ../webapps/guacamole-0.9.9/images/

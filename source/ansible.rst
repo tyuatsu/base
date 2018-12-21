@@ -1,10 +1,11 @@
 Ansible
 =======
-Esta é uma documentação que mostra como criar receitas no Ansible.
-Ela foi feita com base na `documentação oficial <http://docs.ansible.com/ansible/index.html>`_.
+
+Esta é um guia rápido que mostra como criar receitas no Ansible.
+Ela foi feita com base na `doc oficial <http://docs.ansible.com/ansible/index.html>`_.
 
 Instalação
----------
+----------
 
 No momento da instalação foi utilizado:
 
@@ -81,7 +82,9 @@ AD-Hoc, pois podem executar uma série de definições pré-determinadas. Vide d
         "uname.stdout_lines": [
             "Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux"
         ]
+        
     }
+    
     	to retry, use: --limit @/root/.ansible-retry/servidores.retry
 
     PLAY RECAP *********************************************************************
