@@ -34,23 +34,4 @@ Conteúdos:
     
     Jesus
 
-.. _guacamole:
-.. toctree::
-   :maxdepth: 1
-   :caption: Gateway de acesso
 
-   guacamole
-
-.. _docs-readthedocs:
-.. toctree::
-   :maxdepth: 1
-   :caption: A arte de documentar
-
-   docs-readthedocs
-
-.. _certificados-digitais:
-.. toctree::
-    :maxdepth: 1
-    :caption: Certificados
-
-    certificados-digitais    
