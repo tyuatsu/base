@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ansible &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ansible">
+<h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
+<p>Esta é um guia rápido que mostra como criar receitas no Ansible.
+Ela foi feita com base na <a class="reference external" href="http://docs.ansible.com/ansible/index.html">doc oficial</a>.</p>
+<div class="section" id="instalacao">
+<h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
+<p>No momento da instalação foi utilizado:</p>
+<ul class="simple">
+<li><strong>SO</strong>: Centos 7.2</li>
+<li><strong>Ansible</strong>: 2.1.1.0</li>
+</ul>
+<p>Instalando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># yum install epel-release wget</span>
+<span class="c1"># yum install ansible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inventarios">
+<h2>Inventários<a class="headerlink" href="#inventarios" title="Permalink to this headline">¶</a></h2>
+<p>O Ansible conecta nas máquinas de acordo com os endereços registrados no seu arquivo <code class="docutils literal notranslate"><span class="pre">hosts</span></code>. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_inventory.html">documentação</a>.
+Nesta configuração é possível definir hosts individuais ou grupos. Exemplo de um grupo chamado <code class="docutils literal notranslate"><span class="pre">servidores</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ansible</span><span class="o">/</span><span class="n">hosts</span>
+
+<span class="p">[</span><span class="n">servidores</span><span class="p">]</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">25.14</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">25.15</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ad-hoc">
+<h2>Ad-Hoc<a class="headerlink" href="#ad-hoc" title="Permalink to this headline">¶</a></h2>
+<p>Uma das formas para executar um comando remotamente pelo Ansible é adicionar nos hosts conhecidos do ssh (known_hosts) os hosts remotos e então executar comandos. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_adhoc.html">documentação</a>.
+Para isto, execute o ssh para host de destino para que ele seja adicionado:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh 192.168.25.14
+....
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added &#39;192.168.25.14&#39; (ECDSA) to the list of known hosts.
+root@192.168.25.14&#39;s password:
+</pre></div>
+</div>
+<p>Agora é possível executar comandos remotamente. O comando será executado com base na lista de hosts do inventário.
+Exemplo de execução no grupo <code class="docutils literal notranslate"><span class="pre">servidores</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ansible servidores -k -a &quot;uname -a&quot;
+
+SSH password:
+192.168.25.14 | SUCCESS | rc=0 &gt;&gt;
+Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+192.168.25.15 | UNREACHABLE! =&gt; {
+    &quot;changed&quot;: false,
+    &quot;msg&quot;: &quot;Failed to connect to the host via ssh.&quot;,
+    &quot;unreachable&quot;: true
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="receitas-playbook">
+<h2>Receitas - Playbook<a class="headerlink" href="#receitas-playbook" title="Permalink to this headline">¶</a></h2>
+<p>As playbooks são receitas pré-definidas em arquivos de configuração (formato YAML) a serem utilizadas nos hosts, com abordagem diferente ao
+AD-Hoc, pois podem executar uma série de definições pré-determinadas. Vide documentação <a class="reference external" href="http://docs.ansible.com/ansible/playbooks.html">playbooks</a> e <a class="reference external" href="http://docs.ansible.com/ansible/YAMLSyntax.html">YAML</a>.</p>
+<blockquote>
+<div><p>ansible-playbook servidores.yml -k</p>
+<p>SSH password:
+PLAY [servidores] <strong>**********************************************************</strong></p>
+<p>TASK [setup] <strong>***************************************************************</strong>
+ok: [192.168.25.14]
+fatal: [192.168.25.15]: UNREACHABLE! =&gt; {“changed”: false, “msg”: “Failed to connect to the host via ssh.”, “unreachable”: true}</p>
+<p>TASK [verifica versao do kernel] <strong>*******************************************</strong>
+changed: [192.168.25.14]</p>
+<p>TASK [debug] <strong>***************************************************************</strong>
+ok: [192.168.25.14] =&gt; {</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“uname.stdout_lines”: [</dt>
+<dd>“Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux”</dd>
+</dl>
+<p>]</p>
+</div></blockquote>
+<p>}</p>
+<blockquote>
+<div>to retry, use: –limit &#64;/root/.ansible-retry/servidores.retry</div></blockquote>
+<p>PLAY RECAP <strong>*****************************************************************</strong>
+192.168.25.14              : ok=3    changed=1    unreachable=0    failed=0
+192.168.25.15              : ok=0    changed=0    unreachable=1    failed=0</p>
+</div></blockquote>
+<p>..note: Quando há falhas, um arquivo <a class="reference external" href="http://docs.ansible.com/ansible/intro_configuration.html#retry-files-enabled">retry</a> é salvo. Por padráo é necessário definir o caminho ou desativar a função.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ansible</a><ul>
+<li><a class="reference internal" href="#instalacao">Instalação</a></li>
+<li><a class="reference internal" href="#inventarios">Inventários</a></li>
+<li><a class="reference internal" href="#ad-hoc">Ad-Hoc</a></li>
+<li><a class="reference internal" href="#receitas-playbook">Receitas - Playbook</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ansible.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.6.
+    </div>
+  </body>
+</html>
