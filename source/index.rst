@@ -11,15 +11,28 @@ Conteúdos:
    :maxdepth: 1
    :caption: Dicas de bash, linha de comando para uso diário
 
+   bash
+
 .. _galinhas:
 .. toctree::
    :maxdepth: 1
    :caption: Fuga das galinhas
 
+   galinhas
+
 .. _criar-midia-windows-10:
 .. toctree::
    :maxdepth: 1
    :caption: Como Criar Midia de Instalação do Windows 10
+
+   criar-midia-windows-10
+
+.. _Jesus:
+.. toctree::
+    :maxdepth: 1
+    :caption: Estudo Secreto Sobre Jesus Cristo
+    
+    Jesus
 
 .. _guacamole:
 .. toctree::
@@ -40,9 +53,4 @@ Conteúdos:
     :maxdepth: 1
     :caption: Certificados Digitais
 
-    certificados-digitais
-    
-.. _Jesus:
-.. toctree::
-    :maxdepth: 1
-    :caption: Estudo Secreto Sobre Jesus Cristo
+    certificados-digitais    
