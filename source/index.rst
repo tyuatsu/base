@@ -1,6 +1,6 @@
 Bem-Vindo a "Base de Conhecimento do Tyuatsu"
-==================================
-Esta é uma documentação pessoal sobre assuntos de informática/TI.
+===============================================
+Esta é uma documentação pessoal sobre diversos assuntos, inclusive informática/TI.
 
 .. note:: Este conteúdo está publicado em http://tyuatsu.readthedocs.io/
 
