@@ -9,7 +9,7 @@ Conteúdos:
 .. _bash:
 .. toctree::
    :maxdepth: 1
-   :caption: Dicas de bash, linha de comando para uso diário
+   :caption: Dicas de bash
 
    bash
 
@@ -23,34 +23,34 @@ Conteúdos:
 .. _criar-midia-windows-10:
 .. toctree::
    :maxdepth: 1
-   :caption: Como Criar Midia de Instalação do Windows 10
+   :caption: Como criar midia
 
    criar-midia-windows-10
 
 .. _Jesus:
 .. toctree::
     :maxdepth: 1
-    :caption: Estudo Secreto Sobre Jesus Cristo
+    :caption: Jesus Cristo
     
     Jesus
 
 .. _guacamole:
 .. toctree::
    :maxdepth: 1
-   :caption: Gateway de Acesso
+   :caption: Gateway de acesso
 
    guacamole
 
 .. _docs-readthedocs:
 .. toctree::
    :maxdepth: 1
-   :caption: A Arte de Documentar
+   :caption: A arte de documentar
 
    docs-readthedocs
 
 .. _certificados-digitais:
 .. toctree::
     :maxdepth: 1
-    :caption: Certificados Digitais
+    :caption: Certificados
 
     certificados-digitais    
