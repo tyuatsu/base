@@ -88,7 +88,6 @@ Pronto! Agorá você já pode pegar esse Pendrive e sair formatando tudo com o W
 """"""""""""""""""""""""""""""""
 
 Ele costuma demorar bastante até aparecer à tela de instalação do Windows 10.
-
 Fora isso, o instalador rodou normal e todo o processo de instalação foi suave na nave.
 
 
