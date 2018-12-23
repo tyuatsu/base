@@ -8,15 +8,21 @@ Existem muitos tutorias já prontos para o Ubuntu/Debian por aí na net... só p
 
 .. _Siga os passos abaixo:
 
-* Baixe o .iso (DVD de instalação) em: `https://www.microsoft.com/en-us/software-download/ <https://www.microsoft.com/en-us/software-download/>`_
+1. Baixe a imagem .iso (DVD de instalação)
+"""""""""""""""""""""""""""""""""""""""""""
 
-Eu fiz o download da versão PT-BR 64 bits do windows 10: "Win10_1803_BrazilianPortuguese_x64.iso" (4.4GB).
+    `https://www.microsoft.com/en-us/software-download/ <https://www.microsoft.com/en-us/software-download/>`_
 
-Vou usá-la para reinstalar todo o Sistema Operacional no meu notebook, que infelizmente sofreu falhas severas nos seus drivers (tudo corrompido), que nem o restrui.exe e systemreset.exe da vida conseguem dar conta do problema. Isso aconteceu depois de uma parada crítica de energia, no meio de uma atualização do windows update. - E não sei porque cargas d'água ele corrompeu os drivers de video e rede..., algum cazto do universo no processo... Eu sei lá. Tem coisas que só a Microsoft faz por você. 
+Eu fiz o download da versão PT-BR 64 bits do windows 10: Win10_1803_BrazilianPortuguese_x64.iso (4.4GB).
+
+Vou usá-la para reinstalar todo o Sistema Operacional no meu notebook, que infelizmente sofreu falhas severas nos seus drivers (tudo corrompido), que nem o restrui.exe e systemreset.exe da vida conseguem dar conta do problema. Isso aconteceu depois de uma parada crítica de energia, no meio de uma atualização do windows update. - E não sei porque cargas d'água ele corrompeu os drivers de video e rede..., algum cazto do universo durante esse processo. Eu sei lá. Tem coisas que só a Microsoft faz por você!
+
+1.2. Preparar o PenDrive
+""""""""""""""""""""""""
 
 Aqui eu vou usar um pendrive de 32GB, mas também pode usar um de 8GB se ele estiver disponível.
 
-Esse flash disk usb de 32GB, eu costumo utilizá-lo para boot do "fedora 28 live usb". Mas como preciso formatar ugente o meu notebook com windows 10, então vou usá-lo, sem dó e nem piedade! 
+Esse flash disk usb de 32GB, eu costumo utilizá-lo para boot do "fedora 28 live usb". Mas como preciso formatar urgente o meu notebook com windows 10, então vou usá-lo, sem dó e nem piedade! 
 
 **CUIDADO!** O processo à seguir irá destruir todos dados do seu Pendrive, muita calma nessa hora.
 
@@ -32,9 +38,10 @@ O dispositivo do meu drive usb é: "/dev/sdb"::
 
 .. note:: Se tiver na mão, pode usar o gparted para formatar o seu pendrive.
 
-* Vamos baixar o famoso aplicativo "WoeUSB", esse eu garanto que funciona!
+2. Vamos baixar o famoso aplicativo "WoeUSB", esse eu garanto que funciona
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Antes precisa baixar 3 dependências para satisfazer à instalação do software WoeUSB::
+Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB::
 
     sudo dnf -y install wxGTK3-devel
     sudo dnf -y install git
@@ -44,7 +51,8 @@ ou se quiser pode rodar tudo num só comando, assim::
 
     sudo dnf -y install wxGTK3-devel git dh-autoreconf.noarch
 
-Agora temos que fazer o download do source (código fonte) do "WoeUSB", pois ainda não há nem sinal dele nos repositórios do Fedora::
+2.1. Agora temos que fazer o download do source (código fonte) do "WoeUSB", pois ainda não há nem sinal dele nos repositórios do Fedora::
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
     git clone https://github.com/slacka/WoeUSB.git
@@ -67,16 +75,20 @@ You may now safely detach the target device
 Done 
 The target device should be bootable now
 
-Remova o dispositivo::
+Agora remova o dispositivo::
 
     sudo umount /run/media/lazaro/Windows\ USB/
 
 Pronto! Agorá você já pode pegar esse Pendrive e sair formatando tudo com o Windows 10.
 
-Boot pelo pendrive
--------------------
+3. Observações
+"""""""""""""""
 
-Ele costuma demorar um pouco até aparecer à tela de instalação do Windows 10.
+3.1. Sobre o boot pelo pendrive
+""""""""""""""""""""""""""""""""
+
+Ele costuma demorar bastante até aparecer à tela de instalação do Windows 10.
+
 Fora isso, o instalador rodou normal e todo o processo de instalação foi suave na nave.
 
 
