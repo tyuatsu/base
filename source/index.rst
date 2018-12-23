@@ -30,7 +30,7 @@ Conteúdos:
 .. _l1tf-bug:
 .. toctree::
    :maxdepth: 1
-   :caption: L1TF -- L1 Terminal Fault
+   :caption: L1TF
    
    l1tf-bug
 
