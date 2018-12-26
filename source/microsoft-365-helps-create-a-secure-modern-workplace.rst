@@ -4,7 +4,7 @@ Microsoft 365 helps create a secure modern workplace
 The significant increase in mobile data usage, cloud adoption, digitization, and personal devices in the enterprise brings new opportunities and security risks. Microsoft uses many Microsoft 365 security technologies to help ensure a productive and secure environment for the company and our customers. Together, these Microsoft 365 security tools enable us to strengthen authentication, employ conditional access, better protect data, and automate threat protection all while streamlining our security management through a tightly integrated set of tools.
 
 .. figure:: MSC17_ILSI_004.jpg
-    :scale: 25 %
+    :scale: 30 %
     :align: center
     :alt: Microsoft 365 helps create a secure modern workplace
 
@@ -29,7 +29,7 @@ The Microsoft security team implements Microsoft 365 security technologies to he
 Figure 1 below illustrates the array of security components that are available to enterprise Microsoft 365 subscribers. Although we use many of the technologies listed in the wheel, the larger slices are the focus for this case study. For each security area, we describe some of the challenges and concerns we have had, how we’re implementing specific Microsoft 365 technologies to address those issues, and we highlight the benefits we’re gaining by adopting these technologies.
 
 .. figure:: security-areas.png
-    :scale: 80 %
+    :scale: 60 %
     :align: center
     :alt: Figure 1. The four main aspects of digital security and their integrated Microsoft 365 components. The protruding items represent the specific technologies that we have implemented in CSEO and that we discuss in this case study 
 
