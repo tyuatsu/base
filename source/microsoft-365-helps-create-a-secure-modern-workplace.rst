@@ -230,6 +230,6 @@ For more information
 * `IT expert roundtable: Microsoft 365 security <https://www.microsoft.com/itshowcase/Article/Content/1074/IT-expert-roundtable-Microsoft-365-security>`_
 
 
-.. note:: © 2018 Microsoft Corporation. This document is for informational purposes only. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, IN THIS SUMMARY. The names of actual companies and products mentioned herein may be the trademarks of their respective owners. 
+.. note:: Todos direitos são reservados à © 2018 Microsoft Corporation. Este documento tem como propósito, propagar apenas informações sobre novas tecnologias e Não implica qualquer tipo de imposição ou adoção comercial de software, em particular da Microsoft. Visto que não mantemos nenhum tipo de vínculo de qualquer natureza com a referida Empresa. Para mais informações, acesse a fonte original em `https://docs.microsoft.com/  <https://docs.microsoft.com/>`_ 
 
 
