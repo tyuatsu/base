@@ -1,6 +1,6 @@
 Tenchu 3 - Wrath of Heaven PS2
 ------------------------------
-Códigos Secretos
+Todos os códigos secretos foram testados no `Sony Playstation 2 <https://www.playstation.com/pt-br/>`_.
 
 .. figure:: tenchu.jpg
     :scale: 60 %
