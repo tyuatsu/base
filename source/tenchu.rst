@@ -9,7 +9,7 @@ Códigos Secretos
 
 Todas as missões (modo story)
 """""""""""""""""""""""""""""
-Na tela de seleçao de missões, aperte::
+Na tela de seleção de missões, aperte::
 
    L1, R1, L2, R2, direita, quadrado, L3, R3
 
@@ -26,6 +26,7 @@ Habilitar missão demo
 """""""""""""""""""""
 
 Na tela do título, aperte::
+
    cima, baixo, direita, esquerda, X, X, X
 
 Todas as missões (multiplayer)
@@ -91,7 +92,7 @@ Pause o jogo e aperte::
 
    direita, direita, esquerda, esquerda
 
-.. note:: faça isso no controle 2.**
+.. note:: **faça isso no controle 2.**
 
 Aumentar pontuação
 """"""""""""""""""
@@ -100,6 +101,6 @@ Pause o jogo, segure **L1+R1** e aperte::
 
    direita, direita, esquerda, esquerda.
 
-.. note:: Faça isso no controle 2.** Após realizar o truque de ver a pontuaçao, logo perceberá que aumentou 100 pontos no seu placar.
+.. note:: **Faça isso no controle 2.** Após realizar o truque de ver a pontuaçao, logo perceberá que aumentou 100 pontos no seu placar.
 
 
