@@ -41,6 +41,7 @@ As organizations continue to move applications and data to cloud services, the e
 
 Eliminating passwords and improving productivity with Windows Hello
 -------------------------------------------------------------------
+
 We’ve been working to eliminate passwords for users who can use alternative authentication methods such as two-factor authentication and Windows Hello. Why is password-based protection such a concern? From a security perspective, attackers are becoming more sophisticated and successful at compromising users’ password-based credentials, primarily through phishing attacks. Industry analysts indicate that 90% of security breaches start from a successful phishing campaign. In addition, the high number of passwords required for daily Internet usage results in 24% of password reuse meaning that one compromised password can provide access to multiple resources.  
 
 Windows Hello, is one of the key technologies we’ve employed to not only move away from password-based protection but also boost employee productivity. This technology improves identity protection and enables our employees to save time through single sign-on. Windows Hello biometrics and other nonpassword-based authentication features free employees from having to manage an unwieldy array of passwords. Moreover, Windows Hello utilizes two-factor authentication to generate a strong credential that’s safely stored locally on the PC or device; unlike with passwords, nothing is transmitted across the network.  
