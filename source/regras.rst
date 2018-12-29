@@ -33,7 +33,7 @@ Flood/Spam
 
 * Proibido Flood
 
-(Flood é o ato de mandar a mesma mensagem diversas vezes em um chat. Por exemplo, se eu escrever "oi" sete vezes em algum chat, será considerado como Flood).
+(Flood é o ato de mandar a mesma mensagem diversas vezes em um chat. Por exemplo, se eu escrever 'oi' sete vezes em algum chat, será considerado como Flood).
 
 Conteúdos Sexualmente Explícitos
 """""""""""""""""""""""""""""""""
@@ -57,14 +57,14 @@ Fanboys/Haters
 
 * Proibido Haters
 
-(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem ``atacar'' e ``criticar'' o indivíduo).
+(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem 'atacar' e 'criticar' o indivíduo).
 
 Desrespeito/Preconceito
 """""""""""""""""""""""
 
 * Proibido Desrespeito com os membros da comunidade
 
-(Não crie ou alimente discussões com outros membros, insultos e xingamentos não serão permitidos. Mantenha acima de tudo o respeito, mesmo que vocês discordem em algo. Se for a outra pessoa que está te insultando, contate algum moderador e líder e resolva o problema de forma civilizada).
+(Não crie ou alimente discussões com outros membros, insultos e xingamentos não serão permitidos. Mantenha acima de tudo o respeito, mesmo que vocês discordem em algo. Se for a outra pessoa que está te insultando, contate algum moderador e ou líder e resolva o problema de forma civilizada).
 
 * Proibido Preconceito
 
