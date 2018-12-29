@@ -4,7 +4,7 @@ Microsoft 365 helps create a secure modern workplace
 The significant increase in mobile data usage, cloud adoption, digitization, and personal devices in the enterprise brings new opportunities and security risks. Microsoft uses many Microsoft 365 security technologies to help ensure a productive and secure environment for the company and our customers. Together, these Microsoft 365 security tools enable us to strengthen authentication, employ conditional access, better protect data, and automate threat protection all while streamlining our security management through a tightly integrated set of tools.
 
 .. figure:: MSC17_ILSI_004.jpg
-    :scale: 40 %
+    :scale: 30 %
     :align: center
     :alt: Microsoft 365 helps create a secure modern workplace
 
@@ -29,7 +29,7 @@ The Microsoft security team implements Microsoft 365 security technologies to he
 Figure 1 below illustrates the array of security components that are available to enterprise Microsoft 365 subscribers. Although we use many of the technologies listed in the wheel, the larger slices are the focus for this case study. For each security area, we describe some of the challenges and concerns we have had, how we’re implementing specific Microsoft 365 technologies to address those issues, and we highlight the benefits we’re gaining by adopting these technologies.
 
 .. figure:: security-areas.png
-    :scale: 80 %
+    :scale: 60 %
     :align: center
     :alt: Figure 1. The four main aspects of digital security and their integrated Microsoft 365 components. The protruding items represent the specific technologies that we have implemented in CSEO and that we discuss in this case study 
 
@@ -41,6 +41,7 @@ As organizations continue to move applications and data to cloud services, the e
 
 Eliminating passwords and improving productivity with Windows Hello
 -------------------------------------------------------------------
+
 We’ve been working to eliminate passwords for users who can use alternative authentication methods such as two-factor authentication and Windows Hello. Why is password-based protection such a concern? From a security perspective, attackers are becoming more sophisticated and successful at compromising users’ password-based credentials, primarily through phishing attacks. Industry analysts indicate that 90% of security breaches start from a successful phishing campaign. In addition, the high number of passwords required for daily Internet usage results in 24% of password reuse meaning that one compromised password can provide access to multiple resources.  
 
 Windows Hello, is one of the key technologies we’ve employed to not only move away from password-based protection but also boost employee productivity. This technology improves identity protection and enables our employees to save time through single sign-on. Windows Hello biometrics and other nonpassword-based authentication features free employees from having to manage an unwieldy array of passwords. Moreover, Windows Hello utilizes two-factor authentication to generate a strong credential that’s safely stored locally on the PC or device; unlike with passwords, nothing is transmitted across the network.  
@@ -230,6 +231,6 @@ For more information
 * `IT expert roundtable: Microsoft 365 security <https://www.microsoft.com/itshowcase/Article/Content/1074/IT-expert-roundtable-Microsoft-365-security>`_
 
 
-.. note:: © 2018 Microsoft Corporation. This document is for informational purposes only. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, IN THIS SUMMARY. The names of actual companies and products mentioned herein may be the trademarks of their respective owners. 
+.. note:: Todos direitos são reservados à © 2018 Microsoft Corporation. Este documento tem como propósito, propagar apenas informações sobre novas tecnologias e Não implica qualquer tipo de imposição ou adoção comercial de software, em particular da Microsoft. Visto que não mantemos nenhum tipo de vínculo de qualquer natureza com a referida Empresa. Para mais informações, acesse a fonte original em `https://docs.microsoft.com/  <https://docs.microsoft.com/>`_ 
 
 

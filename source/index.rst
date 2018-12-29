@@ -48,6 +48,20 @@ Conteúdos:
     
     jesus
 
+.. _tenchu:
+.. toctree::
+   :maxdepth:1
+   :caption: Tenchu 3 - Wrath of Heaven PS2
+
+   tenchu
+   
+.. _regras:
+.. toctree::
+   :maxdepth:1
+   :caption: Regras da Plataforma
+
+   regras
+
 .. _guacamole:
 .. toctree::
    :maxdepth: 1
