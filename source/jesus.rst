@@ -41,9 +41,9 @@ Durante esses longos anos quis fechar os olhos diante das verdades que minha bus
 
 Muitas vezes, nos momentos solitários de minha vida me perguntei:
 
-  ** Por que teve que ser assim?**
+  **- Por que teve que ser assim?**
  
-  ** Por que eu?**
+  **- Por que eu?**
   
 Já não me sentia mais o mesmo devido ao peso da grande responsabilidade que estava sobre os meus ombros. A responsabilidade da decisão que era preciso tomar: - Tornar público o que havia descoberto.
 
