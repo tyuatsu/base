@@ -1,5 +1,5 @@
 .. figure:: regras.png
-    :scale: 30 %
+    :scale: 50 %
     :align: center
     :alt: Regras da Plataforma
 

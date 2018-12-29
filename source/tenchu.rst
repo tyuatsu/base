@@ -3,7 +3,7 @@ Tenchu 3 - Wrath of Heaven PS2
 Códigos Secretos
 
 .. figure:: tenchu.jpg
-    :scale: 30 %
+    :scale: 60 %
     :align: center
     :alt: Tenchu Wrath of Heaven PS2
 
