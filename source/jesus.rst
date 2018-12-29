@@ -2,15 +2,17 @@ Estudo Secreto Sobre Jesus Cristo
 ====================================         
 O que você não sabia sobre `Jesus Cristo <https://www.livescience.com/13711-jesus-christ-man-physical-evidence-hold.html>`_
 
-.. note:: Este conteúdo está publicado em http://tyuatsu.readthedocs.io/
-
   =================================================================================================
   Jesus Cristo é Deus ou unicamente seu Filho?
+  
   Existe um ser superior a Jesus ou Jesus é o próprio Deus?
-  O Dogma da Divindade afirma que Deus e Jesus constituem um único ser ou que Jesus é igual ao Pai.
+  
+  O Dogma da Divindade afirma que Deus e Jesus constituem um único ser ou que Jesus é igual ao Pai.  
   Mas se Jesus é igual ao Pai, por que o Evangelho afirma que o Pai é maior do que Jesus?
+  
   Como alguém pode ser ao mesmo tempo homem e Deus?
-  Por que a igreja não consegue explicar esse mistério a luz da razão?
+  
+  Por que a igreja não consegue explicar esse mistério a luz da razão?  
   =================================================================================================
   
 .. figure:: jesus.png
@@ -41,10 +43,12 @@ Durante esses longos anos quis fechar os olhos diante das verdades que minha bus
 
 Muitas vezes, nos momentos solitários de minha vida me perguntei:
 
- - Por que teve que ser assim?
+  ================================
+  **Por que teve que ser assim?**
  
- - Por que eu?
- 
+  **Por que eu?**
+  ================================
+  
 Já não me sentia mais o mesmo devido ao peso da grande responsabilidade que estava sobre os meus ombros. A responsabilidade da decisão que era preciso tomar: - Tornar público o que havia descoberto.
 
 Não podia mais aceitar e muito menos ensinar uma doutrina erroneamente formulada por um sistema religioso inconseqüente, porque uma falsa verdade religiosa gera uma fé cega e esta, a intolerância, a desigualdade e o fanatismo.
@@ -107,9 +111,7 @@ O Salvador ' O Filho do homem veio procurar e salvar o que se havia perdido.' `(
 
 - Jesus na qualidade de 'Filho do homem', quer dizer, no exercício de sua missão como humilde Servo de Deus, empreendeu uma grande procura daqueles que um dia tinham se perdido, isto é, que tinham se desviado do verdadeiro caminho que leva o homem a Deus. Caminho esse que precisou reabrir dentre os matagais da ignorância, dos abusos religiosos enraizados no meio do povo e dos preconceitos hauridos desde a servidão do Egito. Entretanto, para os encontrar e atrair para si, foi preciso combater aberta e fortemente o abuso das práticas exteriores e as falsas interpretações. E para isso, teve que pagar um preço: 'dar a sua vida'.
 
-
 - Sem dúvida, Jesus Cristo é o Salvador, enviado para ensinar as verdades aos homens e mostrar-lhes o bom caminho. Mas a sua grande missão de procurar e salvar os perdidos ainda se faz presente em nosso meio; Jesus ainda continua procurando e salvando os aflitos e desvalidos.
-
 
 - Jesus está presente através dos seus novos apóstolos: pessoas que tiveram suas vidas transformadas e seus caminhos iluminados pela força das palavras do Cristo, e que agora, como gesto de gratidão e a consciência de sua missão, propagam as boas novas e a paz entre os homens de boa vontade.
 
