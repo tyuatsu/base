@@ -14,9 +14,6 @@ Qual Importância Das Regras?
 Onde não há limites nem regras fica-se com a sensação que tudo pode acontecer. Uma regra só é entendida como regra se for exigido que seja cumprida sistematicamente.
 As regras são muito importantes para uma boa convivência. Sem regras, tudo seria uma bagunça e as pessoas teriam mais dificuldade para ter um bom relacionamento.
 
-Regras
-======
-
 Divulgações
 """""""""""
 
@@ -60,7 +57,7 @@ Fanboys/Haters
 
 * Proibido Haters
 
-(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem "atacar" e "criticar" o indivíduo).
+(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem ``atacar'' e ``criticar'' o indivíduo).
 
 Desrespeito/Preconceito
 """""""""""""""""""""""
@@ -119,4 +116,4 @@ Só haverá 2 maneiras de serem punidos.
 
 **2° Banimento**
 
-.. note:: Então, sempre pense duas vezes antes de fazer algo para não descumprir as regras. Caso ao contrário, sofra com as consequências! Qualquer dúvida, entrar em contato com a Staff.
+.. note:: Sempre pense duas vezes antes de fazer algo, para não descumprir as regras. Caso contrário, sofra com as consequências! Qualquer dúvida, favor entrar em contato com a Staff.
