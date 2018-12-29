@@ -15,7 +15,7 @@ Onde não há limites nem regras fica-se com a sensação que tudo pode acontece
 As regras são muito importantes para uma boa convivência. Sem regras, tudo seria uma bagunça e as pessoas teriam mais dificuldade para ter um bom relacionamento.
 
 Regras
-------
+======
 
 Divulgações
 """""""""""
