@@ -14,8 +14,8 @@ Qual Importância Das Regras?
 Onde não há limites nem regras fica-se com a sensação que tudo pode acontecer. Uma regra só é entendida como regra se for exigido que seja cumprida sistematicamente.
 As regras são muito importantes para uma boa convivência. Sem regras, tudo seria uma bagunça e as pessoas teriam mais dificuldade para ter um bom relacionamento.
 
-REGRAS
-^^^^^^
+'REGRAS'
+^^^^^^^^
 
 Divulgações
 """""""""""
@@ -46,16 +46,18 @@ Flood/Spam
 Conteúdos Sexualmente Explícitos
 """""""""""""""""""""""""""""""""
 
-* Proibido Qualquer tipo de conteúdo +18
+  ========  ==========================================
+  Proibido  Qualquer tipo de conteúdo adulto **+18**
 
-* Proibido Imagens e Gifs pornográficos
+  Proibido  Imagens e gifs pornográficos
 
-* Proibido Links de sites pornográficos
+  Proibido  Links de sites pornográficos
 
-* Proibido Pedir nudez
+  Proibido  Pedir nudez
 
-* Palavras Obscenas
-
+  Proibido  Palavras obscenas
+  ========  ==========================================
+  
 Fanboys/Haters
 """""""""""""""
 
@@ -109,7 +111,7 @@ Os castigos são utilizados apenas pelos líderes. Estão divididos em três fas
    2° Castigo: Silenciado por 72 horas.
    3° Castigo: Será banido.
 
-Dica De Segurança
+Dica de Segurança
 """""""""""""""""
 
 Proteja suas informações pessoais. Mantenha seu nome completo, endereço residencial exato, números de telefone, informações de conta e cartões de crédito secretos para evitar golpes, abusos ou outros problemas.
