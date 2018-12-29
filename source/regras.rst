@@ -46,7 +46,7 @@ Flood/Spam
 Conteúdos Sexualmente Explícitos
 """""""""""""""""""""""""""""""""
 
-  ========  ========================================================================================
+  ========  ==================================================================
   Proibido  Qualquer tipo de conteúdo impróprio ou inadequado (adulto **+18**)
 
   Proibido  Imagens e gifs pornográficos
@@ -55,8 +55,8 @@ Conteúdos Sexualmente Explícitos
 
   Proibido  Pedir nudez
 
-  Proibido  Palavras obscenas, de baixo calão, chulo, ofensivo, rude, obsceno, agressivo ou imoral
-  ========  =========================================================================================
+  Proibido  Palavras obscenas, ou de baixo calão (rude, agressivo ou imoral)
+  ========  ==================================================================
   
 Fanboys/Haters
 """""""""""""""
