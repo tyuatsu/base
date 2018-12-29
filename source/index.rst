@@ -51,14 +51,14 @@ Conteúdos:
 .. _tenchu:
 .. toctree::
    :maxdepth:1
-   :caption: Tenchu 3 - Wrath of Heaven PS2
+   :caption: Tenchu
 
    tenchu
    
 .. _regras:
 .. toctree::
    :maxdepth:1
-   :caption: Regras da Plataforma
+   :caption: Regras
 
    regras
 
