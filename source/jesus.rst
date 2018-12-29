@@ -1,19 +1,17 @@
 Estudo Secreto Sobre Jesus Cristo
 ====================================         
 O que você não sabia sobre `Jesus Cristo <https://www.livescience.com/13711-jesus-christ-man-physical-evidence-hold.html>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  =================================================================================================
-  Jesus Cristo é Deus ou unicamente seu Filho?
+  - Jesus Cristo é Deus ou unicamente seu Filho?
   
-  Existe um ser superior a Jesus ou Jesus é o próprio Deus?
+  - Existe um ser superior a Jesus ou Jesus é o próprio Deus?
   
-  O Dogma da Divindade afirma que Deus e Jesus constituem um único ser ou que Jesus é igual ao Pai.  
-  Mas se Jesus é igual ao Pai, por que o Evangelho afirma que o Pai é maior do que Jesus?
+  - O Dogma da Divindade afirma que Deus e Jesus constituem um único ser ou que Jesus é igual ao Pai. Mas se Jesus é igual ao Pai, por que o Evangelho afirma que o Pai é maior do que Jesus?
   
-  Como alguém pode ser ao mesmo tempo homem e Deus?
+  - Como alguém pode ser ao mesmo tempo homem e Deus?
   
-  Por que a igreja não consegue explicar esse mistério a luz da razão?  
-  =================================================================================================
+  - Por que a igreja não consegue explicar esse mistério a luz da razão?  
   
 .. figure:: jesus.png
     :scale: 90 %
@@ -43,11 +41,9 @@ Durante esses longos anos quis fechar os olhos diante das verdades que minha bus
 
 Muitas vezes, nos momentos solitários de minha vida me perguntei:
 
-  ================================
-  **Por que teve que ser assim?**
+  ** - Por que teve que ser assim?**
  
-  **Por que eu?**
-  ================================
+  ** - Por que eu?**
   
 Já não me sentia mais o mesmo devido ao peso da grande responsabilidade que estava sobre os meus ombros. A responsabilidade da decisão que era preciso tomar: - Tornar público o que havia descoberto.
 
