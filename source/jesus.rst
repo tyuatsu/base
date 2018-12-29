@@ -1,7 +1,7 @@
 Estudo Secreto Sobre Jesus Cristo
 ====================================         
-O que você não sabia sobre `Jesus Cristo <https://www.livescience.com/13711-jesus-christ-man-physical-evidence-hold.html>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+O que você não sabia sobre `Jesus <https://www.livescience.com/13711-jesus-christ-man-physical-evidence-hold.html>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   - Jesus Cristo é Deus ou unicamente seu Filho?
   
