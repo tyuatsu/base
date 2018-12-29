@@ -116,6 +116,7 @@ A Staff irá avaliar o seu devido punimento.
 Só haverá 2 maneiras de serem punidos.
 
 **1° Castigo**
+
 **2° Banimento**
 
 .. note:: Então, sempre pense duas vezes antes de fazer algo para não descumprir as regras. Caso ao contrário, sofra com as consequências! Qualquer dúvida, entrar em contato com a Staff.
