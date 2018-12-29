@@ -14,13 +14,21 @@ Qual Importância Das Regras?
 Onde não há limites nem regras fica-se com a sensação que tudo pode acontecer. Uma regra só é entendida como regra se for exigido que seja cumprida sistematicamente.
 As regras são muito importantes para uma boa convivência. Sem regras, tudo seria uma bagunça e as pessoas teriam mais dificuldade para ter um bom relacionamento.
 
+REGRAS
+^^^^^^
+
 Divulgações
 """""""""""
 
-* Proibido divulgações de outras Comunidades
-* Proibido divulgações de canais de YouTube
-* Proibido blogs fora do tópico da comunidade
-* Proibido divulgações de Sites
+  ========  ====================================
+  Proibido  divulgações de outras Comunidades
+  
+  Proibido  divulgações de canais de YouTube
+  
+  Proibido  blogs fora do tópico da comunidade
+  
+  Proibido  divulgações de Sites  
+  ========  ====================================
 
 **(Os blogs irão ser imediatamente desabilitados caso uma dessas regras forem descumpridas)**
 

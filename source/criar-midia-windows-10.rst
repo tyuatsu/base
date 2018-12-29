@@ -9,7 +9,7 @@ Existem muitos tutorias já prontos para o Ubuntu/Debian por aí na net... só p
 .. _Siga os passos abaixo:
 
 1. Baixe a imagem .iso (DVD de instalação)
-"""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     `https://www.microsoft.com/en-us/software-download/ <https://www.microsoft.com/en-us/software-download/>`_
 
@@ -39,7 +39,7 @@ O dispositivo do meu drive usb é: "/dev/sdb"::
 .. note:: Se tiver na mão, pode usar o gparted para formatar o seu pendrive.
 
 2. Vamos baixar o famoso aplicativo "WoeUSB", esse eu garanto que funciona
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB::
 
@@ -82,7 +82,7 @@ Agora remova o dispositivo::
 Pronto! Agorá você já pode pegar esse Pendrive e sair formatando tudo com o Windows 10.
 
 3. Observações
-"""""""""""""""
+^^^^^^^^^^^^^^
 
 3.1. Sobre o boot pelo pendrive
 """"""""""""""""""""""""""""""""

@@ -420,7 +420,7 @@ Mitigation control for KVM - module parameter
 The KVM hypervisor mitigation mechanism, flushing the L1D cache when
 entering a guest, can be controlled with a module parameter.
 
-The option/parameter is "kvm-intel.vmentry_l1d_flush=". It takes the
+The option/parameter is 'kvm-intel.vmentry_l1d_flush='. It takes the
 following arguments:
 
   ============  ==============================================================
