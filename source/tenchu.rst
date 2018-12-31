@@ -104,11 +104,11 @@ Pause o jogo, segure **L1+R1** e aperte::
 .. note:: **Faça isso no controle 2.** Após realizar o truque de ver a pontuaçao, logo perceberá que aumentou 100 pontos no seu placar.
 
 
-=======================================================================
+======================================================================
 
-Fim do cheats, vamos agora para o guia completo....
+Fim dos cheats, vamos continuar agora com o guia completo desse jogo.
 
-=======================================================================
+======================================================================
 
 
 Complete Walkthrough Tenchu 3 - Wrath of Heaven 
