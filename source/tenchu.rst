@@ -846,12 +846,12 @@ Level                          Ability                          Character
 8                          Ninja Mind Control                      Ayame
 9                           Wrath of Heaven                        Ayame
 10                          Wrath of Heaven                        Ayame
-                               Mimic Animals                      Tesshu
-                           Upper Straight Combo                   Tesshu
-                                  Enrage                          Tesshu
-                               Power Block                        Tesshu
-                               Feign Death                        Tesshu
-                            Cling To Ceiling                      Tesshu
+--                            Mimic Animals                        Tesshu
+--                         Upper Straight Combo                   Tesshu
+--                               Enrage                           Tesshu
+--                             Power Block                        Tesshu
+--                             Feign Death                        Tesshu
+--                          Cling To Ceiling                      Tesshu
 =====                  ===========================             =========
 
 In this little mini-section, I will give a detailed explanation of each 
