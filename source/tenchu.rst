@@ -77,6 +77,8 @@ Sangue no máximo
 Pause o jogo e aperte::
 
    cima, baixo, direita, esquerda, quadrado, quadrado, quadrado
+   ou
+   esquerda, direita, cima, baixo, quadrado, quadrado, quadrado (funciona no PSP)
 
 Ligar habilidades especiais
 """""""""""""""""""""""""""
