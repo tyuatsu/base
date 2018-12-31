@@ -53,9 +53,8 @@
 <div><a class="reference external" href="https://www.microsoft.com/en-us/software-download/">https://www.microsoft.com/en-us/software-download/</a></div></blockquote>
 <p>Eu fiz o download da versão PT-BR 64 bits do windows 10: Win10_1803_BrazilianPortuguese_x64.iso (4.4GB).</p>
 <p>Vou usá-la para reinstalar todo o Sistema Operacional no meu notebook, que infelizmente sofreu falhas severas nos seus drivers (tudo corrompido), que nem o restrui.exe e systemreset.exe da vida conseguem dar conta do problema. Isso aconteceu depois de uma parada crítica de energia, no meio de uma atualização do windows update. - E não sei porque cargas d’água ele corrompeu os drivers de video e rede…, algum cazto do universo durante esse processo. Eu sei lá. Tem coisas que só a Microsoft faz por você!</p>
-</div>
 <div class="section" id="preparar-o-pendrive">
-<h2>1.2. Preparar o PenDrive<a class="headerlink" href="#preparar-o-pendrive" title="Permalink to this headline">¶</a></h2>
+<h3>1.2. Preparar o PenDrive<a class="headerlink" href="#preparar-o-pendrive" title="Permalink to this headline">¶</a></h3>
 <p>Aqui eu vou usar um pendrive de 32GB, mas também pode usar um de 8GB se ele estiver disponível.</p>
 <p>Esse flash disk usb de 32GB, eu costumo utilizá-lo para boot do “fedora 28 live usb”. Mas como preciso formatar urgente o meu notebook com windows 10, então vou usá-lo, sem dó e nem piedade!</p>
 <p><strong>CUIDADO!</strong> O processo à seguir irá destruir todos dados do seu Pendrive, muita calma nessa hora.</p>
@@ -74,6 +73,7 @@
 <p class="last">Se tiver na mão, pode usar o gparted para formatar o seu pendrive.</p>
 </div>
 </div>
+</div>
 <div class="section" id="vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona">
 <h2>2. Vamos baixar o famoso aplicativo “WoeUSB”, esse eu garanto que funciona<a class="headerlink" href="#vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona" title="Permalink to this headline">¶</a></h2>
 <p>Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB:</p>
@@ -86,9 +86,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">wxGTK3</span><span class="o">-</span><span class="n">devel</span> <span class="n">git</span> <span class="n">dh</span><span class="o">-</span><span class="n">autoreconf</span><span class="o">.</span><span class="n">noarch</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora">
-<h2>2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora::<a class="headerlink" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora" title="Permalink to this headline">¶</a></h2>
+<h3>2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora::<a class="headerlink" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
 git clone <a class="reference external" href="https://github.com/slacka/WoeUSB.git">https://github.com/slacka/WoeUSB.git</a>
@@ -114,13 +113,14 @@ The target device should be bootable now</p>
 </div>
 <p>Pronto! Agorá você já pode pegar esse Pendrive e sair formatando tudo com o Windows 10.</p>
 </div>
+</div>
 <div class="section" id="observacoes">
 <h2>3. Observações<a class="headerlink" href="#observacoes" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="sobre-o-boot-pelo-pendrive">
-<h2>3.1. Sobre o boot pelo pendrive<a class="headerlink" href="#sobre-o-boot-pelo-pendrive" title="Permalink to this headline">¶</a></h2>
+<h3>3.1. Sobre o boot pelo pendrive<a class="headerlink" href="#sobre-o-boot-pelo-pendrive" title="Permalink to this headline">¶</a></h3>
 <p>Ele costuma demorar bastante até aparecer à tela de instalação do Windows 10.
 Fora isso, o instalador rodou normal e todo o processo de instalação foi suave na nave.</p>
+</div>
 </div>
 </div>
 
@@ -133,12 +133,18 @@ Fora isso, o instalador rodou normal e todo o processo de instalação foi suave
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Como Criar Midia de Instalação do Windows 10</a><ul>
-<li><a class="reference internal" href="#baixe-a-imagem-iso-dvd-de-instalacao">1. Baixe a imagem .iso (DVD de instalação)</a></li>
+<li><a class="reference internal" href="#baixe-a-imagem-iso-dvd-de-instalacao">1. Baixe a imagem .iso (DVD de instalação)</a><ul>
 <li><a class="reference internal" href="#preparar-o-pendrive">1.2. Preparar o PenDrive</a></li>
-<li><a class="reference internal" href="#vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona">2. Vamos baixar o famoso aplicativo “WoeUSB”, esse eu garanto que funciona</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona">2. Vamos baixar o famoso aplicativo “WoeUSB”, esse eu garanto que funciona</a><ul>
 <li><a class="reference internal" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora">2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora::</a></li>
-<li><a class="reference internal" href="#observacoes">3. Observações</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#observacoes">3. Observações</a><ul>
 <li><a class="reference internal" href="#sobre-o-boot-pelo-pendrive">3.1. Sobre o boot pelo pendrive</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

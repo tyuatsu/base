@@ -1,5 +1,5 @@
 .. figure:: regras.png
-    :scale: 50 %
+    :scale: 80 %
     :align: center
     :alt: Regras da Plataforma
 
@@ -14,16 +14,21 @@ Qual Importância Das Regras?
 Onde não há limites nem regras fica-se com a sensação que tudo pode acontecer. Uma regra só é entendida como regra se for exigido que seja cumprida sistematicamente.
 As regras são muito importantes para uma boa convivência. Sem regras, tudo seria uma bagunça e as pessoas teriam mais dificuldade para ter um bom relacionamento.
 
-Regras
-------
+'REGRAS'
+^^^^^^^^
 
 Divulgações
 """""""""""
 
-* Proibido divulgações de outras Comunidades
-* Proibido divulgações de canais de YouTube
-* Proibido blogs fora do tópico da comunidade
-* Proibido divulgações de Sites
+  ========  ====================================
+  Proibido  divulgações de outras Comunidades
+  
+  Proibido  divulgações de canais de YouTube
+  
+  Proibido  blogs fora do tópico da comunidade
+  
+  Proibido  divulgações de Sites  
+  ========  ====================================
 
 **(Os blogs irão ser imediatamente desabilitados caso uma dessas regras forem descumpridas)**
 
@@ -36,21 +41,23 @@ Flood/Spam
 
 * Proibido Flood
 
-(Flood é o ato de mandar a mesma mensagem diversas vezes em um chat. Por exemplo, se eu escrever "oi" sete vezes em algum chat, será considerado como Flood).
+(Flood é o ato de mandar a mesma mensagem diversas vezes em um chat. Por exemplo, se eu escrever 'oi' sete vezes em algum chat, será considerado como Flood).
 
 Conteúdos Sexualmente Explícitos
 """""""""""""""""""""""""""""""""
 
-* Proibido Qualquer tipo de conteúdo +18
+  ========  ==================================================================
+  Proibido  Qualquer tipo de conteúdo impróprio ou inadequado (adulto **+18**)
 
-* Proibido Imagens e Gifs pornográficos
+  Proibido  Imagens e gifs pornográficos
 
-* Proibido Links de sites pornográficos
+  Proibido  Links de sites pornográficos
 
-* Proibido Pedir nudez
+  Proibido  Pedir nudez
 
-* Palavras Obscenas
-
+  Proibido  Palavras obscenas, ou de baixo calão (rude, agressivo ou imoral)
+  ========  ==================================================================
+  
 Fanboys/Haters
 """""""""""""""
 
@@ -60,14 +67,14 @@ Fanboys/Haters
 
 * Proibido Haters
 
-(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem "atacar" e "criticar" o indivíduo).
+(Hater é uma pessoa que simplesmente não está feliz ou satisfeito com o êxito, conquista ou felicidade de outra pessoa. Assim sendo, preferem 'atacar' e 'criticar' o indivíduo).
 
 Desrespeito/Preconceito
 """""""""""""""""""""""
 
 * Proibido Desrespeito com os membros da comunidade
 
-(Não crie ou alimente discussões com outros membros, insultos e xingamentos não serão permitidos. Mantenha acima de tudo o respeito, mesmo que vocês discordem em algo. Se for a outra pessoa que está te insultando, contate algum moderador e líder e resolva o problema de forma civilizada).
+(Não crie ou alimente discussões com outros membros, insultos e xingamentos não serão permitidos. Mantenha acima de tudo o respeito, mesmo que vocês discordem em algo. Se for a outra pessoa que está te insultando, contate algum moderador e ou líder e resolva o problema de forma civilizada).
 
 * Proibido Preconceito
 
@@ -104,7 +111,7 @@ Os castigos são utilizados apenas pelos líderes. Estão divididos em três fas
    2° Castigo: Silenciado por 72 horas.
    3° Castigo: Será banido.
 
-Dica De Segurança
+Dica de Segurança
 """""""""""""""""
 
 Proteja suas informações pessoais. Mantenha seu nome completo, endereço residencial exato, números de telefone, informações de conta e cartões de crédito secretos para evitar golpes, abusos ou outros problemas.
@@ -119,4 +126,4 @@ Só haverá 2 maneiras de serem punidos.
 
 **2° Banimento**
 
-.. note:: Então, sempre pense duas vezes antes de fazer algo para não descumprir as regras. Caso ao contrário, sofra com as consequências! Qualquer dúvida, entrar em contato com a Staff.
+.. note:: Sempre pense duas vezes antes de fazer algo, para não descumprir as regras. Caso contrário, sofra com as consequências! Qualquer dúvida, favor entrar em contato com a Staff.
