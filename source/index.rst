@@ -50,14 +50,14 @@ Conteúdos:
 
 .. _tenchu:
 .. toctree::
-   :maxdepth:1
+   :maxdepth: 1
    :caption: Tenchu
 
    tenchu
    
 .. _regras:
 .. toctree::
-   :maxdepth:1
+   :maxdepth: 1
    :caption: Regras
 
    regras

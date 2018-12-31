@@ -823,7 +823,7 @@ kill). I will give a list of abilities for each character and the level
 that you have to get the amount of stealth kills on. Tesshu comes with 
 all of his abilities already so I will just list them.
 
-=====                          =======                          =========
+=====                  ===========================             =========
 Level                          Ability                          Character
 
 1                          Shoulder Thrust                      Rikimaru 
@@ -852,7 +852,7 @@ Level                          Ability                          Character
                                Power Block                        Tesshu
                                Feign Death                        Tesshu
                             Cling To Ceiling                      Tesshu
-==                    ===========================              ==========
+=====                  ===========================             =========
 
 In this little mini-section, I will give a detailed explanation of each 
 ability and when it is best to use them. I am going to list them in the 

@@ -77,6 +77,8 @@ Sangue no máximo
 Pause o jogo e aperte::
 
    cima, baixo, direita, esquerda, quadrado, quadrado, quadrado
+   ou
+   esquerda, direita, cima, baixo, quadrado, quadrado, quadrado (funciona no PSP)
 
 Ligar habilidades especiais
 """""""""""""""""""""""""""
@@ -821,12 +823,11 @@ kill). I will give a list of abilities for each character and the level
 that you have to get the amount of stealth kills on. Tesshu comes with 
 all of his abilities already so I will just list them.
 
-------------------------------------------------------------------------
-Level               -          Ability            -            Character
-------------------------------------------------------------------------
+=====                  ===========================             =========
+Level                          Ability                          Character
 
-1                           Shoulder Thrust                     Rikimaru
-2                           Ninjitsu Block                      Rikimaru
+1                          Shoulder Thrust                      Rikimaru 
+2                          Ninjitsu Block                       Rikimaru
 3                            Ninja Vision                       Rikimaru
 4                        Grappling Hook Combo                   Rikimaru
 5                          Cling To Ceiling                     Rikimaru
@@ -845,14 +846,13 @@ Level               -          Ability            -            Character
 8                          Ninja Mind Control                      Ayame
 9                           Wrath of Heaven                        Ayame
 10                          Wrath of Heaven                        Ayame
-                              Mimic Animals                       Tesshu
-                          Upper Straight Combo                    Tesshu
-                                 Enrage                           Tesshu
-                              Power Block                         Tesshu
-                              Feign Death                         Tesshu
-                           Cling To Ceiling                       Tesshu
-
-=======================================================================
+                               Mimic Animals                      Tesshu
+                           Upper Straight Combo                   Tesshu
+                                  Enrage                          Tesshu
+                               Power Block                        Tesshu
+                               Feign Death                        Tesshu
+                            Cling To Ceiling                      Tesshu
+=====                  ===========================             =========
 
 In this little mini-section, I will give a detailed explanation of each 
 ability and when it is best to use them. I am going to list them in the 
