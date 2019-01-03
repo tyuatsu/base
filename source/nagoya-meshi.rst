@@ -69,7 +69,7 @@ Kishimen
 ^^^^^^^^
 
 .. figure:: kishimen.jpg
-    :scale: 40 %
+    :scale: 60 %
     :align: center
     :alt: kishimen
     
