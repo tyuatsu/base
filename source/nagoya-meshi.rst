@@ -59,7 +59,7 @@ Ebi-furai
 ^^^^^^^^^
 
 .. figure:: ebi.jpg
-    :scale: 60 %
+    :scale: 50 %
     :align: center
     :alt: ebi furai
     
