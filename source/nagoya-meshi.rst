@@ -69,7 +69,7 @@ Kishimen
 ^^^^^^^^
 
 .. figure:: kishimen.jpg
-    :scale: 60 %
+    :scale: 40 %
     :align: center
     :alt: kishimen
     
@@ -80,7 +80,7 @@ Curry Udon
 
 
 .. figure:: curry_udon.jpg
-    :scale: 60 %
+    :scale: 40 %
     :align: center
     :alt: curry udon
     
