@@ -41,6 +41,13 @@ Conteúdos:
     
     microsoft-365-helps-create-a-secure-modern-workplace
 
+.. _falta_de_produtividade:
+.. toctree::
+    :maxdepth: 1
+    :caption: Estudo Microsoft
+    
+    falta_de_produtividade  
+
 .. _nagoya-meshi:
 .. toctree::
     :maxdepth: 1
