@@ -2,7 +2,7 @@ BILL GATES MANDA RECADO SOBRE MOEDAS VIRTUAIS
 =============================================
 
 .. figure:: bill-gates.jpg
-    :scale: 40 %
+    :scale: 80 %
     :align: center
     :alt: bill gates giving back philanthropy
 

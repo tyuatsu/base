@@ -69,6 +69,13 @@ Conteúdos:
     
     jesus
 
+.. _papa_francisco:
+.. toctree::
+    :maxdepth: 1
+    :caption: Melhor é ser ateu
+    
+    papa_francisco
+
 .. _tenchu:
 .. toctree::
    :maxdepth: 1
