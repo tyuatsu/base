@@ -72,7 +72,7 @@ Conteúdos:
 .. _papa_francisco:
 .. toctree::
     :maxdepth: 1
-    :caption: Melhor é ser ateu
+    :caption: Papa
     
     papa_francisco
 
