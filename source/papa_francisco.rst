@@ -23,7 +23,7 @@ A dura advertência do papa lembra a todos, começando justamente por aquele que
 Precisamente por isso o papa Francisco aproxima tantas vezes a hipocrisia com a corrupção: se outros pecados 'chamam' para a conversão, a hipocrisia e a corrupção tendem, por sua natureza, a sufocar a consciência, a silenciá-la, a violentá-la em sua dimensão mais íntima. É então verdadeiro motivo de 'escândalo' assumir a postura de pessoa de oração e depois não amar o próximo, fingir dialogar na oração com o 'Deus que não pode ser visto' e desprezar 'o irmão que pode ser visto'. Então melhor viver 'como ateu', sem professar a fé cristã, em vez de contradizer com o comportamento o que se professa com os lábios.
 
 .. figure:: religiosidade.jpg
-    :scale: 80 %
+    :scale: 40 %
     :align: center
     :alt: cristãos religiosos usam 'máscaras espirituais' para disfarçar seus pecados.
 
@@ -41,7 +41,7 @@ Santos e Pecadores
     :align: center
     :alt: O bem que quero não faço, mas o mau que não quero, esse faço.
 
-Outro dia fulano conversava com beltrano acerca de um aspecto da concupiscência humana. Detalhe: Essa pessoa é cristã. O que ela defendia? Bem resumidamente, é que o cristão após sua conversão vai deixando de pecar cada vez mais, até que em certo ponto ele não mais pecará, ou então isso se tornará algo extremamente acidental em sua vida. Me lembrou muito a doutrina da 'perfeição cristã', defendida por John Wesley (clérigo anglicano e teólogo cristão britânico, líder precursor do movimento metodista).
+Outro dia fulano conversava com beltrano acerca de um aspecto da concupiscência humana. Detalhe: -Essa pessoa é cristã. O que ela defendia? Bem resumidamente, é que o cristão após sua conversão vai deixando de pecar cada vez mais, até que em certo ponto ele não mais pecará, ou então isso se tornará algo extremamente acidental em sua vida. Me lembrou muito a doutrina da 'perfeição cristã', defendida por John Wesley (clérigo anglicano e teólogo cristão britânico, líder precursor do movimento metodista).
 
 Entretanto as coisas não funcionam assim. Por dois motivos básicos:
 
