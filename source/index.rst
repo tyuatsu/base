@@ -46,7 +46,14 @@ Conteúdos:
     :maxdepth: 1
     :caption: Estudo Microsoft
     
-    falta_de_produtividade  
+    falta_de_produtividade
+
+.. _criptomoedas:
+.. toctree::
+    :maxdepth: 1
+    :caption: Bill Gates
+    
+    criptomoedas      
 
 .. _nagoya-meshi:
 .. toctree::
