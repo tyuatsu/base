@@ -58,7 +58,7 @@ Conteúdos:
 .. _paradoxo:
 .. toctree::
     :maxdepth: 1
-    :caption: Refletir é Preciso
+    :caption: Paradoxo
     
     paradoxo
 
