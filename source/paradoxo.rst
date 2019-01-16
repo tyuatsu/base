@@ -33,11 +33,10 @@ produzir mais cópias do que nunca, mas nos comunicamos menos.
 Estamos na era do 'fast-food' e da digestão lenta;
 do homem grande de caráter pequeno;
 excesso de reuniões e relações vazias.
-
 Essa é a era de dois empregos,
 vários divórcios, casas chiques e lares despedaçados.
 Essa é a era das viagens rápidas, fraldas e moral descartáveis,
-das rapidinhas, dos cérebros ocos e das pílulas "mágicas".  
+das rapidinhas, dos cérebros ocos e das pílulas 'mágicas'.  
 
 Um momento de muita coisa na vitrine e muito pouco na dispensa.
 Uma era que leva essa carta a você,
@@ -48,7 +47,7 @@ pois elas não estarão por aqui para sempre.
 Lembre-se dar um abraço carinhoso num amigo,
 pois não lhe custa um centavo sequer.
 
-Lembre-se de dizer "eu te amo" à sua companheira(o)
+Lembre-se de dizer ***'eu te amo'*** à sua companheira(o)
 e às pessoas que ama.
 Um beijo e um abraço curam a dor, quando vêm de lá de dentro.
 
