@@ -58,7 +58,7 @@ Conteúdos:
 .. _paradoxo:
 .. toctree::
     :maxdepth: 1
-    :caption: Do Nosso Tempo
+    :caption: Refletir é Preciso
     
     paradoxo
 
