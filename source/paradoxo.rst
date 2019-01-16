@@ -46,7 +46,6 @@ Lembre-se de passar tempo com as pessoas que ama,
 pois elas não estarão por aqui para sempre.
 Lembre-se dar um abraço carinhoso num amigo,
 pois não lhe custa um centavo sequer.
-
 Lembre-se de dizer **'eu te amo'** à sua companheira(o)
 e às pessoas que ama.
 Um beijo e um abraço curam a dor, quando vêm de lá de dentro.
