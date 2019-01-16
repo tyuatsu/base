@@ -55,6 +55,13 @@ Conteúdos:
     
     criptomoedas      
 
+.. _paradoxo:
+.. toctree::
+    :maxdepth: 1
+    :caption: Do Nosso Tempo
+    
+    paradoxo
+
 .. _nagoya-meshi:
 .. toctree::
     :maxdepth: 1
@@ -72,7 +79,7 @@ Conteúdos:
 .. _papa_francisco:
 .. toctree::
     :maxdepth: 1
-    :caption: Melhor é ser ateu
+    :caption: Papa
     
     papa_francisco
 

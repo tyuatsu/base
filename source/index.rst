@@ -55,6 +55,13 @@ Conteúdos:
     
     criptomoedas      
 
+.. _paradoxo:
+.. toctree::
+    :maxdepth: 1
+    :caption: Do Nosso Tempo
+    
+    paradoxo
+
 .. _nagoya-meshi:
 .. toctree::
     :maxdepth: 1
