@@ -1,4 +1,4 @@
-Tenchu San Portable (PSP)
+Tenchu San Portable 'PSP'
 -------------------------
 
 .. figure:: psptenchu.jpg
@@ -43,8 +43,8 @@ At the start screen, press::
 
    UP, DOWN, RIGHT, LEFT, X(3)
 
-Tenchu 3 - Wrath of Heaven PS2
-------------------------------
+Tenchu 3 - Wrath of Heaven 'PS2'
+--------------------------------
 Todos os códigos secretos foram testados no `Sony Playstation 2 <https://www.playstation.com/pt-br/>`_.
 
 .. figure:: tenchu.jpg
