@@ -1,7 +1,7 @@
 Tenchu San Portable 'PSP'
 -------------------------
 
-.. figure:: psptenchu.jpg
+.. figure:: psp.jpg
     :scale: 43 %
     :align: center
     :alt: Tenchu San Portable PSP
