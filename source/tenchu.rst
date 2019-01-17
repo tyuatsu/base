@@ -1,3 +1,48 @@
+Tenchu San Portable (PSP)
+-------------------------
+
+.. figure:: psptenchu.jpg
+    :scale: 43 %
+    :align: center
+    :alt: Tenchu San Portable PSP
+
+All Items
+"""""""""
+
+At the item selection screen:: 
+	
+   Hold R + L, press UP, square(2), LEFT, square(2), DOWN, square(2), RIGHT, square(2), UP, square(2), LEFT, square(2)
+
+Increase Items (x10)
+""""""""""""""""""""
+
+At the item selection screen::
+
+   Hold R + L, press square(3), RIGHT, DOWN, LEFT, UP
+
+Infinite Items Storage
+""""""""""""""""""""""
+
+At the item selection screen::
+
+   Hold R + L + Triangle, press UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, release Triangle and press Square(3)
+
+
+Restore Health
+""""""""""""""
+
+Pause the game and press::
+
+   LEFT, RIGHT, UP, DOWN, square(3)
+
+
+Unlock Demo Level
+"""""""""""""""""
+
+At the start screen, press::
+
+   UP, DOWN, RIGHT, LEFT, X(3)
+
 Tenchu 3 - Wrath of Heaven PS2
 ------------------------------
 Todos os códigos secretos foram testados no `Sony Playstation 2 <https://www.playstation.com/pt-br/>`_.
@@ -9,6 +54,7 @@ Todos os códigos secretos foram testados no `Sony Playstation 2 <https://www.pl
 
 Todas as missões (modo story)
 """""""""""""""""""""""""""""
+
 Na tela de seleção de missões, aperte::
 
    L1, R1, L2, R2, direita, quadrado, L3, R3
@@ -77,8 +123,6 @@ Sangue no máximo
 Pause o jogo e aperte::
 
    cima, baixo, direita, esquerda, quadrado, quadrado, quadrado
-   ou
-   esquerda, direita, cima, baixo, quadrado, quadrado, quadrado (funciona no PSP)
 
 Ligar habilidades especiais
 """""""""""""""""""""""""""
