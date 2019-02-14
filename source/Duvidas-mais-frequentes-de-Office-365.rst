@@ -875,14 +875,14 @@ Todos os dias temos oportunidades de fazer o melhor com o Office 365. Escolha o 
     :align: center
     :alt: criar-documentos-01
 
-12.3. Na página que for exibida clique em + Novo na barra de opções e escolha o tipo de documento que deseja criar:    
+18.3. Na página que for exibida clique em + Novo na barra de opções e escolha o tipo de documento que deseja criar:    
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: criar-documentos-02.png
     :scale: 100 %
     :align: center
     :alt: criar-documentos-02  
 
-12.4. No campo para o Nome do Documento digite um nome para o arquivo que deseja criar e após clique em Ok. O arquivo será salvo na sua pasta do OneDrive com este nome:
+18.4. No campo para o Nome do Documento digite um nome para o arquivo que deseja criar e após clique em Ok. O arquivo será salvo na sua pasta do OneDrive com este nome:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: criar-documentos-03.png
     :scale: 100 %
@@ -897,17 +897,17 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
     :align: center
     :alt: criar-documentos-04
 
-13. Entendendo o Painel do Usuário do Office 365
+19. Entendendo o Painel do Usuário do Office 365
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-13.1. Após logar, o Painel do Usuário é apresentado desta forma:
+19.1. Após logar, o Painel do Usuário é apresentado desta forma:
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: painel_usuario.png
     :scale: 100 %
     :align: center
     :alt: painel_usuario_geral
 
-13.2. Detalhes:
+19.2. Detalhes:
 """""""""""""""    
 .. figure:: painel_usuario.png
     :scale: 100 %
@@ -924,10 +924,10 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
 
 * [5] Local utilizado para acessar as ferramentas de e-mail (Outlook), Calendário, Contatos (Pessoas), Notícias, Skydrive e Sites.
 
-14. Como compartilhar um documento no serviço Colaboração do Office 365?
+20. Como compartilhar um documento no serviço Colaboração do Office 365?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-14.1. Selecione o documento desejado:
+20.1. Selecione o documento desejado:
 """""""""""""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive3.png
     :scale: 100 %
@@ -935,31 +935,31 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
     :alt: como_compartilhar_doc_drive3
 
 
-14.2. Na parte superior esquerda, clique em arquivo. Após clique em Compartilhar:
+20.2. Na parte superior esquerda, clique em arquivo. Após clique em Compartilhar:
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive4.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive4
 
-14.3. Aguarde o processamento:
+20.3. Aguarde o processamento:
 """"""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive5.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive5
 
-14.4. Preencha os campos solicitados para o compartilhamento, como: e-mail da pessoa que você deseja compartilhar, mensagem pessoal, etc. O campo exigir entrado, caso seja marcado, quem receber o link do material terá que logar no portal do Office 365, portanto é um compartilhamento somente para usuários. Caso a opção não seja marcada, qualquer pessoa poderá ter acesso ao conteúdo.
+20.4. Preencha os campos solicitados para o compartilhamento, como: e-mail da pessoa que você deseja compartilhar, mensagem pessoal, etc. O campo exigir entrado, caso seja marcado, quem receber o link do material terá que logar no portal do Office 365, portanto é um compartilhamento somente para usuários. Caso a opção não seja marcada, qualquer pessoa poderá ter acesso ao conteúdo.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive6.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive6
 
-15. Dificuldades com a senha do Office 365. O que fazer?
+21. Dificuldades com a senha do Office 365. O que fazer?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-15.1. Caso já tenha recebido a senha inicial, mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
+21.1. Caso já tenha recebido a senha inicial, mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Acesse a página de login do Office, através do endereço `https://login.microsoftonline.com <https://login.microsoftonline.com>`_
@@ -969,28 +969,28 @@ Acesse a página de login do Office, através do endereço `https://login.micros
     :align: center
     :alt: senha_office_1
 
-15.2. Clique na opção "Não consegue acessar sua conta?"
+21.2. Clique na opção "Não consegue acessar sua conta?"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_2.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_2
 
-15.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações. Insira os dados solicitados e clique em "Avançar":
+22.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações. Insira os dados solicitados e clique em "Avançar":
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_3.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_3
 
-15.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação. Verifique se está correto, pois um "código de verificação" será enviado para e-mail exibido:
+23.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação. Verifique se está correto, pois um "código de verificação" será enviado para e-mail exibido:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_4.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_4
 
-15.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft, volte para a verificação e clique em "E-mail":
+23.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft, volte para a verificação e clique em "E-mail":
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_5.jpg
     :scale: 100 %
