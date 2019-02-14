@@ -227,25 +227,24 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
 6. Como acessar o Painel de Controle do Office 365?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-6.1. Para utilizar o Office 365 pela primeira vez siga os passos abaixo:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.1. Para utilizar o Office 365 pela primeira vez siga os passos abaixo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Entre no portal Office 365 no endereço `https://portal.office.com <https://portal.office.com/>`_
 
-6.1.1. Entre no portal Office 365 no endereço `https://portal.office.com <https://portal.office.com/>`_
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-01.png
     :scale: 100 %
     :align: center
     :alt: login-office-01
 
-6.1.2. Faça login com o usuário e senha encaminhados por e-mail, após clique em Entrar:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.2. Faça login com o usuário e senha encaminhados por e-mail, após clique em Entrar:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-02.png
     :scale: 100 %
     :align: center
     :alt: login-office-02
 
-6.1.3. Esta será a sua página principal, de onde poderá gerenciar sua conta:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.3. Esta será a sua página principal, de onde poderá gerenciar sua conta:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-03.png
     :scale: 100 %
     :align: center
@@ -268,9 +267,9 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: calendario1
 
-7.3. Preencha os campos e caso seja uma reunião online, clique sobre Reunião Online para enviar um link de participação na Reunião. 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Feito isso, basta clicar em salvar no canto superior direito da tela:
+7.3. Preencha os campos e caso seja uma reunião online
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique sobre Reunião Online para enviar um link de participação na Reunião. Feito isso, basta clicar em salvar no canto superior direito da tela:
 
 .. figure:: calendario2.png
     :scale: 100 %
