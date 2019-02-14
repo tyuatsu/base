@@ -959,7 +959,7 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
 15. Dificuldades com a senha do Office 365. O que fazer?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-16.1. Caso já tenha recebido a senha inicial, mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
+15.1. Caso já tenha recebido a senha inicial, mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Acesse a página de login do Office, através do endereço `https://login.microsoftonline.com <https://login.microsoftonline.com>`_
@@ -969,28 +969,28 @@ Acesse a página de login do Office, através do endereço `https://login.micros
     :align: center
     :alt: senha_office_1
 
-16.2. Clique na opção "Não consegue acessar sua conta?"
+15.2. Clique na opção "Não consegue acessar sua conta?"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_2.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_2
 
-16.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações. Insira os dados solicitados e clique em "Avançar":
+15.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações. Insira os dados solicitados e clique em "Avançar":
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_3.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_3
 
-16.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação. Verifique se está correto, pois um "código de verificação" será enviado para e-mail exibido:
+15.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação. Verifique se está correto, pois um "código de verificação" será enviado para e-mail exibido:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_4.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_4
 
-16.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft, volte para a verificação e clique em "E-mail":
+15.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft, volte para a verificação e clique em "E-mail":
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_5.jpg
     :scale: 100 %
@@ -999,7 +999,4 @@ Acesse a página de login do Office, através do endereço `https://login.micros
 
 Agora é só seguir as orientações de recuperação de senha, fornecidas pela Microsoft.
  
-**Importante:** O OFFICE 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização não possui a autonomia para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.
-
-    
-
+**Importante:** O Office 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização não possui a autonomia para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.
