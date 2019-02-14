@@ -1072,4 +1072,4 @@ Volte para a verificação e clique em **E-mail**:
 
 Agora é só seguir as orientações de recuperação de senha, fornecidas pela Microsoft.
  
-**Importante:** O office 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização, Pé-de-Chinelo, não possui a autonomia necessária para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.
+**Importante:** O office 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização, pé-de-chinelo, não possui a autonomia necessária para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.
