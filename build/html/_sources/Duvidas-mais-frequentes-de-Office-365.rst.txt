@@ -57,8 +57,10 @@ Copyright © 2019 Microsoft, Inc. All Rights Reserved.
     :align: center
     :alt: instalacao1
 
-2.3. Selecione o idioma e a versão da aplicação e clique em instalar. Por padrão o Office é instalado em 32 bits para evitar incompatibilidade com outros softwares, independente da versão do S.O.:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+2.3. Selecione o idioma e a versão da aplicação e clique em instalar.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Por padrão o Office é instalado em 32 bits para evitar incompatibilidade com outros softwares, independente da versão do S.O.:
+
 .. figure:: instalacao2.png
     :scale: 100 %
     :align: center
@@ -159,8 +161,10 @@ Copyright © 2019 Microsoft, Inc. All Rights Reserved.
     :align: center
     :alt: software2
     
-3.4. Por padrão, o Office é instalado na versão 32 bits para não gerar incompatibilidade com outros softwares, independentemente da versão do S.O. Selecione o idioma, a versão e clique em **Instalar**; Para dar continuidade no tutorial, clique em **concluir**:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+3.4. Por padrão, o Office é instalado na versão 32 bits para não gerar incompatibilidade com outros softwares, independentemente da versão do S.O.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ Selecione o idioma, a versão e clique em **Instalar**; Para dar continuidade no tutorial, clique em **concluir**:
+
 .. figure:: software3.png
     :scale: 100 %
     :align: center
@@ -180,8 +184,12 @@ Copyright © 2019 Microsoft, Inc. All Rights Reserved.
     :align: center
     :alt: software5
     
-3.7. Seus próprios colegas configuram o software e os aplicativos móveis depois que iniciam a sessão. Quando iniciam a sessão do Office 365 pela primeira vez, eles recebem informações sobre o Office 365 e aprendem a instalar o software e configurar os dispositivos móveis deles. Observação: se você ainda não adicionou usuários nem designou licenças, vá para a página Usuários & grupos. Eles também podem instalar o software e configurar os dispositivos móveis deles posteriormente na página Software. Clique em concluir para finalizar o tutorial:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+3.7. Seus próprios colegas configuram o software e os aplicativos móveis depois que iniciam a sessão.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Quando iniciam a sessão do Office 365 pela primeira vez, eles recebem informações sobre o Office 365 e aprendem a instalar o software e configurar os dispositivos móveis deles. 
+
+**Observação:** se você ainda não adicionou usuários nem designou licenças, vá para a página Usuários & grupos. Eles também podem instalar o software e configurar os dispositivos móveis deles posteriormente na página **Software**. Clique em concluir para finalizar o tutorial:
+
 .. figure:: software6.png
     :scale: 100 %
     :align: center
@@ -219,25 +227,24 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
 6. Como acessar o Painel de Controle do Office 365?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-6.1. Para utilizar o Office 365 pela primeira vez siga os passos abaixo:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.1. Para utilizar o Office 365 pela primeira vez siga os passos abaixo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Entre no portal Office 365 no endereço `https://portal.office.com <https://portal.office.com/>`_
 
-6.1.1. Entre no portal Office 365 no endereço `https://portal.office.com <https://portal.office.com/>`_
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-01.png
     :scale: 100 %
     :align: center
     :alt: login-office-01
 
-6.1.2. Faça login com o usuário e senha encaminhados por e-mail, após clique em Entrar:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.2. Faça login com o usuário e senha encaminhados por e-mail, após clique em Entrar:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-02.png
     :scale: 100 %
     :align: center
     :alt: login-office-02
 
-6.1.3. Esta será a sua página principal, de onde poderá gerenciar sua conta:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6.3. Esta será a sua página principal, de onde poderá gerenciar sua conta:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: login-office-03.png
     :scale: 100 %
     :align: center
@@ -260,8 +267,10 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: calendario1
 
-7.3. Preencha os campos e caso seja uma reunião online, clique sobre Reunião Online para enviar um link de participação na Reunião. Feito isso, basta clicar em salvar no canto superior direito da tela:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+7.3. Preencha os campos e caso seja uma reunião online
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique sobre Reunião Online para enviar um link de participação na Reunião. Feito isso, basta clicar em salvar no canto superior direito da tela:
+
 .. figure:: calendario2.png
     :scale: 100 %
     :align: center
@@ -274,8 +283,10 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: calendario3
 
-7.5. No canto superior direito, temos o modo de visualização (DIA, SEMANA ÚTIL, SEMANA, MÊS) e abaixo temos a opção de compartilhar com outra pessoa o seu calendário:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+7.5. No canto superior direito, temos o modo de visualização (DIA, SEMANA ÚTIL, SEMANA, MÊS)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+E abaixo temos a opção de compartilhar com outra pessoa o seu calendário:
+
 .. figure:: calendario4.png
     :scale: 100 %
     :align: center
@@ -374,36 +385,46 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: colaboracao9
 
-9.7. Nesta tela, o tutorial mostra alguma atividades que o SkyDrive Pro pode realizar, como: Carregar um documento, Editar um documento, Compartilhe com outras pessoas e Sincronizar com seu computador. Verifique e clique em continuar:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.7. Nesta tela, o tutorial mostra alguma atividades que o SkyDrive Pro pode realizar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Como carregar um documento, editar um documento, compartilhe com outras pessoas e sincronizar com seu computador. Verifique e clique em continuar:
+
 .. figure:: colaboracao10.png
     :scale: 100 %
     :align: center
     :alt: colaboracao10
 
-9.8. Veja os passos para carregar um documento: Clique em SkyDrive, localize o arquivo no seu computador. Arraste o arquivo pelo espaço de Documentos e solte-o em SkyDrive Pro. Após, clique em continuar para dar seguimento no tutorial:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.8. Veja os passos para carregar um documento 
+""""""""""""""""""""""""""""""""""""""""""""""
+Clique em SkyDrive, localize o arquivo no seu computador. Arraste o arquivo pelo espaço de Documentos e solte-o em SkyDrive Pro. Após, clique em continuar para dar seguimento no tutorial:
+
 .. figure:: colaboracao11.png
     :scale: 100 %
     :align: center
     :alt: colaboracao11
 
-9.9. Esta tela mostra como editar um documento: Clique no nome do documento. Clique em Editar documento > Editar no aplicativo Word Web. Clique em Salvar quando terminar. Clique em continuar:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.9. Esta tela mostra como editar um documento
+""""""""""""""""""""""""""""""""""""""""""""""
+Clique no nome do documento. Clique em Editar documento > Editar no aplicativo Word Web. Clique em Salvar quando terminar. Vá em continuar:
+
 .. figure:: colaboracao12.png
     :scale: 100 %
     :align: center
     :alt: colaboracao12
 
-9.10. Confira as informações para compartilhar seu documento: Clique em no documento que você deseja compartilhar e clique em Convidar pessoas.Insira os endereços de email ou nomes de pessoas com as quais você deseja compartilhar.Se você desejar, adicione uma mensagem e clique em Compartilhar. Após clique em continuar para dar continuidade:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.10. Confira as informações para compartilhar seu documento
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique em no documento que você deseja compartilhar e clique em Convidar pessoas. Insira os endereços de email ou nomes de pessoas com as quais você deseja compartilhar. Se você desejar, adicione uma mensagem e clique em Compartilhar. Após, clique em continuar para dar continuidade:
+
 .. figure:: colaboracao13.png
     :scale: 100 %
     :align: center
     :alt: colaboracao13
 
-9.11. Veja os passos para sincronizar os arquivos com seu computador: No SkyDrive Pro, na parte superior da página, clique em Sincronizar e clique em Sincronizar agora.Clique em Mostrar meus arquivos para iniciar o gerenciamento de documentos do seu computador. Após ler a explicação, clique em continuar:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.11. Veja os passos para sincronizar os arquivos com seu computador
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ No SkyDrive Pro, na parte superior da página, clique em Sincronizar e clique em Sincronizar agora. Clique em Mostrar meus arquivos para iniciar o gerenciamento de documentos do seu computador. Após ler a explicação, clique em continuar:
+
 .. figure:: colaboracao14.png
     :scale: 100 %
     :align: center
@@ -437,15 +458,19 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: colaboracao18
 
-9.16. Veja como alterar o logotipo de sua empresa: Clique em Sites e clique em Site da equipe. Clique em Seu site. Sua marca. Carregue seu logotipo e altere o título do site. Após, clique em continuar.    
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.16. Veja como alterar o logotipo de sua empresa
+"""""""""""""""""""""""""""""""""""""""""""""""""
+Clique em Sites e clique em Site da equipe. Clique em Seu site. Sua marca. Carregue seu logotipo e altere o título do site. Após, clique em continuar.    
+
 .. figure:: colaboracao19.png
     :scale: 100 %
     :align: center
     :alt: colaboracao19
 
-9.17. Como alterar o tema de seu site: Em seu site de equipe, clique em Qual o seu estilo? Selecione um estilo e personalize-o escolhendo sua própria imagem de fundo e esquema de cores. Clique em Experimente e se você gostar, clique em Alterar. Leia e clique em continuar:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.17. Como alterar o tema de seu site
+"""""""""""""""""""""""""""""""""""""
+Em seu site de equipe, clique em Qual o seu estilo? Selecione um estilo e personalize-o escolhendo sua própria imagem de fundo e esquema de cores. Clique em Experimente e se você gostar, clique em Alterar. Leia e clique em continuar:
+
 .. figure:: colaboracao20.png
     :scale: 100 %
     :align: center
@@ -479,15 +504,19 @@ Para visualizar o número de licenças disponíveis, basta logar com a conta ADM
     :align: center
     :alt: colaboracao24
 
-9.22. Veja como adicionar um cronograma de projeto: Clique em Sites e clique em Sites de equipe. Clique em Trabalhando com um prazo? Confirme que você deseja adicionar as tarefas e o calendário de aplicativos ao seu site. Após, clique em continuar:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.22. Veja como adicionar um cronograma de projeto
+""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique em Sites e clique em Sites de equipe. Clique em Trabalhando com um prazo? Confirme que você deseja adicionar as tarefas e o calendário de aplicativos ao seu site. Após, clique em continuar:
+
 .. figure:: colaboracao25.png
     :scale: 100 %
     :align: center
     :alt: colaboracao25      
 
-9.23. Como adicionar uma lista de tarefas personalizada: No site de equipe, clique em Adicionar listas, bibliotecas e outros aplicativos. Na página de Seus aplicativos, clique em Lista personalizada, atribua-lhe um nome e clique em Criar. Na página de Conteúdo do Site, selecione a nova lista e adicione itens. Após clique em continuar:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+9.23. Como adicionar uma lista de tarefas personalizada
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+No site de equipe, clique em Adicionar listas, bibliotecas e outros aplicativos. Na página de Seus aplicativos, clique em Lista personalizada, atribua-lhe um nome e clique em Criar. Na página de Conteúdo do Site, selecione a nova lista e adicione itens. Após, clique em continuar:
+
 .. figure:: colaboracao26.png
     :scale: 100 %
     :align: center
@@ -547,15 +576,19 @@ Aguarde a conversão do documento.
     :align: center
     :alt: como_editar_doc_drive7
 
-10.5. Edite o arquivo conforme desejado, após clique em salvar no canto superior esquerdo e para finalizar, clique no X localizado no canto superior direito da tela:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+10.5. Edite o arquivo conforme desejado
+"""""""""""""""""""""""""""""""""""""""
+Após, clique em salvar no canto superior esquerdo e para finalizar, clique no X localizado no canto superior direito da tela:
+
 .. figure:: como_editar_doc_drive8.png
     :scale: 100 %
     :align: center
     :alt: como_editar_doc_drive8  
 
-10.6. O sistema deixa armazenado os dois arquivos, o anterior (.doc) e o atual (.docx), basta ver pelo tempo de criação dos arquivos:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+10.6. O sistema deixa armazenado os dois arquivos
+"""""""""""""""""""""""""""""""""""""""""""""""""
+O anterior (.doc) e o atual (.docx), basta ver pelo tempo de criação dos arquivos:
+
 .. figure:: como_editar_doc_drive9.png
     :scale: 100 %
     :align: center
@@ -578,8 +611,10 @@ Aguarde a conversão do documento.
     :align: center
     :alt: usuario
 
-11.3. Na próxima página será exibido seu usuário principal já cadastrado. Para cadastrar novos usuários, de acordo com a quantidade de licenças que adquiriu, clique no sinal + na parte superior da tela:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""    
+11.3. Na próxima página será exibido seu usuário principal já cadastrado.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Para cadastrar novos usuários, de acordo com a quantidade de licenças que adquiriu, clique no sinal **+** na parte superior da tela:
+
 .. figure:: usuario1.png
     :scale: 100 %
     :align: center
@@ -608,22 +643,28 @@ Escolha o país de onde o usuário irá acessar a conta do Office 365 (por ex: B
     :align: center
     :alt: usuario3
 
-11.6. Escolha o produto ao qual deseja liberar o acesso para o novo usuário. Nesta página você poderá ver quantas licenças ainda estão disponíveis para serem atribuídas à novos usuários, após verificar as informações clique em Próximo:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+11.6. Escolha o produto ao qual deseja liberar o acesso para o novo usuário.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Nesta página você poderá ver quantas licenças ainda estão disponíveis para serem atribuídas à novos usuários, após verificar as informações clique em Próximo:
+
 .. figure:: usuario4.png
     :scale: 100 %
     :align: center
     :alt: usuario4  
 
-11.7. Caso queira enviar o nome do usuário e a senha temporária ao novo usuário por e-mail, preencha o campo com o endereço de e-mail desejado e clique em **Criar**:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""    
+11.7. Caso queira enviar o nome do usuário e a senha temporária ao novo usuário por e-mail
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Preencha o campo com o endereço de e-mail desejado e clique em **Criar**:
+
 .. figure:: usuario5.png
     :scale: 100 %
     :align: center
     :alt: usuario5
 
-11.8. Clique em Concluir e pronto! O novo usuário foi cadastrado. Caso possua mais licenças do Office para cadastrar, siga os passos novamente.    
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""   
+11.8. Clique em Concluir e pronto! O novo usuário foi cadastrado.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Caso possua mais licenças do Office para cadastrar, siga os passos novamente.    
+
 .. figure:: usuario6.png
     :scale: 100 %
     :align: center
@@ -782,8 +823,10 @@ Lync é um serviço de comunicação focado em produtividade e é utilizado para
     :align: center
     :alt: sites_publicos3
 
-16.4. Temos 4 etapas para a conclusão do Tutorial. Vamos clicar na parte inferior da página em Iniciar etapa 1:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+16.4. Temos 4 etapas para a conclusão do Tutorial.
+""""""""""""""""""""""""""""""""""""""""""""""""""
+Vamos clicar na parte inferior da página em Iniciar etapa 1:
+
 .. figure:: sites_publicos4.png
     :scale: 100 %
     :align: center
@@ -799,8 +842,10 @@ Clique em Sites , na parte superior da página ou abra o link em uma nova guia d
     :align: center
     :alt: sites_publicos5
 
-16.6. Para aplicar um tema e adicionar um logotipo: Em seu site público, clique na guia SITE. Para alterar a aparência, clique em Alterar a aparência e selecione um tema diferente na galeria. Para alterar o logotipo, clique em Alterar logotipo. Para avançar no tutorial, clique em ok, concluído:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+16.6. Para aplicar um tema e adicionar um logotipo
+""""""""""""""""""""""""""""""""""""""""""""""""""
+Em seu site público, clique na guia SITE. Para alterar a aparência, clique em Alterar a aparência e selecione um tema diferente na galeria. Para alterar o logotipo, clique em Alterar logotipo. Para avançar no tutorial, clique em ok, concluído:
+
 .. figure:: sites_publicos6.png
     :scale: 100 %
     :align: center
@@ -820,8 +865,14 @@ Clique em Sites , na parte superior da página ou abra o link em uma nova guia d
     :align: center
     :alt: sites_publicos8
 
-16.9. Convide algumas pessoas para ajustar seu site ou apenas para fazer comentários: Abra seu site público clicando em Sites, na parte superior da página, ou abra o link em uma nova guia do navegador. Clique em COMPARTILHAR. Insira um endereço de email ou nome da pessoa ou pessoas com as quais você deseja compartilhar o site. **Observação**: Não quer que essas pessoas possam fazer alterações? Clique em MOSTRAR OPÇÕES. Na lista suspensa, Selecione um nível de permissão ou grupo selecione Leitura. Digite uma mensagem que explica o que você deseja que seja feito e clique em Compartilhamento. Para continuar o tutorial, clique em ok, concluído.    
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+16.9. Convide algumas pessoas para ajustar seu site ou apenas para fazer comentários
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Abra seu site público clicando em Sites, na parte superior da página, ou abra o link em uma nova guia do navegador. Clique em COMPARTILHAR. 
+Insira um endereço de email ou nome da pessoa ou pessoas com as quais você deseja compartilhar o site.
+
+**Observação**: Não quer que essas pessoas possam fazer alterações? Clique em MOSTRAR OPÇÕES. Na lista suspensa, Selecione um nível de permissão ou grupo selecione Leitura. Digite uma mensagem que explica o que você deseja que seja feito e clique em Compartilhamento. Para continuar o tutorial, clique em ok, concluído.    
+
 .. figure:: sites_publicos9.png
     :scale: 100 %
     :align: center
@@ -834,8 +885,14 @@ Clique em Sites , na parte superior da página ou abra o link em uma nova guia d
     :align: center
     :alt: sites_publicos10
 
-16.11. Torne seu site visível na Internet para que todos possam vê-lo: Clique em Sites, na parte superior da página para abrir seu site público, ou abra o link em uma nova guia do navegador. Clique em SITE OFFLINE e clique em COLOCAR O SITE ONLINE. Observação: O URL do site atual é o `https://teste-public.sharepoint.com <https://teste-public.sharepoint.com/>`_. Deseja alterar este endereço? Mostraremos como fazer isso na próxima etapa. Para dar continuidade ao tutorial, clique em ok, concluído;
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+16.11. Torne seu site visível na Internet para que todos possam vê-lo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique em Sites, na parte superior da página para abrir seu site público, ou abra o link em uma nova guia do navegador.
+
+Clique em SITE OFFLINE e clique em COLOCAR O SITE ONLINE. 
+
+**Observação:** O URL do site atual é o `https://teste-public.sharepoint.com <https://teste-public.sharepoint.com/>`_. Deseja alterar este endereço? Mostraremos como fazer isso na próxima etapa. Para dar continuidade ao tutorial, clique em ok, concluído.
+
 .. figure:: sites_publicos11.png
     :scale: 100 %
     :align: center
@@ -868,22 +925,26 @@ Todos os dias temos oportunidades de fazer o melhor com o Office 365. Escolha o 
     :align: center
     :alt: login-office-02
 
-18.2. Para criar um novo documento no Word, Excel, PowerPoint ou OneNote  clique em OneDrive, disponível na parte superior da tela:    
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+18.2. Para criar um novo documento no Word, Excel, PowerPoint ou OneNote 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Clique em OneDrive, disponível na parte superior da tela:    
+
 .. figure:: criar-documentos-01.png
     :scale: 100 %
     :align: center
     :alt: criar-documentos-01
 
-12.3. Na página que for exibida clique em + Novo na barra de opções e escolha o tipo de documento que deseja criar:    
+18.3. Na página que for exibida clique em + Novo na barra de opções e escolha o tipo de documento que deseja criar:    
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: criar-documentos-02.png
     :scale: 100 %
     :align: center
     :alt: criar-documentos-02  
 
-12.4. No campo para o Nome do Documento digite um nome para o arquivo que deseja criar e após clique em Ok. O arquivo será salvo na sua pasta do OneDrive com este nome:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+18.4. No campo para o Nome do Documento digite um nome para o arquivo que deseja criar e após clique em Ok
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+O arquivo será salvo na sua pasta do OneDrive com este nome:
+
 .. figure:: criar-documentos-03.png
     :scale: 100 %
     :align: center
@@ -897,18 +958,18 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
     :align: center
     :alt: criar-documentos-04
 
-13. Entendendo o Painel do Usuário do Office 365
+19. Entendendo o Painel do Usuário do Office 365
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-13.1. Após logar, o Painel do Usuário é apresentado desta forma:
+19.1. Após logar, o Painel do Usuário é apresentado desta forma:
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: painel_usuario.png
     :scale: 100 %
     :align: center
     :alt: painel_usuario_geral
 
-13.2. Detalhes:
-"""""""""""""""    
+19.2. Mais Detalhes:
+""""""""""""""""""""    
 .. figure:: painel_usuario.png
     :scale: 100 %
     :align: center
@@ -924,10 +985,10 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
 
 * [5] Local utilizado para acessar as ferramentas de e-mail (Outlook), Calendário, Contatos (Pessoas), Notícias, Skydrive e Sites.
 
-14. Como compartilhar um documento no serviço Colaboração do Office 365?
+20. Como compartilhar um documento no serviço Colaboração do Office 365?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-14.1. Selecione o documento desejado:
+20.1. Selecione o documento desejado:
 """""""""""""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive3.png
     :scale: 100 %
@@ -935,32 +996,37 @@ Para utilizar as outras funcionalidades que seu Office 365 possui, clique nos li
     :alt: como_compartilhar_doc_drive3
 
 
-14.2. Na parte superior esquerda, clique em arquivo. Após clique em Compartilhar:
+20.2. Na parte superior esquerda, clique em arquivo. Após clique em Compartilhar:
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive4.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive4
 
-14.3. Aguarde o processamento:
+20.3. Aguarde o processamento:
 """"""""""""""""""""""""""""""
 .. figure:: como_compartilhar_doc_drive5.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive5
 
-14.4. Preencha os campos solicitados para o compartilhamento, como: e-mail da pessoa que você deseja compartilhar, mensagem pessoal, etc. O campo exigir entrado, caso seja marcado, quem receber o link do material terá que logar no portal do Office 365, portanto é um compartilhamento somente para usuários. Caso a opção não seja marcada, qualquer pessoa poderá ter acesso ao conteúdo.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+20.4. Preencha os campos solicitados para o compartilhamento, como
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+e-mail da pessoa que você deseja compartilhar, mensagem pessoal, etc. O campo exigir entrado, caso seja marcado, quem receber o link do material terá que logar no portal do Office 365, portanto é um compartilhamento somente para usuários.
+
+Caso a opção não seja marcada, qualquer pessoa poderá ter acesso ao conteúdo.
+
 .. figure:: como_compartilhar_doc_drive6.png
     :scale: 100 %
     :align: center
     :alt: como_compartilhar_doc_drive6
 
-15. Dificuldades com a senha do Office 365. O que fazer?
+21. Dificuldades com a senha do Office 365. O que fazer?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-16.1. Caso já tenha recebido a senha inicial, mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+21.1. Caso já tenha recebido a senha inicial
+""""""""""""""""""""""""""""""""""""""""""""
+Mas mesmo assim não consiga acessar o serviço, por motivos de erro de senha, deverá seguir as orientações abaixo:
 
 Acesse a página de login do Office, através do endereço `https://login.microsoftonline.com <https://login.microsoftonline.com>`_
 
@@ -969,29 +1035,35 @@ Acesse a página de login do Office, através do endereço `https://login.micros
     :align: center
     :alt: senha_office_1
 
-16.2. Clique na opção "Não consegue acessar sua conta?"
+21.2. Clique na opção "Não consegue acessar sua conta?"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. figure:: senha_office_2.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_2
 
-16.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações. Insira os dados solicitados e clique em "Avançar":
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+22.3. Você será direcionado para o processo de recuperação de senha, onde serão solicitadas algumas informações
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Insira os dados solicitados e clique em **Avançar**:
+
 .. figure:: senha_office_3.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_3
 
-16.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação. Verifique se está correto, pois um "código de verificação" será enviado para e-mail exibido:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+23.4. Nessa tela, será exibido parte do e-mail cadastrado, para a confirmação.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Verifique se está correto, pois um **código de verificação** será enviado para e-mail exibido:
+
 .. figure:: senha_office_4.jpg
     :scale: 100 %
     :align: center
     :alt: senha_office_4
 
-16.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft, volte para a verificação e clique em "E-mail":
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+23.5. No seu e-mail, abra a mensagem que recebeu e copie o código enviado pela Microsoft
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Volte para a verificação e clique em **E-mail**:
+
 .. figure:: senha_office_5.jpg
     :scale: 100 %
     :align: center
@@ -999,7 +1071,4 @@ Acesse a página de login do Office, através do endereço `https://login.micros
 
 Agora é só seguir as orientações de recuperação de senha, fornecidas pela Microsoft.
  
-**Importante:** O OFFICE 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização não possui a autonomia para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.
-
-    
-
+**Importante:** O office 365 é um produto da Microsoft, oferecido para clientes domésticos ou empresariais. Sendo assim, nossa Organização, pé-de-chinelo, não possui a autonomia necessária para alterar a senha do usuário, esse procedimento é efetuado diretamente com a Microsoft.

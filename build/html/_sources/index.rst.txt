@@ -91,6 +91,14 @@ Conteúdos:
     
     papa_francisco
 
+.. _a-forca-da-mentira:
+.. toctree::
+   :maxdepth: 1
+   :caption: Antissemitismo
+
+   a-forca-da-mentira
+
+
 .. _tenchu:
 .. toctree::
    :maxdepth: 1
