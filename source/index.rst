@@ -13,6 +13,21 @@ Conteúdos:
 
    bash
 
+.. _velocidade_memoria:
+.. toctree::
+   :maxdepth: 1
+   :caption: Verificar a velocidade da memoria no Windows
+
+   velocidade_memoria
+
+.. _ubuntu-wifi:
+.. toctree::
+   :maxdepth: 1
+   :caption: Resolvendo problema de conexao Wi-Fi no Ubuntu
+
+   ubuntu-wifi
+
+
 .. _galinhas:
 .. toctree::
    :maxdepth: 1
