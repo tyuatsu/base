@@ -1,0 +1,148 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Como verificar a velocidade da memória via linha de comando no Windows? &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Resolvendo problema de conexão Wi-Fi no Ubuntu" href="ubuntu-wifi.html" />
+    <link rel="prev" title="Dicas de bash, linha de comando para uso diário." href="bash.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ubuntu-wifi.html" title="Resolvendo problema de conexão Wi-Fi no Ubuntu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bash.html" title="Dicas de bash, linha de comando para uso diário."
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="como-verificar-a-velocidade-da-memoria-via-linha-de-comando-no-windows">
+<h1>Como verificar a velocidade da memória via linha de comando no Windows?<a class="headerlink" href="#como-verificar-a-velocidade-da-memoria-via-linha-de-comando-no-windows" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Este comando foi testado no Windows 10, mas deve funcionar também em outras versões deste sistema operacional.</p>
+</div>
+<div class="section" id="abra-o-prompt-de-comando-como-administrador">
+<span id="no-windows-existe-uma-forma-simples-para-ver-a-velocidade-frequencia-da-memoria-do-computador-basta-seguir-os-passos-abaixo"></span><h2>Abra o Prompt de Comando como Administrador.<a class="headerlink" href="#abra-o-prompt-de-comando-como-administrador" title="Permalink to this headline">¶</a></h2>
+<p>Digite o comando abaixo:</p>
+<blockquote>
+<div>wmic memorychip get speed</div></blockquote>
+<div class="section" id="apos-digitar-o-comando-tecle-enter-e-confira-o-resultado">
+<h3>Após digitar o comando, tecle <strong>ENTER</strong> e confira o resultado.<a class="headerlink" href="#apos-digitar-o-comando-tecle-enter-e-confira-o-resultado" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows">
+<h1>Como ativar e desativar a conexão de rede via linha de comando no Windows?<a class="headerlink" href="#como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo">
+<h2>Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:<a class="headerlink" href="#parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Abra o Prompt de Comando como Administrador<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Para desativar digite este comando e tecle ENTER:</p>
+<blockquote>
+<div>wmic path win32_networkadapter where NetConnectionID=”NomeDoAdaptador” call disable</div></blockquote>
+<p>Para ativar troque disable por enable, como segue:</p>
+<blockquote>
+<div>wmic path win32_networkadapter where NetConnectionID=”NomeDoAdaptador” call enable</div></blockquote>
+<p>Para maior praticidade você pode salvar este comando em um arquivo de lote <strong>(extensão .bat)</strong>, que poderá ser executado (como Administrador) em vez de digitar o comando toda vez que precisa ativar ou desativar a rede.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Como verificar a velocidade da memória via linha de comando no Windows?</a><ul>
+<li><a class="reference internal" href="#abra-o-prompt-de-comando-como-administrador">Abra o Prompt de Comando como Administrador.</a><ul>
+<li><a class="reference internal" href="#apos-digitar-o-comando-tecle-enter-e-confira-o-resultado">Após digitar o comando, tecle <strong>ENTER</strong> e confira o resultado.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows">Como ativar e desativar a conexão de rede via linha de comando no Windows?</a><ul>
+<li><a class="reference internal" href="#parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo">Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:</a><ul>
+<li><a class="reference internal" href="#id1">Abra o Prompt de Comando como Administrador</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="bash.html"
+                        title="previous chapter">Dicas de bash, linha de comando para uso diário.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ubuntu-wifi.html"
+                        title="next chapter">Resolvendo problema de conexão Wi-Fi no Ubuntu</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/velocidade_memoria.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ubuntu-wifi.html" title="Resolvendo problema de conexão Wi-Fi no Ubuntu"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bash.html" title="Dicas de bash, linha de comando para uso diário."
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.6.
+    </div>
+  </body>
+</html>

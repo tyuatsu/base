@@ -1,0 +1,134 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Resolvendo problema de conexão Wi-Fi no Ubuntu &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Educação para adultos x fuga das galinhas" href="galinhas.html" />
+    <link rel="prev" title="Como verificar a velocidade da memória via linha de comando no Windows?" href="velocidade_memoria.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="galinhas.html" title="Educação para adultos x fuga das galinhas"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="velocidade_memoria.html" title="Como verificar a velocidade da memória via linha de comando no Windows?"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="resolvendo-problema-de-conexao-wi-fi-no-ubuntu">
+<h1>Resolvendo problema de conexão Wi-Fi no Ubuntu<a class="headerlink" href="#resolvendo-problema-de-conexao-wi-fi-no-ubuntu" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Se você informa login e senha corretos e o Ubuntu não consegue estabelecer a conexão Wi-Fi, experimente executar os passos seguintes.</p>
+</div>
+<div class="section" id="abra-uma-janela-do-terminal-shell-do-ubuntu">
+<h2>Abra uma janela do Terminal/Shell do Ubuntu.<a class="headerlink" href="#abra-uma-janela-do-terminal-shell-do-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>Digite o comando abaixo e tecle <strong>ENTER</strong>:</p>
+<blockquote>
+<div>sudo nano /etc/NetworkManager/NetworkManager.conf</div></blockquote>
+<p>Se solicitada, digite a senha do usuário root e tecle <strong>ENTER</strong>.</p>
+<p>Se tudo der certo até aqui, será exibido um conteúdo semelhante a este abaixo:</p>
+<blockquote>
+<div><p>[main]
+plugins=ifupdown,keyfile</p>
+<p>[ifupdown]
+managed=false</p>
+</div></blockquote>
+<p>Pressione SETA-PARA-BAIXO para descer até o final do arquivo e adicione o seguinte conteúdo.</p>
+<blockquote>
+<div>[device]
+wifi.scan-rand-mac-address=no</div></blockquote>
+<p>Pressione <strong>CTRL+O</strong> e tecle <strong>ENTER</strong> para gravar a alteração.</p>
+<p>Pressione <strong>CTRL+X</strong> para sair do editor de texto.</p>
+<p>Reinicie o Linux e tente conectar novamente.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Resolvendo problema de conexão Wi-Fi no Ubuntu</a><ul>
+<li><a class="reference internal" href="#abra-uma-janela-do-terminal-shell-do-ubuntu">Abra uma janela do Terminal/Shell do Ubuntu.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="velocidade_memoria.html"
+                        title="previous chapter">Como verificar a velocidade da memória via linha de comando no Windows?</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="galinhas.html"
+                        title="next chapter">Educação para adultos x fuga das galinhas</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ubuntu-wifi.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="galinhas.html" title="Educação para adultos x fuga das galinhas"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="velocidade_memoria.html" title="Como verificar a velocidade da memória via linha de comando no Windows?"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.6.
+    </div>
+  </body>
+</html>
