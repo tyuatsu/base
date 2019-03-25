@@ -16,14 +16,14 @@ Conteúdos:
 .. _velocidade_memoria:
 .. toctree::
    :maxdepth: 1
-   :caption: Verificar a velocidade da memoria no Windows
+   :caption: Verificar Memoria no Windows
 
    velocidade_memoria
 
 .. _ubuntu-wifi:
 .. toctree::
    :maxdepth: 1
-   :caption: Resolvendo problema de conexao Wi-Fi no Ubuntu
+   :caption: Conexao Wi-Fi no Ubuntu
 
    ubuntu-wifi
 
