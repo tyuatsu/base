@@ -6,29 +6,29 @@ Como verificar a velocidade da memória via linha de comando no Windows?
 .. _No Windows existe uma forma simples para ver a velocidade (frequência) da memória do computador. Basta seguir os passos abaixo:
 
 Abra o Prompt de Comando como Administrador.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""
 
-Digite o comando abaixo:
+Digite o comando abaixo::
 
     wmic memorychip get speed
 
 Após digitar o comando, tecle **ENTER** e confira o resultado.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 Como ativar e desativar a conexão de rede via linha de comando no Windows?
 --------------------------------------------------------------------------
 
 Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Abra o Prompt de Comando como Administrador
-"""""""""""""""""""""""""""""""""""""""""""
+Abra o Prompt de Comando como Administrador.
+""""""""""""""""""""""""""""""""""""""""""""
 
-Para desativar digite este comando e tecle ENTER:
+Para desativar digite este comando e tecle ENTER::
 
     wmic path win32_networkadapter where NetConnectionID="NomeDoAdaptador" call disable
     
-Para ativar troque disable por enable, como segue:
+Para ativar troque disable por enable, como segue::
 
     wmic path win32_networkadapter where NetConnectionID="NomeDoAdaptador" call enable
     
