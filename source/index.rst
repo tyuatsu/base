@@ -32,9 +32,9 @@ Conteúdos:
    :maxdepth: 1
    :caption: Assinatura Digital PDF 
 
-   _assinar-pdf
+   assinar-pdf
    
-   .. _html-to-pdf:
+.. _html-to-pdf:
 .. toctree::
    :maxdepth: 1
    :caption: Converter HTML para PDF
