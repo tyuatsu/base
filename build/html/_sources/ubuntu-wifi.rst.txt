@@ -6,13 +6,13 @@ Resolvendo problema de conexão Wi-Fi no Ubuntu
 Abra uma janela do Terminal/Shell do Ubuntu.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Digite o comando abaixo e tecle **ENTER**:
+Digite o comando abaixo e tecle **ENTER**::
 
     sudo nano /etc/NetworkManager/NetworkManager.conf
 
 Se solicitada, digite a senha do usuário root e tecle **ENTER**.
 
-Se tudo der certo até aqui, será exibido um conteúdo semelhante a este abaixo:
+Se tudo der certo até aqui, será exibido um conteúdo semelhante a este abaixo::
 
     [main]
     plugins=ifupdown,keyfile
@@ -20,7 +20,7 @@ Se tudo der certo até aqui, será exibido um conteúdo semelhante a este abaixo
     [ifupdown]
     managed=false
     
-Pressione SETA-PARA-BAIXO para descer até o final do arquivo e adicione o seguinte conteúdo.
+Pressione SETA-PARA-BAIXO para descer até o final do arquivo e adicione o seguinte conteúdo::
 
     [device]
     wifi.scan-rand-mac-address=no

@@ -48,27 +48,28 @@
 <div class="section" id="abra-o-prompt-de-comando-como-administrador">
 <span id="no-windows-existe-uma-forma-simples-para-ver-a-velocidade-frequencia-da-memoria-do-computador-basta-seguir-os-passos-abaixo"></span><h2>Abra o Prompt de Comando como Administrador.<a class="headerlink" href="#abra-o-prompt-de-comando-como-administrador" title="Permalink to this headline">¶</a></h2>
 <p>Digite o comando abaixo:</p>
-<blockquote>
-<div>wmic memorychip get speed</div></blockquote>
-<div class="section" id="apos-digitar-o-comando-tecle-enter-e-confira-o-resultado">
-<h3>Após digitar o comando, tecle <strong>ENTER</strong> e confira o resultado.<a class="headerlink" href="#apos-digitar-o-comando-tecle-enter-e-confira-o-resultado" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wmic</span> <span class="n">memorychip</span> <span class="n">get</span> <span class="n">speed</span>
+</pre></div>
 </div>
+<p>Após digitar o comando, tecle <strong>ENTER</strong> e confira o resultado.</p>
 </div>
 </div>
 <div class="section" id="como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows">
 <h1>Como ativar e desativar a conexão de rede via linha de comando no Windows?<a class="headerlink" href="#como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo">
 <h2>Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:<a class="headerlink" href="#parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Abra o Prompt de Comando como Administrador<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Para desativar digite este comando e tecle ENTER:</p>
-<blockquote>
-<div>wmic path win32_networkadapter where NetConnectionID=”NomeDoAdaptador” call disable</div></blockquote>
-<p>Para ativar troque disable por enable, como segue:</p>
-<blockquote>
-<div>wmic path win32_networkadapter where NetConnectionID=”NomeDoAdaptador” call enable</div></blockquote>
-<p>Para maior praticidade você pode salvar este comando em um arquivo de lote <strong>(extensão .bat)</strong>, que poderá ser executado (como Administrador) em vez de digitar o comando toda vez que precisa ativar ou desativar a rede.</p>
 </div>
+<div class="section" id="id1">
+<h2>Abra o Prompt de Comando como Administrador.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Para desativar digite este comando e tecle ENTER:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wmic</span> <span class="n">path</span> <span class="n">win32_networkadapter</span> <span class="n">where</span> <span class="n">NetConnectionID</span><span class="o">=</span><span class="s2">&quot;NomeDoAdaptador&quot;</span> <span class="n">call</span> <span class="n">disable</span>
+</pre></div>
+</div>
+<p>Para ativar troque disable por enable, como segue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wmic</span> <span class="n">path</span> <span class="n">win32_networkadapter</span> <span class="n">where</span> <span class="n">NetConnectionID</span><span class="o">=</span><span class="s2">&quot;NomeDoAdaptador&quot;</span> <span class="n">call</span> <span class="n">enable</span>
+</pre></div>
+</div>
+<p>Para maior praticidade você pode salvar este comando em um arquivo de lote <strong>(extensão .bat)</strong>, que poderá ser executado (como Administrador) em vez de digitar o comando toda vez que precisa ativar ou desativar a rede.</p>
 </div>
 </div>
 
@@ -81,17 +82,12 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Como verificar a velocidade da memória via linha de comando no Windows?</a><ul>
-<li><a class="reference internal" href="#abra-o-prompt-de-comando-como-administrador">Abra o Prompt de Comando como Administrador.</a><ul>
-<li><a class="reference internal" href="#apos-digitar-o-comando-tecle-enter-e-confira-o-resultado">Após digitar o comando, tecle <strong>ENTER</strong> e confira o resultado.</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#abra-o-prompt-de-comando-como-administrador">Abra o Prompt de Comando como Administrador.</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#como-ativar-e-desativar-a-conexao-de-rede-via-linha-de-comando-no-windows">Como ativar e desativar a conexão de rede via linha de comando no Windows?</a><ul>
-<li><a class="reference internal" href="#parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo">Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:</a><ul>
-<li><a class="reference internal" href="#id1">Abra o Prompt de Comando como Administrador</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#parar-desativar-ou-ativar-uma-conexao-de-rede-via-linha-de-comando-no-windows-siga-os-passos-abaixo">Parar desativar ou ativar uma conexão de rede via linha de comando no Windows siga os passos abaixo:</a></li>
+<li><a class="reference internal" href="#id1">Abra o Prompt de Comando como Administrador.</a></li>
 </ul>
 </li>
 </ul>

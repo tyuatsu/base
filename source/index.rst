@@ -27,6 +27,19 @@ Conteúdos:
 
    ubuntu-wifi
 
+.. _assinar-pdf:
+.. toctree::
+   :maxdepth: 1
+   :caption: Assinatura Digital PDF 
+
+   _assinar-pdf
+   
+   .. _html-to-pdf:
+.. toctree::
+   :maxdepth: 1
+   :caption: Converter HTML para PDF
+
+   html-to-pdf
 
 .. _galinhas:
 .. toctree::
