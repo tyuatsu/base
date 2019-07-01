@@ -8,13 +8,13 @@ Procedimento
 
 Instalação::
 	
-Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_.
+Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_
 
-**Observação::** Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
+**Observação:** Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
  
 Após a execução do **adksetup.exe** vamos escolher a segunda opção: **download features for installation on a separate computer.**
 
-Escolha o local de instalação em **C:\ADK-Offline**, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.
+.. note:: Escolha o local de instalação em **C:\ADK-Offline**, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.
 
 
 Instalar o USMT
