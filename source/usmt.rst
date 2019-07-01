@@ -26,18 +26,18 @@ Entre na pasta ADK-Offline e execute o adksetup.exe e coloque no local de instal
 
 Escolha a primeira opção e em seguida selecione a ferramenta no caso, apenas o usmt.
 
-Iniciar o processo do usmt na máquina alvo::
-""""""""""""""""""""""""""""""""""""""""""""
+Iniciar o processo do usmt na máquina alvo
+""""""""""""""""""""""""""""""""""""""""""
 
 .. note:: O teste à seguir foi feito no meu Oracle VM VirtualBOX
 
-1. mapear a pasta compartilhada o qual irar armazenar o perfil do usuario::
+Mapear a pasta compartilhada o qual irar armazenar o perfil do usuario::
  
    net use e: \\vboxsrv\andre
 
    mkdir e:\Downloads\backup_user
 
-2. Iniciar o processo do usmt::
+Iniciar o processo do usmt::
 
    cd "C:\ADK\Assessment and Deployment Kit\User State Migration Tool\amd64"
 
@@ -52,11 +52,9 @@ Iniciar o processo do usmt na máquina alvo::
     :align: center
     :alt: Snipping Tool Capture Scanstate
 
-
 **OBS**:: Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
   
-
-3. Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
+Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
 
    cd "C:\ADK\Assessment and Deployment Kit\User State Migration Tool\amd64"
 
@@ -74,8 +72,8 @@ Iniciar o processo do usmt na máquina alvo::
 
 Faça um logon com o usuário andre e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..).
 
-Consideracoes Finais:
----------------------
+Consideracoes Finais
+--------------------
 
 No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário... mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.
 
@@ -87,8 +85,8 @@ USMT com Criptografia
 
 .. note:: Caso queira utilizar a migração com mais segurança, podemos usar a criptografia.
 
-Veja um exemplo abaixo:
------------------------
+Veja um exemplo abaixo
+----------------------
 
 Migração completa do perfil do usuário chamado **lidiane**, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).
 
