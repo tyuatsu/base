@@ -31,7 +31,7 @@ Iniciar o processo do usmt na máquina alvo
 
 .. note:: O teste à seguir foi feito no meu Oracle VM VirtualBOX
 
-Mapear a pasta compartilhada o qual irar armazenar o perfil do usuario::
+Mapear a pasta compartilhada o qual irar armazenar o perfil do usuário::
  
    net use e: \\vboxsrv\andre
 
