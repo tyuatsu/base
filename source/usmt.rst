@@ -64,7 +64,7 @@ Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar 
 
    loadstate.exe \\vboxsrv\andre\Downloads\backup_user\USMT\ /ue:*\* /ui:*\andre /i:miguser.xml /i:migapp.xml /nocompress
 
-.. figure:: capture-1-loadstate.png
+.. figure:: capture-2-loadstate.png
     :scale: 60 %
     :align: center
     :alt: Snipping Tool Capture Loadstate
