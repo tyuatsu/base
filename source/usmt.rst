@@ -72,7 +72,7 @@ Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar 
 
 Faça um logon com o usuário andre e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..).
 
-Consideracoes Finais
+Considerações Finais
 --------------------
 
 No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário... mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.
@@ -122,7 +122,7 @@ Realizar a cópia critografada do perfil completo da máquina.
    loadstate.exe e:\notekaren\perfilmigration /ue:*\* /ui:*\karen /i:migapp.xml /i:miguser.xml /i:migdocs.xml /v:13 /lae /lac:12345678 /decrypt /key:delldakaren10
 
 
-.. note:: remova a opção //lae e //lac se a conta do perfil pertencer a um domínio. Use apenas para contas locais. Saiba mais sobre esses parâmetros em:  https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-loadstate-syntax
+.. note:: remova a opção /lae e /lac se a conta do perfil pertencer a um domínio. Use apenas para contas locais. Saiba mais sobre esses parâmetros em:  https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-loadstate-syntax
 
 3. Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário karen e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)
 
