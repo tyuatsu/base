@@ -52,7 +52,7 @@ Iniciar o processo do usmt::
     :align: center
     :alt: Snipping Tool Capture Scanstate
 
-**OBS**:: Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
+**OBS**: Isso Irá criar uma pasta nova chamada **USMT** em e:\\Downloads\\backup_user.
   
 Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
 
