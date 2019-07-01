@@ -88,7 +88,7 @@ USMT com Criptografia
 Veja um exemplo abaixo
 ----------------------
 
-Migração completa do perfil do usuário chamado **lidiane**, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).
+Migração completa do perfil do usuário chamado **karen**, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).
 
 
 Realizar a cópia critografada do perfil completo da máquina.
@@ -104,9 +104,9 @@ Realizar a cópia critografada do perfil completo da máquina.
 
    conecte o hd externo (e:) ou se estiver em rede mapeia para o seu fileserver:
 
-   mkdir e:\notelidiane\perfilmigration
+   mkdir e:\notekaren\perfilmigration
 
-   scanstate.exe e:\notelidiane\perfilmigration /ue:*\* /ui:*\Lidia /i:migapp.xml /i:miguser.xml /i:migdocs.xml /v:5 /vsc /encrypt /key:delldalidiane10
+   scanstate.exe e:\notekaren\perfilmigration /ue:*\* /ui:*\karen /i:migapp.xml /i:miguser.xml /i:migdocs.xml /v:5 /vsc /encrypt /key:delldakaren10
 
 
 2. Restaurar o perfil em outra máquina.
@@ -119,8 +119,16 @@ Realizar a cópia critografada do perfil completo da máquina.
 
    conecte o hd externo (e:) ou se estiver em rede mapeia para o seu fileserver:
 
-   loadstate.exe e:\notelidiane\perfilmigration /ue:*\* /ui:*\Lidia /i:migapp.xml /i:miguser.xml /i:migdocs.xml /v:13 /lae /lac:12345678 /decrypt /key:delldalidiane10
+   loadstate.exe e:\notekaren\perfilmigration /ue:*\* /ui:*\karen /i:migapp.xml /i:miguser.xml /i:migdocs.xml /v:13 /lae /lac:12345678 /decrypt /key:delldakaren10
 
 
-3. Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário lidiane e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)
+.. note:: remova a opção //lae e //lac se a conta do perfil pertencer a um domínio. Use apenas para contas locais. Saiba mais sobre esses parâmetros em:  https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-loadstate-syntax
+
+3. Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário karen e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)
+
+
+
+
+
+
 
