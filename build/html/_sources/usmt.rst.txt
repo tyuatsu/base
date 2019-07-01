@@ -6,18 +6,15 @@ User State Migration Tool 'USMT'
 Procedimento
 """"""""""""
 
-Instalação:: 
+Instalação::
 	
-   Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_.
+Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_
 
-Observação:
------------
-
-Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
+**Observação:** Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
  
-Apos a execução do **adksetup.exe** vamos escolher a segunda opção: **download features for installation on a separate computer**
+Após a execução do **adksetup.exe** vamos escolher a segunda opção: **download features for installation on a separate computer.**
 
-Escolha o local de instalação em **C:\ADK-Offline**, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.
+.. note:: Escolha o local de instalação em **C:\\ADK-Offline**, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.
 
 
 Instalar o USMT
@@ -29,18 +26,18 @@ Entre na pasta ADK-Offline e execute o adksetup.exe e coloque no local de instal
 
 Escolha a primeira opção e em seguida selecione a ferramenta no caso, apenas o usmt.
 
-Iniciar o processo do usmt na máquina alvo:
-"""""""""""""""""""""""""""""""""""""""""""
+Iniciar o processo do usmt na máquina alvo
+""""""""""""""""""""""""""""""""""""""""""
 
 .. note:: O teste à seguir foi feito no meu Oracle VM VirtualBOX
 
-1. mapear a pasta compartilhada o qual irar armazenar o perfil do usuario::
+Mapear a pasta compartilhada o qual irar armazenar o perfil do usuário::
  
    net use e: \\vboxsrv\andre
 
    mkdir e:\Downloads\backup_user
 
-2. Iniciar o processo do usmt::
+Iniciar o processo do usmt::
 
    cd "C:\ADK\Assessment and Deployment Kit\User State Migration Tool\amd64"
 
@@ -55,14 +52,9 @@ Iniciar o processo do usmt na máquina alvo:
     :align: center
     :alt: Snipping Tool Capture Scanstate
 
-
-OBS:
-----
-
-Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
+**OBS**: Isso Irá criar uma pasta nova chamada **USMT** em e:\\Downloads\\backup_user.
   
-
-3. Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
+Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
 
    cd "C:\ADK\Assessment and Deployment Kit\User State Migration Tool\amd64"
 
@@ -72,7 +64,7 @@ Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
 
    loadstate.exe \\vboxsrv\andre\Downloads\backup_user\USMT\ /ue:*\* /ui:*\andre /i:miguser.xml /i:migapp.xml /nocompress
 
-.. figure:: capture-1-loadstate.png
+.. figure:: capture-2-loadstate.png
     :scale: 60 %
     :align: center
     :alt: Snipping Tool Capture Loadstate
@@ -80,8 +72,8 @@ Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
 
 Faça um logon com o usuário andre e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..).
 
-Consideracoes Finais:
----------------------
+Consideracoes Finais
+--------------------
 
 No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário... mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.
 
@@ -93,8 +85,8 @@ USMT com Criptografia
 
 .. note:: Caso queira utilizar a migração com mais segurança, podemos usar a criptografia.
 
-Veja um exemplo abaixo:
------------------------
+Veja um exemplo abaixo
+----------------------
 
 Migração completa do perfil do usuário chamado **lidiane**, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).
 
