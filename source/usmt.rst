@@ -6,16 +6,13 @@ User State Migration Tool 'USMT'
 Procedimento
 """"""""""""
 
-Instalação:: 
+Instalação::
 	
-   Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_.
+Baixe o adksetup.exe pelo site: `docs.microsoft.com <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>`_.
 
-Observação:
------------
-
-Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
+**Observação::** Nesse exemplo usaremos windows adk, para sistema windows 10 professional.
  
-Apos a execução do **adksetup.exe** vamos escolher a segunda opção: **download features for installation on a separate computer**
+Após a execução do **adksetup.exe** vamos escolher a segunda opção: **download features for installation on a separate computer.**
 
 Escolha o local de instalação em **C:\ADK-Offline**, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.
 
@@ -29,8 +26,8 @@ Entre na pasta ADK-Offline e execute o adksetup.exe e coloque no local de instal
 
 Escolha a primeira opção e em seguida selecione a ferramenta no caso, apenas o usmt.
 
-Iniciar o processo do usmt na máquina alvo:
-"""""""""""""""""""""""""""""""""""""""""""
+Iniciar o processo do usmt na máquina alvo::
+""""""""""""""""""""""""""""""""""""""""""""
 
 .. note:: O teste à seguir foi feito no meu Oracle VM VirtualBOX
 
@@ -56,10 +53,7 @@ Iniciar o processo do usmt na máquina alvo:
     :alt: Snipping Tool Capture Scanstate
 
 
-OBS:
-----
-
-Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
+**OBS**:: Isso Irá criar uma pasta nova chamada **USMT** em e:\Downloads\backup_user.
   
 
 3. Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt)::
