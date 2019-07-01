@@ -6,6 +6,13 @@ Esta é uma documentação pessoal sobre diversos assuntos, inclusive informáti
 
 Conteúdos:
 
+.. _usmt:
+.. toctree::
+   :maxdepth: 1
+   :caption: USMT do Windows ADK
+
+   usmt
+
 .. _bash:
 .. toctree::
    :maxdepth: 1
