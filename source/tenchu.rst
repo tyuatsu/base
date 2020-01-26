@@ -159,7 +159,6 @@ Fim dos cheats, vamos continuar agora com o guia completo desse jogo.
 
 Complete Walkthrough Tenchu 3 - Wrath of Heaven 
 """""""""""""""""""""""""""""""""""""""""""""""
------------------------------------------------
 
 .. note:: Para mais guias legais como esse você só encontra em: `https://gamefaqs.gamespot.com <https://gamefaqs.gamespot.com>`_
  
@@ -5081,8 +5080,6 @@ and last level again.
 
 =======================================================================
                       Frequently Asked Questions
-=======================================================================
-
 =======================================================================
 
 Q = Question
