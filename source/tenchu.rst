@@ -5177,15 +5177,6 @@ of it that was mostly gaps and you had to jump on the small planks of
 wood? Well look in the pit until you find a platform. This platform is 
 like a little bridge. Jump down onto it and look for it down there. 
 
-==========================================================================
-
-==========================================================================
-
-Vamos continuar agora com o guia completo do jogo Tenchu Shadow para PSP
-
-==========================================================================
-
-
 Tenchu Shadow Assassins (PSP) - Walkthrough
 --------------------------------------------
 
@@ -5193,7 +5184,6 @@ Tenchu Shadow Assassins (PSP) - Walkthrough
     :scale: 43 %
     :align: center
     :alt: Tenchu Shadow Assassins Portable PSP
-
 
 .. note:: Para mais guias legais como esse você só encontra em: `https://gamefaqs.gamespot.com <https://gamefaqs.gamespot.com>`_
 
@@ -5217,7 +5207,6 @@ Table of Contents
 12. Stage 9 - Escorting the Princess                             
 13. Stage 10 - Sekiya Naotada                                    
                                                     
-
 ===============
 I. INTRODUCTION                                                 
 ===============
@@ -5839,31 +5828,7 @@ trouble.
 
 Congratulations, you beat Tenchu: Shadow Assassins!
 
-
 .. figure:: ayame.png
     :scale: 43 %
     :align: center
     :alt: Tenchu Shadow Assassin PSP
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
