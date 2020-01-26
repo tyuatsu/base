@@ -5242,7 +5242,7 @@ Triangle - Ninja Vision
 Shows you enemy field of vision and hiding areas. You'll be using this
 a lot too to gauge where enemies are.
 
-Square - Stealth Kill / Hissatsu
+Square - Stealth Kill (Hissatsu)
 
 When an enemy is near you and is not in alert mode, you can use the
 square button to stealth kill him. However if he is in alert mode
