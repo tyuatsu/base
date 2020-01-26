@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Microsoft 365 helps create a secure modern workplace &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -52,10 +50,10 @@
 <p>At Microsoft, we’re constantly exploring new technologies and processes to help ensure we have the most productive and secure environment for the company and for our customers and partners. Like many large enterprises, we need to ensure that we are implementing security controls that keep pace with the significant increase we’re seeing in mobile data usage, cloud adoption, digitization, and Bring Your Own Devices (BYODs).</p>
 <p>This technical case study describes the multifaced approach that Microsoft is taking to create a secure modern workplace. The key is Microsoft 365, our solution of integrated and intelligent components that includes Office 365, Windows 10 , and Enterprise Mobility + Security. We’re using Microsoft 365 to enhance digital security in the following four areas:</p>
 <ul class="simple">
-<li>Identity protection</li>
-<li>Information protection</li>
-<li>Threat protection</li>
-<li>Security management</li>
+<li><p>Identity protection</p></li>
+<li><p>Information protection</p></li>
+<li><p>Threat protection</p></li>
+<li><p>Security management</p></li>
 </ul>
 <p>We explore how Microsoft Core Services Engineering and Operations (CSEO), formerly Microsoft IT, is addressing each of these areas in the following sections.</p>
 <div class="section" id="our-approach-to-security">
@@ -89,9 +87,9 @@
 <div class="section" id="identity-based-protection-guidelines">
 <h2>Identity-based protection guidelines<a class="headerlink" href="#identity-based-protection-guidelines" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Continue your move to the cloud. The more systems and environments that you transition from legacy, on-premises systems to Azure, the more you’ll be able to utilize Azure AD security capabilities including identity protection. Your challenge might be in securing legacy apps running in on-premises environments that don’t support the latest authentication protocols. In this case, you might be able to secure legacy apps by enforcing conditional access security at the device level. For legacy apps with a web front-end, you can direct them to open in an Intune-protected Edge browser.</li>
-<li>Implement automated processes to monitor and manage device health. Transition your manual device management practices to automated systems to help you stay ahead of the wave of BYODs connecting to corporate resources, and to programmatically perform device health checks at scale. At Microsoft, using Azure AD and Intune to automatically manage conditional access for all connected devices not only enhances our security but also streamlines operations.</li>
-<li>Drive cultural change by communicating the importance of securing personal devices. Requiring that employees enroll their personal devices in Intune to better secure them can pose a cultural challenge. People are concerned about their privacy, but need to understand the potential impact or threat that bringing their unsecured personal devices to work can have and why it’s therefore so important to secure all devices corporate and personal that connect to work-based environments. At Microsoft, we developed a detailed communication plan with support from our leadership to emphasize the rationale for our drive to secure personal devices. By reiterating the reasons why it’s important and by having executive sponsorship to capture employee attention, we were able to rapidly onboard most of our personal devices into our device-management systems.</li>
+<li><p>Continue your move to the cloud. The more systems and environments that you transition from legacy, on-premises systems to Azure, the more you’ll be able to utilize Azure AD security capabilities including identity protection. Your challenge might be in securing legacy apps running in on-premises environments that don’t support the latest authentication protocols. In this case, you might be able to secure legacy apps by enforcing conditional access security at the device level. For legacy apps with a web front-end, you can direct them to open in an Intune-protected Edge browser.</p></li>
+<li><p>Implement automated processes to monitor and manage device health. Transition your manual device management practices to automated systems to help you stay ahead of the wave of BYODs connecting to corporate resources, and to programmatically perform device health checks at scale. At Microsoft, using Azure AD and Intune to automatically manage conditional access for all connected devices not only enhances our security but also streamlines operations.</p></li>
+<li><p>Drive cultural change by communicating the importance of securing personal devices. Requiring that employees enroll their personal devices in Intune to better secure them can pose a cultural challenge. People are concerned about their privacy, but need to understand the potential impact or threat that bringing their unsecured personal devices to work can have and why it’s therefore so important to secure all devices corporate and personal that connect to work-based environments. At Microsoft, we developed a detailed communication plan with support from our leadership to emphasize the rationale for our drive to secure personal devices. By reiterating the reasons why it’s important and by having executive sponsorship to capture employee attention, we were able to rapidly onboard most of our personal devices into our device-management systems.</p></li>
 </ul>
 </div>
 <div class="section" id="protecting-information-wherever-it-goes">
@@ -116,10 +114,10 @@ We needed to implement a new, holistic data discovery and protection solution th
 <div class="section" id="information-protection-guidelines">
 <h2>Information protection guidelines<a class="headerlink" href="#information-protection-guidelines" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Plan and fine tune classification rules. When rolling out your initial information protection deployment, make sure to allocate time for reviewing classification rules and verifying classification actions. As with most deployments, we suggest you start with a small population to work out false positives before deploying to a larger number of users. In our experience, we realized that false positives can also help uncover other sensitive data that may not have otherwise been considered. At Microsoft, we believe that a careful, ongoing analysis of false positives is an effective way to improve data detection and monitoring processes. As we iterate on modifications to classifications and rules, we gain more confidence that the changes made are appropriate when we see the number of false positives trend downward. These improved classifications are then applied across the company.</li>
-<li>Design intuitive data labels. If you expect multiple departments and regions to all apply your data sensitivity labels frequently and accurately, you must confirm that your terminology makes sense to everyone; otherwise, you’ll have mislabeled data at best or unlabeled data at worst. Achieving labeling consistency was a more significant challenge than the technical implementation. Because this new taxonomy would be applied across all our departments and regions, we engaged stakeholders from many teams and spent considerable time building a taxonomy that all parties could understand and accurately apply to their data.</li>
-<li>Don’t be surprised at the number of faulty business processes found during the discovery and validation phases. If you haven’t previously had a programmatic means to evaluate whether data is being protected in your business processes, it’s not uncommon to discover a variety of faulty business processes, or even a lack of business process or classification. At Microsoft, we view uncovering business practices that don’t adhere to our security practices early in the data life cycle as a good thing, because it presents an opportunity to educate employees on proper data handling and to encourage corrective behavior. Addressing these issues as they’re identified, then continuing to monitor to ensure adherence, should reduce false-positive rates over time and that is your best evidence that you’re optimally protecting your corporate information.</li>
-<li>Educate employees on data protection and why it’s important. To successfully implement data protection in your organization, focus on the cultural change to the same extent that you focus on deploying Office 365 DLP and Azure Information Protection. Design an education and awareness program to teach employees how to properly classify and label content by using the Azure Information Protection capabilities within their familiar Office 365 apps. At Microsoft, we’ve developed education and awareness training programs that help remind our employees about business processes and proper labeling and storage of sensitive content. This proactive approach helps us remove faulty business practices, which in turn reduces the risk of unauthorized disclosures or inadvertent leaks of sensitive content.</li>
+<li><p>Plan and fine tune classification rules. When rolling out your initial information protection deployment, make sure to allocate time for reviewing classification rules and verifying classification actions. As with most deployments, we suggest you start with a small population to work out false positives before deploying to a larger number of users. In our experience, we realized that false positives can also help uncover other sensitive data that may not have otherwise been considered. At Microsoft, we believe that a careful, ongoing analysis of false positives is an effective way to improve data detection and monitoring processes. As we iterate on modifications to classifications and rules, we gain more confidence that the changes made are appropriate when we see the number of false positives trend downward. These improved classifications are then applied across the company.</p></li>
+<li><p>Design intuitive data labels. If you expect multiple departments and regions to all apply your data sensitivity labels frequently and accurately, you must confirm that your terminology makes sense to everyone; otherwise, you’ll have mislabeled data at best or unlabeled data at worst. Achieving labeling consistency was a more significant challenge than the technical implementation. Because this new taxonomy would be applied across all our departments and regions, we engaged stakeholders from many teams and spent considerable time building a taxonomy that all parties could understand and accurately apply to their data.</p></li>
+<li><p>Don’t be surprised at the number of faulty business processes found during the discovery and validation phases. If you haven’t previously had a programmatic means to evaluate whether data is being protected in your business processes, it’s not uncommon to discover a variety of faulty business processes, or even a lack of business process or classification. At Microsoft, we view uncovering business practices that don’t adhere to our security practices early in the data life cycle as a good thing, because it presents an opportunity to educate employees on proper data handling and to encourage corrective behavior. Addressing these issues as they’re identified, then continuing to monitor to ensure adherence, should reduce false-positive rates over time and that is your best evidence that you’re optimally protecting your corporate information.</p></li>
+<li><p>Educate employees on data protection and why it’s important. To successfully implement data protection in your organization, focus on the cultural change to the same extent that you focus on deploying Office 365 DLP and Azure Information Protection. Design an education and awareness program to teach employees how to properly classify and label content by using the Azure Information Protection capabilities within their familiar Office 365 apps. At Microsoft, we’ve developed education and awareness training programs that help remind our employees about business processes and proper labeling and storage of sensitive content. This proactive approach helps us remove faulty business practices, which in turn reduces the risk of unauthorized disclosures or inadvertent leaks of sensitive content.</p></li>
 </ul>
 </div>
 <div class="section" id="detecting-and-responding-to-attacks-more-quickly">
@@ -151,8 +149,8 @@ We needed to implement a new, holistic data discovery and protection solution th
 <div class="section" id="threat-detection-and-response-guidelines">
 <h2>Threat detection and response guidelines<a class="headerlink" href="#threat-detection-and-response-guidelines" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Invest in your platform and your instrumentation so that you can analyze and respond to threats at scale. Agility and scalability require forward thinking and building platforms that enable next-generation threat protection. Windows Defender ATP and Office 365 ATP give us an integrated platform that improves our ability to analyze an attack while enhancing our remediation capabilities that don’t disrupt employee productivity. These technologies are key to performing effective, programmatic, and timely remediation of malware attacks. With these tools, we can inventory our assets, monitor system and network health, and then take immediate action to quarantine and repair infected systems and delete phishing emails.</li>
-<li>Invest in your people. Although Office 365 DLP and Windows Defender ATP are critical tools that your SecOps and analysts can use to better protect your infrastructure, threat protection starts with your employees. Every person in the enterprise has a part to play in helping keep malware at bay. Educate your employees about their important role as part of the new security perimeter and what they must do to protect themselves and co-workers about digital threats and security risks. At Microsoft, we’re focusing on streamlining the communication between incident response teams and eliminating persistent admin rights in favor of providing access at the right time. We provide training for our employees on security best practices, risks, and reinforce key concepts through communication campaigns that help keep the proper behaviors foremost in employees’ minds.</li>
+<li><p>Invest in your platform and your instrumentation so that you can analyze and respond to threats at scale. Agility and scalability require forward thinking and building platforms that enable next-generation threat protection. Windows Defender ATP and Office 365 ATP give us an integrated platform that improves our ability to analyze an attack while enhancing our remediation capabilities that don’t disrupt employee productivity. These technologies are key to performing effective, programmatic, and timely remediation of malware attacks. With these tools, we can inventory our assets, monitor system and network health, and then take immediate action to quarantine and repair infected systems and delete phishing emails.</p></li>
+<li><p>Invest in your people. Although Office 365 DLP and Windows Defender ATP are critical tools that your SecOps and analysts can use to better protect your infrastructure, threat protection starts with your employees. Every person in the enterprise has a part to play in helping keep malware at bay. Educate your employees about their important role as part of the new security perimeter and what they must do to protect themselves and co-workers about digital threats and security risks. At Microsoft, we’re focusing on streamlining the communication between incident response teams and eliminating persistent admin rights in favor of providing access at the right time. We provide training for our employees on security best practices, risks, and reinforce key concepts through communication campaigns that help keep the proper behaviors foremost in employees’ minds.</p></li>
 </ul>
 </div>
 <div class="section" id="building-intelligent-security-management">
@@ -174,9 +172,9 @@ We needed to implement a new, holistic data discovery and protection solution th
 <div class="section" id="security-management-guidelines">
 <h2>Security management guidelines<a class="headerlink" href="#security-management-guidelines" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong>Combine security alert data with organizational context.</strong> Combining information about the nature of a malware attack with details about the targeted user will help you understand a breach’s potential scope. Individuals who hold highly confidential corporate information might require a much more significant response than those who don’t. At Microsoft, using the Security API to connect our security processes with Azure AD and Office 365 gives us this critical insight and helps us adjust our method and level of response for each attack.</li>
-<li><strong>Transition from custom hacks to a production API.</strong> Shift your security developers (DevSec personnel) from custom coding security interfaces to working with the Security API. This should alleviate much of the resource drain associated with maintaining brittle code, and it enables you to multiply the value of each development effort by coding one integration for one product, and then reusing the same code to integrate with any other product that supports the Security API.</li>
-<li><strong>Recruit your developers’ and SecOps’ brainpower to integrate security practices within DevOps.</strong> The Security API enables you to reduce the cost, effort, and operational risk associated with custom-code solutions. This helps you better use the skill set that your developers already possess, and it enables them to them quickly transition to implementing security practices. At Microsoft, we’re using this strategy to scale our DevSecOps team as needed. Those developers who aren’t as familiar with security aspects can work alongside SecOps team members to streamline their efforts.</li>
+<li><p><strong>Combine security alert data with organizational context.</strong> Combining information about the nature of a malware attack with details about the targeted user will help you understand a breach’s potential scope. Individuals who hold highly confidential corporate information might require a much more significant response than those who don’t. At Microsoft, using the Security API to connect our security processes with Azure AD and Office 365 gives us this critical insight and helps us adjust our method and level of response for each attack.</p></li>
+<li><p><strong>Transition from custom hacks to a production API.</strong> Shift your security developers (DevSec personnel) from custom coding security interfaces to working with the Security API. This should alleviate much of the resource drain associated with maintaining brittle code, and it enables you to multiply the value of each development effort by coding one integration for one product, and then reusing the same code to integrate with any other product that supports the Security API.</p></li>
+<li><p><strong>Recruit your developers’ and SecOps’ brainpower to integrate security practices within DevOps.</strong> The Security API enables you to reduce the cost, effort, and operational risk associated with custom-code solutions. This helps you better use the skill set that your developers already possess, and it enables them to them quickly transition to implementing security practices. At Microsoft, we’re using this strategy to scale our DevSecOps team as needed. Those developers who aren’t as familiar with security aspects can work alongside SecOps team members to streamline their efforts.</p></li>
 </ul>
 </div>
 <div class="section" id="conclusions">
@@ -199,19 +197,19 @@ We needed to implement a new, holistic data discovery and protection solution th
 <div class="section" id="for-more-information">
 <h2>For more information<a class="headerlink" href="#for-more-information" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="microsoft.com/itshowcase">Microsoft IT Showcase</a></li>
-<li><a class="reference external" href="https://docs.microsoft.com/en-us/microsoft-365/enterprise/index#pivot=itadmin&amp;panel=it-security">Microsoft 365 Enterprise documentation and resources</a></li>
+<li><p><a class="reference external" href="microsoft.com/itshowcase">Microsoft IT Showcase</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/microsoft-365/enterprise/index#pivot=itadmin&amp;panel=it-security">Microsoft 365 Enterprise documentation and resources</a></p></li>
 </ul>
 <p><a class="reference external" href="https://www.youtube.com/playlist?list=PLjlQh-Q54TQIj-SFPnWkK4uDXwFrwDC3_">Security at Microsoft</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/1051/IT-Expert-Roundtable-Information-protection-at-Microsoft-June-2018">IT Expert Roundtable: Information protection at Microsoft</a></li>
-<li><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/974/Security-expert-roundtable-advanced-threat-protection-at-Microsoft-October-2017">Security expert roundtable: advanced threat protection at Microsoft</a></li>
-<li><a class="reference external" href="https://www.microsoft.com/en-us/security/intelligence-security-api">Microsoft Graph Security API</a></li>
-<li><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/1074/IT-expert-roundtable-Microsoft-365-security">IT expert roundtable: Microsoft 365 security</a></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/1051/IT-Expert-Roundtable-Information-protection-at-Microsoft-June-2018">IT Expert Roundtable: Information protection at Microsoft</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/974/Security-expert-roundtable-advanced-threat-protection-at-Microsoft-October-2017">Security expert roundtable: advanced threat protection at Microsoft</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/security/intelligence-security-api">Microsoft Graph Security API</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/itshowcase/Article/Content/1074/IT-expert-roundtable-Microsoft-365-security">IT expert roundtable: Microsoft 365 security</a></p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Todos direitos são reservados à © 2018 Microsoft Corporation. Este documento tem como propósito, propagar apenas informações sobre novas tecnologias e Não implica qualquer tipo de imposição ou adoção comercial de software, em particular da Microsoft. Visto que não mantemos nenhum tipo de vínculo de qualquer natureza com a referida Empresa. Para mais informações, acesse a fonte original em <a class="reference external" href="https://docs.microsoft.com/">https://docs.microsoft.com/</a></p>
+<p class="admonition-title">Note</p>
+<p>Todos direitos são reservados à © 2018 Microsoft Corporation. Este documento tem como propósito, propagar apenas informações sobre novas tecnologias e Não implica qualquer tipo de imposição ou adoção comercial de software, em particular da Microsoft. Visto que não mantemos nenhum tipo de vínculo de qualquer natureza com a referida Empresa. Para mais informações, acesse a fonte original em <a class="reference external" href="https://docs.microsoft.com/">https://docs.microsoft.com/</a></p>
 </div>
 </div>
 </div>
@@ -266,13 +264,11 @@ We needed to implement a new, holistic data discovery and protection solution th
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -298,7 +294,7 @@ We needed to implement a new, holistic data discovery and protection solution th
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

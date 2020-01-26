@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Como usar Certificados Digitais no Linux &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -47,7 +45,7 @@
 <h3>Informações de um Certificado<a class="headerlink" href="#informacoes-de-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>No linux, há algumas formas de verificar informações de certificados, veja algumas formas e suas ferramentas.</p>
 <ul class="simple">
-<li><strong>Keytool</strong></li>
+<li><p><strong>Keytool</strong></p></li>
 </ul>
 <p>No Ubuntu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span>
@@ -74,7 +72,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>OpenSSL</strong></li>
+<li><p><strong>OpenSSL</strong></p></li>
 </ul>
 <p>Para verificar informações como fingerprint, versão, algoritmos de assinatura, dentro outros a ferramenta OpenSSL. Algumas <a class="reference external" href="https://www.sslshopper.com/article-most-common-openssl-commands.html">referências sobre</a>.
 Verificar Certificados - listar informação do certificado padrão x509:</p>
@@ -117,7 +115,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><strong>Fingerprint</strong> - para verificar uma impressão digital (fingerprint) de um certificado no linux:</p>
+<li><p><strong>Fingerprint</strong> - para verificar uma impressão digital (fingerprint) de um certificado no linux:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">noout</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">cer</span> <span class="o">-</span><span class="n">fingerprint</span>
 </pre></div>
 </div>
@@ -132,7 +130,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 <h3>Importar um certificado<a class="headerlink" href="#importar-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>Veja como importar um certificado.</p>
 <ul>
-<li><p class="first"><strong>Ubuntu</strong>:</p>
+<li><p><strong>Ubuntu</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\\ <span class="n">Sem</span> <span class="n">alias</span>
 <span class="n">keytool</span> <span class="o">-</span><span class="n">importcert</span> <span class="o">-</span><span class="n">keystore</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">.</span><span class="n">CER</span><span class="o">&gt;</span>
 
@@ -141,7 +139,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Red Hat</strong>::</p>
+<li><p><strong>Red Hat</strong>::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">importcert</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="n">certificado</span><span class="o">.</span><span class="n">cer</span>
 </pre></div>
 </div>
@@ -206,13 +204,11 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -235,7 +231,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Como Criar Midia de Instalação do Windows 10 &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -46,14 +44,15 @@
 <h1>Como Criar Midia de Instalação do Windows 10<a class="headerlink" href="#como-criar-midia-de-instalacao-do-windows-10" title="Permalink to this headline">¶</a></h1>
 <p>com boot pelo Flash Disk USB (Pendrive) no Linux</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Atenção! Todos os passoas à seguir, foram feitos com a distro Linux: “Fedora”.</p>
+<p class="admonition-title">Note</p>
+<p>Atenção! Todos os passoas à seguir, foram feitos com a distro Linux: “Fedora”.</p>
 </div>
 <p>Existem muitos tutorias já prontos para o Ubuntu/Debian por aí na net… só pesquisar que você acham. Mas como não encontrei nada parecido para o Fedora Linux, decidi então postar essa dica aqui.</p>
 <div class="section" id="baixe-a-imagem-iso-dvd-de-instalacao">
 <span id="siga-os-passos-abaixo"></span><h2>1. Baixe a imagem .iso (DVD de instalação)<a class="headerlink" href="#baixe-a-imagem-iso-dvd-de-instalacao" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><a class="reference external" href="https://www.microsoft.com/en-us/software-download/">https://www.microsoft.com/en-us/software-download/</a></div></blockquote>
+<div><p><a class="reference external" href="https://www.microsoft.com/en-us/software-download/">https://www.microsoft.com/en-us/software-download/</a></p>
+</div></blockquote>
 <p>Eu fiz o download da versão PT-BR 64 bits do windows 10: Win10_1803_BrazilianPortuguese_x64.iso (4.4GB).</p>
 <p>Vou usá-la para reinstalar todo o Sistema Operacional no meu notebook, que infelizmente sofreu falhas severas nos seus drivers (tudo corrompido), que nem o restrui.exe e systemreset.exe da vida conseguem dar conta do problema. Isso aconteceu depois de uma parada crítica de energia, no meio de uma atualização do windows update. - E não sei porque cargas d’água ele corrompeu os drivers de video e rede…, algum cazto do universo durante esse processo. Eu sei lá. Tem coisas que só a Microsoft faz por você!</p>
 <div class="section" id="preparar-o-pendrive">
@@ -72,8 +71,8 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Se tiver na mão, pode usar o gparted para formatar o seu pendrive.</p>
+<p class="admonition-title">Note</p>
+<p>Se tiver na mão, pode usar o gparted para formatar o seu pendrive.</p>
 </div>
 </div>
 </div>
@@ -92,7 +91,7 @@
 <div class="section" id="agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora">
 <h3>2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora::<a class="headerlink" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
+<div><p>mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
 git clone <a class="reference external" href="https://github.com/slacka/WoeUSB.git">https://github.com/slacka/WoeUSB.git</a>
 cd WoeUSB
 autoreconf –force –install
@@ -100,7 +99,8 @@ autoreconf –force –install
 make &amp;&amp; sudo make install
 cd /usr/bin
 sudo ln -s /usr/local/bin/woeusb
-sudo ln -s /usr/local/bin/woeusbgui</div></blockquote>
+sudo ln -s /usr/local/bin/woeusbgui</p>
+</div></blockquote>
 <p>Nesse momento você pode carregar o WoeUSB (GUI – Modo Gráfico) no seu Gnome.</p>
 <p>Ou faça como eu, execute o comando direto no shell:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">woeusb</span> <span class="o">--</span><span class="n">device</span> <span class="n">Win10_1803_BrazilianPortuguese_x64</span><span class="o">.</span><span class="n">iso</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span>
@@ -166,13 +166,11 @@ Fora isso, o instalador rodou normal e todo o processo de instalação foi suave
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -198,7 +196,7 @@ Fora isso, o instalador rodou normal e todo o processo de instalação foi suave
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Ansible &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -42,8 +40,8 @@ Ela foi feita com base na <a class="reference external" href="http://docs.ansibl
 <h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
 <p>No momento da instalação foi utilizado:</p>
 <ul class="simple">
-<li><strong>SO</strong>: Centos 7.2</li>
-<li><strong>Ansible</strong>: 2.1.1.0</li>
+<li><p><strong>SO</strong>: Centos 7.2</p></li>
+<li><p><strong>Ansible</strong>: 2.1.1.0</p></li>
 </ul>
 <p>Instalando:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># yum install epel-release wget</span>
@@ -106,15 +104,16 @@ changed: [192.168.25.14]</p>
 <p>TASK [debug] <strong>***************************************************************</strong>
 ok: [192.168.25.14] =&gt; {</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>“uname.stdout_lines”: [</dt>
-<dd>“Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux”</dd>
+<div><dl class="simple">
+<dt>“uname.stdout_lines”: [</dt><dd><p>“Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux”</p>
+</dd>
 </dl>
 <p>]</p>
 </div></blockquote>
 <p>}</p>
 <blockquote>
-<div>to retry, use: –limit &#64;/root/.ansible-retry/servidores.retry</div></blockquote>
+<div><p>to retry, use: –limit &#64;/root/.ansible-retry/servidores.retry</p>
+</div></blockquote>
 <p>PLAY RECAP <strong>*****************************************************************</strong>
 192.168.25.14              : ok=3    changed=1    unreachable=0    failed=0
 192.168.25.15              : ok=0    changed=0    unreachable=1    failed=0</p>
@@ -148,13 +147,11 @@ ok: [192.168.25.14] =&gt; {</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -174,7 +171,7 @@ ok: [192.168.25.14] =&gt; {</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

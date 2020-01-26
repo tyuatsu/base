@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>User State Migration Tool ‘USMT’ &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -45,8 +43,8 @@
   <div class="section" id="user-state-migration-tool-usmt">
 <h1>User State Migration Tool ‘USMT’<a class="headerlink" href="#user-state-migration-tool-usmt" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">A Ferramenta de Migração de Estado do Usuário é um programa utilitário de linha de comando desenvolvido pela Microsoft que permite que os usuários se sintam à vontade com linguagens de script para transferir arquivos e configurações entre PCs com Windows.</p>
+<p class="admonition-title">Note</p>
+<p>A Ferramenta de Migração de Estado do Usuário é um programa utilitário de linha de comando desenvolvido pela Microsoft que permite que os usuários se sintam à vontade com linguagens de script para transferir arquivos e configurações entre PCs com Windows.</p>
 </div>
 <div class="section" id="procedimento">
 <h2>Procedimento<a class="headerlink" href="#procedimento" title="Permalink to this headline">¶</a></h2>
@@ -55,8 +53,8 @@
 <p><strong>Observação:</strong> Nesse exemplo usaremos windows adk, para sistema windows 10 professional.</p>
 <p>Após a execução do <strong>adksetup.exe</strong> vamos escolher a segunda opção: <strong>download features for installation on a separate computer.</strong></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Escolha o local de instalação em <strong>C:\ADK-Offline</strong>, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.</p>
+<p class="admonition-title">Note</p>
+<p>Escolha o local de instalação em <strong>C:\ADK-Offline</strong>, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.</p>
 </div>
 </div>
 <div class="section" id="instalar-o-usmt">
@@ -70,8 +68,8 @@
 <div class="section" id="iniciar-o-processo-do-usmt-na-maquina-alvo">
 <h2>Iniciar o processo do usmt na máquina alvo<a class="headerlink" href="#iniciar-o-processo-do-usmt-na-maquina-alvo" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">O teste à seguir foi feito no meu Oracle VM VirtualBOX</p>
+<p class="admonition-title">Note</p>
+<p>O teste à seguir foi feito no meu Oracle VM VirtualBOX</p>
 </div>
 <p>Mapear a pasta compartilhada o qual irar armazenar o perfil do usuário:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="n">use</span> <span class="n">e</span><span class="p">:</span> \\<span class="n">vboxsrv</span>\<span class="n">andre</span>
@@ -90,7 +88,7 @@
 </pre></div>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/capture-1-scanstate.png"><img alt="Snipping Tool Capture Scanstate" src="_images/capture-1-scanstate.png" style="width: 511.8px; height: 251.4px;" /></a>
+<a class="reference internal image-reference" href="_images/capture-1-scanstate.png"><img alt="Snipping Tool Capture Scanstate" src="_images/capture-1-scanstate.png" style="width: 511.79999999999995px; height: 251.39999999999998px;" /></a>
 </div>
 <p><strong>OBS</strong>: Isso Irá criar uma pasta nova chamada <strong>USMT</strong> em e:\Downloads\backup_user.</p>
 <p>Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt):</p>
@@ -110,21 +108,21 @@
 </div>
 </div>
 <div class="section" id="consideracoes-finais">
-<h1>Consideracoes Finais<a class="headerlink" href="#consideracoes-finais" title="Permalink to this headline">¶</a></h1>
+<h1>Considerações Finais<a class="headerlink" href="#consideracoes-finais" title="Permalink to this headline">¶</a></h1>
 <p>No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário… mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.</p>
 <p>Caso a máquina esteja ingressado num Domain, tanto a máquina alvo como a de destino, devem estar sempre no mesmo domain ou grupo de trabalho, antes de se iniciar o restore do loadstate do perfil do usuário!</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Caso queira utilizar a migração com mais segurança, podemos usar a criptografia.</p>
+<p class="admonition-title">Note</p>
+<p>Caso queira utilizar a migração com mais segurança, podemos usar a criptografia.</p>
 </div>
 </div>
 <div class="section" id="veja-um-exemplo-abaixo">
 <h1>Veja um exemplo abaixo<a class="headerlink" href="#veja-um-exemplo-abaixo" title="Permalink to this headline">¶</a></h1>
-<p>Migração completa do perfil do usuário chamado <strong>lidiane</strong>, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).</p>
+<p>Migração completa do perfil do usuário chamado <strong>karen</strong>, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).</p>
 <div class="section" id="realizar-a-copia-critografada-do-perfil-completo-da-maquina">
 <h2>Realizar a cópia critografada do perfil completo da máquina.<a class="headerlink" href="#realizar-a-copia-critografada-do-perfil-completo-da-maquina" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Instale o software <strong>adksetup.exe</strong> em ambas as máquinas!</li>
+<li><p>Instale o software <strong>adksetup.exe</strong> em ambas as máquinas!</p></li>
 </ol>
 <p>(notedell):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">elevate</span> <span class="n">cmd</span> <span class="n">administrator</span>
@@ -133,13 +131,13 @@
 
 <span class="n">conecte</span> <span class="n">o</span> <span class="n">hd</span> <span class="n">externo</span> <span class="p">(</span><span class="n">e</span><span class="p">:)</span> <span class="n">ou</span> <span class="n">se</span> <span class="n">estiver</span> <span class="n">em</span> <span class="n">rede</span> <span class="n">mapeia</span> <span class="n">para</span> <span class="n">o</span> <span class="n">seu</span> <span class="n">fileserver</span><span class="p">:</span>
 
-<span class="n">mkdir</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notelidiane</span>\<span class="n">perfilmigration</span>
+<span class="n">mkdir</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notekaren</span>\<span class="n">perfilmigration</span>
 
-<span class="n">scanstate</span><span class="o">.</span><span class="n">exe</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notelidiane</span>\<span class="n">perfilmigration</span> <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">Lidia</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migdocs</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">v</span><span class="p">:</span><span class="mi">5</span> <span class="o">/</span><span class="n">vsc</span> <span class="o">/</span><span class="n">encrypt</span> <span class="o">/</span><span class="n">key</span><span class="p">:</span><span class="n">delldalidiane10</span>
+<span class="n">scanstate</span><span class="o">.</span><span class="n">exe</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notekaren</span>\<span class="n">perfilmigration</span> <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">karen</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migdocs</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">v</span><span class="p">:</span><span class="mi">5</span> <span class="o">/</span><span class="n">vsc</span> <span class="o">/</span><span class="n">encrypt</span> <span class="o">/</span><span class="n">key</span><span class="p">:</span><span class="n">delldakaren10</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>Restaurar o perfil em outra máquina.</li>
+<li><p>Restaurar o perfil em outra máquina.</p></li>
 </ol>
 <p>(note-sam):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">elevate</span> <span class="n">cmd</span> <span class="n">administrator</span>
@@ -148,11 +146,15 @@
 
 <span class="n">conecte</span> <span class="n">o</span> <span class="n">hd</span> <span class="n">externo</span> <span class="p">(</span><span class="n">e</span><span class="p">:)</span> <span class="n">ou</span> <span class="n">se</span> <span class="n">estiver</span> <span class="n">em</span> <span class="n">rede</span> <span class="n">mapeia</span> <span class="n">para</span> <span class="n">o</span> <span class="n">seu</span> <span class="n">fileserver</span><span class="p">:</span>
 
-<span class="n">loadstate</span><span class="o">.</span><span class="n">exe</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notelidiane</span>\<span class="n">perfilmigration</span> <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">Lidia</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migdocs</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">v</span><span class="p">:</span><span class="mi">13</span> <span class="o">/</span><span class="n">lae</span> <span class="o">/</span><span class="n">lac</span><span class="p">:</span><span class="mi">12345678</span> <span class="o">/</span><span class="n">decrypt</span> <span class="o">/</span><span class="n">key</span><span class="p">:</span><span class="n">delldalidiane10</span>
+<span class="n">loadstate</span><span class="o">.</span><span class="n">exe</span> <span class="n">e</span><span class="p">:</span>\<span class="n">notekaren</span>\<span class="n">perfilmigration</span> <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">karen</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migdocs</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">v</span><span class="p">:</span><span class="mi">13</span> <span class="o">/</span><span class="n">lae</span> <span class="o">/</span><span class="n">lac</span><span class="p">:</span><span class="mi">12345678</span> <span class="o">/</span><span class="n">decrypt</span> <span class="o">/</span><span class="n">key</span><span class="p">:</span><span class="n">delldakaren10</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>remova a opção /lae e /lac se a conta do perfil pertencer a um domínio. Use elas apenas para as contas locais. Saiba mais sobre esses e outros parâmetros em:  <a class="reference external" href="https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-loadstate-syntax">https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-loadstate-syntax</a> ou <a class="reference external" href="https://blogs.technet.microsoft.com/askds/2011/05/05/usmt-and-u-migrating-only-fresh-domain-profiles/">https://blogs.technet.microsoft.com/askds/2011/05/05/usmt-and-u-migrating-only-fresh-domain-profiles/</a></p>
+</div>
 <ol class="arabic simple" start="3">
-<li>Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário lidiane e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)</li>
+<li><p>Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário karen e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)</p></li>
 </ol>
 </div>
 </div>
@@ -171,7 +173,7 @@
 <li><a class="reference internal" href="#iniciar-o-processo-do-usmt-na-maquina-alvo">Iniciar o processo do usmt na máquina alvo</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#consideracoes-finais">Consideracoes Finais</a></li>
+<li><a class="reference internal" href="#consideracoes-finais">Considerações Finais</a></li>
 <li><a class="reference internal" href="#veja-um-exemplo-abaixo">Veja um exemplo abaixo</a><ul>
 <li><a class="reference internal" href="#realizar-a-copia-critografada-do-perfil-completo-da-maquina">Realizar a cópia critografada do perfil completo da máquina.</a></li>
 </ul>
@@ -192,13 +194,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -224,7 +224,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

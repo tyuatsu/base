@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>L1TF - L1 Terminal Fault &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -45,8 +43,8 @@
   <div class="section" id="l1tf-l1-terminal-fault">
 <h1>L1TF - L1 Terminal Fault<a class="headerlink" href="#l1tf-l1-terminal-fault" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">O conteúdo original está publicado em <a class="reference external" href="https://www.kernel.org/doc/html/latest/admin-guide/l1tf.html">https://www.kernel.org/doc/html/latest/admin-guide/l1tf.html</a></p>
+<p class="admonition-title">Note</p>
+<p>O conteúdo original está publicado em <a class="reference external" href="https://www.kernel.org/doc/html/latest/admin-guide/l1tf.html">https://www.kernel.org/doc/html/latest/admin-guide/l1tf.html</a></p>
 </div>
 <p>L1 Terminal Fault is a hardware vulnerability which allows unprivileged
 speculative access to data which is available in the Level 1 Data Cache
@@ -58,15 +56,15 @@ for the access, has the Present bit cleared or other reserved bits set.</p>
 vulnerability is not present on:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Processors from AMD, Centaur and other non Intel vendors</li>
-<li>Older processor models, where the CPU family is &lt; 6</li>
-<li>A range of Intel ATOM processors (Cedarview, Cloverview, Lincroft,
-Penwell, Pineview, Silvermont, Airmont, Merrifield)</li>
-<li>The Intel XEON PHI family</li>
-<li>Intel processors which have the ARCH_CAP_RDCL_NO bit set in the
+<li><p>Processors from AMD, Centaur and other non Intel vendors</p></li>
+<li><p>Older processor models, where the CPU family is &lt; 6</p></li>
+<li><p>A range of Intel ATOM processors (Cedarview, Cloverview, Lincroft,
+Penwell, Pineview, Silvermont, Airmont, Merrifield)</p></li>
+<li><p>The Intel XEON PHI family</p></li>
+<li><p>Intel processors which have the ARCH_CAP_RDCL_NO bit set in the
 IA32_ARCH_CAPABILITIES MSR. If the bit is set the CPU is not affected
 by the Meltdown vulnerability either. These CPUs should become
-available by end of 2018.</li>
+available by end of 2018.</p></li>
 </ul>
 </div></blockquote>
 <p>Whether a processor is affected or not can be read out from the L1TF
@@ -76,24 +74,24 @@ vulnerability file in sysfs. See <a class="reference internal" href="#l1tf-sys-i
 <h2>Related CVEs<a class="headerlink" href="#related-cves" title="Permalink to this headline">¶</a></h2>
 <p>The following CVE entries are related to the L1TF vulnerability:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="22%" />
-<col width="28%" />
-<col width="50%" />
+<col style="width: 22%" />
+<col style="width: 28%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>CVE-2018-3615</td>
-<td>L1 Terminal Fault</td>
-<td>SGX related aspects</td>
+<tbody>
+<tr class="row-odd"><td><p>CVE-2018-3615</p></td>
+<td><p>L1 Terminal Fault</p></td>
+<td><p>SGX related aspects</p></td>
 </tr>
-<tr class="row-even"><td>CVE-2018-3620</td>
-<td>L1 Terminal Fault</td>
-<td>OS, SMM related aspects</td>
+<tr class="row-even"><td><p>CVE-2018-3620</p></td>
+<td><p>L1 Terminal Fault</p></td>
+<td><p>OS, SMM related aspects</p></td>
 </tr>
-<tr class="row-odd"><td>CVE-2018-3646</td>
-<td>L1 Terminal Fault</td>
-<td>Virtualization related aspects</td>
+<tr class="row-odd"><td><p>CVE-2018-3646</p></td>
+<td><p>L1 Terminal Fault</p></td>
+<td><p>Virtualization related aspects</p></td>
 </tr>
 </tbody>
 </table>
@@ -173,17 +171,17 @@ mitigations are active. The relevant sysfs file is:</p>
 <p>/sys/devices/system/cpu/vulnerabilities/l1tf</p>
 <p>The possible values in this file are:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="47%" />
-<col width="53%" />
+<col style="width: 47%" />
+<col style="width: 53%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>‘Not affected’</td>
-<td>The processor is not vulnerable</td>
+<tbody>
+<tr class="row-odd"><td><p>‘Not affected’</p></td>
+<td><p>The processor is not vulnerable</p></td>
 </tr>
-<tr class="row-even"><td>‘Mitigation: PTE Inversion’</td>
-<td>The host protection is active</td>
+<tr class="row-even"><td><p>‘Mitigation: PTE Inversion’</p></td>
+<td><p>The host protection is active</p></td>
 </tr>
 </tbody>
 </table>
@@ -192,37 +190,37 @@ mitigations are active. The relevant sysfs file is:</p>
 information is appended to the ‘Mitigation: PTE Inversion’ part:</p>
 <blockquote>
 <div><ul>
-<li><p class="first">SMT status:</p>
-<table border="1" class="docutils">
+<li><p>SMT status:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="57%" />
-<col width="43%" />
+<col style="width: 57%" />
+<col style="width: 43%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>‘VMX: SMT vulnerable’</td>
-<td>SMT is enabled</td>
+<tbody>
+<tr class="row-odd"><td><p>‘VMX: SMT vulnerable’</p></td>
+<td><p>SMT is enabled</p></td>
 </tr>
-<tr class="row-even"><td>‘VMX: SMT disabled’</td>
-<td>SMT is disabled</td>
+<tr class="row-even"><td><p>‘VMX: SMT disabled’</p></td>
+<td><p>SMT is disabled</p></td>
 </tr>
 </tbody>
 </table>
 </li>
-<li><p class="first">L1D Flush mode:</p>
-<table border="1" class="docutils">
+<li><p>L1D Flush mode:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="47%" />
-<col width="53%" />
+<col style="width: 47%" />
+<col style="width: 53%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>‘L1D vulnerable’</td>
-<td>L1D flushing is disabled</td>
+<tbody>
+<tr class="row-odd"><td><p>‘L1D vulnerable’</p></td>
+<td><p>L1D flushing is disabled</p></td>
 </tr>
-<tr class="row-even"><td>‘L1D conditional cache flushes’</td>
-<td>L1D flush is conditionally enabled</td>
+<tr class="row-even"><td><p>‘L1D conditional cache flushes’</p></td>
+<td><p>L1D flush is conditionally enabled</p></td>
 </tr>
-<tr class="row-odd"><td>‘L1D cache flushes’</td>
-<td>L1D flush is unconditionally enabled</td>
+<tr class="row-odd"><td><p>‘L1D cache flushes’</p></td>
+<td><p>L1D flush is unconditionally enabled</p></td>
 </tr>
 </tbody>
 </table>
@@ -253,11 +251,10 @@ scenarios where guest VMEXIT/VMENTER are rare the performance impact is
 minimal. Virtio and mechanisms like posted interrupts are designed to
 confine the VMEXITs to a bare minimum, but specific configurations and
 application scenarios might still suffer from a high VMEXIT rate.</p>
-<dl class="docutils">
-<dt>The kernel provides two L1D flush modes:</dt>
-<dd><ul class="first last simple">
-<li>conditional (‘cond’)</li>
-<li>unconditional (‘always’)</li>
+<dl class="simple">
+<dt>The kernel provides two L1D flush modes:</dt><dd><ul class="simple">
+<li><p>conditional (‘cond’)</p></li>
+<li><p>unconditional (‘always’)</p></li>
 </ul>
 </dd>
 </dl>
@@ -342,64 +339,64 @@ to control it. It also provides a kernel command line interface to
 control SMT.</p>
 <p>The kernel command line interface consists of the following options:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="16%" />
-<col width="84%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>nosmt</td>
-<td>Affects the bring up of the secondary CPUs during boot. The
+<tbody>
+<tr class="row-odd"><td><p>nosmt</p></td>
+<td><p>Affects the bring up of the secondary CPUs during boot. The
 kernel tries to bring all present CPUs online during the
 boot process. “nosmt” makes sure that from each physical
 core only one - the so called primary (hyper) thread is
 activated. Due to a design flaw of Intel processors related
 to Machine Check Exceptions the non primary siblings have
 to be brought up at least partially and are then shut down
-again.  “nosmt” can be undone via the sysfs interface.</td>
+again.  “nosmt” can be undone via the sysfs interface.</p></td>
 </tr>
-<tr class="row-even"><td>nosmt=force</td>
-<td>Has the same effect as “nosmt” but it does not allow to
-undo the SMT disable via the sysfs interface.</td>
+<tr class="row-even"><td><p>nosmt=force</p></td>
+<td><p>Has the same effect as “nosmt” but it does not allow to
+undo the SMT disable via the sysfs interface.</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
 <p>The sysfs interface provides two files:</p>
 <ul class="simple">
-<li>/sys/devices/system/cpu/smt/control</li>
-<li>/sys/devices/system/cpu/smt/active</li>
+<li><p>/sys/devices/system/cpu/smt/control</p></li>
+<li><p>/sys/devices/system/cpu/smt/active</p></li>
 </ul>
 <p>/sys/devices/system/cpu/smt/control:</p>
 <blockquote>
 <div><p>This file allows to read out the SMT control state and provides the
 ability to disable or (re)enable SMT. The possible states are:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="22%" />
-<col width="78%" />
+<col style="width: 22%" />
+<col style="width: 78%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>on</td>
-<td>SMT is supported by the CPU and enabled. All
+<tbody>
+<tr class="row-odd"><td><p>on</p></td>
+<td><p>SMT is supported by the CPU and enabled. All
 logical CPUs can be onlined and offlined without
-restrictions.</td>
+restrictions.</p></td>
 </tr>
-<tr class="row-even"><td>off</td>
-<td>SMT is supported by the CPU and disabled. Only
+<tr class="row-even"><td><p>off</p></td>
+<td><p>SMT is supported by the CPU and disabled. Only
 the so called primary SMT threads can be onlined
 and offlined without restrictions. An attempt to
-online a non-primary sibling is rejected</td>
+online a non-primary sibling is rejected</p></td>
 </tr>
-<tr class="row-odd"><td>forceoff</td>
-<td>Same as ‘off’ but the state cannot be controlled.
-Attempts to write to the control file are rejected.</td>
+<tr class="row-odd"><td><p>forceoff</p></td>
+<td><p>Same as ‘off’ but the state cannot be controlled.
+Attempts to write to the control file are rejected.</p></td>
 </tr>
-<tr class="row-even"><td>notsupported</td>
-<td>The processor does not support SMT. It’s therefore
+<tr class="row-even"><td><p>notsupported</p></td>
+<td><p>The processor does not support SMT. It’s therefore
 not affected by the SMT implications of L1TF.
-Attempts to write to the control file are rejected.</td>
+Attempts to write to the control file are rejected.</p></td>
 </tr>
 </tbody>
 </table>
@@ -407,15 +404,16 @@ Attempts to write to the control file are rejected.</td>
 <p>The possible states which can be written into this file to control SMT
 state are:</p>
 <ul class="simple">
-<li>on</li>
-<li>off</li>
-<li>forceoff</li>
+<li><p>on</p></li>
+<li><p>off</p></li>
+<li><p>forceoff</p></li>
 </ul>
 </div></blockquote>
 <p>/sys/devices/system/cpu/smt/active:</p>
 <blockquote>
-<div>This file reports whether SMT is enabled and active, i.e. if on any
-physical core two or more sibling threads are online.</div></blockquote>
+<div><p>This file reports whether SMT is enabled and active, i.e. if on any
+physical core two or more sibling threads are online.</p>
+</div></blockquote>
 <p>SMT control is also possible at boot time via the l1tf kernel command
 line parameter in combination with L1D flush control. See
 <a class="reference internal" href="#mitigation-control-command-line"><span class="std std-ref">Mitigation control on the kernel command line</span></a>.</p>
@@ -440,55 +438,55 @@ address the performance impact of disabling SMT or EPT.</p>
 <p>The kernel command line allows to control the L1TF mitigations at boot
 time with the option “l1tf=”. The valid arguments for this option are:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="16%" />
-<col width="84%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>full</td>
-<td><p class="first">Provides all available mitigations for the L1TF
+<tbody>
+<tr class="row-odd"><td><p>full</p></td>
+<td><p>Provides all available mitigations for the L1TF
 vulnerability. Disables SMT and enables all mitigations in
 the hypervisors, i.e. unconditional L1D flushing</p>
-<p class="last">SMT control and L1D flush control via the sysfs interface
+<p>SMT control and L1D flush control via the sysfs interface
 is still possible after boot.  Hypervisors will issue a
 warning when the first VM is started in a potentially
 insecure configuration, i.e. SMT enabled or L1D flush
 disabled.</p>
 </td>
 </tr>
-<tr class="row-even"><td>full,force</td>
-<td>Same as ‘full’, but disables SMT and L1D flush runtime
+<tr class="row-even"><td><p>full,force</p></td>
+<td><p>Same as ‘full’, but disables SMT and L1D flush runtime
 control. Implies the ‘nosmt=force’ command line option.
-(i.e. sysfs control of SMT is disabled.)</td>
+(i.e. sysfs control of SMT is disabled.)</p></td>
 </tr>
-<tr class="row-odd"><td>flush</td>
-<td><p class="first">Leaves SMT enabled and enables the default hypervisor
+<tr class="row-odd"><td><p>flush</p></td>
+<td><p>Leaves SMT enabled and enables the default hypervisor
 mitigation, i.e. conditional L1D flushing</p>
-<p class="last">SMT control and L1D flush control via the sysfs interface
+<p>SMT control and L1D flush control via the sysfs interface
 is still possible after boot.  Hypervisors will issue a
 warning when the first VM is started in a potentially
 insecure configuration, i.e. SMT enabled or L1D flush
 disabled.</p>
 </td>
 </tr>
-<tr class="row-even"><td>flush,nosmt</td>
-<td><p class="first">Disables SMT and enables the default hypervisor mitigation,
+<tr class="row-even"><td><p>flush,nosmt</p></td>
+<td><p>Disables SMT and enables the default hypervisor mitigation,
 i.e. conditional L1D flushing.</p>
-<p class="last">SMT control and L1D flush control via the sysfs interface
+<p>SMT control and L1D flush control via the sysfs interface
 is still possible after boot.  Hypervisors will issue a
 warning when the first VM is started in a potentially
 insecure configuration, i.e. SMT enabled or L1D flush
 disabled.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>flush,nowarn</td>
-<td>Same as ‘flush’, but hypervisors will not warn when a VM is
-started in a potentially insecure configuration.</td>
+<tr class="row-odd"><td><p>flush,nowarn</p></td>
+<td><p>Same as ‘flush’, but hypervisors will not warn when a VM is
+started in a potentially insecure configuration.</p></td>
 </tr>
-<tr class="row-even"><td>off</td>
-<td>Disables hypervisor mitigations and doesn’t emit any
-warnings.</td>
+<tr class="row-even"><td><p>off</p></td>
+<td><p>Disables hypervisor mitigations and doesn’t emit any
+warnings.</p></td>
 </tr>
 </tbody>
 </table>
@@ -502,23 +500,23 @@ entering a guest, can be controlled with a module parameter.</p>
 <p>The option/parameter is ‘kvm-intel.vmentry_l1d_flush=’. It takes the
 following arguments:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="16%" />
-<col width="84%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>always</td>
-<td>L1D cache flush on every VMENTER.</td>
+<tbody>
+<tr class="row-odd"><td><p>always</p></td>
+<td><p>L1D cache flush on every VMENTER.</p></td>
 </tr>
-<tr class="row-even"><td>cond</td>
-<td>Flush L1D on VMENTER only when the code between VMEXIT and
+<tr class="row-even"><td><p>cond</p></td>
+<td><p>Flush L1D on VMENTER only when the code between VMEXIT and
 VMENTER can leak host memory which is considered
 interesting for an attacker. This still can leak host memory
-which allows e.g. to determine the hosts address space layout.</td>
+which allows e.g. to determine the hosts address space layout.</p></td>
 </tr>
-<tr class="row-odd"><td>never</td>
-<td>Disables the mitigation</td>
+<tr class="row-odd"><td><p>never</p></td>
+<td><p>Disables the mitigation</p></td>
 </tr>
 </tbody>
 </table>
@@ -536,8 +534,9 @@ module parameter is ignored and writes to the sysfs file are rejected.</p>
 <div class="section" id="no-virtualization-in-use">
 <h3>1. No virtualization in use<a class="headerlink" href="#no-virtualization-in-use" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>The system is protected by the kernel unconditionally and no further
-action is required.</div></blockquote>
+<div><p>The system is protected by the kernel unconditionally and no further
+action is required.</p>
+</div></blockquote>
 </div>
 <div class="section" id="virtualization-with-trusted-guests">
 <h3>2. Virtualization with trusted guests<a class="headerlink" href="#virtualization-with-trusted-guests" title="Permalink to this headline">¶</a></h3>
@@ -577,20 +576,20 @@ VMENTER is not required.</p>
 <div><p>If SMT and EPT are supported and active then various degrees of
 mitigations can be employed:</p>
 <ul>
-<li><p class="first">L1D flushing on VMENTER:</p>
+<li><p>L1D flushing on VMENTER:</p>
 <p>L1D flushing on VMENTER is the minimal protection requirement, but it
 is only potent in combination with other mitigation methods.</p>
 <p>Conditional L1D flushing is the default behaviour and can be tuned. See
 <a class="reference internal" href="#mitigation-control-command-line"><span class="std std-ref">Mitigation control on the kernel command line</span></a> and <a class="reference internal" href="#mitigation-control-kvm"><span class="std std-ref">Mitigation control for KVM - module parameter</span></a>.</p>
 </li>
-<li><p class="first">Guest confinement:</p>
+<li><p>Guest confinement:</p>
 <p>Confinement of guests to a single or a group of physical cores which
 are not running any other processes, can reduce the attack surface
 significantly, but interrupts, soft interrupts and kernel threads can
 still expose valuable data to a potential attacker. See
 <a class="reference internal" href="#guest-confinement"><span class="std std-ref">2. Guest VCPU confinement to dedicated physical cores</span></a>.</p>
 </li>
-<li><p class="first">Interrupt isolation:</p>
+<li><p>Interrupt isolation:</p>
 <p>Isolating the guest CPUs from interrupts can reduce the attack surface
 further, but still allows a malicious guest to explore a limited amount
 of host physical memory. This can at least be used to gain knowledge
@@ -608,7 +607,7 @@ carefully analyzed. For full protection the following methods are
 available:</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Disabling SMT:</p>
+<li><p>Disabling SMT:</p>
 <p>Disabling SMT and enforcing the L1D flushing provides the maximum
 amount of protection. This mitigation is not depending on any of the
 above mitigation methods.</p>
@@ -618,7 +617,7 @@ time with the matching sysfs control files. See <a class="reference internal" hr
 <a class="reference internal" href="#mitigation-control-command-line"><span class="std std-ref">Mitigation control on the kernel command line</span></a> and
 <a class="reference internal" href="#mitigation-control-kvm"><span class="std std-ref">Mitigation control for KVM - module parameter</span></a>.</p>
 </li>
-<li><p class="first">Disabling EPT:</p>
+<li><p>Disabling EPT:</p>
 <p>Disabling EPT provides the maximum amount of protection as well. It is
 not depending on any of the above mitigation methods. SMT can stay
 enabled and L1D flushing is not required, but the performance impact is
@@ -638,15 +637,15 @@ guest will always be processed by the bare metal hypervisor. If KVM is the
 bare metal hypervisor it will:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Flush the L1D cache on every switch from the nested hypervisor to the
+<li><p>Flush the L1D cache on every switch from the nested hypervisor to the
 nested virtual machine, so that the nested hypervisor’s secrets are not
-exposed to the nested virtual machine;</li>
-<li>Flush the L1D cache on every switch from the nested virtual machine to
+exposed to the nested virtual machine;</p></li>
+<li><p>Flush the L1D cache on every switch from the nested virtual machine to
 the nested hypervisor; this is a complex operation, and flushing the L1D
 cache avoids that the bare metal hypervisor’s secrets are exposed to the
-nested virtual machine;</li>
-<li>Instruct the nested hypervisor to not perform any L1D cache flush. This
-is an optimization to avoid double L1D flushing.</li>
+nested virtual machine;</p></li>
+<li><p>Instruct the nested hypervisor to not perform any L1D cache flush. This
+is an optimization to avoid double L1D flushing.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -657,37 +656,34 @@ is an optimization to avoid double L1D flushing.</li>
 <blockquote>
 <div><p>The kernel default mitigations for vulnerable processors are:</p>
 <ul class="simple">
-<li>PTE inversion to protect against malicious user space. This is done
-unconditionally and cannot be controlled.</li>
-<li>L1D conditional flushing on VMENTER when EPT is enabled for
-a guest.</li>
+<li><p>PTE inversion to protect against malicious user space. This is done
+unconditionally and cannot be controlled.</p></li>
+<li><p>L1D conditional flushing on VMENTER when EPT is enabled for
+a guest.</p></li>
 </ul>
 <p>The kernel does not by default enforce the disabling of SMT, which leaves
 SMT systems vulnerable when running untrusted guests with EPT enabled.</p>
 <p>The rationale for this choice is:</p>
 <ul>
-<li><p class="first">Force disabling SMT can break existing setups, especially with
-unattended updates.</p>
-</li>
-<li><p class="first">If regular users run untrusted guests on their machine, then L1TF is
+<li><p>Force disabling SMT can break existing setups, especially with
+unattended updates.</p></li>
+<li><p>If regular users run untrusted guests on their machine, then L1TF is
 just an add on to other malware which might be embedded in an untrusted
 guest, e.g. spam-bots or attacks on the local network.</p>
 <p>There is no technical way to prevent a user from running untrusted code
 on their machines blindly.</p>
 </li>
-<li><p class="first">It’s technically extremely unlikely and from today’s knowledge even
+<li><p>It’s technically extremely unlikely and from today’s knowledge even
 impossible that L1TF can be exploited via the most popular attack
 mechanisms like JavaScript because these mechanisms have no way to
 control PTEs. If this would be possible and not other mitigation would
-be possible, then the default might be different.</p>
-</li>
-<li><p class="first">The administrators of cloud and hosting setups have to carefully
+be possible, then the default might be different.</p></li>
+<li><p>The administrators of cloud and hosting setups have to carefully
 analyze the risk for their scenarios and make the appropriate
 mitigation choices, which might even vary across their deployed
 machines and also result in other changes of their overall setup.
 There is no way for the kernel to provide a sensible default for this
-kind of scenarios.</p>
-</li>
+kind of scenarios.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -753,13 +749,11 @@ kind of scenarios.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -785,7 +779,7 @@ kind of scenarios.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

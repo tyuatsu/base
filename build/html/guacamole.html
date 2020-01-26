@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Moles Moles Guacamoles &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -46,23 +44,23 @@
 <h1>Moles Moles Guacamoles<a class="headerlink" href="#moles-moles-guacamoles" title="Permalink to this headline">¶</a></h1>
 <p>Veja como instalar e configurar um gateway de acesso utilizando o software <a class="reference external" href="https://guacamole.incubator.apache.org/">Guacamole</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Para utilizá-lo com a VPN deverá gerar antes, os devidos certificados digitais.</p>
+<p class="admonition-title">Note</p>
+<p>Para utilizá-lo com a VPN deverá gerar antes, os devidos certificados digitais.</p>
 </div>
 <div class="section" id="visao-geral">
 <h2>Visão Geral<a class="headerlink" href="#visao-geral" title="Permalink to this headline">¶</a></h2>
 <p>Em resumo, a <a class="reference internal" href="#instalacao"><span class="std std-ref">Instalação</span></a> e a <a class="reference internal" href="#configuracao"><span class="std std-ref">Configuração</span></a> da solução será:</p>
 <ul class="simple">
-<li><strong>Sistema Operacional</strong>: CentoOS 7</li>
-<li><strong>Servidor Web</strong>: Apache (2.4.6)</li>
-<li><strong>Servidor de Aplicação</strong>: Tomcat (7.0.54)</li>
-<li><strong>Banco de Dados</strong>: MariaDB (5.5.47)</li>
-<li><strong>Compilador</strong>: gcc</li>
-<li><strong>Softwares</strong>: Guacamole (0.9.9) e Extensões (banco de dados e ldap)</li>
+<li><p><strong>Sistema Operacional</strong>: CentoOS 7</p></li>
+<li><p><strong>Servidor Web</strong>: Apache (2.4.6)</p></li>
+<li><p><strong>Servidor de Aplicação</strong>: Tomcat (7.0.54)</p></li>
+<li><p><strong>Banco de Dados</strong>: MariaDB (5.5.47)</p></li>
+<li><p><strong>Compilador</strong>: gcc</p></li>
+<li><p><strong>Softwares</strong>: Guacamole (0.9.9) e Extensões (banco de dados e ldap)</p></li>
 </ul>
 <div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/visao-geral-guacamole.png"><img alt="Visão Geral - Guacamole" src="_images/visao-geral-guacamole.png" style="width: 377.6px; height: 517.6px;" /></a>
-<p class="caption"><span class="caption-text">Diagrama da arquitetura da instalação do Guacamole e seus componentes feita nesta documentação.</span></p>
+<p class="caption"><span class="caption-text">Diagrama da arquitetura da instalação do Guacamole e seus componentes feita nesta documentação.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="instalacao">
@@ -100,31 +98,31 @@
 <p id="guacamole-e-componentes">A <a class="reference external" href="https://guacamole.incubator.apache.org/doc/0.9.9/gug/">documentação</a> e os <a class="reference external" href="https://guacamole.incubator.apache.org/releases/0.9.9/">downloads</a> do softwares são:</p>
 <p>Componentes do Guacamole - dependências de pacotes</p>
 <ul>
-<li><p class="first"><strong>Repositórios necessários</strong>:</p>
+<li><p><strong>Repositórios necessários</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span> <span class="n">wget</span>
 <span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">home</span><span class="p">:</span><span class="n">felfert</span><span class="o">.</span><span class="n">repo</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">home</span><span class="p">:</span><span class="o">/</span><span class="n">felfert</span><span class="o">/</span><span class="n">Fedora_19</span><span class="o">/</span><span class="n">home</span><span class="p">:</span><span class="n">felfert</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Pacotes</strong>:</p>
+<li><p><strong>Pacotes</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">cairo</span><span class="o">-</span><span class="n">devel</span> <span class="n">freerdp</span><span class="o">-</span><span class="n">devel</span> <span class="n">gcc</span> <span class="n">java</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">openjdk</span><span class="o">.</span><span class="n">x86_64</span> <span class="n">libguac</span> <span class="n">libguac</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">rdp</span> <span class="n">libguac</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">ssh</span> <span class="n">libguac</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">vnc</span> <span class="n">libjpeg</span><span class="o">-</span><span class="n">turbo</span><span class="o">-</span><span class="n">devel</span> <span class="n">libpng</span><span class="o">-</span><span class="n">devel</span> <span class="n">libssh2</span><span class="o">-</span><span class="n">devel</span> <span class="n">libtelnet</span><span class="o">-</span><span class="n">devel</span> <span class="n">libvncserver</span><span class="o">-</span><span class="n">devel</span> <span class="n">libvorbis</span><span class="o">-</span><span class="n">devel</span> <span class="n">libwebp</span><span class="o">-</span><span class="n">devel</span> <span class="n">openssl</span><span class="o">-</span><span class="n">devel</span> <span class="n">pango</span><span class="o">-</span><span class="n">devel</span> <span class="n">pulseaudio</span><span class="o">-</span><span class="n">libs</span><span class="o">-</span><span class="n">devel</span> <span class="n">terminus</span><span class="o">-</span><span class="n">fonts</span> <span class="n">tomcat</span> <span class="n">tomcat</span><span class="o">-</span><span class="n">webapps</span> <span class="n">uuid</span><span class="o">-</span><span class="n">devel</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Download Guacamole - v0.9.9</strong> - realizar download do Guacamole a ser compilado:</p>
+<li><p><strong>Download Guacamole - v0.9.9</strong> - realizar download do Guacamole a ser compilado:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">guacamole</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">war</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">current</span><span class="o">/</span><span class="n">binary</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">war</span>
 <span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">guacamole</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">current</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Download das Extensões</strong> - realizar download das extensões para utilização com banco de dados e sistema de diretório:</p>
+<li><p><strong>Download das Extensões</strong> - realizar download das extensões para utilização com banco de dados e sistema de diretório:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">current</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dev</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">get</span><span class="o">/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">Connector</span><span class="o">/</span><span class="n">j</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mf">38.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">current</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">ldap</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Descompactar Guacamole e extensões</strong> - extensões para integração com banco de dados e com o LDAP:</p>
+<li><p><strong>Descompactar Guacamole e extensões</strong> - extensões para integração com banco de dados e com o LDAP:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">guacamole</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">guacamole</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mf">38.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
@@ -132,14 +130,14 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Criar Diretório Guacamole</strong> - será o local de instalação:</p>
+<li><p><strong>Criar Diretório Guacamole</strong> - será o local de instalação:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span>
 <span class="n">mkdir</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">lib</span>
 <span class="n">mkdir</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">extensions</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Compilando e Instalando o Guacamole</strong> - ao compilar o guacamole, será criado o binário guacd:</p>
+<li><p><strong>Compilando e Instalando o Guacamole</strong> - ao compilar o guacamole, será criado o binário guacd:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">guacamole</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">9</span>
 <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">init</span><span class="o">-</span><span class="nb">dir</span><span class="o">=/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span>
 <span class="n">make</span>
@@ -148,13 +146,13 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Configurar inicialização automática do guacd</strong>:</p>
+<li><p><strong>Configurar inicialização automática do guacd</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">enable</span> <span class="n">guacd</span>
 <span class="n">systemctl</span> <span class="n">start</span> <span class="n">guacd</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Disponibilizando Arquivos</strong> - após instalação dos componentes e extensões, disponibiliza-se para as devidas pastas:</p>
+<li><p><strong>Disponibilizando Arquivos</strong> - após instalação dos componentes e extensões, disponibiliza-se para as devidas pastas:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
 <span class="n">cp</span> <span class="n">guacamole</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">war</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span>
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">war</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">webapps</span><span class="o">/</span>
@@ -168,7 +166,7 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Link para Tomcat</strong>:</p>
+<li><p><strong>Link para Tomcat</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/.</span><span class="n">guacamole</span><span class="o">/</span><span class="p">{</span><span class="n">extensions</span><span class="p">,</span><span class="n">lib</span><span class="p">}</span>
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="n">mysql</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">9.</span><span class="n">jar</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/.</span><span class="n">guacamole</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span>
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">38</span><span class="o">-</span><span class="nb">bin</span><span class="o">.</span><span class="n">jar</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/.</span><span class="n">guacamole</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span>
@@ -182,11 +180,11 @@
 <span id="id2"></span><h3>Banco de Dados<a class="headerlink" href="#banco-de-dados" title="Permalink to this headline">¶</a></h3>
 <p>A instalação do banco de dados e ajustes iniciais.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Armazene as senhas em local seguro!</p>
+<p class="admonition-title">Note</p>
+<p>Armazene as senhas em local seguro!</p>
 </div>
 <ul>
-<li><p class="first"><strong>Propriedades do Guacamole</strong> - essas são as configurações iniciais para subir o serviço com o banco de dados. Mudanças neste arquivo tornam necessário reiniciar o Tomcat.:</p>
+<li><p><strong>Propriedades do Guacamole</strong> - essas são as configurações iniciais para subir o serviço com o banco de dados. Mudanças neste arquivo tornam necessário reiniciar o Tomcat.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;# Configurações do Banco MySQL&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">guacamole</span><span class="o">.</span><span class="n">properties</span>
 <span class="n">echo</span> <span class="s2">&quot;mysql-hostname: localhost&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">guacamole</span><span class="o">.</span><span class="n">properties</span>
 <span class="n">echo</span> <span class="s2">&quot;mysql-port: 3306&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">guacamole</span><span class="o">/</span><span class="n">guacamole</span><span class="o">.</span><span class="n">properties</span>
@@ -198,19 +196,19 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Instalar banco</strong></p>
+<li><p><strong>Instalar banco</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">mariadb</span><span class="o">-</span><span class="n">server</span>
 <span class="n">systemctl</span> <span class="n">start</span> <span class="n">mariadb</span>
 <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">mariadb</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Melhorar segurança do banco</strong></p>
+<li><p><strong>Melhorar segurança do banco</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql_secure_installation</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Criar conta e banco de dados</strong> - criando banco e importando esquemas:</p>
+<li><p><strong>Criar conta e banco de dados</strong> - criando banco e importando esquemas:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span>
 <span class="n">create</span> <span class="n">database</span> <span class="n">guacamole_db</span><span class="p">;</span>
 <span class="n">create</span> <span class="n">user</span> <span class="s1">&#39;guacamole_user&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span> <span class="n">identified</span> <span class="n">by</span> <span class="s1">&#39;&lt;SENHA&gt;&#39;</span><span class="p">;</span>
@@ -220,12 +218,12 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Criando schema</strong> - script com definições do esquema de dados:</p>
+<li><p><strong>Criando schema</strong> - script com definições do esquema de dados:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">guacamole</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">schema</span><span class="o">/*.</span><span class="n">sql</span> <span class="o">|</span> <span class="n">mysql</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span> <span class="n">guacamole_db</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first"><strong>Finalizando a Instalação</strong> - atualizar pacotes:</p>
+<li><p><strong>Finalizando a Instalação</strong> - atualizar pacotes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">update</span>
 </pre></div>
 </div>
@@ -233,8 +231,8 @@
 </ul>
 <p>Considerando que os serviços iniciaram corretamente, o sistema estará disponível em <code class="docutils literal notranslate"><span class="pre">http://&lt;IP_DO_SERVIDOR&gt;:8080/guacamole-0.9.9/</span></code></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">O usuário/senha padrão é <code class="docutils literal notranslate"><span class="pre">guacadmin</span></code>. Troque a senha!</p>
+<p class="admonition-title">Note</p>
+<p>O usuário/senha padrão é <code class="docutils literal notranslate"><span class="pre">guacadmin</span></code>. Troque a senha!</p>
 </div>
 </div>
 </div>
@@ -245,8 +243,8 @@
 <h3>Certificados<a class="headerlink" href="#certificados" title="Permalink to this headline">¶</a></h3>
 <p>Os certificados aqui gerados e configurados serão utilizados logo a frente, para:</p>
 <ul class="simple">
-<li><strong>Servidor Web</strong> - certificado do site (HTTPS). Crie ou importe um certificado (Veja como em <a class="reference external" href="CertificadosDigitais.html#gerar-um-certificado">certificados digitais:</a>)</li>
-<li><strong>Tomcat</strong> - certificado para o túnel entre o servidor web e o Tomcat.</li>
+<li><p><strong>Servidor Web</strong> - certificado do site (HTTPS). Crie ou importe um certificado (Veja como em <a class="reference external" href="CertificadosDigitais.html#gerar-um-certificado">certificados digitais:</a>)</p></li>
+<li><p><strong>Tomcat</strong> - certificado para o túnel entre o servidor web e o Tomcat.</p></li>
 </ul>
 <p>Gerar um certificado auto-assinado com o nome <code class="docutils literal notranslate"><span class="pre">tomcat</span></code>, com validade de 90 dias. Ficará armazenado no diretório ‘home’ do usuário corrente, dentro da keystore chamada <code class="docutils literal notranslate"><span class="pre">.keystore</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>keytool -genkey -alias tomcat -keyalg RSA
@@ -276,7 +274,7 @@ Enter key password for &lt;tomcat&gt;
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><strong>LDAP</strong> - exporte o certificado do Active Directory e importe o certificado para o utilização do LDAPS:</p>
+<li><p><strong>LDAP</strong> - exporte o certificado do Active Directory e importe o certificado para o utilização do LDAPS:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">imporIMPACTAert</span> <span class="o">-</span><span class="n">alias</span> <span class="n">activedirectory</span><span class="p">:</span><span class="n">ca</span><span class="o">-</span><span class="n">ad</span><span class="o">-</span><span class="n">IMPACTA</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mf">0.101</span><span class="o">-</span><span class="mf">3.</span><span class="n">b13</span><span class="o">.</span><span class="n">el7_2</span><span class="o">.</span><span class="n">x86_64</span><span class="o">/</span><span class="n">jre</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">security</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">ca</span><span class="o">-</span><span class="n">ad</span><span class="o">-</span><span class="n">IMPACTA</span><span class="o">.</span><span class="n">cer</span>
 </pre></div>
 </div>
@@ -290,18 +288,15 @@ Enter key password for &lt;tomcat&gt;
 <div class="section" id="apache">
 <span id="id4"></span><h3>Apache<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">WebSocket - Mesmo com a configuração de websocket (ws)  no Apache, o Web Socket não funcionou devidamente, porém não impacta na utilização do Guacamole.  É possível também utilizar o <a class="reference internal" href="#nginx"><span class="std std-ref">NGINX</span></a>, faça sua escolha.</p>
+<p class="admonition-title">Note</p>
+<p>WebSocket - Mesmo com a configuração de websocket (ws)  no Apache, o Web Socket não funcionou devidamente, porém não impacta na utilização do Guacamole.  É possível também utilizar o <a class="reference internal" href="#nginx"><span class="std std-ref">NGINX</span></a>, faça sua escolha.</p>
 </div>
 <p>Será o serviço responsável por receber as solicitações do usuários e aplicar criptografia no canal (HTTPS) e encaminhar para o Tomcat. O encaminhamento (proxying) do Apache para o Tomcat é feito utilizando também criptografia. Uma configuração de exemplo do Apache:</p>
 <ul>
-<li><p class="first"><strong>ServerTokens</strong> - ocultar informações sobre apache</p>
-</li>
-<li><p class="first"><strong>Strict-Transport-Security</strong> - habilitar o HSTS para evitar certos tipos de ataque MITM</p>
-</li>
-<li><p class="first"><strong>X-Frame-Options</strong> - não permite que site seja embutido (iframe) em outro site evitando ataques do tipo clickjacking.</p>
-</li>
-<li><p class="first"><strong>SetEnvIf</strong> - definir o que não irá para log, para que não seja gerado muitos eventos que não são muito úteis. Caso de uma conexão é estabelecida e há tráfego de dados entre servidor guacamole e terminal remoto.:</p>
+<li><p><strong>ServerTokens</strong> - ocultar informações sobre apache</p></li>
+<li><p><strong>Strict-Transport-Security</strong> - habilitar o HSTS para evitar certos tipos de ataque MITM</p></li>
+<li><p><strong>X-Frame-Options</strong> - não permite que site seja embutido (iframe) em outro site evitando ataques do tipo clickjacking.</p></li>
+<li><p><strong>SetEnvIf</strong> - definir o que não irá para log, para que não seja gerado muitos eventos que não são muito úteis. Caso de uma conexão é estabelecida e há tráfego de dados entre servidor guacamole e terminal remoto.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>vi /etc/httpd/conf.d/guacamole.IMPACTA.local.conf
 
 # Server version: Apache/2.4.6 (CentOS
@@ -429,11 +424,9 @@ server {
 <h3>Tomcat<a class="headerlink" href="#tomcat" title="Permalink to this headline">¶</a></h3>
 <p>Para permitir que o tráfego entre o Apache e o Tomcat seja criptografado, as configurações abaixo são feitas.</p>
 <ul>
-<li><p class="first"><strong>Server &gt; port</strong> - destivar porta de shutdown</p>
-</li>
-<li><p class="first"><strong>Listener &gt; SSLEngine</strong> - habilitar SSL</p>
-</li>
-<li><p class="first"><strong>Connector &gt; server</strong> - alterar nome utilizado para evitar expor versão do tomcat</p>
+<li><p><strong>Server &gt; port</strong> - destivar porta de shutdown</p></li>
+<li><p><strong>Listener &gt; SSLEngine</strong> - habilitar SSL</p></li>
+<li><p><strong>Connector &gt; server</strong> - alterar nome utilizado para evitar expor versão do tomcat</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">server</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
@@ -599,7 +592,7 @@ server {
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><strong>Restringir Acesso</strong> - para não permitir acesso direto ao Tomcat é necessário inserir o parâmetro abaixo (dentro do <code class="docutils literal notranslate"><span class="pre">&lt;Context&gt;</span></code>):</p>
+<li><p><strong>Restringir Acesso</strong> - para não permitir acesso direto ao Tomcat é necessário inserir o parâmetro abaixo (dentro do <code class="docutils literal notranslate"><span class="pre">&lt;Context&gt;</span></code>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">context</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
@@ -614,7 +607,7 @@ server {
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><strong>Página de Erro</strong> - para tratar páginas de erros, edite o arquivo abaixo e inclua as linhas em destaque.:</p>
+<li><p><strong>Página de Erro</strong> - para tratar páginas de erros, edite o arquivo abaixo e inclua as linhas em destaque.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
@@ -654,7 +647,7 @@ Verifique o nome digitado.
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>Ajustes Finos</strong></li>
+<li><p><strong>Ajustes Finos</strong></p></li>
 </ul>
 <p><strong>Imagens</strong> - substitua as imagens padrão para as novas (envie as suas imagens):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">webapps</span><span class="o">/</span><span class="n">guacamole</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="n">images</span><span class="o">/</span>
@@ -738,13 +731,11 @@ Verifique o nome digitado.
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -770,7 +761,7 @@ Verifique o nome digitado.
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>
