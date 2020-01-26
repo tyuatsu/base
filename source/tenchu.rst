@@ -5191,7 +5191,7 @@ Uma nova saga de Rikimaru e Ayame, ninjas de elite que devem usar suas habilidad
 
 
 I. INTRODUCTION                                                 
----------------
+===============
 
 Tenchu: Shadow Assassins is the latest in the Tenchu series of games
 focusing on stealth and cunning instead of just running in guns (or
@@ -5207,7 +5207,7 @@ into the UMD is nothing less than a miracle.
 
 
 II. CONTROLS                                                    
-------------
+============
 
 L - Run
 
@@ -5249,7 +5249,7 @@ Again, self explanatory.
 
 
 III. STORY MODE                                                 
----------------
+===============
 
 .. figure:: tenchu4.png
     :scale: 43 %
@@ -5258,7 +5258,7 @@ III. STORY MODE
 
 
 STAGE 1 - THE EVIL MERCHANT                                     
----------------------------
+===========================
 
 Run forward and kill the guard. Go through the door to your right. Kill
 the guard ahead of you and stick to the wall's shadows until you can
@@ -5312,7 +5312,7 @@ easily without being seen.
 
 
 STAGE 2 - THE BANDIT RINGLEADER                                 
--------------------------------
+===============================
 
 Hide in the bushes and when the guard turns his back, stealth kill him.
 Now jump down to get a bamboo tube. Go up to the other side and stealth
@@ -5355,7 +5355,7 @@ and stealth kill him.
 
 
 STAGE 3 - DAIMYO TADO                                           
----------------------
+=====================
 
 Go forward and hide in the jar. When the guard walks nearby stealth
 kill him. Now go right and you'll see a guard doing rounds. Wait until
@@ -5407,7 +5407,7 @@ straightforward.
 
 
 STAGE 4 - GODA CASTLE                                           
----------------------
+=====================
 
 Go left and hide in the shadows, and make your way into the thickets.
 Kill the guard, and take the nearby shuriken. Use the shuriken to kill
@@ -5472,7 +5472,7 @@ fight Ayame in a sword duel now.
 
 
 STAGE 5 - AYAME                                                 
----------------
+===============
 
 Go right and jump onto the tree branch. Jump to the next tree, then
 drop down to the right to grab the kasugai. Now go back onto the tree
@@ -5529,7 +5529,7 @@ wagon to end the level.
 
 
 TAGE 6 - THE PRINCESS                                          
-----------------------
+=====================
 
 Grab the kunai nearby and kill the hidden ninja in the thickets beyond
 the torch. Go into the cave and you'll find a guard. Wait until he
@@ -5571,7 +5571,7 @@ explosives, so use the kunai to destroy the explosives and kill him.
 
 
 STAGE 7 - THE MERCHANT                                          
-----------------------
+======================
 
 Go forward and hide in the nearby thickets. Move through the thickets
 and kill the guard. Wait for the ninja to have his back to you then
@@ -5634,7 +5634,7 @@ make your way to the merchant. Kill him from above to end the level.
 
 
 STAGE 8 - THE PRINCESS                                          
-----------------------
+======================
 
 Go through the thickets and kill the guard while his back is ruend. Now
 grab the box he dropped and put it near the wall you can climb and use
@@ -5703,7 +5703,7 @@ so use them to kill the last guard you can see. Now go to the goal.
 
 
 STAGE 9 - ESCORTING THE PRINCESS                                
----------------------------------
+================================
 
 You'll begin the stage with a swordfight.
 
@@ -5756,7 +5756,7 @@ Now you have another swordfight before the level ends.
 
 
 STAGE 10 - SEKIYA NAOTADA                                       
--------------------------
+=========================
 
 Hide in the thickets on the right when you're not noticed. Then kill
 the ninja when he's nearby. Now go to the thickets near the gaurd and
