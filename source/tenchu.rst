@@ -5211,9 +5211,9 @@ Table of Contents
 13. Stage 10 - Sekiya Naotada                                    
                                                     
 
-===============
+---------------
 I. INTRODUCTION                                                 
-===============
+---------------
 
 Tenchu: Shadow Assassins is the latest in the Tenchu series of games
 focusing on stealth and cunning instead of just running in guns (or
@@ -5227,9 +5227,9 @@ versions of each stage), but with the ability to play it portably,
 this is an ok loss, the fact that they werea ble to squeeze everything
 into the UMD is nothing less than a miracle.
 
-============
+------------
 II. CONTROLS                                                    
-============
+------------
 
 L - Run
 
@@ -5269,9 +5269,9 @@ Analog Stick - Movement
 
 Again, self explanatory.
 
-===============
+---------------
 III. STORY MODE                                                 
-===============
+---------------
 
 .. figure:: tenchu4.png
     :scale: 43 %
