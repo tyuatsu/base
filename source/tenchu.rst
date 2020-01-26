@@ -5181,8 +5181,7 @@ like a little bridge. Jump down onto it and look for it down there.
 
 
 Tenchu Shadow Assassins (PSP) - Walkthrough
-"""""""""""""""""""""""""""""""""""""""""""""""
------------------------------------------------
+--------------------------------------------
 
 .. figure:: techushadow.jpg
     :scale: 43 %
