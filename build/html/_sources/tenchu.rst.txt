@@ -5174,6 +5174,7 @@ of it that was mostly gaps and you had to jump on the small planks of
 wood? Well look in the pit until you find a platform. This platform is 
 like a little bridge. Jump down onto it and look for it down there. 
 
+
 Tenchu Shadow Assassins (PSP) - Walkthrough
 --------------------------------------------
 
@@ -5189,7 +5190,7 @@ Tenchu: Shadow Assassins continua a saga de Rikimaru e Ayame, ninjas de elite qu
 
 
 Table of Contents
-^^^^^^^^^^^^^^^^^
+
 
 1. Introduction                                                 
 2. Controls                                                     
@@ -5830,3 +5831,5 @@ Congratulations, you beat Tenchu: Shadow Assassins!
     :scale: 43 %
     :align: center
     :alt: Tenchu Shadow Assassin PSP
+    
+    
