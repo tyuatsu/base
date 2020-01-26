@@ -1518,7 +1518,7 @@ character will drop behind them. It hurts someone's feet when they step
 on them and will cause them to stop for a bit. This is very useful when 
 trying to evade some enemies or something. Very good item. 
 
-----------
+-----------
 Poison Rice
 -----------
 
@@ -5177,7 +5177,6 @@ like a little bridge. Jump down onto it and look for it down there.
 ======================================================================
 
 
-
 Tenchu Shadow Assassins (PSP) - Walkthrough
 --------------------------------------------
 
@@ -5189,11 +5188,11 @@ Tenchu Shadow Assassins (PSP) - Walkthrough
 .. note:: Para mais guias legais como esse você só encontra em: `https://gamefaqs.gamespot.com <https://gamefaqs.gamespot.com>`_
 
 Tenchu: Shadow Assassins permite que os jogadores dominem as técnicas mortais de um ninja real no sistema PSP.
-Tenchu: Shadow Assassins continua a saga de Rikimaru e Ayame, ninjas de elite que devem usar suas habilidades letais para manter a paz no Japão feudal.
+Uma nova saga de Rikimaru e Ayame, ninjas de elite que devem usar suas habilidades letais para manter a paz no Japão feudal.
 
-===============
+
 I. INTRODUCTION                                                 
-===============
+---------------
 
 Tenchu: Shadow Assassins is the latest in the Tenchu series of games
 focusing on stealth and cunning instead of just running in guns (or
@@ -5207,9 +5206,9 @@ versions of each stage), but with the ability to play it portably,
 this is an ok loss, the fact that they werea ble to squeeze everything
 into the UMD is nothing less than a miracle.
 
-============
+
 II. CONTROLS                                                    
-============
+------------
 
 L - Run
 
@@ -5249,18 +5248,18 @@ Analog Stick - Movement
 
 Again, self explanatory.
 
-===============
+
 III. STORY MODE                                                 
-===============
+---------------
 
 .. figure:: tenchu4.png
     :scale: 43 %
     :align: center
     :alt: Tenchu  Shadow Assassins PSP
 
-=======================================================================
+
 STAGE 1 - THE EVIL MERCHANT                                     
-=======================================================================
+---------------------------
 
 Run forward and kill the guard. Go through the door to your right. Kill
 the guard ahead of you and stick to the wall's shadows until you can
@@ -5312,9 +5311,9 @@ door. Go to the right and jump up onto the rafters. From the rafters
 you are able to stealth kill every enemy, including the Merchant, 
 easily without being seen.
 
-=======================================================================
+
 STAGE 2 - THE BANDIT RINGLEADER                                 
-=======================================================================
+-------------------------------
 
 Hide in the bushes and when the guard turns his back, stealth kill him.
 Now jump down to get a bamboo tube. Go up to the other side and stealth
@@ -5355,9 +5354,9 @@ kill him. Now climb up and go left, then jump over the hole. There is
 a guard here that you can kill. Once you do, go above the ringleader
 and stealth kill him.
 
-=======================================================================
+
 STAGE 3 - DAIMYO TADO                                           
-=======================================================================
+---------------------
 
 Go forward and hide in the jar. When the guard walks nearby stealth
 kill him. Now go right and you'll see a guard doing rounds. Wait until
@@ -5407,9 +5406,9 @@ the rafters and wait for the Daimyo to be poisoned.
 You'll have to fight a female ninja in a swordfight now, it's fairly
 straightforward.
 
-=======================================================================
+
 STAGE 4 - GODA CASTLE                                           
-=======================================================================
+---------------------
 
 Go left and hide in the shadows, and make your way into the thickets.
 Kill the guard, and take the nearby shuriken. Use the shuriken to kill
@@ -5472,9 +5471,9 @@ where you killed the guard who was sitting down. There is a door nearby
 locked, use the key to unlock it. Now go to the exit. You'll have to
 fight Ayame in a sword duel now.
 
-=======================================================================
+
 STAGE 5 - AYAME                                                 
-=======================================================================
+---------------
 
 Go right and jump onto the tree branch. Jump to the next tree, then
 drop down to the right to grab the kasugai. Now go back onto the tree
@@ -5529,9 +5528,9 @@ from above and then kill the gunner on the tower with a shuriken. Now,
 go to the balcony outside, then through the thickets and under the
 wagon to end the level.
 
-=======================================================================
-STAGE 6 - THE PRINCESS                                          
-=======================================================================
+
+TAGE 6 - THE PRINCESS                                          
+----------------------
 
 Grab the kunai nearby and kill the hidden ninja in the thickets beyond
 the torch. Go into the cave and you'll find a guard. Wait until he
@@ -5571,9 +5570,9 @@ killing the ninja with a kunai or shuriken, then keep going and kill
 the ninja with his back turned. You'll find an enemy near some
 explosives, so use the kunai to destroy the explosives and kill him.
 
-=======================================================================
+
 STAGE 7 - THE MERCHANT                                          
-=======================================================================
+----------------------
 
 Go forward and hide in the nearby thickets. Move through the thickets
 and kill the guard. Wait for the ninja to have his back to you then
@@ -5634,9 +5633,9 @@ up on the next guard and kill him, as well. Now go into the house
 and go to the left when you see a guard. Jump into the rafters and
 make your way to the merchant. Kill him from above to end the level.
 
-=======================================================================
+
 STAGE 8 - THE PRINCESS                                          
-=======================================================================
+----------------------
 
 Go through the thickets and kill the guard while his back is ruend. Now
 grab the box he dropped and put it near the wall you can climb and use
@@ -5703,9 +5702,9 @@ Now jump down and move on and you'll find a door with a guard outside.
 Kill him when his back is turned. You'll find some ghostmakers nearby
 so use them to kill the last guard you can see. Now go to the goal.
 
-=======================================================================
+
 STAGE 9 - ESCORTING THE PRINCESS                                
-=======================================================================
+---------------------------------
 
 You'll begin the stage with a swordfight.
 
@@ -5756,9 +5755,9 @@ a kunai to kill an enemy in the thickets near the goal. Go to the goal.
 
 Now you have another swordfight before the level ends.
 
-=======================================================================
+
 STAGE 10 - SEKIYA NAOTADA                                       
-=======================================================================
+-------------------------
 
 Hide in the thickets on the right when you're not noticed. Then kill
 the ninja when he's nearby. Now go to the thickets near the gaurd and
