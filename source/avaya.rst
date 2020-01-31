@@ -10,8 +10,10 @@ Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure l
 sempre a porta (tag all) com o sys topology (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
 Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o Mac e as Vlans que estão passando na interface desse Switch.
 
-Configurar o Switch IP 10.255.11.28 portas:45 e 46 na vlan-id: **101** (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: **220** (IP 172.31.78.0).
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Adicionar nova VLAN no SW Core.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: **101** (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: **220** (IP 172.31.78.0).
 
 Acesse o SW CORE, digite o comando abaixo e tecle **ENTER**::
 
@@ -42,7 +44,7 @@ Acesse o SW CORE, digite o comando abaixo e tecle **ENTER**::
     10.255.11.28    00:23:0d:03:68:00  255     1/39      DYNAMIC 295
 
 
-VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SWITCH ESTÁ CONECTADO::
+VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SW ESTÁ CONECTADO::
 
     CORETESTSW01#  show ports info vlans port 3/7
     
@@ -59,7 +61,7 @@ VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SWI
     3/7   enable  false   true      255     100 109 214 250 255 271 3138   disable
 
 
-VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE SECUNDÁRIO** ONDE O SWITCH ESTÁ CONECTADO::
+VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE SECUNDÁRIO** ONDE O SW ESTÁ CONECTADO::
 
     CORETESTSW02# show ports info vlans port 1/39
     
@@ -76,7 +78,7 @@ VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE SECUNDÁRIO** ONDE O S
     1/39  enable  false   true      255     100 109 214 250 255 271 3138   disable
 
 
-Há 8 VLANS atualmente cadastradas no SWITCH DE ACESSO **(IP 10.255.11.28)** mas nenhuma delas atendem as vlans 101 e 220::
+Há 8 VLANS atualmente cadastradas no SW de acesso **(IP 10.255.11.28)** mas nenhuma delas atendem as vlans 101 e 220::
 
     sw1.teste# show vlan
     
@@ -100,7 +102,9 @@ Há 8 VLANS atualmente cadastradas no SWITCH DE ACESSO **(IP 10.255.11.28)** mas
             Port Members: 22,30-35,49-50
     Total VLANs: 8
 
-Para adicionar 2 novas vlans no Switch de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário), em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan **(by port ou by srcmac)**. Muita calma nessa hora pois em abientes de produção, um bom planejamento por Gmud se faz necessário em situações como essas. ::
+Para adicionar 2 novas vlans no SW de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário). Depois em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan **(by port ou by srcmac)**. Muita calma nessa hora, pois em abientes de produção é necessário ter um bom planejamento por Gmud.
+
+Acesse o SW CORE, digite o comando abaixo e tecle **ENTER**::
 
 
     CORETESTSW01# show vlan info basic 101
@@ -194,13 +198,17 @@ Nos CORES (Primário e Secundário), deverão ser adicionados, obrigatoriamente,
     CORETESTSW01# show ip arp
 
 
-Avaya Nortel Ethernet Routing Switch - Tagging, Tagall, Untagall, Tagpvid e Untagpvid
--------------------------------------------------------------------------------------
+2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
+---------------------------------------------------------
 
-.. note:: Conceito básico de frames UntagPvid Only para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.
+.. note:: Iniciaremos com o conceito 'UntagPvidOnly' para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.
 
 .. figure:: untagpvidonly.png
     :scale: 90 %
     :align: center
     :alt: Avaya Nortel
+    
+    
+    
+    
 
