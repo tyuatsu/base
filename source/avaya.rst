@@ -198,8 +198,8 @@ Nos CORES (Primário e Secundário), deverão ser adicionados, obrigatoriamente,
     CORETESTSW01# show ip arp
 
 
-2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
----------------------------------------------------------
+2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Iniciaremos com o conceito 'UntagPvidOnly' para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.
 
