@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Avaya Nortel Ethernet Routing Switch &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="avaya-nortel-ethernet-routing-switch">
+<h1>Avaya Nortel Ethernet Routing Switch<a class="headerlink" href="#avaya-nortel-ethernet-routing-switch" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.</p>
+</div>
+<p>Dados fornecidos geralmente são o MAC ou IP e Vlan de cada Operação.</p>
+<p>Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure localizar o SW de acesso da operação e conferir
+sempre a porta (tag all) com o sys topology (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
+Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o Mac e as Vlans que estão passando na interface desse Switch.</p>
+<div class="section" id="configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0">
+<h2>Configurar o Switch IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).<a class="headerlink" href="#configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0" title="Permalink to this headline">¶</a></h2>
+<p>Acesse o SW CORE, digite o comando abaixo e tecle <strong>ENTER</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show ip arp info 10.255.11.28</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">TUE</span> <span class="n">JAN</span> <span class="mi">28</span> <span class="mi">09</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">58</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                         <span class="n">IP</span> <span class="n">Arp</span> <span class="o">-</span> <span class="n">GlobalRouter</span>
+<span class="o">================================================================================</span>
+<span class="n">IP_ADDRESS</span>      <span class="n">MAC_ADDRESS</span>        <span class="n">VLAN</span>    <span class="n">PORT</span>       <span class="n">TYPE</span>    <span class="n">TTL</span><span class="p">(</span><span class="mi">10</span> <span class="n">Sec</span><span class="p">)</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mf">10.255</span><span class="o">.</span><span class="mf">11.28</span>    <span class="mi">00</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">0</span><span class="n">d</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">68</span><span class="p">:</span><span class="mi">00</span>  <span class="mi">255</span>     <span class="mi">3</span><span class="o">/</span><span class="mi">7</span>      <span class="n">DYNAMIC</span> <span class="mi">1263</span>
+
+<span class="n">CORETESTSW02</span><span class="c1"># show ip arp info 10.255.11.28</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">TUE</span> <span class="n">JAN</span> <span class="mi">28</span> <span class="mi">10</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">09</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                         <span class="n">IP</span> <span class="n">Arp</span> <span class="o">-</span> <span class="n">GlobalRouter</span>
+<span class="o">================================================================================</span>
+<span class="n">IP_ADDRESS</span>      <span class="n">MAC_ADDRESS</span>        <span class="n">VLAN</span>    <span class="n">PORT</span>       <span class="n">TYPE</span>    <span class="n">TTL</span><span class="p">(</span><span class="mi">10</span> <span class="n">Sec</span><span class="p">)</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mf">10.255</span><span class="o">.</span><span class="mf">11.28</span>    <span class="mi">00</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">0</span><span class="n">d</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">68</span><span class="p">:</span><span class="mi">00</span>  <span class="mi">255</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">39</span>      <span class="n">DYNAMIC</span> <span class="mi">295</span>
+</pre></div>
+</div>
+<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE PRIMÁRIO</strong> ONDE O SWITCH ESTÁ CONECTADO:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1">#  show ports info vlans port 3/7</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">TUE</span> <span class="n">JAN</span> <span class="mi">28</span> <span class="mi">09</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">06</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                               <span class="n">Port</span> <span class="n">Vlans</span>
+<span class="o">================================================================================</span>
+<span class="n">PORT</span>          <span class="n">DISCARD</span> <span class="n">DISCARD</span>   <span class="n">DEFAULT</span> <span class="n">VLAN</span>   <span class="n">UNTAG</span>
+<span class="n">NUM</span>   <span class="n">TAGGING</span> <span class="n">TAGFRAM</span> <span class="n">UNTAGFRAM</span> <span class="n">VLANID</span>  <span class="n">IDS</span>    <span class="n">DEFVLAN</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mi">3</span><span class="o">/</span><span class="mi">7</span>   <span class="n">enable</span>  <span class="n">false</span>   <span class="n">true</span>      <span class="mi">255</span>     <span class="mi">100</span> <span class="mi">109</span> <span class="mi">214</span> <span class="mi">250</span> <span class="mi">255</span> <span class="mi">271</span> <span class="mi">3138</span>   <span class="n">disable</span>
+</pre></div>
+</div>
+<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE SECUNDÁRIO</strong> ONDE O SWITCH ESTÁ CONECTADO:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW02</span><span class="c1"># show ports info vlans port 1/39</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">TUE</span> <span class="n">JAN</span> <span class="mi">28</span> <span class="mi">10</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">55</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                               <span class="n">Port</span> <span class="n">Vlans</span>
+<span class="o">================================================================================</span>
+<span class="n">PORT</span>          <span class="n">DISCARD</span> <span class="n">DISCARD</span>   <span class="n">DEFAULT</span> <span class="n">VLAN</span>   <span class="n">UNTAG</span>
+<span class="n">NUM</span>   <span class="n">TAGGING</span> <span class="n">TAGFRAM</span> <span class="n">UNTAGFRAM</span> <span class="n">VLANID</span>  <span class="n">IDS</span>    <span class="n">DEFVLAN</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mi">1</span><span class="o">/</span><span class="mi">39</span>  <span class="n">enable</span>  <span class="n">false</span>   <span class="n">true</span>      <span class="mi">255</span>     <span class="mi">100</span> <span class="mi">109</span> <span class="mi">214</span> <span class="mi">250</span> <span class="mi">255</span> <span class="mi">271</span> <span class="mi">3138</span>   <span class="n">disable</span>
+</pre></div>
+</div>
+<p>Há 8 VLANS atualmente cadastradas no SWITCH DE ACESSO <strong>(IP 10.255.11.28)</strong> mas nenhuma delas atendem as vlans 101 e 220:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># show vlan</span>
+
+<span class="n">Id</span>   <span class="n">Name</span>                 <span class="n">Type</span>     <span class="n">Protocol</span>         <span class="n">PID</span>     <span class="n">Active</span> <span class="n">IVL</span><span class="o">/</span><span class="n">SVL</span> <span class="n">Mgmt</span>
+<span class="o">----</span> <span class="o">--------------------</span> <span class="o">--------</span> <span class="o">----------------</span> <span class="o">-------</span> <span class="o">------</span> <span class="o">-------</span> <span class="o">----</span>
+<span class="mi">1</span>    <span class="n">VLAN</span> <span class="c1">#1              Port     None             0x0000  Yes    IVL     No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="n">NONE</span>
+<span class="mi">100</span>  <span class="n">VLAN</span><span class="o">-</span><span class="mf">10.220</span><span class="o">.</span><span class="mi">11</span>       <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">30</span><span class="o">-</span><span class="mi">32</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="o">-</span><span class="mi">38</span><span class="p">,</span><span class="mi">49</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">109</span>  <span class="n">VLAN_73</span>              <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">1</span><span class="o">-</span><span class="mi">29</span><span class="p">,</span><span class="mi">33</span><span class="o">-</span><span class="mi">34</span><span class="p">,</span><span class="mi">38</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">214</span>  <span class="n">VLAN_172</span><span class="o">.</span><span class="mf">31.173</span>      <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">1</span><span class="o">-</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="o">-</span><span class="mi">21</span><span class="p">,</span><span class="mi">23</span><span class="o">-</span><span class="mi">29</span><span class="p">,</span><span class="mi">38</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">250</span>  <span class="n">VLAN</span><span class="o">-</span><span class="n">WIFI</span><span class="o">-</span><span class="n">MONICA</span>     <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">36</span><span class="o">-</span><span class="mi">37</span><span class="p">,</span><span class="mi">49</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">255</span>  <span class="n">GER_BIDU</span>             <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">Yes</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">49</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">271</span>  <span class="n">VLAN</span><span class="o">-</span><span class="mi">271</span>             <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">49</span><span class="o">-</span><span class="mi">50</span>
+<span class="mi">3138</span> <span class="n">CORP</span><span class="o">-</span><span class="n">VOZ</span>             <span class="n">Port</span>     <span class="kc">None</span>             <span class="mh">0x0000</span>  <span class="n">Yes</span>    <span class="n">IVL</span>     <span class="n">No</span>
+        <span class="n">Port</span> <span class="n">Members</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span><span class="mi">30</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span><span class="mi">49</span><span class="o">-</span><span class="mi">50</span>
+<span class="n">Total</span> <span class="n">VLANs</span><span class="p">:</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>Para adicionar 2 novas vlans no Switch de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário), em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan <strong>(by port ou by srcmac)</strong>. Muita calma nessa hora pois em abientes de produção, um bom planejamento por Gmud se faz necessário em situações como essas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show vlan info basic 101</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">WED</span> <span class="n">JAN</span> <span class="mi">29</span> <span class="mi">03</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">15</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                               <span class="n">Vlan</span> <span class="n">Basic</span>
+<span class="o">================================================================================</span>
+<span class="n">VLAN</span>                              <span class="n">STG</span>
+<span class="n">ID</span>    <span class="n">NAME</span>             <span class="n">TYPE</span>         <span class="n">ID</span>  <span class="n">PROTOCOLID</span> <span class="n">SUBNETADDR</span>      <span class="n">SUBNETMASK</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mi">101</span>   <span class="n">VLAN</span> <span class="o">-</span> <span class="mi">64</span>        <span class="n">byPort</span>       <span class="mi">1</span>   <span class="n">none</span>       <span class="n">N</span><span class="o">/</span><span class="n">A</span>             <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+
+<span class="n">CORETESTSW01</span><span class="c1"># show vlan info basic 220</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">WED</span> <span class="n">JAN</span> <span class="mi">29</span> <span class="mi">03</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">20</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                               <span class="n">Vlan</span> <span class="n">Basic</span>
+<span class="o">================================================================================</span>
+<span class="n">VLAN</span>                              <span class="n">STG</span>
+<span class="n">ID</span>    <span class="n">NAME</span>             <span class="n">TYPE</span>         <span class="n">ID</span>  <span class="n">PROTOCOLID</span> <span class="n">SUBNETADDR</span>      <span class="n">SUBNETMASK</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mi">220</span>   <span class="n">VLAN</span> <span class="o">-</span> <span class="mf">172.31</span><span class="o">.</span><span class="mf">78.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-</span> <span class="n">Magali</span> <span class="n">bySrcMac</span>     <span class="mi">1</span>   <span class="n">none</span>       <span class="n">N</span><span class="o">/</span><span class="n">A</span>             <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+
+
+<span class="n">CORETESTSW01</span><span class="c1"># show vlan info advance 220</span>
+
+<span class="o">================================================================================</span>
+                                  <span class="n">Vlan</span> <span class="n">Advance</span>
+<span class="o">================================================================================</span>
+<span class="n">VLAN</span>             <span class="n">IF</span>    <span class="n">QOS</span>   <span class="n">AGING</span> <span class="n">MAC</span>                <span class="n">USER</span>
+<span class="n">ID</span>    <span class="n">NAME</span>       <span class="n">INDEX</span> <span class="n">LVL</span>   <span class="n">TIME</span>  <span class="n">ADDRESS</span>       <span class="n">DEFINEPID</span> <span class="n">ENCAP</span>  <span class="n">DSAP</span><span class="o">/</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="mi">220</span>   <span class="n">VLAN</span> <span class="o">-</span> <span class="mf">172.31</span><span class="o">.</span><span class="mf">78.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-</span> <span class="n">Magali</span> <span class="mi">2268</span>  <span class="mi">1</span>     <span class="mi">600</span>   <span class="mi">3</span><span class="n">c</span><span class="p">:</span><span class="n">b1</span><span class="p">:</span><span class="mi">5</span><span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="n">d</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span>  <span class="mh">0x0000</span>
+
+
+<span class="n">CORETESTSW01</span><span class="c1"># show vlan info advance 101</span>
+
+<span class="o">*******************************************************************************</span>
+<span class="n">Command</span> <span class="n">Execution</span> <span class="n">Time</span><span class="p">:</span> <span class="n">WED</span> <span class="n">JAN</span> <span class="mi">29</span> <span class="mi">04</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">49</span> <span class="mi">2020</span> <span class="n">GMT</span>
+<span class="o">*******************************************************************************</span>
+
+<span class="o">================================================================================</span>
+                              <span class="n">Vlan</span> <span class="n">Advance</span>
+<span class="o">================================================================================</span>
+<span class="n">VLAN</span>             <span class="n">IF</span>    <span class="n">QOS</span>   <span class="n">AGING</span> <span class="n">MAC</span>                <span class="n">USER</span>
+<span class="n">ID</span>    <span class="n">NAME</span>       <span class="n">INDEX</span> <span class="n">LVL</span>   <span class="n">TIME</span>  <span class="n">ADDRESS</span>            <span class="n">DEFINEPID</span> <span class="n">ENCAP</span>  <span class="n">DSAP</span><span class="o">/</span><span class="n">SSAP</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="mi">101</span>   <span class="n">VLAN</span> <span class="o">-</span> <span class="mi">64</span>  <span class="mi">2149</span>  <span class="mi">1</span>     <span class="mi">0</span>     <span class="mi">3</span><span class="n">c</span><span class="p">:</span><span class="n">b1</span><span class="p">:</span><span class="mi">5</span><span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="n">d</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">0</span><span class="n">f</span>  <span class="mh">0x0000</span>
+</pre></div>
+</div>
+<p>A vlan 101 é By Port, portanto temos que adicionar Vlan-Id através da porta (BY PORT) em ambos os CORES:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># vlan 101 ports add 3/7 member portmember</span>
+<span class="n">CORETESTSW02</span><span class="c1"># vlan 101 ports add 1/39 member portmember</span>
+</pre></div>
+</div>
+<p>A vlan 220 é By Source Mac, portanto temos que adicionar Vlan-Id através da porta (BY SRCMAC) em ambos os CORES:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># vlan 220 ports add 3/7 member static</span>
+<span class="n">CORETESTSW02</span><span class="c1"># vlan 220 ports add 1/39 member static</span>
+</pre></div>
+</div>
+<p>Vamos realizar agora as alterações necessárias no SWITCH DE ACESSO <strong>(IP 10.255.11.28)</strong>.</p>
+<p>Após ter realizado o tageamento vlan port nos CORES, agora vamos ajustar as Vlans 101 e 220 nas interfaces no SW de acesso.</p>
+<p>OBS: No PVID a vlan padrão 101 e 220 ambas são vlan de dados (prioridade sempre é para o tráfego de dados).</p>
+<p>Adicionar a VLAN-ID 101 nas Portas 46 e 45.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># vlan members add 101 45-46</span>
+<span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># vlan ports 45-46 pvid 101</span>
+<span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># show vlan</span>
+</pre></div>
+</div>
+<p>Adicionar a VLAN-ID 220 nas Portas 6, 9, 17, 21 e 39:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># vlan members add 220 6,9,17,21,39</span>
+<span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># vlan ports 6,9,17,21,39 pvid 220</span>
+<span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># show vlan</span>
+</pre></div>
+</div>
+<p>Nos CORES (Primário e Secundário), deverão ser adicionados, obrigatoriamente, os MACs das estações na tabela SRCMAC da vlan 220. Veja o exemplo abaixo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># vlan 220 srcmac add 64:1c:67:9B:82:6B</span>
+<span class="n">CORETESTSW01</span><span class="c1"># show ip arp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid">
+<h1>Avaya Nortel Ethernet Routing Switch - Tagging, Tagall, Untagall, Tagpvid e Untagpvid<a class="headerlink" href="#avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conceito básico de frames UntagPvid Only para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/untagpvidonly.png"><img alt="Avaya Nortel" src="_images/untagpvidonly.png" style="width: 684.0px; height: 320.40000000000003px;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Avaya Nortel Ethernet Routing Switch</a><ul>
+<li><a class="reference internal" href="#configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0">Configurar o Switch IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid">Avaya Nortel Ethernet Routing Switch - Tagging, Tagall, Untagall, Tagpvid e Untagpvid</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/avaya.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
