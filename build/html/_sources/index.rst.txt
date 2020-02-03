@@ -13,6 +13,13 @@ Conteúdos:
    
    avaya
 
+.. _cisco:
+.. toctree::
+   :maxdepth: 1
+   :caption: Cisco System Training
+   
+   cisco
+
 .. _usmt:
 .. toctree::
    :maxdepth: 1

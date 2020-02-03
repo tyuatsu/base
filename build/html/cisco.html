@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Comandos Básicos Router Cisco &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User State Migration Tool ‘USMT’" href="usmt.html" />
+    <link rel="prev" title="Avaya Nortel Ethernet Routing Switch" href="avaya.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="avaya.html" title="Avaya Nortel Ethernet Routing Switch"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="comandos-basicos-router-cisco">
+<h1>3. Comandos Básicos Router Cisco<a class="headerlink" href="#comandos-basicos-router-cisco" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ciscologo.jpg"><img alt="Cisco" src="_images/ciscologo.jpg" style="width: 614.4px; height: 408.0px;" /></a>
+</div>
+<p>Router IP: 192.168.131.108 x 192.172.100.102:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TESTRO0075</span><span class="c1"># clear counter int br</span>
+<span class="n">TESTRO0075</span><span class="c1"># ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)**</span>
+<span class="n">TESTRO0075</span><span class="c1"># show ip int br</span>
+<span class="n">TESTRO0075</span><span class="c1"># show ip int br | in up | drops</span>
+<span class="n">TESTRO0075</span><span class="c1"># show int | i CRC</span>
+<span class="n">TESTRO0075</span><span class="c1"># show ver | i uptime</span>
+<span class="n">TESTRO0001</span><span class="c1"># show clock</span>
+</pre></div>
+</div>
+<p>Acesso ao equipamento TESTRO0001 com incremento de erro na interface operadora.</p>
+<p>Router IP: 192.172.100.101 x 192.172.100.102:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TESTRO0001</span><span class="c1"># clear counter int FastEthernet0/1</span>
+<span class="n">TESTRO0001</span><span class="c1"># ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)**</span>
+<span class="n">TESTRO0001</span><span class="c1"># show int description</span>
+<span class="n">TESTRO0001</span><span class="c1"># show int FastEthernet0/1</span>
+<span class="n">TESTRO0001</span><span class="c1"># show int FastEthernet0/1 | in up | drops</span>
+<span class="n">TESTRO0001</span><span class="c1"># show int | i CRC</span>
+<span class="n">TESTRO0001</span><span class="c1"># show ver | i uptime</span>
+<span class="n">TESTRO0001</span><span class="c1"># show clock</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="avaya.html"
+                        title="previous chapter">Avaya Nortel Ethernet Routing Switch</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usmt.html"
+                        title="next chapter">User State Migration Tool ‘USMT’</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cisco.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="avaya.html" title="Avaya Nortel Ethernet Routing Switch"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
