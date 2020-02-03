@@ -15,7 +15,9 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User State Migration Tool ‘USMT’" href="usmt.html" />
+    <link rel="prev" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -23,6 +25,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>  
@@ -42,8 +50,9 @@
 <p>Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure localizar o SW de acesso da operação e conferir
 sempre a porta (tag all) com o sys topology (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
 Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o Mac e as Vlans que estão passando na interface desse Switch.</p>
-<div class="section" id="configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0">
-<h2>Configurar o Switch IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).<a class="headerlink" href="#configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adicionar-nova-vlan-no-sw-core">
+<h2>1. Adicionar nova VLAN no SW Core.<a class="headerlink" href="#adicionar-nova-vlan-no-sw-core" title="Permalink to this headline">¶</a></h2>
+<p>Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).</p>
 <p>Acesse o SW CORE, digite o comando abaixo e tecle <strong>ENTER</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show ip arp info 10.255.11.28</span>
 
@@ -72,7 +81,7 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 <span class="mf">10.255</span><span class="o">.</span><span class="mf">11.28</span>    <span class="mi">00</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">0</span><span class="n">d</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">68</span><span class="p">:</span><span class="mi">00</span>  <span class="mi">255</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">39</span>      <span class="n">DYNAMIC</span> <span class="mi">295</span>
 </pre></div>
 </div>
-<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE PRIMÁRIO</strong> ONDE O SWITCH ESTÁ CONECTADO:</p>
+<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE PRIMÁRIO</strong> ONDE O SW ESTÁ CONECTADO:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1">#  show ports info vlans port 3/7</span>
 
 <span class="o">*******************************************************************************</span>
@@ -88,7 +97,7 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 <span class="mi">3</span><span class="o">/</span><span class="mi">7</span>   <span class="n">enable</span>  <span class="n">false</span>   <span class="n">true</span>      <span class="mi">255</span>     <span class="mi">100</span> <span class="mi">109</span> <span class="mi">214</span> <span class="mi">250</span> <span class="mi">255</span> <span class="mi">271</span> <span class="mi">3138</span>   <span class="n">disable</span>
 </pre></div>
 </div>
-<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE SECUNDÁRIO</strong> ONDE O SWITCH ESTÁ CONECTADO:</p>
+<p>VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO <strong>CORE SECUNDÁRIO</strong> ONDE O SW ESTÁ CONECTADO:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW02</span><span class="c1"># show ports info vlans port 1/39</span>
 
 <span class="o">*******************************************************************************</span>
@@ -104,7 +113,7 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 <span class="mi">1</span><span class="o">/</span><span class="mi">39</span>  <span class="n">enable</span>  <span class="n">false</span>   <span class="n">true</span>      <span class="mi">255</span>     <span class="mi">100</span> <span class="mi">109</span> <span class="mi">214</span> <span class="mi">250</span> <span class="mi">255</span> <span class="mi">271</span> <span class="mi">3138</span>   <span class="n">disable</span>
 </pre></div>
 </div>
-<p>Há 8 VLANS atualmente cadastradas no SWITCH DE ACESSO <strong>(IP 10.255.11.28)</strong> mas nenhuma delas atendem as vlans 101 e 220:</p>
+<p>Há 8 VLANS atualmente cadastradas no SW de acesso <strong>(IP 10.255.11.28)</strong> mas nenhuma delas atendem as vlans 101 e 220:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw1</span><span class="o">.</span><span class="n">teste</span><span class="c1"># show vlan</span>
 
 <span class="n">Id</span>   <span class="n">Name</span>                 <span class="n">Type</span>     <span class="n">Protocol</span>         <span class="n">PID</span>     <span class="n">Active</span> <span class="n">IVL</span><span class="o">/</span><span class="n">SVL</span> <span class="n">Mgmt</span>
@@ -128,7 +137,8 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 <span class="n">Total</span> <span class="n">VLANs</span><span class="p">:</span> <span class="mi">8</span>
 </pre></div>
 </div>
-<p>Para adicionar 2 novas vlans no Switch de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário), em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan <strong>(by port ou by srcmac)</strong>. Muita calma nessa hora pois em abientes de produção, um bom planejamento por Gmud se faz necessário em situações como essas.</p>
+<p>Para adicionar 2 novas vlans no SW de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário). Depois em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan <strong>(by port ou by srcmac)</strong>. Muita calma nessa hora, pois em abientes de produção é necessário ter um bom planejamento por Gmud.</p>
+<p>Acesse o SW CORE, digite o comando abaixo e tecle <strong>ENTER</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show vlan info basic 101</span>
 
 <span class="o">*******************************************************************************</span>
@@ -216,15 +226,15 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid">
-<h1>Avaya Nortel Ethernet Routing Switch - Tagging, Tagall, Untagall, Tagpvid e Untagpvid<a class="headerlink" href="#avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tagging-tagall-untagall-tagpvidonly-e-untagpvidonly">
+<h2>2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly.<a class="headerlink" href="#tagging-tagall-untagall-tagpvidonly-e-untagpvidonly" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Conceito básico de frames UntagPvid Only para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.</p>
+<p>Iniciaremos com o conceito ‘UntagPvidOnly’ para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/untagpvidonly.png"><img alt="Avaya Nortel" src="_images/untagpvidonly.png" style="width: 684.0px; height: 320.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="_images/untagpvidonly.png"><img alt="Avaya Nortel" src="_images/untagpvidonly.png" style="width: 684.0px; height: 319.5px;" /></a>
+</div>
 </div>
 </div>
 
@@ -237,12 +247,18 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Avaya Nortel Ethernet Routing Switch</a><ul>
-<li><a class="reference internal" href="#configurar-o-switch-ip-10-255-11-28-portas-45-e-46-na-vlan-id-101-ip-10-221-64-0-e-tambem-as-portas-6-9-17-21-e-39-na-vlan-id-220-ip-172-31-78-0">Configurar o Switch IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).</a></li>
+<li><a class="reference internal" href="#adicionar-nova-vlan-no-sw-core">1. Adicionar nova VLAN no SW Core.</a></li>
+<li><a class="reference internal" href="#tagging-tagall-untagall-tagpvidonly-e-untagpvidonly">2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly.</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#avaya-nortel-ethernet-routing-switch-tagging-tagall-untagall-tagpvid-e-untagpvid">Avaya Nortel Ethernet Routing Switch - Tagging, Tagall, Untagall, Tagpvid e Untagpvid</a></li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Bem-Vindo a “Base de Conhecimento do Tyuatsu”</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usmt.html"
+                        title="next chapter">User State Migration Tool ‘USMT’</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -270,6 +286,12 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>
