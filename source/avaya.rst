@@ -3,10 +3,6 @@ Avaya Nortel Ethernet Routing Switch
 
 .. note:: Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.
 
-.. figure:: nortel.jpg
-    :scale: 30 %
-    :align: center
-    :alt: Nortel
 
 Dados fornecidos geralmente são o MAC ou IP e Vlan de cada Operação.
 
@@ -19,7 +15,7 @@ Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o 
 
 Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: **101** (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: **220** (IP 172.31.78.0).
 
-Acesse o SW CORE (Avaya_ERS_8600), digite o comando abaixo e tecle **ENTER**::
+Acesse o SW CORE, digite o comando abaixo e tecle **ENTER**::
 
     CORETESTSW01# show ip arp info 10.255.11.28
 
@@ -176,35 +172,6 @@ A vlan 220 é By Source Mac, portanto temos que adicionar Vlan-Id através da po
     CORETESTSW01# vlan 220 ports add 3/7 member static 
     CORETESTSW02# vlan 220 ports add 1/39 member static 
 
-Verificar as Vlans 101 e 220 nas portas em ambos os Cores::
-
-    CORETESTSW01# show ports info vlans port 3/7
-    
-    *******************************************************************************
-    Command Execution Time: WED JAN 29 07:49:07 2020 GMT
-    *******************************************************************************
-
-    ================================================================================
-                                   Port Vlans
-    ================================================================================
-    PORT          DISCARD DISCARD   DEFAULT VLAN   UNTAG
-    NUM   TAGGING TAGFRAM UNTAGFRAM VLANID  IDS    DEFVLAN
-    --------------------------------------------------------------------------------
-    3/7   enable  false   true      255     1 100 101 109 214 220 250 255 271 3138   disable
-
-    CORETESTSW02# show ports info vlans port 1/39
-    
-    *******************************************************************************
-    Command Execution Time: WED JAN 29 08:00:02 2020 GMT
-    *******************************************************************************
-
-    ================================================================================
-                                   Port Vlans
-    ================================================================================
-    PORT          DISCARD DISCARD   DEFAULT VLAN   UNTAG
-    NUM   TAGGING TAGFRAM UNTAGFRAM VLANID  IDS    DEFVLAN
-    --------------------------------------------------------------------------------
-    1/39   enable  false   true      255     1 100 101 109 214 220 250 255 271 3138   disable
 
 Vamos realizar agora as alterações necessárias no SWITCH DE ACESSO **(IP 10.255.11.28)**.
 
@@ -228,8 +195,7 @@ Adicionar a VLAN-ID 220 nas Portas 6, 9, 17, 21 e 39::
 Nos CORES (Primário e Secundário), deverão ser adicionados, obrigatoriamente, os MACs das estações na tabela SRCMAC da vlan 220. Veja o exemplo abaixo::
 
     CORETESTSW01# vlan 220 srcmac add 64:1c:67:9B:82:6B
-
-    CORETESTSW01# show ip arp info 
+    CORETESTSW01# show ip arp
 
 
 2. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly.
@@ -242,32 +208,7 @@ Nos CORES (Primário e Secundário), deverão ser adicionados, obrigatoriamente,
     :align: center
     :alt: Avaya Nortel
     
-3. Comandos Básicos Router Cisco
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
-
-Router IP: 192.168.131.108 x 192.172.100.102
-
-    TESTRO0075# clear counter int br
-    TESTRO0075# ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: 'press ctrl + shift + 6' simultainiously)**
-    TESTRO0075# show ip int br
-    TESTRO0075# show ip int br | in up | drops
-    TESTRO0075# show int | i CRC
-    TESTRO0075# show ver | i uptime
-    TESTRO0001# show clock
-
-Acesso ao equipamento TESTRO0001 com incremento de erro na interface operadora.
-
-Router IP: 192.172.100.101 x 192.172.100.102
-
-    TESTRO0001# clear counter int FastEthernet0/1
-    TESTRO0001# ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: 'press ctrl + shift + 6' simultainiously)**
-    TESTRO0001# show int description
-    TESTRO0001# show int FastEthernet0/1
-    TESTRO0001# show int FastEthernet0/1 | in up | drops
-    TESTRO0001# show int | i CRC
-    TESTRO0001# show ver | i uptime
-    TESTRO0001# show clock
+    
+    
     
 
