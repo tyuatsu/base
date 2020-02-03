@@ -4,7 +4,7 @@ Router Cisco
 .. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
 
 .. figure:: ciscologo.jpg
-    :scale: 60 %
+    :scale: 40 %
     :align: center
     :alt: Cisco
 
