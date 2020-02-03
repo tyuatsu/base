@@ -1,5 +1,5 @@
-3. Comandos Básicos Router Cisco
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Router Cisco
+------------
 
 .. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
 
@@ -7,6 +7,9 @@
     :scale: 60 %
     :align: center
     :alt: Cisco
+
+1. Comandos Básicos Router Cisco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Router IP: 192.168.131.108 x 192.172.100.102::
 
