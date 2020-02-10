@@ -3,9 +3,8 @@ Avaya Nortel Ethernet Routing Switch
 
 .. note:: Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.
 
-          - `Site oficial http://support.avaya.com/ <http://support.avaya.com/>`_ 
-          211 Mt. Airy Road,Basking Ridge,NJ 07920 AVAYA
-
+          - `211 Mt. Airy Road,Basking Ridge, NJ 07920 AVAYA - Site oficial (http://support.avaya.com/) <http://support.avaya.com/>`_ 
+          
 .. figure:: nortel.jpg
     :scale: 60 %
     :align: center
@@ -356,12 +355,19 @@ Para ativar o POE::
     sw4.cosmonaut (config)# no poe-shutdown port 45
     sw4.cosmonaut# exit
 
+Para desativar o POE::
+
+    sw4.cosmonaut# configure terminal
+    sw4.cosmonaut (config)# interface fastethernet 45
+    sw4.cosmonaut (config)# poe poe-shutdown port 45
+    sw4.cosmonaut# exit
+
     sw4.cosmonaut# show poe-port-status 45
 
               Admin      Current                               Limit
     Port  Status     Status              Classification   (Watts)  Priority
     ----  -------    -----------------   --------------   -------  --------
-    45    Enable     Enable                 0          16       Low
+    45    Enable     Enable              0                16       Low
 
 4. Efetuar a troca do IP 10.221.17.220 da estação, para a rede IP 10.64.x.x. Mac da estação: 64:31:50:ff:6c:6f
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -542,7 +548,7 @@ Cadastrar a Vlan 265 na porta 17::
 
 O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vlan 265 na configuração da interface porta 17::
 
-    sw04cascao# show running-config | i Ethernet
+    sw04cascao# show running-config
 
     interface Ethernet ALL
     lldp med-network-policies port 12,16 voice dscp 46 priority 6 tagging tagged vlan-id 265
@@ -551,17 +557,420 @@ O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vl
     exit
 
     sw04cascao# conf t
-    sw04cascao (config)# interterface fastEthernet 17
+    sw04cascao (config)#
     sw04cascao (config)# no lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 214
     sw04cascao (config)# lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 265
     sw04cascao (config)# exit 
     sw04cascao# save conf
 
     sw04cascao# show lldp med-network-policies port 17
-    sw04cascao# show running-config | i Ethernet
+    sw04cascao# show running-config
     
     interface Ethernet ALL
     lldp med-network-policies port 12,16-17,19,21,31,39,42 voice dscp 46 priority 6 tagging tagged vlan-id 265
+
+
+.. note:: Configuração LLDP - conforme as informações descritas abaixo, deverá ser realizado a configuração de 44 bases Avaya.
+
+sw13.rack3.sala.camelia (IP **10.221.175.30**) 
+Portas = 1 a 4 (Vlan 2161 + lldp)
+Portas = 27 a 48 (Vlan 2162 + lldp)
+Total = 26 Bases Avaya
+
+sw12.rack1.sala.orquidea (IP **10.221.175.29**) 
+Portas = 31 a 48 (Vlan 2161 + lldp) mas a **Porta 41 permanecerá na Vlan 2162**
+Total = 18 Bases Avaya
+
+Antes de acessar os switches, vamos checar as informações das vlans 2161 e 2162 nos 2 Cores::  
+
+    CORESW001# show ip arp info 10.221.175.29
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:36:42 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                 IP Arp - GlobalRouter
+    ================================================================================
+    IP_ADDRESS      MAC_ADDRESS        VLAN    PORT       TYPE    TTL(10 Sec)
+    --------------------------------------------------------------------------------
+    10.221.175.29   38:bb:3c:28:4c:00  1751  MLT 1      DYNAMIC 1953
+
+    1 out of 3087 ARP entries displayed
+
+    CORESW001# show vlan info fdb-entry mac 38:bb:3c:28:4c:00
+    
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:38:17 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                        Vlan Fdb
+    ================================================================================
+    VLAN            MAC                                         QOS    SMLT
+    ID   STATUS     ADDRESS            INTERFACE        MONITOR LEVEL  REMOTE
+    --------------------------------------------------------------------------------
+    1751 learned    38:bb:3c:28:4c:00  IST              false   1      true
+
+    1 out of 3800 entries in all fdb(s) displayed.
+
+Os resultados dos comandos acima, significam que a conexão do switch 10.221.175.29 com o CORE primário está **down** conforme mostra a interface IST e a porta MLT 1.   
+
+Vamos analisar agora o switch 10.221.175.30 no Core prinário::
+
+    CORESW001# show ip arp info 10.221.175.30
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:35:55 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                 IP Arp - GlobalRouter
+    ================================================================================
+    IP_ADDRESS      MAC_ADDRESS        VLAN    PORT       TYPE    TTL(10 Sec)
+    --------------------------------------------------------------------------------
+    10.221.175.30   38:bb:3c:28:54:00  1751    1/27      DYNAMIC 763
+
+    1 out of 3087 ARP entries displayed
+
+    CORESW001# show ports info vlans port 1/27
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:34:47 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                       Port Vlans
+    ================================================================================
+    PORT          DISCARD DISCARD   DEFAULT VLAN   UNTAG
+    NUM   TAGGING TAGFRAM UNTAGFRAM VLANID  IDS    DEFVLAN
+    --------------------------------------------------------------------------------
+    1/27  enable  false   true      1751    161 162 164 1751 2161 2162 2163 2164 2165   disable
+
+    CORESW001# show vlan info basic 2161
+    
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:35:18 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                       Vlan Basic
+    ================================================================================
+    VLAN                              STG
+    ID    NAME             TYPE         ID  PROTOCOLID SUBNETADDR      SUBNETMASK
+    --------------------------------------------------------------------------------
+    2161  NEO - VOZ - 172.31.161.0_24 byPort       1   none       N/A             N/A
+
+    CORESW001# show vlan info basic 2162
+   
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:35:22 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                       Vlan Basic
+    ================================================================================
+    VLAN                              STG
+    ID    NAME             TYPE         ID  PROTOCOLID SUBNETADDR      SUBNETMASK
+    --------------------------------------------------------------------------------
+    2162  NEO - VOZ - 172.31.162.0_24 byPort       1   none       N/A             N/A
+
+    CORESW001# show sys topology
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:52:42 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                     Topology Table
+    ================================================================================
+    Local Rem
+    Port  IpAddress       SegmentId MacAddress   ChassisType            BT LS  CS   Port
+    --------------------------------------------------------------------------------
+    1/27 10.221.175.30   0x000131  38bb3c285401 ERS4550T-PWR           12 Yes HtBt 1/49
+
+Antes de acessar os switches, vamos checar as informações das vlans 2161 e 2162 no Core secundario::
+
+    CORESW002# show vlan info fdb-entry mac 38:bb:3c:28:4c:00 
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:57:42 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                        Vlan Fdb
+    ================================================================================
+    VLAN            MAC                                         QOS    SMLT
+    ID   STATUS     ADDRESS            INTERFACE        MONITOR LEVEL  REMOTE
+    --------------------------------------------------------------------------------
+    1751 learned    38:bb:3c:28:4c:00  Port-1/26        false   1      false
+
+    1 out of 3799 entries in all fdb(s) displayed.
+
+    CORESW002# show ports info vlans port 1/26
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 12:58:19 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                       Port Vlans
+    ================================================================================
+    PORT          DISCARD DISCARD   DEFAULT VLAN   UNTAG
+    NUM   TAGGING TAGFRAM UNTAGFRAM VLANID  IDS    DEFVLAN
+    --------------------------------------------------------------------------------
+    1/26  enable  false   true      1751    161 164 1751 2161 2162 2163 2164 2165   disable
+
+    CORESW002# show vlan info fdb-entry mac 38:bb:3c:28:54:00
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 13:00:57 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                        Vlan Fdb
+    ================================================================================
+    VLAN            MAC                                         QOS    SMLT
+    ID   STATUS     ADDRESS            INTERFACE        MONITOR LEVEL  REMOTE
+    --------------------------------------------------------------------------------
+    1751 learned    38:bb:3c:28:54:00  Port-1/27        false   1      false
+
+    1 out of 3799 entries in all fdb(s) displayed.
+
+    CORESW002# show ports info vlans port 1/27
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 13:01:24 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                       Port Vlans
+    ================================================================================
+    PORT          DISCARD DISCARD   DEFAULT VLAN   UNTAG
+    NUM   TAGGING TAGFRAM UNTAGFRAM VLANID  IDS    DEFVLAN
+    --------------------------------------------------------------------------------
+    1/27  enable  false   true      1751    161 162 164 1751 2161 2162 2163 2164 2165   disable
+
+    CORESW002# show ip interface
+
+    *******************************************************************************
+    Command Execution Time: FRI FEB 07 13:02:51 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                              IP Interface - GlobalRouter
+    ================================================================================
+    INTERFACE    IP             NET            BCASTADDR  REASM    VLAN  BROUTER
+                 ADDRESS        MASK           FORMAT     MAXSIZE  ID    PORT
+    --------------------------------------------------------------------------------
+    Port5/1      192.168.168.168 255.255.255.0  ones       1500     0     false
+    Vlan2161     172.31.161.3    255.255.255.0  ones       1500     2161  false
+    Vlan2162     172.31.162.3    255.255.255.0  ones       1500     2162  false
+    Vlan2163     172.31.163.3    255.255.255.0  ones       1500     2163  false
+    Vlan2164     172.31.164.3    255.255.255.0  ones       1500     2164  false
+    Vlan2165     172.31.165.3    255.255.255.0  ones       1500     2165  false
+    Vlan2166     172.31.166.3    255.255.255.0  ones       1500     2166  false
+
+Acessar o SW de Acesso **10.221.175.30** e adicionar a VLAN-ID 2161 nas portas 1 a 4 e VLAN-ID 2162 nas portas 27 a 48 + LLDP.
+
+Configurar primeiro a LLDP de acordo com a sua vlan de voz::
+
+    sw30cascao# conf t
+    sw30cascao (config)# lldp med-network-policies port 27-48 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    sw30cascao (config)# lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw30cascao# exit
+    sw30cascao# save conf
+
+    sw30cascao# show lldp med-network-policies port 1-4
+    -------------------------------------------------------------------------------
+                         LLDP-MED network-policies
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+       Unit/   Application Type   VlanID   Tagging   DSCP   Priority
+       Port
+    -------------------------------------------------------------------------------
+       1       Voice              2161     tagged     46    6
+       2       Voice              2161     tagged     46    6
+       3       Voice              2161     tagged     46    6
+       4       Voice              2161     tagged     46    6
+    -------------------------------------------------------------------------------
+
+    sw30cascao# show lldp med-network-policies port 27-48
+    -------------------------------------------------------------------------------
+                         LLDP-MED network-policies
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+       Unit/   Application Type   VlanID   Tagging   DSCP   Priority
+       Port
+    -------------------------------------------------------------------------------
+       27      Voice              2162     tagged     46    6
+       28      Voice              2162     tagged     46    6
+       29      Voice              2162     tagged     46    6
+       30      Voice              2162     tagged     46    6
+       31      Voice              2162     tagged     46    6
+       32      Voice              2162     tagged     46    6
+       33      Voice              2162     tagged     46    6
+       34      Voice              2162     tagged     46    6
+       35      Voice              2162     tagged     46    6
+       36      Voice              2162     tagged     46    6
+       37      Voice              2162     tagged     46    6
+       38      Voice              2162     tagged     46    6
+       39      Voice              2162     tagged     46    6
+       40      Voice              2162     tagged     46    6
+       41      Voice              2162     tagged     46    6
+       42      Voice              2162     tagged     46    6
+       43      Voice              2162     tagged     46    6
+       44      Voice              2162     tagged     46    6
+       45      Voice              2162     tagged     46    6
+       46      Voice              2162     tagged     46    6
+       47      Voice              2162     tagged     46    6
+       48      Voice              2162     tagged     46    6
+    -------------------------------------------------------------------------------
+
+Se quiser pode conferir também o lldp pelo running::
+
+    sw30cascao# show running-config
+
+    interface Ethernet ALL
+    lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 5 voice dscp 46 priority 6 tagging tagged vlan-id 2163
+    lldp med-network-policies port 6-7 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    lldp med-network-policies port 8-15 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 16-17 voice dscp 46 priority 6 tagging tagged vlan-id 2163
+    lldp med-network-policies port 18-26 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 27-48 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    exit
+
+
+Ao verificar a Vlan 2162 nesse switch, a mesma já está configurada em todas as portas:: 
+
+    sw30cascao# show vlan id 2162
+
+    Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+    ---- -------------------- -------- ---------------- ------- ------ ------- ----
+    2162 Neo-Voz-162          Port     None             0x0000  Yes    IVL     No
+            Port Members: ALL
+    Total VLANs: 1
+
+Será necessário apenas configurar a vlan 2161 nas portas 1 a 4::
+
+    sw30cascao# show vlan id 2161
+
+    Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+    ---- -------------------- -------- ---------------- ------- ------ ------- ----
+    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+            Port Members: 7-35,37-50
+    Total VLANs: 1
+
+    sw30cascao# conf t
+    sw30cascao (config)# vlan members add 2161 1-4
+    sw30cascao (config)# exit
+    sw30cascao# save conf
+
+    sw30cascao# show vlan id 2161
+
+    Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+    ---- -------------------- -------- ---------------- ------- ------ ------- ----
+    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+            Port Members: 1-4,7-35,37-50
+    Total VLANs: 1
+
+Para mostrar todas as vlans da porta::
+
+    sw30cascao# show vlan interface VIDS 1-4
+
+    Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    1    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    2    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    3    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    4    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+
+
+Agora precisamos acessar o switch de acesso IP 10.221.175.29 e adicionar a VLAN-ID 2161 nas portas (31-40 e 42-48) + LLDP.
+
+Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
+
+ Configurar primeiro a LLDP de acordo com a sua vlan de voz::
+
+    sw29.teslacoil# conf t
+    sw29.teslacoil (config)# lldp med-network-policies port 31-40 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw29.teslacoil (config)# lldp med-network-policies port 42-48 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw29.teslacoil (config)# exit 
+    sw29.teslacoil# save conf
+
+    sw29.teslacoil# show lldp med-network-policies port 31-48
+
+    -------------------------------------------------------------------------------
+                         LLDP-MED network-policies
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+       Unit/   Application Type   VlanID   Tagging   DSCP   Priority
+       Port
+    -------------------------------------------------------------------------------
+       31      Voice              2161     tagged     46    6
+       32      Voice              2161     tagged     46    6
+       33      Voice              2161     tagged     46    6
+       34      Voice              2161     tagged     46    6
+       35      Voice              2161     tagged     46    6
+       36      Voice              2161     tagged     46    6
+       37      Voice              2161     tagged     46    6
+       38      Voice              2161     tagged     46    6
+       39      Voice              2161     tagged     46    6
+       40      Voice              2161     tagged     46    6
+       41      Voice              2162     tagged     46    6
+       42      Voice              2161     tagged     46    6
+       43      Voice              2161     tagged     46    6
+       44      Voice              2161     tagged     46    6
+       45      Voice              2161     tagged     46    6
+       46      Voice              2161     tagged     46    6
+       47      Voice              2161     tagged     46    6
+       48      Voice              2161     tagged     46    6
+    -------------------------------------------------------------------------------
+
+    sw29.teslacoil# show running-config
+
+    interface Ethernet ALL
+    lldp med-network-policies port 1-6 voice dscp 46 priority 6 tagging tagged vlan-id 2164
+    lldp med-network-policies port 7-8 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 9-10 voice dscp 46 priority 6 tagging tagged vlan-id 2164
+    lldp med-network-policies port 11 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 12-19 voice dscp 46 priority 6 tagging tagged vlan-id 2164
+    lldp med-network-policies port 20-30 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    lldp med-network-policies port 31-40 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    lldp med-network-policies port 41 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    lldp med-network-policies port 42-48 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    exit
+
+    sw29.teslacoil# conf t
+    sw29.teslacoil (config)# vlan members add 2161 31-40
+    sw29.teslacoil (config)# vlan members add 2161 42-48
+    sw29.teslacoil (config)# vlan members add 2162 41
+    sw29.teslacoil (config)# exit
+    sw29.teslacoil# save conf
+
+    sw29.teslacoil# show vlan id 2161
+
+    Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+    ---- -------------------- -------- ---------------- ------- ------ ------- ----
+    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+            Port Members: 7-8,11,20-21,23-25,27-29,31-50
+    Total VLANs: 1
+
+    sw29.teslacoil# show vlan id 2162
+    
+    Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+    ---- -------------------- -------- ---------------- ------- ------ ------- ----
+    2162 NEO-VOZ-162          Port     None             0x0000  Yes    IVL     No
+            Port Members: 20-50
+
+    sw29.teslacoil# show vlan interface VIDS 41
+
+    Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    41   161  NEO-DADOS-161     164  NEO-DADOS-164     2161 NEO-VOZ-161
+         2162 NEO-VOZ-162
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+
+show vlan interface info 41
+      Filter     Filter
+     Untagged Unregistered
+Port  Frames     Frames    PVID PRI    Tagging    Name
+---- -------- ------------ ---- --- ------------- ----------------
+41   No       Yes          164  0   UntagPvidOnly Port 41
+
 
 6. Lentidão na Internet
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -793,7 +1202,7 @@ Verificar no SW de Acesso IP 10.221.4.7::
                   Status                    Auto                        Flow
     Port Trunk Admin   Oper Link LinkTrap Negotiation  Speed   Duplex Control
     ---- ----- ------- ---- ---- -------- ----------- -------- ------ -------
-11         Enable  Up   Up   Enabled  Enabled     100Mbps  Full   Disable
+    11   Enable  Up   Up   Enabled  Enabled     100Mbps  Full   Disable
 
     sw0012magali# show log
 
