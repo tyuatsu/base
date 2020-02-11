@@ -836,7 +836,7 @@ Ao verificar a Vlan 2162 nesse switch, a mesma já está configurada em todas as
 
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
     ---- -------------------- -------- ---------------- ------- ------ ------- ----
-    2162 Neo-Voz-162          Port     None             0x0000  Yes    IVL     No
+    2162 SHOYU-VOZ-162          Port     None             0x0000  Yes    IVL     No
             Port Members: ALL
     Total VLANs: 1
 
@@ -846,7 +846,7 @@ Será necessário apenas configurar a vlan 2161 nas portas 1 a 4::
 
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
     ---- -------------------- -------- ---------------- ------- ------ ------- ----
-    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+    2161 SHOYU-VOZ-161          Port     None             0x0000  Yes    IVL     No
             Port Members: 7-35,37-50
     Total VLANs: 1
 
@@ -859,7 +859,7 @@ Será necessário apenas configurar a vlan 2161 nas portas 1 a 4::
 
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
     ---- -------------------- -------- ---------------- ------- ------ ------- ----
-    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+    2161 SHOYU-VOZ-161          Port     None             0x0000  Yes    IVL     No
             Port Members: 1-4,7-35,37-50
     Total VLANs: 1
 
@@ -869,13 +869,13 @@ Para mostrar todas as vlans da porta::
 
     Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    1    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    1    164  SHOYU-DADOS-164     2164 SHOYU-VOZ-164
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    2    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    2    164  SHOYU-DADOS-164     2164 SHOYU-VOZ-164
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    3    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    3    164  SHOYU-DADOS-164     2164 SHOYU-VOZ-164
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    4    164  NEO-DADOS-164     2164 NEO-VOZ-164
+    4    164  SHOYU-DADOS-164     2164 SHOYU-VOZ-164
     ---- ---- ----------------  ---- ----------------  ---- ----------------
 
 
@@ -945,7 +945,7 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
 
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
     ---- -------------------- -------- ---------------- ------- ------ ------- ----
-    2161 NEO-VOZ-161          Port     None             0x0000  Yes    IVL     No
+    2161 SHOYU-VOZ-161          Port     None             0x0000  Yes    IVL     No
             Port Members: 7-8,11,20-21,23-25,27-29,31-50
     Total VLANs: 1
 
@@ -953,15 +953,15 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
     ---- -------------------- -------- ---------------- ------- ------ ------- ----
-    2162 NEO-VOZ-162          Port     None             0x0000  Yes    IVL     No
+    2162 SHOYU-VOZ-162          Port     None             0x0000  Yes    IVL     No
             Port Members: 20-50
 
     sw29.teslacoil# show vlan interface VIDS 41
 
     Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    41   161  NEO-DADOS-161     164  NEO-DADOS-164     2161 NEO-VOZ-161
-         2162 NEO-VOZ-162
+    41   161  SHOYU-DADOS-161     164  SHOYU-DADOS-164     2161 SHOYU-VOZ-161
+         2162 SHOYU-VOZ-162
     ---- ---- ----------------  ---- ----------------  ---- ----------------
 
     sw29.teslacoil# show vlan interface info 41
