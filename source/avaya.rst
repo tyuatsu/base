@@ -442,7 +442,7 @@ Mudar o Pvid da porta::
     43   No     No       No           160  0   UntagPvidOnly Port 43
   
 
-Localizar no Core o Mac a4:1f:72:fa:ba:9c olhando Vlan por Vlan (mais trabalhoso). Ele útil quando não se sabe direito qual é o Mac do host que está conectado no switch de acesso.
+Localizar no Core o Mac a4:1f:72:fa:ba:9c olhando Vlan por Vlan (mais trabalhoso). É útil quando não se sabe direito qual Mac (host) que está conectado no switch de acesso.
 
 Mostar todas as Vlans::
 
@@ -964,12 +964,13 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
          2162 NEO-VOZ-162
     ---- ---- ----------------  ---- ----------------  ---- ----------------
 
-show vlan interface info 41
-      Filter     Filter
-     Untagged Unregistered
-Port  Frames     Frames    PVID PRI    Tagging    Name
----- -------- ------------ ---- --- ------------- ----------------
-41   No       Yes          164  0   UntagPvidOnly Port 41
+    sw29.teslacoil# show vlan interface info 41
+    
+    Filter     Filter
+         Untagged Unregistered
+    Port  Frames     Frames    PVID PRI    Tagging    Name
+    ---- -------- ------------ ---- --- ------------- ----------------
+    41   No       Yes          164  0   UntagPvidOnly Port 41
 
 
 6. Lentidão na Internet
