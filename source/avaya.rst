@@ -51,12 +51,6 @@ Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle **ENTER**::
     10.255.11.28    00:23:0d:03:68:00  255     1/39      DYNAMIC 295
 
 
-Mostrar o IP da VLAN 220 e 101::
-    
-    CORETESTSW01# show vlan info ip 220
-    CORETESTSW01# show vlan info ip 101
-
-
 VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SW ESTÁ CONECTADO::
 
     CORETESTSW01#  show ports info vlans port 3/7
@@ -79,7 +73,7 @@ VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE SECUNDÁRIO** ONDE O S
     CORETESTSW02# show ports info vlans port 1/39
     
     *******************************************************************************
-    Command Execution Time: TUE JAN 28 10:00:55 2020 GMT
+                Command Execution Time: TUE JAN 28 10:00:55 2020 GMT
     *******************************************************************************
 
     ================================================================================
@@ -94,6 +88,77 @@ Mostra as vlans do Core e suas informações::
 
     CORETESTSW01# show ip interface
 
+    *******************************************************************************
+                Command Execution Time: TUE JAN 28 10:00:55 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                              IP Interface - GlobalRouter
+    ================================================================================
+    INTERFACE    IP             NET            BCASTADDR  REASM    VLAN  BROUTER
+                 ADDRESS        MASK           FORMAT     MAXSIZE  ID    PORT
+    --------------------------------------------------------------------------------
+    Port6/1      192.168.168.169 255.255.255.0  ones       1500     0     false
+    Vlan2        10.221.70.1    255.255.255.192 ones       1500     2     false
+    Vlan3        10.221.70.66   255.255.255.192 ones       1500     3     false
+    Vlan4        10.221.70.129  255.255.255.192 ones       1500     4     false
+    Vlan12       10.30.10.1     255.255.255.252 ones       1500     12    false
+    Vlan13       192.168.128.17 255.255.255.248 ones       1500     13    false
+    Vlan30       10.221.75.2    255.255.255.192 ones       1500     30    false
+    Vlan31       10.221.75.66   255.255.255.192 ones       1500     31    false
+    Vlan32       10.221.75.130  255.255.255.192 ones       1500     32    false
+    Vlan33       10.221.75.194  255.255.255.192 ones       1500     33    false
+    Vlan40       10.221.65.1    255.255.255.192 ones       1500     40    false
+    Vlan41       10.221.65.65   255.255.255.192 ones       1500     41    false
+    Vlan42       10.221.65.129  255.255.255.192 ones       1500     42    false
+    Vlan43       10.221.65.193  255.255.255.192 ones       1500     43    false
+    Vlan44       10.221.66.2    255.255.255.0  ones       1500     44    false
+    Vlan99       10.220.0.2     255.255.255.0  ones       1500     99    false
+    Vlan100      10.220.11.2    255.255.255.0  ones       1500     100   false
+    Vlan101      10.221.64.2    255.255.255.0  ones       1500     101   false
+    Vlan104      10.221.67.2    255.255.255.0  ones       1500     104   false
+    Vlan105      10.221.68.2    255.255.255.0  ones       1500     105   false
+    Vlan106      10.221.69.2    255.255.255.0  ones       1500     106   false
+    Vlan107      10.221.71.2    255.255.255.0  ones       1500     107   false
+    Vlan109      10.221.73.2    255.255.255.0  ones       1500     109   false
+    Vlan110      10.221.74.2    255.255.255.0  ones       1500     110   false
+    Vlan111      10.221.76.2    255.255.255.0  ones       1500     111   false
+    Vlan113      10.221.78.2    255.255.255.0  ones       1500     113   false
+    Vlan114      10.221.79.2    255.255.255.0  ones       1500     114   false
+    Vlan115      10.221.77.2    255.255.255.192 ones       1500     115   false
+    Vlan116      10.221.77.66   255.255.255.192 ones       1500     116   false
+    Vlan117      10.221.77.130  255.255.255.192 ones       1500     117   false
+    Vlan118      172.21.240.81  255.255.255.248 ones       1500     118   false
+    Vlan146      10.220.146.2   255.255.255.0  ones       1500     146   false
+    Vlan166      192.168.129.62 255.255.255.252 ones       1500     166   false
+    Vlan210      172.31.72.2    255.255.255.0  ones       1500     210   false
+    Vlan211      172.31.68.2    255.255.255.0  ones       1500     211   false
+    Vlan212      172.31.69.2    255.255.255.0  ones       1500     212   false
+    Vlan213      172.31.66.2    255.255.255.0  ones       1500     213   false
+    Vlan214      172.31.73.2    255.255.255.0  ones       1500     214   false
+    Vlan218      172.31.75.2    255.255.255.0  ones       1500     218   false
+    Vlan219      172.31.76.2    255.255.255.0  ones       1500     219   false
+    Vlan220      172.31.78.2    255.255.255.0  ones       1500     220   false
+    Vlan221      172.31.77.2    255.255.255.0  ones       1500     221   false
+    Vlan222      10.222.255.130 255.255.255.192 ones       1500     222   false
+    Vlan223      172.31.79.2    255.255.255.0  ones       1500     223   false
+    Vlan224      172.31.67.2    255.255.255.0  ones       1500     224   false
+    Vlan250      10.220.250.98  255.255.255.240 ones       1500     250   false
+    Vlan254      10.254.5.2     255.255.255.0  ones       1500     254   false
+    Vlan255      10.255.11.2    255.255.255.0  ones       1500     255   false
+    Vlan271      172.31.71.2    255.255.255.0  ones       1500     271   false
+    Vlan301      192.168.128.33 255.255.255.248 ones       1500     301   false
+    Vlan1000     10.220.111.2   255.255.255.0  ones       1500     1000  false
+    Vlan1111     192.192.192.1  255.255.255.252 ones       1500     1111  false
+    Vlan1241     10.220.241.2   255.255.255.0  ones       1500     1241  false
+    Vlan1376     192.168.129.114 255.255.255.252 ones       1500     1376  false
+    Vlan1603     192.168.129.182 255.255.255.252 ones       1500     1603  false
+    Vlan1604     192.168.129.186 255.255.255.252 ones       1500     1604  false
+    Vlan2000     10.221.70.249  255.255.255.252 ones       1500     2000  false
+    Vlan2241     172.31.241.2   255.255.255.0  ones       1500     2241  false
+    Vlan2500     192.168.200.254 255.255.255.252 ones       1500     2500  false
+    Vlan2600     192.168.202.2  255.255.255.248 ones       1500     2600  false
+    Vlan3000     10.221.70.253  255.255.255.252 ones       1500     3000  false
+    Vlan3138     10.220.138.2   255.255.255.0  ones       1500     3138  false
 
 Há 8 VLANS atualmente cadastradas no SW de acesso **(IP 10.255.11.28)** mas nenhuma delas atendem as vlans 101 e 220::
 
@@ -122,7 +187,6 @@ Há 8 VLANS atualmente cadastradas no SW de acesso **(IP 10.255.11.28)** mas nen
 Para adicionar 2 novas vlans no SW de Acesso, antes será necessário realizar ALTERAÇÔES em abos os CORES (Primário e Secundário). Depois em seguida TAGEAR VLAN PORT DO CORE de acordo com o tipo da vlan **(by port ou by srcmac)**. Muita calma nessa hora, pois em abientes de produção é necessário ter um bom planejamento por Gmud.
 
 Acesse o SW CORE, digite o comando abaixo e tecle **ENTER**::
-
 
     CORETESTSW01# show vlan info basic 101
     
@@ -232,6 +296,9 @@ Adicionar a VLAN-ID 101 nas Portas 46 e 45.::
     sw1.teste (config)# vlan ports 45-46 pvid 101
     sw1.teste (config)# exit
     sw1.teste # save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
     
     sw1.teste # show vlan
     sw1.teste# show vlan interface info 45,46
@@ -251,6 +318,9 @@ Adicionar a VLAN-ID 220 nas Portas 6, 9, 17, 21 e 39::
     sw1.teste (config)# vlan ports 6,9,17,21,39 pvid 220
     sw1.teste (config)# exit
     sw1.teste # save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
     
     sw1.teste# show vlan
     sw1.teste# show vlan interface info 6,9,17,21,39
@@ -426,12 +496,18 @@ Adicionar uma Vlan **160** que já existe no switch na porta **43**::
     sw8.cosmonault (config)# exit
     sw8.cosmonault# save conf
 
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
+
 Mudar o Pvid da porta::
          
     sw8.cosmonault# conf t
     sw8.cosmonault (config)# vlan ports 43 pvid 160
     sw8.cosmonault (config)# exit
     sw8.cosmonault# save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
             
     sw8.cosmonault# show vlan interface info 43
     
@@ -538,6 +614,9 @@ Cadastrar a Vlan 265 na porta 17::
     sw04cascao (config)# vlan members add 265 17
     sw04cascao (config)# exit
     sw04cascao# save conf
+    
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
      
     sw04cascao# show vlan interface VIDS 17
 
@@ -562,6 +641,9 @@ O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vl
     sw04cascao (config)# lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 265
     sw04cascao (config)# exit 
     sw04cascao# save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
 
     sw04cascao# show lldp med-network-policies port 17
     sw04cascao# show running-config | include interface
@@ -768,6 +850,9 @@ Configurar primeiro a LLDP de acordo com a sua vlan de voz::
     sw30cascao (config)# lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
     sw30cascao# exit
     sw30cascao# save conf
+    
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
 
     sw30cascao# show lldp med-network-policies port 1-4
     -------------------------------------------------------------------------------
@@ -855,6 +940,9 @@ Será necessário apenas configurar a vlan 2161 nas portas 1 a 4::
     sw30cascao (config)# exit
     sw30cascao# save conf
 
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
+
     sw30cascao# show vlan id 2161
 
     Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
@@ -890,6 +978,9 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     sw29.teslacoil (config)# lldp med-network-policies port 42-48 voice dscp 46 priority 6 tagging tagged vlan-id 2161
     sw29.teslacoil (config)# exit 
     sw29.teslacoil# save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
 
     sw29.teslacoil# show lldp med-network-policies port 31-48
 
@@ -940,6 +1031,9 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     sw29.teslacoil (config)# vlan members add 2162 41
     sw29.teslacoil (config)# exit
     sw29.teslacoil# save conf
+
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
 
     sw29.teslacoil# show vlan id 2161
 
@@ -1235,6 +1329,9 @@ Segundo a documentação, e de acordo com a topologia, identificamos o IP do SW 
     sw016chicobento (config)# no shut
     sw016chicobento (config)# exit
     sw016chicobento# save conf
+    
+    Save config to file /flash/config.cfg successful.
+    Save license to file /flash/license.dat successful.
 
     sw016chicobento# show interfaces 1/34
 
