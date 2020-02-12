@@ -1070,7 +1070,9 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
 6. Lentidão na Internet
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: Dado apenas o IP da estação 10.221.12.45
+.. note:: Dado apenas o IP da estação 10.221.12.45.
+
+Fazer as validações e analisar as possíveis causas de lentidão na rede::
 
     CORETESTW001# show ip arp info 10.221.12.45
 
