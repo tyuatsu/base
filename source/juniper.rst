@@ -11,8 +11,6 @@ Router Juniper
 1. Comandos Básicos Router Juniper
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-echo VISUALIZA TODOS OS TIPOS DE ERROS | tr [A-Z] [a-z]
-
 Verificar informações de todas interfaces::
 
     supersonic@RT01> show interfaces descriptions
