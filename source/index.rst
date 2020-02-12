@@ -20,6 +20,13 @@ Conteúdos:
    
    cisco
 
+.. _juniper:
+.. toctree::
+   :maxdepth: 1
+   :caption: Juniper Networks
+
+   juniper
+
 .. _usmt:
 .. toctree::
    :maxdepth: 1
