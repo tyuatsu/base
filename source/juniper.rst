@@ -4,7 +4,7 @@ Router Juniper
 .. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
 
 .. figure:: juniper.jpg
-    :scale: 40 %
+    :scale: 60 %
     :align: center
     :alt: Juniper
 
