@@ -548,7 +548,7 @@ Cadastrar a Vlan 265 na porta 17::
 
 O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vlan 265 na configuração da interface porta 17::
 
-    sw04cascao# show running-config
+    sw04cascao# show running-config | include interface
 
     interface Ethernet ALL
     lldp med-network-policies port 12,16 voice dscp 46 priority 6 tagging tagged vlan-id 265
@@ -564,7 +564,7 @@ O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vl
     sw04cascao# save conf
 
     sw04cascao# show lldp med-network-policies port 17
-    sw04cascao# show running-config
+    sw04cascao# show running-config | include interface
     
     interface Ethernet ALL
     lldp med-network-policies port 12,16-17,19,21,31,39,42 voice dscp 46 priority 6 tagging tagged vlan-id 265
@@ -654,7 +654,7 @@ Vamos analisar agora o switch 10.221.175.30 no Core prinário::
     VLAN                              STG
     ID    NAME             TYPE         ID  PROTOCOLID SUBNETADDR      SUBNETMASK
     --------------------------------------------------------------------------------
-    2161  NEO - VOZ - 172.31.161.0_24 byPort       1   none       N/A             N/A
+    2161  SHOYU - VOZ - 172.31.161.0_24 byPort       1   none       N/A             N/A
 
     CORESW001# show vlan info basic 2162
    
@@ -667,7 +667,7 @@ Vamos analisar agora o switch 10.221.175.30 no Core prinário::
     VLAN                              STG
     ID    NAME             TYPE         ID  PROTOCOLID SUBNETADDR      SUBNETMASK
     --------------------------------------------------------------------------------
-    2162  NEO - VOZ - 172.31.162.0_24 byPort       1   none       N/A             N/A
+    2162  SHOYU - VOZ - 172.31.162.0_24 byPort       1   none       N/A             N/A
 
     CORESW001# show sys topology
 
@@ -817,7 +817,7 @@ Configurar primeiro a LLDP de acordo com a sua vlan de voz::
 
 Se quiser pode conferir também o lldp pelo running::
 
-    sw30cascao# show running-config
+    sw30cascao# show running-config | include interface
 
     interface Ethernet ALL
     lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
@@ -920,7 +920,7 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
        48      Voice              2161     tagged     46    6
     -------------------------------------------------------------------------------
 
-    sw29.teslacoil# show running-config
+    sw29.teslacoil# show running-config | include interface
 
     interface Ethernet ALL
     lldp med-network-policies port 1-6 voice dscp 46 priority 6 tagging tagged vlan-id 2164
@@ -1001,7 +1001,7 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     VLAN                              STG
     ID    NAME             TYPE         ID  PROTOCOLID SUBNETADDR      SUBNETMASK
     --------------------------------------------------------------------------------
-    21    Lobo-Guara 12   bySrcMac      1    none        N/A             N/A
+    21    Lobo-Guara 12   by      1    none        N/A             N/A
  
     1 out of 835 ARP entries displayed
 
@@ -1066,87 +1066,48 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     64 bytes from 10.221.4.7: icmp_seq=26. time=1.036 ms
     64 bytes from 10.221.4.7: icmp_seq=27. time=1.123 ms
 
-----10.221.4.7 PING Statistics----
-34 packets transmitted, 34 packets received, 0% packet loss
-round-trip (ms)  min/avg/max = 0.979/1.093/1.905
+    ----10.221.4.7 PING Statistics----
+    34 packets transmitted, 34 packets received, 0% packet loss
+    round-trip (ms)  min/avg/max = 0.979/1.093/1.905
 
     CORETESTW001/show/ports/error# ?
 
- 
-
-Sub-Context:
-
-Current Context:
-
- 
+    Sub-Context:
+    Current Context:
 
     collision [port <value>]
-
     extended [port <value>]
-
     main [port <value>]
-
     ospf [port <value>]
-
     show-all [file <value>]
-
- 
 
     CORETESTW001/show/ports/error# collision
 
-*******************************************************************************
-
-Command Execution Time: TUE JAN 07 10:52:51 2020 GMT
-
-*******************************************************************************
-
- 
-
-================================================================================
-
-                         Port Ethernet Collision Error
-
-================================================================================
-
-PORT  ------------------------------- COLLISIONS -------------------------------
-
-NUM   SINGLE            MULTIPLE          LATE              EXCESSIVE
-
---------------------------------------------------------------------------------
-
-1/1   0                 0                 0                 0
-
-1/2   0                 0                 0                 0
-
-1/3   0                 0                 0                 0
-
-1/4   0                 0                 0                 0
-
-1/5   0                 0                 0                 0
-
-1/6   0                 0                 0                 0
-
-1/7   0                 0                 0                 0
-
-1/8   0                 0                 0                 0
-
-1/9   0                 0                 0                 0
-
-1/10  0                 0                 0                 0
-
-1/11  0                 0                 0                 0
-
-1/12  0                 0                 0                 0
-
-1/13  0                 0                 0                 0
-
-1/14  0                 0                 0                 0
-
-1/15  0                 0                 0                 0
-
-1/16  0                 0                 0                 0
-
- 
+    *******************************************************************************
+    Command Execution Time: TUE JAN 07 10:52:51 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                           Port Ethernet Collision Error
+    ================================================================================
+    PORT  ------------------------------- COLLISIONS -------------------------------
+    NUM   SINGLE            MULTIPLE          LATE              EXCESSIVE
+    --------------------------------------------------------------------------------
+    1/1   0                 0                 0                 0
+    1/2   0                 0                 0                 0
+    1/3   0                 0                 0                 0
+    1/4   0                 0                 0                 0
+    1/5   0                 0                 0                 0
+    1/6   0                 0                 0                 0
+    1/7   0                 0                 0                 0
+    1/8   0                 0                 0                 0
+    1/9   0                 0                 0                 0
+    1/10  0                 0                 0                 0
+    1/11  0                 0                 0                 0
+    1/12  0                 0                 0                 0
+    1/13  0                 0                 0                 0
+    1/14  0                 0                 0                 0
+    1/15  0                 0                 0                 0
+    1/16  0                 0                 0                 0
 
     CORETESTW001/show/ports/error# collision port 1/6
 
@@ -1186,7 +1147,7 @@ NUM   SINGLE            MULTIPLE          LATE              EXCESSIVE
     --------------------------------------------------------------------------------
     1/6   0        0        0        0        0        0        0        0
 
-Verificar no SW de Acesso IP 10.221.4.7::
+Verificar no SW de Acesso, o IP 10.221.4.7::
 
     sw0012magali# show mac-address-table address d0:94:66:a8:3f:11
 
@@ -1242,8 +1203,8 @@ Verificar no SW de Acesso IP 10.221.4.7::
     I    2020-01-07 09:33:23 GMT-02:00 38192     Link Down Trap for Port: 41
     I    2020-01-07 09:33:30 GMT-02:00 38193     Link Up Trap for Port: 41
 
-7. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 do andar térreo
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+7. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 (andar térreo)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Motivo - foi necessário fazer a movimentação de uma máquina (estação do colaborador).
 
@@ -1442,7 +1403,11 @@ Verifica IP de cada Vlan::
 
 Localiza posição do Mac::
 
-    sw04cascao# show mac-address-table adress cc-f9-54-a5-01-e6
+    sw04cascao# show mac-address-table adress cc:f9:54:a5:01:e6
+
+Localiza Macs na vlan 45::
+
+    sw04cascao# show mac-address-table vid 45
 
 Resumo de todas as Vlans::
 
@@ -1542,6 +1507,7 @@ Espelhar as configurações do switch 10.255.7.6
 Segue as configurações de exemplo::
 
     SW017GIULIANA# show running-config
+    
     ! Embedded ASCII Configuration Generator Script
     ! Model = Ethernet Routing Switch 4550T-PWR
     ! Software version = v5.7.1.021
