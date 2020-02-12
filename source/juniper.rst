@@ -17,7 +17,7 @@ Verificar informações de todas interfaces::
 
 Verificar últimos logs de quedas::
 
-    ter00775@RO060> show log messages | last 200
+    supersonic@RT01>show log messages | last 200
 
 Verificar as informações de todas interfaces::
 
