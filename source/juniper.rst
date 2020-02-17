@@ -13,41 +13,41 @@ Router Juniper
 
 Verificar informações de todas interfaces::
 
-    supersonic@RT01> show interfaces descriptions
+    Supersonic@C3PO> show interfaces descriptions
 
 Verificar últimos logs de quedas::
 
-    supersonic@RT01>show log messages | last 200
+    Supersonic@C3PO>show log messages | last 200
 
 Verificar as informações de todas interfaces::
 
-    supersonic@RT01> show interfaces descriptions | find ge-0/0/1 
-    supersonic@RT01> show interfaces descriptions | find ge
+    Supersonic@C3PO> show interfaces descriptions | find ge-0/0/1 
+    Supersonic@C3PO> show interfaces descriptions | find ge
 
 Verificar informações da interface::
 
-    supersonic@RT01> show interfaces descriptions | match ge-0/0/1
+    Supersonic@C3PO> show interfaces descriptions | match ge-0/0/1
 
 Verificar se está fisicamente up ou down::
 
-    supersonic@RT01> show interfaces detail | match ge-0/0/1
+    Supersonic@C3PO> show interfaces detail | match ge-0/0/1
 
 Visualizar todas as interfaces::
 
-    supersonic@RT01> show interfaces
+    Supersonic@C3PO> show interfaces
 
 Visualizar todas as interfaces com detalhamento::
 
-    supersonic@RT01> show interfaces brief
+    Supersonic@C3PO> show interfaces brief
 
 Visualiza todos os tipos de erros::
 
-    supersonic@RT01> show interfaces ge-0/0/1 extensive
-    supersonic@RT01> show interfaces ge-0/0/1 extensive | match errors
+    Supersonic@C3PO> show interfaces ge-0/0/1 extensive
+    Supersonic@C3PO> show interfaces ge-0/0/1 extensive | match errors
 
 Verificar tempo de operação do equipamento::
 
-    supersonic@RT01> show system uptime
+    Supersonic@C3PO> show system uptime
 
 
 Mais comandos úteis para verificação
@@ -55,95 +55,95 @@ Mais comandos úteis para verificação
 
 Verificar tempo de operação do equipamento::
 
-    subatomic@RO02> show system uptime
+    Atom@R2D2> show system uptime
 
 Verificar usuários logados::
 
-    subatomic@RO02> show system users
+    Atom@R2D2> show system users
 
 Verificar armazenamento de dados local::
 
-    subatomic@RO02> show system storage
+    Atom@R2D2> show system storage
 
 Verificar a tabela de processos em execução::
 
-    subatomic@RO02> show system processes
+    Atom@R2D2> show system processes
 
 Verificar componentes de hardware instalados::
 
-    subatomic@RO02> show chassis hardware
+    Atom@R2D2> show chassis hardware
 
 Verificar status dos componentes e temperatura, e velocidades do sistema de refrigeração::
 
-    subatomic@RO02> show chassis environment
+    Atom@R2D2> show chassis environment
 
 Verificar status da routing engine::
 
-    subatomic@RO02> show chassis routing-engine
+    Atom@R2D2> show chassis routing-engine
 
 Verificar alarmes de alertas no equipamento::
 
-    subatomic@RO02> show chassis alarms 
+    Atom@R2D2> show chassis alarms 
 
 Versão do Junos OS que esta rodando no equipamento. Também exibe o host name e o modelo do dispositivo::
 
-    subatomic@RO02> show version
+    Atom@R2D2> show version
 
 Verificar logs relacionados aos alarmes do hardware::
 
-    subatomic@RO02> show log chassisd | no-more 
+    Atom@R2D2> show log chassisd | no-more 
 
 Verificar mensagens de log::
 
-    subatomic@RO02> show log messages | no-more 
+    Atom@R2D2> show log messages | no-more 
 
 Verificar histórico de login dos usuários::
 
-    subatomic@RO02> show log user 
+    Atom@R2D2> show log user 
 
 Verificar a configuração atual::
 
-    subatomic@RO02> show configuration 
+    Atom@R2D2> show configuration 
 
 Breve descrição sobre o status das interfaces::
 
-    subatomic@RO02> show interfaces terse 
+    Atom@R2D2> show interfaces terse 
 
 Descrição sobre uma interface::
 
-    subatomic@RO02> show interfaces interface-name 
+    Atom@R2D2> show interfaces interface-name 
 
 Descrição detalhada sobre uma interface::
 
-    subatomic@RO02> show interface interface-name extensive 
+    Atom@R2D2> show interface interface-name extensive 
 
 Reinicia as estatísticas de uma interface::
 
-    subatomic@RO02> clear interfaces statistics interface-name 
+    Atom@R2D2> clear interfaces statistics interface-name 
 
 Breve descrição sobre o estado do protocolo::
 
-    subatomic@RO02> show bgp summary 
+    Atom@R2D2> show bgp summary 
 
 Breve descrição sobre o estado do protocolo::
 
-    subatomic@RO02> show ospf overview 
+    Atom@R2D2> show ospf overview 
 
 Breve descrição sobre o estado do protocolo::
 
-    subatomic@RO02> show isis overview 
+    Atom@R2D2> show isis overview 
 
 Descrição detalhada sobre uma rota específica::
 
-    subatomic@RO02> show route 216.142.248.0 extensive 
+    Atom@R2D2> show route 216.142.248.0 extensive 
 
 Descrição sobre uma rota específica::
 
-    subatomic@RO02> show route 192.168.68.0/24 
+    Atom@R2D2> show route 192.168.68.0/24 
 
 Descrição da tabela de rotas::
 
-    subatomic@RO02> show route terse 
+    Atom@R2D2> show route terse 
     
     
     
