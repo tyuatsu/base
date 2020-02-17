@@ -10,11 +10,11 @@ Avaya Nortel Ethernet Routing Switch
     :align: center
     :alt: Nortel
 
-Dados fornecidos geralmente são o MAC ou IP e Vlan de cada Operação.
+Dados fornecidos geralmente são o MAC ou IP e Vlan.
 
-Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure localizar o SW de acesso da operação e conferir
-sempre a porta (tag all) com o sys topology (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
-Uma vez localizado o Switch de acesso, acessar e verificar o status da porta, o Mac e as Vlans que estão passando na interface desse Switch.
+Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure localizar o SW de acesso e conferir
+sempre a porta (tag all) com o comando **sys topology** (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
+Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da porta, o Mac e as Vlans da interface.
 
 1. Adicionar nova VLAN no SW Core
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
