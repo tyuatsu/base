@@ -1589,8 +1589,8 @@ Exibir configuração geral::
     sw04cascao# show running-config
 
 
-Como configurar um novo switch de acesso
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+10. Como configurar um novo switch de acesso
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Tendo em vista o crescimento operacional, segue os dados para a configuração do novo switch.
 
@@ -1887,8 +1887,8 @@ Segue as configurações de exemplo::
     !
     ! *** LINK STATE TRACKING ***
 
-Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+11. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Iniciaremos com o conceito 'UntagPvidOnly' para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.
 
