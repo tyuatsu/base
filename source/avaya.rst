@@ -396,7 +396,7 @@ Mostar as Vlans configuradas na porta::
     
     Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    3    88   BV-DADOS_VOZ      182  CHUBB-Voz
+    3    88   RHEL-Dados      182  RHEL-Voz
     ---- ---- ----------------  ---- ----------------  ---- ----------------
 
 3. Proceder com a desabilitação de alimentação POE do SW 10.221.99.7 porta 45
@@ -622,7 +622,7 @@ Cadastrar a Vlan 265 na porta 17::
 
     Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
     ---- ---- ----------------  ---- ----------------  ---- ----------------
-    17   40   Buraco_GAP-Dados    265  Buraco_GAP-Voz
+    17   40   Cloud_GAP-Dados    265  Cloud_GAP-Voz
     ---- ---- ----------------  ---- ----------------  ---- ----------------
 
 O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vlan 265 na configuração da interface porta 17::
