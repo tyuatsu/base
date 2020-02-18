@@ -32,6 +32,8 @@ Router IP: 192.168.131.108 x 192.172.100.102::
     
     TESTRO0075# show int description
     TESTRO0075# show ip int brief
+    TESTRO0075# show standby brief
+    TESTRO0075# show standby (hscp - hot stanby cisco protocol)
     TESTRO0075# show int GigabitEhternet0/1
     TESTRO0075# show int GigabitEhternet0/1 | in up | drops
     TESTRO0075# show int summ
@@ -63,6 +65,8 @@ Router IP: 192.172.100.101 x 192.172.100.102::
     
     TESTRO0001# show int description
     TESTRO0001# show ip int brief
+    TESTRO0001# show standby brief
+    TESTRO0001# show standby
     TESTRO0001# show int FastEthernet0/1
     TESTRO0001# show int FastEthernet0/1 | in up | drops
     TESTRO0001# show int summ
