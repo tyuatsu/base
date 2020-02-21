@@ -100,7 +100,7 @@ Sabendo quais os dados da vlan correta através do switch core, acesse o sw de a
     -------- ------------ ------  -----  -------- -------  -----   -------- ----
     gi4      1G-Copper    Full    1000   Enabled  Off      Up      Disabled Auto
 
-Prete muita atenção ao entrar no modo de configuração::
+Preste muita atenção ao entrar no modo de configuração::
 
     MARSUPIAL-SW06# conf t
     MARSUPIAL-SW06(config)# int gi4
