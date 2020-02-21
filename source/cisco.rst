@@ -75,8 +75,8 @@ Router IP: 192.172.100.101 x 192.172.100.102::
     TESTRO0001# show ver | i uptime
     TESTRO0001# show clock
         
- 1. Comandos Básicos Switch Cisco SG 300-20
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2. Comandos Básicos Switch Cisco SG 300-20
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: A máquina com o mac f8:0f:41:35:17:22 do setor fac-símiles, não se encontra na vlan abacaxi. Portanto será necessário mudar para a vlan correta que é 10.221.60.0/24 (vlan id 17).
 
