@@ -1361,6 +1361,7 @@ Informação da Vlan::
 
     CORETESTW001# show vlan info advance 44
     CORETESTW001# show vlan info basic 44
+    CORETESTW001# show vlan info ip 44
 
 Descobrir os Macs atrelados a Vlan 100::
 
@@ -1566,7 +1567,7 @@ Consulta IPs para amarração::
 
 Verificar status da LLDP na porta::
 
-    sw04cascao# show lldp port 41
+    sw04cascao# show lldp med-network-policies port 41
 
 Exibir o processamento da CPU::
 
