@@ -10,6 +10,13 @@
   ^ for subsubsections
   " for paragraphs
 
+############
+CONFIGURAÇÂO
+############
+
+*****
+AVAYA
+*****
 
 Avaya Nortel Ethernet Routing Switch
 ------------------------------------
