@@ -44,7 +44,7 @@ Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: **101** (IP 10.221.64
 
 Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle **ENTER**::
 
-```bash
+
     CORETESTSW01# show ip arp info 10.255.11.28
 
     *******************************************************************************
@@ -71,11 +71,9 @@ Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle **ENTER**::
     IP_ADDRESS      MAC_ADDRESS        VLAN    PORT       TYPE    TTL(10 Sec)
     --------------------------------------------------------------------------------
     10.255.11.28    00:23:0d:03:68:00  255     1/39      DYNAMIC 295
-````
+
 
 VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SW ESTÁ CONECTADO::
-
-.. code-block:: console
 
     CORETESTSW01#  show ports info vlans port 3/7
     
@@ -93,6 +91,7 @@ VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SW 
 
 
 VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE SECUNDÁRIO** ONDE O SW ESTÁ CONECTADO::
+
 
     CORETESTSW02# show ports info vlans port 1/39
     
