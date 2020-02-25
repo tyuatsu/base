@@ -1,3 +1,16 @@
+..
+  Normally, there are no heading levels assigned to certain characters as the structure is
+  determined from the succession of headings. However, this convention is used in Python’s
+  Style Guide for documenting which you may follow:
+
+  # with overline, for parts
+  * for chapters
+  = for sections
+  - for subsections
+  ^ for subsubsections
+  " for paragraphs
+
+
 Avaya Nortel Ethernet Routing Switch
 ------------------------------------
 
@@ -13,8 +26,9 @@ Avaya Nortel Ethernet Routing Switch
 Dados fornecidos geralmente são o MAC ou IP e Vlan.
 
 Acesso ao SW Cores (apenas vizualização não entrar no modo config). Procure localizar o SW de acesso e conferir
-sempre a porta (tag all) com o comando **sys topology** (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
+sempre a porta (tag all) com o comando ``sys topology`` (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
 Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da porta, o Mac e as Vlans da interface.
+
 
 1. Adicionar nova VLAN no SW Core
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -23,6 +37,7 @@ Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: **101** (IP 10.221.64
 
 Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle **ENTER**::
 
+```bash
     CORETESTSW01# show ip arp info 10.255.11.28
 
     *******************************************************************************
@@ -49,9 +64,11 @@ Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle **ENTER**::
     IP_ADDRESS      MAC_ADDRESS        VLAN    PORT       TYPE    TTL(10 Sec)
     --------------------------------------------------------------------------------
     10.255.11.28    00:23:0d:03:68:00  255     1/39      DYNAMIC 295
-
+````
 
 VLANS QUE ATUALMENTE ESTÃO PASSANDO PELA PORTA DO **CORE PRIMÁRIO** ONDE O SW ESTÁ CONECTADO::
+
+.. code-block:: console
 
     CORETESTSW01#  show ports info vlans port 3/7
     
