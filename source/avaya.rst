@@ -10,9 +10,9 @@
   ^ for subsubsections
   " for paragraphs
 
-############
-CONFIGURAÇÂO
-############
+#############
+MÓDULO BÁSICO
+#############
 
 *****
 AVAYA
@@ -23,7 +23,7 @@ Avaya Nortel Ethernet Routing Switch
 
 .. note:: Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.
 
-          - `211 Mt. Airy Road,Basking Ridge, NJ 07920 AVAYA - Site oficial (http://support.avaya.com/) <http://support.avaya.com/>`_ 
+          - 211 Mt. Airy Road,Basking Ridge, NJ 07920 AVAYA - Site oficial `(http://support.avaya.com/) <http://support.avaya.com/>`_ 
           
 .. figure:: nortel.jpg
     :scale: 60 %
