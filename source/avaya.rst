@@ -14,12 +14,12 @@
 BÁSICO
 ######
 
-*****
-AVAYA
-*****
+************
+AVAYA NORTEL
+************
 
-Avaya Nortel Ethernet Routing Switch
-------------------------------------
+Ethernet Routing Switch
+-----------------------
 
 .. note:: Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.
 
