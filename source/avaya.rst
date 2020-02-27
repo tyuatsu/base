@@ -10,9 +10,9 @@
   ^ for subsubsections
   " for paragraphs
 
-#############
-MÓDULO BÁSICO
-#############
+######
+BÁSICO
+######
 
 *****
 AVAYA
