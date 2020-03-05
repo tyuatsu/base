@@ -182,3 +182,100 @@ Vamos verificar as alterações e coletar as evidências::
     Po7
     Po8
 
+3. Comandos Básicos Switch Cisco ME-C3750-24TE (PowerPC405)  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: O switch Cisco ME-C3750-24TE será nosso SW Core e os SW de acesso será o Nortel Routing Switch 4550T-PWR.
+
+Favor realizar identificação da porta do switch que está ligado a estação (MAC: 00-1b-4f-75-39-82), porém essa máquina não pega IP. 
+Se possível, favor alterar para vlan 133::
+
+    KINGTUT-01> show mac-address-table address 00-1b-4f-75-39-82
+
+              Mac Address Table
+    -------------------------------------------
+    Vlan    Mac Address       Type        Ports
+    ----    -----------       --------    -----
+      29    001b.4f75.3982    DYNAMIC     Fa1/0/18
+    Total Mac Addresses for this criterion: 1
+
+    KINGTUT-01> show interfaces Fa1/0/18
+
+    FastEthernet1/0/18 is up, line protocol is up (connected)
+      Hardware is Fast Ethernet, address is ec44.7630.fe94 (bia ec44.7630.fe94)
+      Description: The 13th floor SW 192.168.133.4
+      MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,
+         reliability 255/255, txload 6/255, rxload 2/255
+      Encapsulation ARPA, loopback not set
+      Keepalive set (10 sec)
+      Full-duplex, 100Mb/s, media type is 10/100BaseTX
+      input flow-control is off, output flow-control is unsupported
+      ARP type: ARPA, ARP Timeout 04:00:00
+      Last input 00:00:09, output 00:00:00, output hang never
+      Last clearing of "show interface" counters 29w6d
+      Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+      Queueing strategy: fifo
+      Output queue: 0/40 (size/max)
+      5 minute input rate 971000 bits/sec, 504 packets/sec
+      5 minute output rate 2366000 bits/sec, 662 packets/sec
+         6463274408 packets input, 1896886174888 bytes, 0 no buffer
+         Received 15512997 broadcasts (0 multicasts)
+         0 runts, 0 giants, 0 throttles
+         0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+         0 watchdog, 10463928 multicast, 0 pause input
+         0 input packets with dribble condition detected
+         9994720872 packets output, 6110735013726 bytes, 0 underruns
+         0 output errors, 0 collisions, 0 interface resets
+         0 babbles, 0 late collision, 0 deferred
+         0 lost carrier, 0 no carrier, 0 PAUSE output
+         0 output buffer failures, 0 output buffers swapped out
+
+    KINGTUT-01# show run int Fa1/0/18
+
+    Building configuration...
+    Current configuration : 269 bytes
+    !
+    interface FastEthernet1/0/18
+    description 13th floor SW 192.168.133.4
+    switchport trunk encapsulation dot1q
+    switchport trunk native vlan 133
+    switchport trunk allowed vlan 23-29,45,47,133,134
+    switchport mode trunk
+    switchport voice vlan 29
+    spanning-tree portfast
+    end
+
+Acessar o switch de acesso 192.168.133.4 e verificar o MAC **00-1b-4f-75-39-82**::
+
+    TimeCrystal# show mac-address-table address 00:1b:4f:75:39:82
+    Mac Address Table Aging Time: 300
+    Learning Enabled Ports ALL
+    Number of addresses: 1
+
+       MAC Address    Vid   Type       Source
+    ----------------- ---- ------- --------------
+    00-1B-4F-75-39-82   29 Dynamic Port:33
+
+    TimeCrystal# show vlan interface vid 33
+    Port VLAN VLAN Name         VLAN VLAN Name         VLAN VLAN Name
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+    33   23   VLAN23-DADOS      24   VLAN24-DADOS      25   VLAN25-VOZ
+         26   VLAN26-VOZ        27   VLAN27-VOZ        28   VLAN28-DADOS
+         29   VLAN-29-Voz       45   VLAN45-DADOS      47   VLAN47-VOZ
+         133  VLAN-133-Dados    134  VLAN134-DADOS
+    ---- ---- ----------------  ---- ----------------  ---- ----------------
+
+Agora vamos apenas alterar para Vlan 133::
+
+    TimeCrystal(config)# vlan ports 33 pvid 133
+    TimeCrystal(config)# save conf
+    TimeCrystal(config)# exit
+
+    TimeCrystal# show vlan interface info 33
+      Filter     Filter
+     Untagged Unregistered
+    Port  Frames     Frames    PVID PRI    Tagging    Name
+    ---- -------- ------------ ---- --- ------------- ----------------
+    33   No       Yes          133  0   UntagPvidOnly Port 33
+    
+

@@ -462,17 +462,19 @@ Para desativar o POE::
     ----  -------    -----------------   --------------   -------  --------
     45    Enable     Enable              0                16       Low
 
-4. Efetuar a troca do IP 10.221.17.220 da estação, para a rede IP 10.64.x.x. Mac da estação: 64:31:50:ff:6c:6f
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Efetuar a troca do IP 10.221.17.220 da estação, para a rede IP 10.64.x.x. 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Mac da estação: 64:31:50:ff:6c:6f::
+
     CORETESTSW01# show vlan info fdb-entry mac 64:31:50:ff:6c:6f
     CORETESTSW01# show ip arp info 10.221.17.220
     CORETESTSW01# show sys topology
     
-Mostrar o IP das VLANs :
+Mostrar o IP das VLANs::
     
     CORETESTSW01# show vlan info ip 160,172,180,181
   
-        
 Conforme evidência o switch na qual o mac está conectado não possui vlans 160,172,180 e 181 do range 10.64.x.x.::
 
     CORETESTSW01# show ports info vlans port 1/6
