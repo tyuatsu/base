@@ -661,11 +661,12 @@ O LLDP está forçando a Vlan 214, precisamos removê-la e depois adicionar a Vl
     exit
 
     sw04cascao# conf t
-    sw04cascao (config)#
-    sw04cascao (config)# no lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 214
-    sw04cascao (config)# lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 265
-    sw04cascao (config)# exit 
-    sw04cascao# save conf
+    sw04cascao (config)# interface fastethernet port 17
+    sw04cascao (config-if)# no lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 214
+    sw04cascao (config-if)# lldp med-network-policies port 17 voice dscp 46 priority 6 tagging tagged vlan-id 265
+    sw04cascao (config)# save conf
+    sw04cascao (config)# exit
+    sw04cascao# 
 
     Save config to file /flash/config.cfg successful.
     Save license to file /flash/license.dat successful.
@@ -871,10 +872,16 @@ Acessar o SW de Acesso **10.221.175.30** e adicionar a VLAN-ID 2161 nas portas 1
 Configurar primeiro a LLDP de acordo com a sua vlan de voz::
 
     sw30cascao# conf t
-    sw30cascao (config)# lldp med-network-policies port 27-48 voice dscp 46 priority 6 tagging tagged vlan-id 2162
-    sw30cascao (config)# lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
-    sw30cascao# exit
-    sw30cascao# save conf
+    sw30cascao (config)# interface ethernet port 27-48
+    sw30cascao (config-if)# lldp med-network-policies port 27-48 voice dscp 46 priority 6 tagging tagged vlan-id 2162
+    sw30cascao (config-if)# exit
+        
+    sw30cascao (config)# interface ethernet port 1,2,3,4    
+    sw30cascao (config-if)# lldp med-network-policies port 1-4 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw30cascao (config-if)# exit
+    sw30cascao (config)# save conf
+    sw30cascao (config)# sexit    
+    sw30cascao# 
     
     Save config to file /flash/config.cfg successful.
     Save license to file /flash/license.dat successful.
@@ -999,13 +1006,20 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
  Configurar primeiro a LLDP de acordo com a sua vlan de voz::
 
     sw29.teslacoil# conf t
-    sw29.teslacoil (config)# lldp med-network-policies port 31-40 voice dscp 46 priority 6 tagging tagged vlan-id 2161
-    sw29.teslacoil (config)# lldp med-network-policies port 42-48 voice dscp 46 priority 6 tagging tagged vlan-id 2161
-    sw29.teslacoil (config)# exit 
-    sw29.teslacoil# save conf
+    sw29.teslacoil (config)# interface ethernet port 31-40
+    sw29.teslacoil (config-if)# lldp med-network-policies port 31-40 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw29.teslacoil (config-inf)# exit
+
+    sw29.teslacoil (config)# interface ethernet port 42-48    
+    sw29.teslacoil (config-if)# lldp med-network-policies port 42-48 voice dscp 46 priority 6 tagging tagged vlan-id 2161
+    sw29.teslacoil (config-inf)# exit 
+    sw29.teslacoil (config)# save conf
 
     Save config to file /flash/config.cfg successful.
     Save license to file /flash/license.dat successful.
+
+    sw29.teslacoil (config)# exit
+    sw29.teslacoil# 
 
     sw29.teslacoil# show lldp med-network-policies port 31-48
 
@@ -1090,6 +1104,151 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     Port  Frames     Frames    PVID PRI    Tagging    Name
     ---- -------- ------------ ---- --- ------------- ----------------
     41   No       Yes          164  0   UntagPvidOnly Port 41
+
+Dobradinha LLDP no Switch de Acesso
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Estamos migrando a telefonia de Softwarephone para Hardphone Avaya. Se faz necessário a reserva de 4 IP's no range da Vlan 214.
+
+- Vlan: 214 (srcmac)
+- Range: 172.31.73.X
+- Switch: 10.255.11.30
+
+- MAC B4:B0:17:8E:1B:D4 (port 33)
+- MAC 00:1B:4F:4F:05:D7 (port 35)
+- MAC CC:F9:54:A7:7E:23 (port 32)
+- MAC 00:1B:4F:50:AC:B1 (port 37)
+
+
+.. note 1:: Atenção - Antes de alterar a Vlan de voz 214, favor não mexer no PVID, pois a vlan default 245 é reservado apenas para rede de dados das estações.
+
+.. note 2:: Faça a limpeza no DHCP ou seja, antes de tudo, remova às possíveis amarrações de reserva para escopo DHCP dos 4 Macs das bases Avaya, caso contrário nunca carregará corretamente o IP na Vlan 214. Típico erro de DHCP infinito em aparelhos de modelo ip-phone (Avaya 1601).
+
+
+Bora acessar o CORE (realizar o processo tanto no primário como no secundário)::
+
+    sw011.popcorn# conf
+    sw011.popcorn# vlan 214 srcmac add B4:B0:17:8E:1B:D4 
+
+    Error: Invalid MAC address
+
+    sw011.popcorn# vlan 214 srcmac add 00:1B:4F:4F:05:D7
+    sw011.popcorn# vlan 214 srcmac add CC:F9:54:A7:7E:23
+    sw011.popcorn# vlan 214 srcmac add 00:1B:4F:50:AC:B1
+
+    sw011.popcorn# save conf
+    sw011.popcorn# exit
+
+
+Perceba que correu um erro ``Invalid MAC address`` significa que esse MAC **B4:B0:17:8E:1B:D4** já foi adicionado em alguma Vlan da vida. Portanto precisamos apenas checar e ver para qual Vlan ele se encontra ou se já foi adicionado na própria Vlan 214. Não é possivel adicionar o mesmo Mac para mais de uma Vlan. E também não há como sobreescrever o Mac repetindo o comando mais de uma vez, nem se for para a mesma Vlan.
+
+Vamos listar todos os Macs::
+
+    sw011.popcorn# show vlan info srcmac
+
+    *******************************************************************************
+    Command Execution Time: FRI MAR 13 10:16:20 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                      Vlan Srcmac
+    ================================================================================
+    VLAN_ID    MAC_ADDRESS
+    --------------------------------------------------------------------------------
+    100        94:c6:91:44:51:98
+    100        78:2b:cb:ee:3c:59
+    100        a4:1f:72:fa:ba:5c
+    100        90:b1:1c:f7:8e:7d
+    100        78:2b:cb:ee:0e:89
+    100        d0:94:66:b1:8f:80
+    214        b4:b0:17:8e:1b:d4
+
+Maravilha, o Mac já se encontra na Vlan 214, tudo certo até aqui. Vamos agora alinhar as LLDP nas portas 32, 33, 35 e 37::
+
+    sw011.popcorn# conf t
+    sw011.popcorn (config)# interface ethernet port 32,33,35,37
+    sw011.popcorn (config-if)# lldp med-network-policies port 32,33,35,37 voice dscp 46 priority 6 tagging tagged vlan-id 214
+    sw011.popcorn (config-if)# exit
+    sw011.popcorn (config)# save conf
+    sw011.popcorn (config)# exit
+    sw011.popcorn# 
+
+
+Verifique as configurações da LLDP::
+
+    sw011.popcorn# show run | include Ethernet
+
+    !
+    interface Ethernet ALL
+    lldp med-network-policies port 1-2,6 voice dscp 46 priority 6 tagging tagged vlan-id 214
+    lldp med-network-policies port 9,16 voice dscp 46 priority 6 tagging tagged vlan-id 3138
+    lldp med-network-policies port 22,25,27,32-33,35-37,47 voice dscp 46 priority 6 tagging tagged vlan-id 214
+    exit
+    !
+
+    sw011.popcorn# show lldp med-network-policies port 32,33,35,37
+    
+    -------------------------------------------------------------------------------
+                         LLDP-MED network-policies
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+       Unit/   Application Type   VlanID   Tagging   DSCP   Priority
+       Port
+    -------------------------------------------------------------------------------
+       32      Voice              214     tagged     46    6
+       33      Voice              214     tagged     46    6
+       35      Voice              214     tagged     46    6
+       37      Voice              214     tagged     46    6
+    -------------------------------------------------------------------------------
+
+Adicione a Vlan de voz 214 nas portas:: 
+
+    sw011.popcorn# conf t
+    sw011.popcorn(config)# vlan members add 214 32,33,35,37
+    sw011.popcorn(config)# save conf
+    sw011.popcorn(config)# exit
+
+    sw011.popcorn# show mac-address-table port 32
+
+    Mac Address Table Aging Time: 300
+    Learning Enabled Ports ALL
+    Number of addresses: 2
+
+       MAC Address    Vid   Type       Source
+    ----------------- ---- ------- --------------
+    CC-F9-54-A7-7E-23  214 Dynamic Port:32
+    00-1E-90-94-81-31  254 Dynamic Port:32
+
+    sw011.popcorn# show mac-address-table port 33
+
+    Mac Address Table Aging Time: 300
+    Learning Enabled Ports ALL
+    Number of addresses: 2
+
+       MAC Address    Vid   Type       Source
+    ----------------- ---- ------- --------------
+    B4-B0-17-8E-1B-D4  214 Dynamic Port:33
+    E0-CB-4E-AC-F3-CC  254 Dynamic Port:33
+
+    sw011.popcorn# show mac-address-table port 35
+
+    Mac Address Table Aging Time: 300
+    Learning Enabled Ports ALL
+    Number of addresses: 1
+
+       MAC Address    Vid   Type       Source
+    ----------------- ---- ------- --------------
+    00-1B-4F-4F-05-D7  214 Dynamic Port:35
+
+    sw011.popcorn# show mac-address-table port 37
+
+    Mac Address Table Aging Time: 300
+    Learning Enabled Ports ALL
+    Number of addresses: 2
+
+       MAC Address    Vid   Type       Source
+    ----------------- ---- ------- --------------
+    00-1B-4F-50-AC-B1  214 Dynamic Port:37
+    00-1E-90-94-80-A8  254 Dynamic Port:37
 
 
 6. Lentidão na Internet
