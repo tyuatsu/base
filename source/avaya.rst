@@ -1105,8 +1105,9 @@ Depois logo em seguida, manter a VLAN-ID **2162** na porta **41**.
     ---- -------- ------------ ---- --- ------------- ----------------
     41   No       Yes          164  0   UntagPvidOnly Port 41
 
-Dobradinha LLDP no Switch de Acesso
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+6. Dobradinha LLDP no Switch de Acesso
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Estamos migrando a telefonia de Softwarephone para Hardphone Avaya. Se faz necessário a reserva de 4 IP's no range da Vlan 214.
 
@@ -1251,7 +1252,7 @@ Adicione a Vlan de voz 214 nas portas::
     00-1E-90-94-80-A8  254 Dynamic Port:37
 
 
-6. Lentidão na Internet
+7. Lentidão na Internet
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Dado apenas o IP da estação 10.221.12.45.
@@ -1483,7 +1484,7 @@ Verificar no SW de Acesso, o IP 10.221.4.7::
     I    2020-01-07 09:33:23 GMT-02:00 38192     Link Down Trap for Port: 41
     I    2020-01-07 09:33:30 GMT-02:00 38193     Link Up Trap for Port: 41
 
-7. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 (andar térreo)
+8. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 (andar térreo)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Motivo - foi necessário fazer a movimentação de uma máquina (estação do colaborador).
@@ -1527,7 +1528,7 @@ Segundo a documentação, e de acordo com a topologia, identificamos o IP do SW 
     1/34       Enable  Up   Up   Enabled  Enabled     100Mbps  Full   Disable
 
 
-8. AVAYA CORE VSP 4000 Command Line Reference
+9. AVAYA CORE VSP 4000 Command Line Reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Localizar Mac no Core::
@@ -1678,8 +1679,8 @@ Ping estendido do Core para o switch de acesso::
     CORETESTW001# ping -s 10.221.28.5
 
 
-9. SW de Acesso - Command Line Reference
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+10. SW de Acesso - Command Line Reference
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Verifica IP de cada Vlan::
 
@@ -1774,7 +1775,7 @@ Exibir configuração geral::
     sw04cascao# show running-config
 
 
-10. Como configurar um novo switch de acesso
+11. Como configurar um novo switch de acesso
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Tendo em vista o crescimento operacional, segue os dados para a configuração do novo switch.
@@ -2072,7 +2073,7 @@ Segue as configurações de exemplo::
     !
     ! *** LINK STATE TRACKING ***
 
-11. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
+12. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Iniciaremos com o conceito 'UntagPvidOnly' para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.
