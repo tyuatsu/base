@@ -1121,9 +1121,9 @@ Estamos migrando a telefonia de Softwarephone para Hardphone Avaya. Se faz neces
 - MAC 00:1B:4F:50:AC:B1 (port 37)
 
 
-.. note 1:: Atenção - Antes de alterar a Vlan de voz 214, favor não mexer no PVID, pois a vlan default 245 é reservado apenas para rede de dados das estações.
+.. note :: Atenção - Antes de alterar a Vlan de voz 214, favor não mexer no PVID, pois a vlan default 245 é reservado apenas para rede de dados das estações.
 
-.. note 2:: Faça a limpeza no DHCP ou seja, antes de tudo, remova às possíveis amarrações de reserva para escopo DHCP dos 4 Macs das bases Avaya, caso contrário nunca carregará corretamente o IP na Vlan 214. Típico erro de DHCP infinito em aparelhos de modelo ip-phone (Avaya 1601).
+Faça a limpeza no DHCP ou seja, antes de tudo, remova às possíveis amarrações de reserva para escopo DHCP dos 4 Macs das bases Avaya, caso contrário nunca carregará corretamente o IP na Vlan 214. Típico erro de DHCP infinito em aparelhos do tipo ip-phone (modelo Avaya 1601).
 
 
 Bora acessar o CORE (realizar o processo tanto no primário como no secundário)::
