@@ -1535,8 +1535,17 @@ Localizar Mac no Core::
 
     COREVSPW005# show vlan mac-address-entry mac f8:bc:12:8e:b2:95
     COREVSPW005# show vlan mac-address-entry port
+
+Mostrar Vlans configuradas na Porta 1/8::
+    
+    COREVSPW005# show port vlan 1/8
+    
+Mostrar Topologia::
+    
     COREVSPW005# show autotopology nmm-table
 
+10. AVAYA CORE ERS-8806 Command Line Reference
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Localizar Mac no Core::
 
@@ -1679,7 +1688,7 @@ Ping estendido do Core para o switch de acesso::
     CORETESTW001# ping -s 10.221.28.5
 
 
-10. SW de Acesso - Command Line Reference
+11. SW de Acesso - Command Line Reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Verifica IP de cada Vlan::
@@ -1775,8 +1784,8 @@ Exibir configuração geral::
     sw04cascao# show running-config
 
 
-11. Como configurar um novo switch de acesso
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+12. Exemplos de configurção de um switch nortel 4550T-PWR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Tendo em vista o crescimento operacional, segue os dados para a configuração do novo switch.
 
