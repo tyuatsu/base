@@ -732,7 +732,7 @@ Não há port security ativado nessa porta::
 
 **Excess Defer frames**:: - According to Cisco documentation it is the number of frames that are not sent after the time exceeds the maximum-packet time. It means that the port is under heavy load. The device connected to the port is transmitting or receiving more traffic that can be handled by the port.
 
-Segue abaixo às recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de **network flapping**::
+.. note:: Veja as recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de **network flapping**.
 
 **Cabo incorreto**:: - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA). Também de preferência, tente conectar um dispositivo fluke e rode um diagnostico completo para checar às medições de impedância do cabo UTP (Veja se há interferencias, do tipo crossstalk no cabeamento).
 
