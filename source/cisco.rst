@@ -740,7 +740,7 @@ Não há port security ativado nessa porta::
 
 **Na estação verifique a placa de rede**: - Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.
 
-'Outros testes possíveis e que podem ser válidos para mitigação do problema': - Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
+**Outros testes possíveis e que podem ser válidos para mitigação do problema**: - Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
 
 
 
