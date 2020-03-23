@@ -728,16 +728,18 @@ Não há port security ativado nessa porta::
     23:02:19.957 BRAZIL Fri Mar 6 2020
 
 
-.. note:: Foi identificado erros de "network flapping" na porta 45 do switch 10.255.10.4. Onde ocorre um número elevado de conexão e desconexão progressiva da estação, recorrente sempre na mesma porta. Consultamos a documentação do próprio fabricante o qual diz que isso está relacionado à problema de camada física.
+.. note:: Foi identificado erros de 'network flapping' na porta 45 do switch 10.255.10.4. Onde ocorre um número elevado de conexão e desconexão progressiva da estação, recorrente sempre na mesma porta. Consultamos a documentação do próprio fabricante o qual diz que isso está relacionado à problema de camada física.
 
 'Excess Defer frames':: - According to Cisco documentation it is the number of frames that are not sent after the time exceeds the maximum-packet time. It means that the port is under heavy load. The device connected to the port is transmitting or receiving more traffic that can be handled by the port.
 
-Segue abaixo às recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de "network flapping"::
+Segue abaixo às recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de 'network flapping'::
 
-Cabo incorreto - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA) - Também de preferencia, conectar um dispositivo fluke e rodar diagnostico completo para checar as medições de impedancia do cabo UTP e suas possíveis interferencias (crossstalk).
-Verificar possíveis conexões soltas ou mal encaixadas. Ver se existem conexões soltas porque às vezes, parece que um cabo está colocado na tomada, mas não está. Desconecte o cabo e o reintroduza. Na estação verifique a placa de rede:: Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.
+'Cabo incorreto':: - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA). Também de preferência, tente conectar um dispositivo fluke e rode um diagnostico completo para checar às medições de impedância do cabo UTP (Veja se há interferencias, do tipo crossstalk no cabeamento).
+Verificar possíveis conexões soltas ou mal encaixadas. Ver se existem conexões soltas porque às vezes, parece que um cabo está colocado na tomada, mas não está. Desconecte o cabo e o reintroduza.
 
-Outros testes possíveis e que podem ser válidos para mitigação do problema: Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
+'Na estação verifique a placa de rede':: - Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.
+
+'Outros testes possíveis e que podem ser válidos para mitigação do problema':: - Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
 
 
 

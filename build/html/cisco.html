@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Router Cisco &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <title>Cisco &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -16,8 +16,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="User State Migration Tool ‘USMT’" href="usmt.html" />
-    <link rel="prev" title="Avaya Nortel Ethernet Routing Switch" href="avaya.html" /> 
+    <link rel="next" title="Router Juniper" href="juniper.html" />
+    <link rel="prev" title="BÁSICO" href="avaya.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -26,10 +26,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+          <a href="juniper.html" title="Router Juniper"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="avaya.html" title="Avaya Nortel Ethernet Routing Switch"
+          <a href="avaya.html" title="BÁSICO"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -40,8 +40,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="router-cisco">
-<h1>Router Cisco<a class="headerlink" href="#router-cisco" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="cisco">
+<h1>Cisco<a class="headerlink" href="#cisco" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.</p>
@@ -52,27 +52,724 @@
 <div class="section" id="comandos-basicos-router-cisco">
 <h2>1. Comandos Básicos Router Cisco<a class="headerlink" href="#comandos-basicos-router-cisco" title="Permalink to this headline">¶</a></h2>
 <p>Router IP: 192.168.131.108 x 192.172.100.102:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TESTRO0075</span><span class="c1"># clear counter int br</span>
-<span class="n">TESTRO0075</span><span class="c1"># ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)**</span>
-<span class="n">TESTRO0075</span><span class="c1"># show ip int br</span>
-<span class="n">TESTRO0075</span><span class="c1"># show ip int br | in up | drops</span>
-<span class="n">TESTRO0075</span><span class="c1"># show int | i CRC</span>
-<span class="n">TESTRO0075</span><span class="c1"># show ver | i uptime</span>
-<span class="n">TESTRO0001</span><span class="c1"># show clock</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TESTRO0075# clear counter int GigabitEhternet0/1
+
+TESTRO0075# ping 192.172.100.102 size 1500 repeat 1000 df-bit (escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)
+
+Type escape sequence to abort.
+Sending 1000, 1500-byte ICMP Echos to 192.172.100.102, timeout is 2 seconds:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Success rate is 100 percent (2162/2268), round-trip min/avg/max = 40/58/224 ms
+
+TESTRO0075# show int description
+TESTRO0075# show ip int brief
+TESTRO0075# show standby brief
+TESTRO0075# show standby (hscp - hot stanby cisco protocol)
+TESTRO0075# show int GigabitEhternet0/1
+TESTRO0075# show int GigabitEhternet0/1 | in up | drops
+TESTRO0075# show int summ
+TESTRO0075# show run int GigabitEthernet0/1
+TESTRO0075# show int | i CRC
+TESTRO0075# show ver | i uptime
+TESTRO0001# show clock
 </pre></div>
 </div>
 <p>Acesso ao equipamento TESTRO0001 com incremento de erro na interface operadora.</p>
 <p>Router IP: 192.172.100.101 x 192.172.100.102:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TESTRO0001</span><span class="c1"># clear counter int FastEthernet0/1</span>
-<span class="n">TESTRO0001</span><span class="c1"># ping 192.172.100.102 repeat 1000 size 1500 **(escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)**</span>
-<span class="n">TESTRO0001</span><span class="c1"># show int description</span>
-<span class="n">TESTRO0001</span><span class="c1"># show int FastEthernet0/1</span>
-<span class="n">TESTRO0001</span><span class="c1"># show int FastEthernet0/1 | in up | drops</span>
-<span class="n">TESTRO0001</span><span class="c1"># show int | i CRC</span>
-<span class="n">TESTRO0001</span><span class="c1"># show ver | i uptime</span>
-<span class="n">TESTRO0001</span><span class="c1"># show clock</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TESTRO0001# clear counter int FastEthernet0/1
+
+TESTRO0001# ping 192.172.100.102 size 1500 repeat 1000 df-bit (escape sequence to abort: &#39;press ctrl + shift + 6&#39; simultainiously)
+
+Type escape sequence to abort.
+Sending 1000, 1500-byte ICMP Echos to 192.172.100.102, timeout is 2 seconds:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Success rate is 100 percent (2162/2268), round-trip min/avg/max = 40/58/224 ms
+
+TESTRO0001# show int description
+TESTRO0001# show ip int brief
+TESTRO0001# show standby brief
+TESTRO0001# show standby
+TESTRO0001# show int FastEthernet0/1
+TESTRO0001# show int FastEthernet0/1 | in up | drops
+TESTRO0001# show int summ
+TESTRO0001# show run int FastEthernet0/1
+TESTRO0001# show int | i CRC
+TESTRO0001# show ver | i uptime
+TESTRO0001# show clock
 </pre></div>
 </div>
+</div>
+<div class="section" id="comandos-basicos-switch-cisco-sg-300-20">
+<h2>2. Comandos Básicos Switch Cisco SG 300-20<a class="headerlink" href="#comandos-basicos-switch-cisco-sg-300-20" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A máquina com o mac f8:0f:41:35:17:22 do setor fac-símiles, não se encontra na vlan abacaxi. Portanto será necessário mudar para a vlan correta que é 10.221.60.0/24 (vlan id 17).</p>
+</div>
+<p>Sabendo quais os dados da vlan correta através do switch core, acesse o sw de acesso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show vlan</span>
+
+<span class="n">Vlan</span>       <span class="n">Name</span>                   <span class="n">Ports</span>                <span class="n">Type</span>     <span class="n">Authorization</span>
+<span class="o">----</span> <span class="o">-----------------</span> <span class="o">---------------------------</span> <span class="o">------------</span> <span class="o">-------------</span>
+ <span class="mi">1</span>           <span class="mi">1</span>                 <span class="n">gi20</span><span class="p">,</span><span class="n">Po1</span><span class="o">-</span><span class="mi">8</span>            <span class="n">Default</span>      <span class="n">Required</span>
+ <span class="mi">17</span>     <span class="n">CATCHUP</span><span class="o">-</span><span class="n">DADOS</span>                <span class="n">gi20</span>              <span class="n">permanent</span>     <span class="n">Required</span>
+ <span class="mi">58</span>     <span class="n">GERAL</span><span class="o">-</span><span class="n">DADOS</span>    <span class="n">gi1</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="n">gi5</span><span class="p">,</span><span class="n">gi7</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="n">gi13</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span>    <span class="n">permanent</span>     <span class="n">Required</span>
+                       <span class="n">gi17</span><span class="o">-</span><span class="mi">20</span>
+ <span class="mi">60</span>    <span class="n">ABACAXI</span><span class="o">-</span><span class="n">DADOS</span>        <span class="n">gi6</span><span class="p">,</span><span class="n">gi12</span><span class="p">,</span><span class="n">gi16</span><span class="p">,</span><span class="n">gi20</span>       <span class="n">permanent</span>     <span class="n">Required</span>
+<span class="mi">144</span>      <span class="n">CATCHUP</span><span class="o">-</span><span class="n">VOZ</span>                 <span class="n">gi20</span>              <span class="n">permanent</span>     <span class="n">Required</span>
+<span class="mi">561</span>     <span class="n">GERENCIA</span><span class="o">-</span><span class="n">SW</span>               <span class="n">gi20</span>              <span class="n">permanent</span>     <span class="n">Required</span>
+
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show int conf gi4</span>
+                                           <span class="n">Flow</span>    <span class="n">Admin</span>     <span class="n">Back</span>   <span class="n">Mdix</span>
+<span class="n">Port</span>     <span class="n">Type</span>         <span class="n">Duplex</span>  <span class="n">Speed</span>  <span class="n">Neg</span>      <span class="n">control</span>  <span class="n">State</span>   <span class="n">Pressure</span> <span class="n">Mode</span>
+<span class="o">--------</span> <span class="o">------------</span> <span class="o">------</span>  <span class="o">-----</span>  <span class="o">--------</span> <span class="o">-------</span>  <span class="o">-----</span>   <span class="o">--------</span> <span class="o">----</span>
+<span class="n">gi4</span>      <span class="mi">1</span><span class="n">G</span><span class="o">-</span><span class="n">Copper</span>    <span class="n">Full</span>    <span class="mi">1000</span>   <span class="n">Enabled</span>  <span class="n">Off</span>      <span class="n">Up</span>      <span class="n">Disabled</span> <span class="n">Auto</span>
+</pre></div>
+</div>
+<p>Preste muita atenção ao entrar no modo de configuração:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># conf t</span>
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="c1"># int gi4</span>
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="p">(</span><span class="n">config</span><span class="o">-</span><span class="k">if</span><span class="p">)</span><span class="c1"># switchport mode access</span>
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="p">(</span><span class="n">config</span><span class="o">-</span><span class="k">if</span><span class="p">)</span><span class="c1"># switchport access vlan 17</span>
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="p">(</span><span class="n">config</span><span class="o">-</span><span class="k">if</span><span class="p">)</span><span class="c1"># no shut</span>
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="p">(</span><span class="n">config</span><span class="o">-</span><span class="k">if</span><span class="p">)</span><span class="c1"># end</span>
+</pre></div>
+</div>
+<p>Vamos verificar as alterações e coletar as evidências:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show vlan</span>
+
+<span class="n">Vlan</span>       <span class="n">Name</span>                   <span class="n">Ports</span>                <span class="n">Type</span>     <span class="n">Authorization</span>
+<span class="o">----</span> <span class="o">-----------------</span> <span class="o">---------------------------</span> <span class="o">------------</span> <span class="o">-------------</span>
+ <span class="mi">1</span>           <span class="mi">1</span>                 <span class="n">gi20</span><span class="p">,</span><span class="n">Po1</span><span class="o">-</span><span class="mi">8</span>            <span class="n">Default</span>      <span class="n">Required</span>
+ <span class="mi">17</span>     <span class="n">CATCHUP</span><span class="o">-</span><span class="n">DADOS</span>           <span class="n">gi4</span><span class="p">,</span><span class="n">gi20</span>            <span class="n">permanent</span>     <span class="n">Required</span>
+ <span class="mi">58</span>     <span class="n">GERAL</span><span class="o">-</span><span class="n">DADOS</span>    <span class="n">gi1</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="n">gi5</span><span class="p">,</span><span class="n">gi7</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="n">gi13</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span>    <span class="n">permanent</span>     <span class="n">Required</span>
+                       <span class="n">gi17</span><span class="o">-</span><span class="mi">20</span>
+ <span class="mi">60</span>     <span class="n">ABACAXI</span><span class="o">-</span><span class="n">DADOS</span>        <span class="n">gi6</span><span class="p">,</span><span class="n">gi12</span><span class="p">,</span><span class="n">gi16</span><span class="p">,</span><span class="n">gi20</span>     <span class="n">permanent</span>     <span class="n">Required</span>
+<span class="mi">144</span>      <span class="n">CATCHUP</span><span class="o">-</span><span class="n">VOZ</span>               <span class="n">gi20</span>             <span class="n">permanent</span>     <span class="n">Required</span>
+<span class="mi">561</span>     <span class="n">GERENCIA</span><span class="o">-</span><span class="n">SW</span>                <span class="n">gi20</span>             <span class="n">permanent</span>     <span class="n">Required</span>
+
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show int switchport gi4</span>
+
+<span class="n">Port</span> <span class="p">:</span> <span class="n">gi4</span>
+<span class="n">Port</span> <span class="n">Mode</span><span class="p">:</span> <span class="n">Access</span>
+<span class="n">Gvrp</span> <span class="n">Status</span><span class="p">:</span> <span class="n">disabled</span>
+<span class="n">Ingress</span> <span class="n">Filtering</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">Acceptable</span> <span class="n">Frame</span> <span class="n">Type</span><span class="p">:</span> <span class="n">admitAll</span>
+<span class="n">Ingress</span> <span class="n">UnTagged</span> <span class="n">VLAN</span> <span class="p">(</span> <span class="n">NATIVE</span> <span class="p">):</span> <span class="mi">17</span>
+<span class="n">Port</span> <span class="ow">is</span> <span class="n">member</span> <span class="ow">in</span><span class="p">:</span>
+<span class="n">Vlan</span>               <span class="n">Name</span>               <span class="n">Egress</span> <span class="n">rule</span> <span class="n">Port</span> <span class="n">Membership</span> <span class="n">Type</span>
+<span class="o">----</span> <span class="o">--------------------------------</span> <span class="o">-----------</span> <span class="o">--------------------</span>
+ <span class="mi">17</span>             <span class="n">CATCHUP</span><span class="o">-</span><span class="n">DADOS</span>             <span class="n">Untagged</span>          <span class="n">Static</span>
+
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show run int Gi4</span>
+
+ <span class="n">interface</span> <span class="n">gigabitethernet4</span>
+ <span class="n">storm</span><span class="o">-</span><span class="n">control</span> <span class="n">broadcast</span> <span class="n">enable</span>
+ <span class="n">storm</span><span class="o">-</span><span class="n">control</span> <span class="n">broadcast</span> <span class="n">level</span> <span class="n">kbps</span> <span class="mi">20</span>
+ <span class="n">storm</span><span class="o">-</span><span class="n">control</span> <span class="n">include</span><span class="o">-</span><span class="n">multicast</span> <span class="n">unknown</span><span class="o">-</span><span class="n">unicast</span>
+ <span class="n">spanning</span><span class="o">-</span><span class="n">tree</span> <span class="n">bpduguard</span> <span class="n">enable</span>
+ <span class="n">switchport</span> <span class="n">mode</span> <span class="n">access</span>
+ <span class="n">switchport</span> <span class="n">access</span> <span class="n">vlan</span> <span class="mi">17</span>
+
+<span class="n">MARSUPIAL</span><span class="o">-</span><span class="n">SW06</span><span class="c1"># show int desc</span>
+
+<span class="n">Port</span>      <span class="n">Description</span>
+<span class="o">-------</span>   <span class="o">-----------</span>
+<span class="n">gi1</span>
+<span class="n">gi2</span>
+<span class="n">gi3</span>
+<span class="n">gi4</span>
+<span class="n">gi5</span>
+<span class="n">gi6</span>
+<span class="n">gi7</span>
+<span class="n">gi8</span>
+<span class="n">gi9</span>
+<span class="n">gi10</span>
+<span class="n">gi11</span>
+<span class="n">gi12</span>
+<span class="n">gi13</span>
+<span class="n">gi14</span>
+<span class="n">gi15</span>
+<span class="n">gi16</span>
+<span class="n">gi17</span>
+<span class="n">gi18</span>
+<span class="n">gi19</span>
+<span class="n">gi20</span>
+
+<span class="n">Ch</span>        <span class="n">Description</span>
+<span class="o">-------</span>   <span class="o">-----------</span>
+<span class="n">Po1</span>
+<span class="n">Po2</span>
+<span class="n">Po3</span>
+<span class="n">Po4</span>
+<span class="n">Po5</span>
+<span class="n">Po6</span>
+<span class="n">Po7</span>
+<span class="n">Po8</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comandos-basicos-switch-cisco-me-c3750-24te-powerpc405">
+<h2>3. Comandos Básicos Switch Cisco ME-C3750-24TE (PowerPC405)<a class="headerlink" href="#comandos-basicos-switch-cisco-me-c3750-24te-powerpc405" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>O switch Cisco ME-C3750-24TE será nosso SW Core e os SW de acesso será o Nortel Routing Switch 4550T-PWR.</p>
+</div>
+<p>Favor realizar identificação da porta do switch que está ligado a estação (MAC: 00-1b-4f-75-39-82), porém essa máquina não pega IP.
+Se possível, favor alterar para vlan 133:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>KINGTUT-01&gt; show mac-address-table address 00-1b-4f-75-39-82
+
+          Mac Address Table
+-------------------------------------------
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+  29    001b.4f75.3982    DYNAMIC     Fa1/0/18
+Total Mac Addresses for this criterion: 1
+
+KINGTUT-01&gt; show interfaces Fa1/0/18
+
+FastEthernet1/0/18 is up, line protocol is up (connected)
+  Hardware is Fast Ethernet, address is ec44.7630.fe94 (bia ec44.7630.fe94)
+  Description: The 13th floor SW 192.168.133.4
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,
+     reliability 255/255, txload 6/255, rxload 2/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is 10/100BaseTX
+  input flow-control is off, output flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:09, output 00:00:00, output hang never
+  Last clearing of &quot;show interface&quot; counters 29w6d
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 971000 bits/sec, 504 packets/sec
+  5 minute output rate 2366000 bits/sec, 662 packets/sec
+     6463274408 packets input, 1896886174888 bytes, 0 no buffer
+     Received 15512997 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 10463928 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     9994720872 packets output, 6110735013726 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 PAUSE output
+     0 output buffer failures, 0 output buffers swapped out
+
+KINGTUT-01# show run int Fa1/0/18
+
+Building configuration...
+Current configuration : 269 bytes
+!
+interface FastEthernet1/0/18
+description 13th floor SW 192.168.133.4
+switchport trunk encapsulation dot1q
+switchport trunk native vlan 133
+switchport trunk allowed vlan 23-29,45,47,133,134
+switchport mode trunk
+switchport voice vlan 29
+spanning-tree portfast
+end
+</pre></div>
+</div>
+<p>Acessar o switch de acesso 192.168.133.4 e verificar o MAC <strong>00-1b-4f-75-39-82</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TimeCrystal</span><span class="c1"># show mac-address-table address 00:1b:4f:75:39:82</span>
+<span class="n">Mac</span> <span class="n">Address</span> <span class="n">Table</span> <span class="n">Aging</span> <span class="n">Time</span><span class="p">:</span> <span class="mi">300</span>
+<span class="n">Learning</span> <span class="n">Enabled</span> <span class="n">Ports</span> <span class="n">ALL</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">addresses</span><span class="p">:</span> <span class="mi">1</span>
+
+   <span class="n">MAC</span> <span class="n">Address</span>    <span class="n">Vid</span>   <span class="n">Type</span>       <span class="n">Source</span>
+<span class="o">-----------------</span> <span class="o">----</span> <span class="o">-------</span> <span class="o">--------------</span>
+<span class="mi">00</span><span class="o">-</span><span class="mi">1</span><span class="n">B</span><span class="o">-</span><span class="mi">4</span><span class="n">F</span><span class="o">-</span><span class="mi">75</span><span class="o">-</span><span class="mi">39</span><span class="o">-</span><span class="mi">82</span>   <span class="mi">29</span> <span class="n">Dynamic</span> <span class="n">Port</span><span class="p">:</span><span class="mi">33</span>
+
+<span class="n">TimeCrystal</span><span class="c1"># show vlan interface vid 33</span>
+<span class="n">Port</span> <span class="n">VLAN</span> <span class="n">VLAN</span> <span class="n">Name</span>         <span class="n">VLAN</span> <span class="n">VLAN</span> <span class="n">Name</span>         <span class="n">VLAN</span> <span class="n">VLAN</span> <span class="n">Name</span>
+<span class="o">----</span> <span class="o">----</span> <span class="o">----------------</span>  <span class="o">----</span> <span class="o">----------------</span>  <span class="o">----</span> <span class="o">----------------</span>
+<span class="mi">33</span>   <span class="mi">23</span>   <span class="n">VLAN23</span><span class="o">-</span><span class="n">DADOS</span>      <span class="mi">24</span>   <span class="n">VLAN24</span><span class="o">-</span><span class="n">DADOS</span>      <span class="mi">25</span>   <span class="n">VLAN25</span><span class="o">-</span><span class="n">VOZ</span>
+     <span class="mi">26</span>   <span class="n">VLAN26</span><span class="o">-</span><span class="n">VOZ</span>        <span class="mi">27</span>   <span class="n">VLAN27</span><span class="o">-</span><span class="n">VOZ</span>        <span class="mi">28</span>   <span class="n">VLAN28</span><span class="o">-</span><span class="n">DADOS</span>
+     <span class="mi">29</span>   <span class="n">VLAN</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="n">Voz</span>       <span class="mi">45</span>   <span class="n">VLAN45</span><span class="o">-</span><span class="n">DADOS</span>      <span class="mi">47</span>   <span class="n">VLAN47</span><span class="o">-</span><span class="n">VOZ</span>
+     <span class="mi">133</span>  <span class="n">VLAN</span><span class="o">-</span><span class="mi">133</span><span class="o">-</span><span class="n">Dados</span>    <span class="mi">134</span>  <span class="n">VLAN134</span><span class="o">-</span><span class="n">DADOS</span>
+<span class="o">----</span> <span class="o">----</span> <span class="o">----------------</span>  <span class="o">----</span> <span class="o">----------------</span>  <span class="o">----</span> <span class="o">----------------</span>
+</pre></div>
+</div>
+<p>Agora vamos apenas alterar para Vlan 133:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TimeCrystal</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="c1"># vlan ports 33 pvid 133</span>
+<span class="n">TimeCrystal</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="c1"># save conf</span>
+<span class="n">TimeCrystal</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="c1"># exit</span>
+
+<span class="n">TimeCrystal</span><span class="c1"># show vlan interface info 33</span>
+  <span class="n">Filter</span>     <span class="n">Filter</span>
+ <span class="n">Untagged</span> <span class="n">Unregistered</span>
+<span class="n">Port</span>  <span class="n">Frames</span>     <span class="n">Frames</span>    <span class="n">PVID</span> <span class="n">PRI</span>    <span class="n">Tagging</span>    <span class="n">Name</span>
+<span class="o">----</span> <span class="o">--------</span> <span class="o">------------</span> <span class="o">----</span> <span class="o">---</span> <span class="o">-------------</span> <span class="o">----------------</span>
+<span class="mi">33</span>   <span class="n">No</span>       <span class="n">Yes</span>          <span class="mi">133</span>  <span class="mi">0</span>   <span class="n">UntagPvidOnly</span> <span class="n">Port</span> <span class="mi">33</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp">
+<h2>3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP<a class="headerlink" href="#troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp" title="Permalink to this headline">¶</a></h2>
+<p>Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: <strong>Abobrinhas Selvagens</strong>. O pedido é: - ‘Verificar a rede até a estação do atendente’.</p>
+<p>Foi constatado incontáveis erros de ping contra servidores Avaya. (Aprox. às 11h40hs da manhã, houve surtos na comunicação entre cliente e servidor, os quais geraram um conjunto maior de erros de ping. Sendo assim, precisamos que verifiquem especificamente a estação de trabalho cujo IP é 10.0.12.152.</p>
+<p>Vale lembrar que tal incidente, tem potencial para gerar crise e virar um grande problema: - O erro é relacionado ao login do insólito operador na aplicação do mal  softwarephone of hell, onde o operador loga e após um determinado tempo (em torno de 6 a 8 ligações) ocorre os erros: Logoff inesperado + comunicação com o servidor imediatamente é perdida. A aplicação fecha abruptamente, deslogando o usuário do sistema. Deve-se frisar que isso não ocorre nas outras máquinas da mesma rede. É algo pontual e afeta apenas uma máquina.</p>
+<p>Vamos iniciar a coleta das evidências para montar nosso laudo técnico. Estação IP é <strong>10.0.12.152</strong> e Mac <strong>d0-94-66-b1-90-e5</strong>.</p>
+<p>Acesso Core:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  CAATINGA01# show mac address-table address d0:94:66:b1:90:e5
+
+            Mac Address Table
+  -------------------------------------------
+  Vlan    Mac Address       Type        Ports
+  ----    -----------       --------    -----
+  120    d094.66b1.90e5    DYNAMIC     Po1
+
+  Total Mac Addresses for this criterion: 1
+
+
+  CAATINGA01# sh int Po1
+
+  Port-channel1 is up, line protocol is up (connected)
+    Hardware is EtherChannel, address is d4c9.3c81.a30c (bia d4c9.3c81.a30c)
+    Description: ESCOLTA_2B_10.255.10.4
+    MTU 9198 bytes, BW 2000000 Kbit/sec, DLY 10 usec,
+       reliability 255/255, txload 1/255, rxload 1/255
+    Encapsulation ARPA, loopback not set
+    Keepalive set (10 sec)
+    Full-duplex, 1000Mb/s, link type is auto, media type is N/A
+    input flow-control is off, output flow-control is unsupported
+    Members in this channel: Gi1/1/0/1 Gi2/1/0/1
+    ARP type: ARPA, ARP Timeout 04:00:00
+    Last input 1d02h, output 00:00:00, output hang never
+    Last clearing of &quot;show interface&quot; counters never
+    Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 8927
+    Queueing strategy: fifo
+    Output queue: 0/40 (size/max)
+    5 minute input rate 47000 bits/sec, 32 packets/sec
+    5 minute output rate 47000 bits/sec, 29 packets/sec
+       1385339740 packets input, 177768658761 bytes, 0 no buffer
+       Received 9129816 broadcasts (7769398 multicasts)
+       0 runts, 0 giants, 0 throttles
+       0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+       0 watchdog, 7769398 multicast, 0 pause input
+       0 input packets with dribble condition detected
+       596842574 packets output, 281113115957 bytes, 0 underruns
+       0 output errors, 0 collisions, 6 interface resets
+       0 unknown protocol drops
+       0 babbles, 0 late collision, 0 deferred
+       0 lost carrier, 0 no carrier, 0 pause output
+       0 output buffer failures, 0 output buffers swapped out
+
+  CAATINGA01# show int Po1 capabilities
+
+  Port-channel1
+    Model:                 Unknown PID
+    Type:                  10/100/1000BaseTX
+    Speed:                 10,100,1000,auto
+    Duplex:                full,half,auto
+    Trunk encap. type:     802.1Q
+    Trunk mode:            on,off,desirable,nonegotiate
+    Channel:               no
+    Broadcast suppression: no
+    Unicast suppression:   no
+    Multicast suppression: no
+    Flowcontrol:           rx-(off,on,desired),tx-(none)
+    Fast Start:            no
+    QoS scheduling:        no
+    CoS rewrite:           no
+    ToS rewrite:           no
+    UDLD:                  no
+    Inline power:          no
+    SPAN:                  source
+    PortSecure:            no
+    Dot1x:                 no
+    Diagnostic Monitoring: N/A
+
+  CAATINGA01# show run int po1
+
+  Building configuration...
+
+  Current configuration : 176 bytes
+  !
+  interface Port-channel1
+   description ESCOLTA_2B_10.255.10.4
+   switchport trunk native vlan 255
+   switchport trunk allowed vlan 110,120,121,255
+   switchport mode trunk
+  end
+
+  CAATINGA01# show etherchannel 1 summary
+
+  Number of channel-groups in use: 11
+  Number of aggregators:           11
+
+  Group  Port-channel  Protocol    Ports
+  ------+-------------+-----------+-----------------------------------------------
+  1      Po1(SU)         LACP        Gi1/1/0/1(P)  Gi2/1/0/1(P)
+
+
+  CAATINGA01# show etherchannel port-channel
+
+                  Channel-group listing:
+                  ----------------------
+  Group: 1
+  ----------
+                  Port-channels in the group:
+                  ---------------------------
+
+  Port-channel: Po1    (Primary Aggregator)
+  ------------
+  Age of the Port-channel   = 108d:14h:11m:46s
+  Logical slot/port   = 30/1          Number of ports = 2
+  HotStandBy port = null
+  Port state          = Port-channel Ag-Inuse
+  Protocol            =   LACP
+  Port security       = Disabled
+
+  Ports in the Port-channel:
+
+  Index   Load   Port     EC state        No of bits
+  ------+------+------+------------------+-----------
+    0     00     Gi1/1/0/1 Active             0
+    0     00     Gi2/1/0/1 Active             0
+
+  Time since last port bundled:    24d:14h:03m:00s    Gi1/1/0/1
+  Time since last port Un-bundled: 24d:14h:10m:37s    Gi1/1/0/1
+
+  CAATINGA01# show int Gi2/1/0/1 controller | i up
+
+  GigabitEthernet2/1/0/1 is up, line protocol is up (connected)
+    Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
+    input flow-control is off, output flow-control is unsupported
+
+  CAATINGA01# show int Gi2/1/0/2 controller | i up
+
+  GigabitEthernet2/1/0/2 is up, line protocol is up (connected)
+    Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
+    input flow-control is off, output flow-control is unsupported
+
+  CAATINGA01# show int Gi2/1/0/1 controller | i drop
+
+Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 7456
+   0 unknown protocol drops
+          0 Gold frames dropped                   0 FcsErr frames
+
+  CAATINGA01# show int Gi2/1/0/2 controller | i drop
+
+Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 2420
+   0 unknown protocol drops
+          0 Gold frames dropped                   0 FcsErr frames
+
+
+  CAATINGA01# show int Gi2/1/0/1 controller | i Defer
+
+       7456 Excess Defer frames                   0 Collision fragments
+          0 Deferred frames                       0 ValidOverSize frames
+
+  CAATINGA01# how int Gi2/1/0/2 controller | i Defer
+
+       2420 Excess Defer frames                   0 Collision fragments
+          0 Deferred frames                       0 ValidOverSize frames
+
+  CAATINGA01# sh int Po1 | i CRC
+
+       0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+
+  CAATINGA01# sh int Po1 | in up | drops
+
+  Port-channel1 is up, line protocol is up (connected)
+    Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 8927
+       0 unknown protocol drops
+
+  CAATINGA01# ping 10.255.10.4 size 1500 repeat 1000 df-bit
+
+  Type escape sequence to abort.
+  Sending 1000, 1500-byte ICMP Echos to 10.255.10.4, timeout is 2 seconds:
+  Packet sent with the DF bit set
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!!!!!!!!!!!!!!!
+  Success rate is 100 percent (1000/1000), round-trip min/avg/max = 1/1/8 ms
+</pre></div>
+</div>
+<p>Acesso SW 10.255.10.4 (Catalyst Switch C9200L-48P-4G-E):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ANUBIS-N01_4A# show module
+
+Switch  Ports    Model                Serial No.   MAC address     Hw Ver.       Sw Ver.
+------  -----   ---------             -----------  --------------  -------       --------
+ 1       52     C9200L-48P-4G-E       JAE23011SDV  7488.bb49.1d00  V01           16.9.3
+
+ANUBIS-N01_4A# show mac address-table address d0:94:66:b1:90:e5
+          Mac Address Table
+-------------------------------------------
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ 120    d094.66b1.90e5    DYNAMIC     Gi1/0/45
+Total Mac Addresses for this criterion: 1
+
+ANUBIS-N01_4A# sh run int Gi1/0/45
+
+Building configuration...
+
+Current configuration : 91 bytes
+!
+interface GigabitEthernet1/0/45
+ switchport access vlan 120
+ switchport mode access
+end
+</pre></div>
+</div>
+<p>Não há port security ativado nessa porta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh port int Gi1/0/45</span>
+<span class="n">Port</span> <span class="n">Security</span>              <span class="p">:</span> <span class="n">Disabled</span>
+<span class="n">Port</span> <span class="n">Status</span>                <span class="p">:</span> <span class="n">Secure</span><span class="o">-</span><span class="n">down</span>
+<span class="n">Violation</span> <span class="n">Mode</span>             <span class="p">:</span> <span class="n">Shutdown</span>
+<span class="n">Aging</span> <span class="n">Time</span>                 <span class="p">:</span> <span class="mi">0</span> <span class="n">mins</span>
+<span class="n">Aging</span> <span class="n">Type</span>                 <span class="p">:</span> <span class="n">Absolute</span>
+<span class="n">SecureStatic</span> <span class="n">Address</span> <span class="n">Aging</span> <span class="p">:</span> <span class="n">Disabled</span>
+<span class="n">Maximum</span> <span class="n">MAC</span> <span class="n">Addresses</span>      <span class="p">:</span> <span class="mi">1</span>
+<span class="n">Total</span> <span class="n">MAC</span> <span class="n">Addresses</span>        <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Configured</span> <span class="n">MAC</span> <span class="n">Addresses</span>   <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Sticky</span> <span class="n">MAC</span> <span class="n">Addresses</span>       <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Last</span> <span class="n">Source</span> <span class="n">Address</span><span class="p">:</span><span class="n">Vlan</span>   <span class="p">:</span> <span class="mf">0000.0000</span><span class="o">.</span><span class="mi">0000</span><span class="p">:</span><span class="mi">0</span>
+<span class="n">Security</span> <span class="n">Violation</span> <span class="n">Count</span>   <span class="p">:</span> <span class="mi">0</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int gi1/0/45 trunk</span>
+
+<span class="n">Port</span>        <span class="n">Mode</span>             <span class="n">Encapsulation</span>  <span class="n">Status</span>        <span class="n">Native</span> <span class="n">vlan</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>    <span class="n">off</span>              <span class="mf">802.1</span><span class="n">q</span>         <span class="ow">not</span><span class="o">-</span><span class="n">trunking</span>  <span class="mi">1</span>
+
+<span class="n">Port</span>        <span class="n">Vlans</span> <span class="n">allowed</span> <span class="n">on</span> <span class="n">trunk</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>    <span class="mi">120</span>
+
+<span class="n">Port</span>        <span class="n">Vlans</span> <span class="n">allowed</span> <span class="ow">and</span> <span class="n">active</span> <span class="ow">in</span> <span class="n">management</span> <span class="n">domain</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>    <span class="mi">120</span>
+
+<span class="n">Port</span>        <span class="n">Vlans</span> <span class="ow">in</span> <span class="n">spanning</span> <span class="n">tree</span> <span class="n">forwarding</span> <span class="n">state</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pruned</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>    <span class="mi">120</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh cdp neighbor</span>
+
+<span class="n">Capability</span> <span class="n">Codes</span><span class="p">:</span> <span class="n">R</span> <span class="o">-</span> <span class="n">Router</span><span class="p">,</span> <span class="n">T</span> <span class="o">-</span> <span class="n">Trans</span> <span class="n">Bridge</span><span class="p">,</span> <span class="n">B</span> <span class="o">-</span> <span class="n">Source</span> <span class="n">Route</span> <span class="n">Bridge</span>
+                  <span class="n">S</span> <span class="o">-</span> <span class="n">Switch</span><span class="p">,</span> <span class="n">H</span> <span class="o">-</span> <span class="n">Host</span><span class="p">,</span> <span class="n">I</span> <span class="o">-</span> <span class="n">IGMP</span><span class="p">,</span> <span class="n">r</span> <span class="o">-</span> <span class="n">Repeater</span><span class="p">,</span> <span class="n">P</span> <span class="o">-</span> <span class="n">Phone</span><span class="p">,</span>
+                  <span class="n">D</span> <span class="o">-</span> <span class="n">Remote</span><span class="p">,</span> <span class="n">C</span> <span class="o">-</span> <span class="n">CVTA</span><span class="p">,</span> <span class="n">M</span> <span class="o">-</span> <span class="n">Two</span><span class="o">-</span><span class="n">port</span> <span class="n">Mac</span> <span class="n">Relay</span>
+
+<span class="n">Device</span> <span class="n">ID</span>        <span class="n">Local</span> <span class="n">Intrfce</span>     <span class="n">Holdtme</span>    <span class="n">Capability</span>  <span class="n">Platform</span>  <span class="n">Port</span> <span class="n">ID</span>
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01</span><span class="o">.</span><span class="n">jehuty</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">jp</span>
+                 <span class="n">Gig</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>         <span class="mi">139</span>             <span class="n">R</span> <span class="n">S</span> <span class="n">I</span>  <span class="n">C9404R</span>    <span class="n">Gig</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01</span><span class="o">.</span><span class="n">jehuty</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">jp</span>
+                 <span class="n">Gig</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span>         <span class="mi">166</span>             <span class="n">R</span> <span class="n">S</span> <span class="n">I</span>  <span class="n">C9404R</span>    <span class="n">Gig</span> <span class="mi">2</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+
+<span class="n">Total</span> <span class="n">cdp</span> <span class="n">entries</span> <span class="n">displayed</span> <span class="p">:</span> <span class="mi">2</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int Gi1/0/45 status</span>
+
+<span class="n">Port</span>      <span class="n">Name</span>               <span class="n">Status</span>       <span class="n">Vlan</span>       <span class="n">Duplex</span>  <span class="n">Speed</span> <span class="n">Type</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>                     <span class="n">connected</span>    <span class="mi">120</span>        <span class="n">a</span><span class="o">-</span><span class="n">full</span> <span class="n">a</span><span class="o">-</span><span class="mi">1000</span> <span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">/</span><span class="mi">1000</span><span class="n">BaseTX</span>
+
+<span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span> <span class="ow">is</span> <span class="n">up</span><span class="p">,</span> <span class="n">line</span> <span class="n">protocol</span> <span class="ow">is</span> <span class="n">up</span> <span class="p">(</span><span class="n">connected</span><span class="p">)</span>
+  <span class="n">Full</span><span class="o">-</span><span class="n">duplex</span><span class="p">,</span> <span class="mi">1000</span><span class="n">Mb</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">media</span> <span class="nb">type</span> <span class="ow">is</span> <span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">/</span><span class="mi">1000</span><span class="n">BaseTX</span>
+  <span class="nb">input</span> <span class="n">flow</span><span class="o">-</span><span class="n">control</span> <span class="ow">is</span> <span class="n">off</span><span class="p">,</span> <span class="n">output</span> <span class="n">flow</span><span class="o">-</span><span class="n">control</span> <span class="ow">is</span> <span class="n">unsupported</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int Gi1/0/45 controller | i drops</span>
+  <span class="n">Input</span> <span class="n">queue</span><span class="p">:</span> <span class="mi">0</span><span class="o">/</span><span class="mi">2000</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span> <span class="p">(</span><span class="n">size</span><span class="o">/</span><span class="nb">max</span><span class="o">/</span><span class="n">drops</span><span class="o">/</span><span class="n">flushes</span><span class="p">);</span> <span class="n">Total</span> <span class="n">output</span> <span class="n">drops</span><span class="p">:</span> <span class="mi">434</span>
+ <span class="mi">17959</span> <span class="n">unknown</span> <span class="n">protocol</span> <span class="n">drops</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int Gi1/0/45 controller | i Defer</span>
+          <span class="mi">434</span> <span class="n">Excess</span> <span class="n">Defer</span> <span class="n">frames</span>                   <span class="mi">0</span> <span class="n">Collision</span> <span class="n">fragments</span>
+            <span class="mi">0</span> <span class="n">Deferred</span> <span class="n">frames</span>                       <span class="mi">0</span> <span class="n">ValidOverSize</span> <span class="n">frames</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int Gi1/0/45 controller | i CRC</span>
+     <span class="mi">0</span> <span class="nb">input</span> <span class="n">errors</span><span class="p">,</span> <span class="mi">0</span> <span class="n">CRC</span><span class="p">,</span> <span class="mi">0</span> <span class="n">frame</span><span class="p">,</span> <span class="mi">0</span> <span class="n">overrun</span><span class="p">,</span> <span class="mi">0</span> <span class="n">ignored</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int Gi1/0/45 counters errors</span>
+
+<span class="n">Port</span>        <span class="n">Align</span><span class="o">-</span><span class="n">Err</span>     <span class="n">FCS</span><span class="o">-</span><span class="n">Err</span>    <span class="n">Xmit</span><span class="o">-</span><span class="n">Err</span>     <span class="n">Rcv</span><span class="o">-</span><span class="n">Err</span>  <span class="n">UnderSize</span>  <span class="n">OutDiscards</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>            <span class="mi">0</span>           <span class="mi">0</span>           <span class="mi">0</span>           <span class="mi">0</span>          <span class="mi">0</span>          <span class="mi">434</span>
+
+<span class="n">Port</span>      <span class="n">Single</span><span class="o">-</span><span class="n">Col</span>  <span class="n">Multi</span><span class="o">-</span><span class="n">Col</span>   <span class="n">Late</span><span class="o">-</span><span class="n">Col</span>  <span class="n">Excess</span><span class="o">-</span><span class="n">Col</span>  <span class="n">Carri</span><span class="o">-</span><span class="n">Sen</span>      <span class="n">Runts</span>
+<span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>           <span class="mi">0</span>          <span class="mi">0</span>          <span class="mi">0</span>           <span class="mi">0</span>          <span class="mi">0</span>          <span class="mi">0</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int gi1/0/45 switchport</span>
+
+<span class="n">Name</span><span class="p">:</span> <span class="n">Gi1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>
+<span class="n">Switchport</span><span class="p">:</span> <span class="n">Enabled</span>
+<span class="n">Administrative</span> <span class="n">Mode</span><span class="p">:</span> <span class="n">static</span> <span class="n">access</span>
+<span class="n">Operational</span> <span class="n">Mode</span><span class="p">:</span> <span class="n">static</span> <span class="n">access</span>
+<span class="n">Administrative</span> <span class="n">Trunking</span> <span class="n">Encapsulation</span><span class="p">:</span> <span class="n">dot1q</span>
+<span class="n">Operational</span> <span class="n">Trunking</span> <span class="n">Encapsulation</span><span class="p">:</span> <span class="n">native</span>
+<span class="n">Negotiation</span> <span class="n">of</span> <span class="n">Trunking</span><span class="p">:</span> <span class="n">Off</span>
+<span class="n">Access</span> <span class="n">Mode</span> <span class="n">VLAN</span><span class="p">:</span> <span class="mi">120</span> <span class="p">(</span><span class="n">Bradesco_Seg</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Trunking</span> <span class="n">Native</span> <span class="n">Mode</span> <span class="n">VLAN</span><span class="p">:</span> <span class="mi">1</span> <span class="p">(</span><span class="n">default</span><span class="p">)</span>
+<span class="n">Administrative</span> <span class="n">Native</span> <span class="n">VLAN</span> <span class="n">tagging</span><span class="p">:</span> <span class="n">disabled</span>
+<span class="n">Voice</span> <span class="n">VLAN</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">host</span><span class="o">-</span><span class="n">association</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">mapping</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">native</span> <span class="n">VLAN</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">Native</span> <span class="n">VLAN</span> <span class="n">tagging</span><span class="p">:</span> <span class="n">enabled</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">encapsulation</span><span class="p">:</span> <span class="n">dot1q</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">normal</span> <span class="n">VLANs</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">associations</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Administrative</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span> <span class="n">trunk</span> <span class="n">mappings</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Operational</span> <span class="n">private</span><span class="o">-</span><span class="n">vlan</span><span class="p">:</span> <span class="n">none</span>
+<span class="n">Trunking</span> <span class="n">VLANs</span> <span class="n">Enabled</span><span class="p">:</span> <span class="n">ALL</span>
+<span class="n">Pruning</span> <span class="n">VLANs</span> <span class="n">Enabled</span><span class="p">:</span> <span class="mi">2</span><span class="o">-</span><span class="mi">1001</span>
+<span class="n">Capture</span> <span class="n">Mode</span> <span class="n">Disabled</span>
+<span class="n">Capture</span> <span class="n">VLANs</span> <span class="n">Allowed</span><span class="p">:</span> <span class="n">ALL</span>
+
+<span class="n">Protected</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">Unknown</span> <span class="n">unicast</span> <span class="n">blocked</span><span class="p">:</span> <span class="n">disabled</span>
+<span class="n">Unknown</span> <span class="n">multicast</span> <span class="n">blocked</span><span class="p">:</span> <span class="n">disabled</span>
+<span class="n">Vepa</span> <span class="n">Enabled</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">Appliance</span> <span class="n">trust</span><span class="p">:</span> <span class="n">none</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># sh int gi1/0/45 sum</span>
+
+ <span class="o">*</span><span class="p">:</span> <span class="n">interface</span> <span class="ow">is</span> <span class="n">up</span>
+ <span class="n">IHQ</span><span class="p">:</span> <span class="n">pkts</span> <span class="ow">in</span> <span class="nb">input</span> <span class="n">hold</span> <span class="n">queue</span>     <span class="n">IQD</span><span class="p">:</span> <span class="n">pkts</span> <span class="n">dropped</span> <span class="kn">from</span> <span class="nn">input</span> <span class="n">queue</span>
+ <span class="n">OHQ</span><span class="p">:</span> <span class="n">pkts</span> <span class="ow">in</span> <span class="n">output</span> <span class="n">hold</span> <span class="n">queue</span>    <span class="n">OQD</span><span class="p">:</span> <span class="n">pkts</span> <span class="n">dropped</span> <span class="kn">from</span> <span class="nn">output</span> <span class="n">queue</span>
+ <span class="n">RXBS</span><span class="p">:</span> <span class="n">rx</span> <span class="n">rate</span> <span class="p">(</span><span class="n">bits</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span>          <span class="n">RXPS</span><span class="p">:</span> <span class="n">rx</span> <span class="n">rate</span> <span class="p">(</span><span class="n">pkts</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span>
+ <span class="n">TXBS</span><span class="p">:</span> <span class="n">tx</span> <span class="n">rate</span> <span class="p">(</span><span class="n">bits</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span>          <span class="n">TXPS</span><span class="p">:</span> <span class="n">tx</span> <span class="n">rate</span> <span class="p">(</span><span class="n">pkts</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span>
+ <span class="n">TRTL</span><span class="p">:</span> <span class="n">throttle</span> <span class="n">count</span>
+  <span class="n">Interface</span>                   <span class="n">IHQ</span>       <span class="n">IQD</span>       <span class="n">OHQ</span>       <span class="n">OQD</span>      <span class="n">RXBS</span>      <span class="n">RXPS</span>      <span class="n">TXBS</span>      <span class="n">TXPS</span>      <span class="n">TRTL</span>
+<span class="o">-----------------------------------------------------------------------------------------------------------------</span>
+<span class="o">*</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">45</span>         <span class="mi">0</span>         <span class="mi">0</span>         <span class="mi">0</span>       <span class="mi">434</span>         <span class="mi">0</span>         <span class="mi">0</span>      <span class="mi">4000</span>         <span class="mi">4</span>         <span class="mi">0</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># show diagnostic description switch 1 test 1</span>
+
+<span class="n">DiagGoldPktTest</span> <span class="p">:</span>
+        <span class="n">The</span> <span class="n">GOLD</span> <span class="n">packet</span> <span class="n">Loopback</span> <span class="n">test</span> <span class="n">verifies</span> <span class="n">the</span> <span class="n">MAC</span> <span class="n">level</span> <span class="n">loopback</span>
+        <span class="n">functionality</span><span class="o">.</span> <span class="n">In</span> <span class="n">this</span> <span class="n">test</span><span class="p">,</span> <span class="n">a</span> <span class="n">GOLD</span> <span class="n">packet</span><span class="p">,</span> <span class="k">for</span> <span class="n">which</span> <span class="n">doppler</span>
+        <span class="n">provides</span> <span class="n">the</span> <span class="n">support</span> <span class="ow">in</span> <span class="n">hardware</span><span class="p">,</span> <span class="ow">is</span> <span class="n">sent</span><span class="o">.</span> <span class="n">The</span> <span class="n">packet</span> <span class="n">loops</span> <span class="n">back</span>
+        <span class="n">at</span> <span class="n">MAC</span> <span class="n">level</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">matched</span> <span class="n">against</span> <span class="n">the</span> <span class="n">stored</span> <span class="n">packet</span><span class="o">.</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">non</span>
+        <span class="o">-</span><span class="n">disruptive</span> <span class="n">test</span><span class="o">.</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># diagnostic start switch 1 test 1</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># diagnostic stop switch 1</span>
+<span class="n">Diagnostic</span><span class="p">[</span><span class="n">switch</span> <span class="mi">1</span><span class="p">]:</span> <span class="n">Diagnostic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">active</span><span class="o">.</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># show diagnostic result switch 1</span>
+
+<span class="n">Current</span> <span class="n">bootup</span> <span class="n">diagnostic</span> <span class="n">level</span><span class="p">:</span> <span class="n">minimal</span>
+
+<span class="n">switch</span> <span class="mi">1</span><span class="p">:</span>   <span class="n">SerialNo</span> <span class="p">:</span> <span class="n">JAE23011SDV</span>
+
+  <span class="n">Overall</span> <span class="n">Diagnostic</span> <span class="n">Result</span> <span class="k">for</span> <span class="n">switch</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">PASS</span>
+  <span class="n">Diagnostic</span> <span class="n">level</span> <span class="n">at</span> <span class="n">card</span> <span class="n">bootup</span><span class="p">:</span> <span class="n">minimal</span>
+
+  <span class="n">Test</span> <span class="n">results</span><span class="p">:</span> <span class="p">(</span><span class="o">.</span> <span class="o">=</span> <span class="n">Pass</span><span class="p">,</span> <span class="n">F</span> <span class="o">=</span> <span class="n">Fail</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="n">Untested</span><span class="p">)</span>
+
+    <span class="mi">1</span><span class="p">)</span> <span class="n">DiagGoldPktTest</span><span class="p">:</span>
+
+   <span class="n">Port</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span> <span class="mi">14</span> <span class="mi">15</span> <span class="mi">16</span> <span class="mi">17</span> <span class="mi">18</span> <span class="mi">19</span> <span class="mi">20</span> <span class="mi">21</span> <span class="mi">22</span> <span class="mi">23</span> <span class="mi">24</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>
+
+   <span class="n">Port</span> <span class="mi">25</span> <span class="mi">26</span> <span class="mi">27</span> <span class="mi">28</span> <span class="mi">29</span> <span class="mi">30</span> <span class="mi">31</span> <span class="mi">32</span> <span class="mi">33</span> <span class="mi">34</span> <span class="mi">35</span> <span class="mi">36</span> <span class="mi">37</span> <span class="mi">38</span> <span class="mi">39</span> <span class="mi">40</span> <span class="mi">41</span> <span class="mi">42</span> <span class="mi">43</span> <span class="mi">44</span> <span class="mi">45</span> <span class="mi">46</span> <span class="mi">47</span> <span class="mi">48</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>
+
+   <span class="n">Port</span> <span class="mi">49</span> <span class="mi">50</span> <span class="mi">51</span> <span class="mi">52</span>
+   <span class="o">----------------</span>
+         <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>  <span class="o">.</span>
+
+
+    <span class="mi">2</span><span class="p">)</span> <span class="n">DiagThermalTest</span> <span class="o">-----------------&gt;</span> <span class="o">.</span>
+    <span class="mi">3</span><span class="p">)</span> <span class="n">DiagPhyLoopbackTest</span><span class="p">:</span>
+
+   <span class="n">Port</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span> <span class="mi">14</span> <span class="mi">15</span> <span class="mi">16</span> <span class="mi">17</span> <span class="mi">18</span> <span class="mi">19</span> <span class="mi">20</span> <span class="mi">21</span> <span class="mi">22</span> <span class="mi">23</span> <span class="mi">24</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+   <span class="n">Port</span> <span class="mi">25</span> <span class="mi">26</span> <span class="mi">27</span> <span class="mi">28</span> <span class="mi">29</span> <span class="mi">30</span> <span class="mi">31</span> <span class="mi">32</span> <span class="mi">33</span> <span class="mi">34</span> <span class="mi">35</span> <span class="mi">36</span> <span class="mi">37</span> <span class="mi">38</span> <span class="mi">39</span> <span class="mi">40</span> <span class="mi">41</span> <span class="mi">42</span> <span class="mi">43</span> <span class="mi">44</span> <span class="mi">45</span> <span class="mi">46</span> <span class="mi">47</span> <span class="mi">48</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+   <span class="n">Port</span> <span class="mi">49</span> <span class="mi">50</span> <span class="mi">51</span> <span class="mi">52</span>
+   <span class="o">----------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+
+    <span class="mi">4</span><span class="p">)</span> <span class="n">DiagScratchRegisterTest</span> <span class="o">---------&gt;</span> <span class="o">.</span>
+    <span class="mi">5</span><span class="p">)</span> <span class="n">TestUnusedPortLoopback</span><span class="p">:</span>
+
+   <span class="n">Port</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span> <span class="mi">14</span> <span class="mi">15</span> <span class="mi">16</span> <span class="mi">17</span> <span class="mi">18</span> <span class="mi">19</span> <span class="mi">20</span> <span class="mi">21</span> <span class="mi">22</span> <span class="mi">23</span> <span class="mi">24</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+   <span class="n">Port</span> <span class="mi">25</span> <span class="mi">26</span> <span class="mi">27</span> <span class="mi">28</span> <span class="mi">29</span> <span class="mi">30</span> <span class="mi">31</span> <span class="mi">32</span> <span class="mi">33</span> <span class="mi">34</span> <span class="mi">35</span> <span class="mi">36</span> <span class="mi">37</span> <span class="mi">38</span> <span class="mi">39</span> <span class="mi">40</span> <span class="mi">41</span> <span class="mi">42</span> <span class="mi">43</span> <span class="mi">44</span> <span class="mi">45</span> <span class="mi">46</span> <span class="mi">47</span> <span class="mi">48</span>
+   <span class="o">----------------------------------------------------------------------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+   <span class="n">Port</span> <span class="mi">49</span> <span class="mi">50</span> <span class="mi">51</span> <span class="mi">52</span>
+   <span class="o">----------------</span>
+         <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>  <span class="n">U</span>
+
+
+    <span class="mi">6</span><span class="p">)</span> <span class="n">DiagPoETest</span> <span class="o">---------------------&gt;</span> <span class="n">U</span>
+    <span class="mi">7</span><span class="p">)</span> <span class="n">DiagStackCableTest</span> <span class="o">--------------&gt;</span> <span class="n">U</span>
+    <span class="mi">8</span><span class="p">)</span> <span class="n">DiagMemoryTest</span> <span class="o">------------------&gt;</span> <span class="n">U</span>
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># show logging | i GigabitEthernet1/0/38</span>
+
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">31.868</span><span class="p">:</span> <span class="o">%</span><span class="n">LINEPROTO</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Line</span> <span class="n">protocol</span> <span class="n">on</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">down</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">32.870</span><span class="p">:</span> <span class="o">%</span><span class="n">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">down</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">35.404</span><span class="p">:</span> <span class="o">%</span><span class="n">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">up</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">36.405</span><span class="p">:</span> <span class="o">%</span><span class="n">LINEPROTO</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Line</span> <span class="n">protocol</span> <span class="n">on</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">up</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">51.115</span><span class="p">:</span> <span class="o">%</span><span class="n">LINEPROTO</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Line</span> <span class="n">protocol</span> <span class="n">on</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">down</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">52.117</span><span class="p">:</span> <span class="o">%</span><span class="n">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">down</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">55.786</span><span class="p">:</span> <span class="o">%</span><span class="n">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">up</span>
+<span class="n">Mar</span>  <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">56.784</span><span class="p">:</span> <span class="o">%</span><span class="n">LINEPROTO</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">UPDOWN</span><span class="p">:</span> <span class="n">Line</span> <span class="n">protocol</span> <span class="n">on</span> <span class="n">Interface</span> <span class="n">GigabitEthernet1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">38</span><span class="p">,</span> <span class="n">changed</span> <span class="n">state</span> <span class="n">to</span> <span class="n">up</span>
+
+
+<span class="n">ANUBIS</span><span class="o">-</span><span class="n">N01_4A</span><span class="c1"># show clock</span>
+
+<span class="mi">23</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mf">19.957</span> <span class="n">BRAZIL</span> <span class="n">Fri</span> <span class="n">Mar</span> <span class="mi">6</span> <span class="mi">2020</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Foi identificado erros de ‘network flapping’ na porta 45 do switch 10.255.10.4. Onde ocorre um número elevado de conexão e desconexão progressiva da estação, recorrente sempre na mesma porta. Consultamos a documentação do próprio fabricante o qual diz que isso está relacionado à problema de camada física.</p>
+</div>
+<p>‘Excess Defer frames’:: - According to Cisco documentation it is the number of frames that are not sent after the time exceeds the maximum-packet time. It means that the port is under heavy load. The device connected to the port is transmitting or receiving more traffic that can be handled by the port.</p>
+<p>Segue abaixo às recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de ‘network flapping’:</p>
+<p>Cabo incorreto - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA) - Também de preferencia, conectar um dispositivo fluke e rodar diagnostico completo para checar as medições de impedancia do cabo UTP e suas possíveis interferencias (crossstalk).
+Verificar possíveis conexões soltas ou mal encaixadas. Ver se existem conexões soltas porque às vezes, parece que um cabo está colocado na tomada, mas não está. Desconecte o cabo e o reintroduza. Na estação verifique a placa de rede:: Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.</p>
+<p>Outros testes possíveis e que podem ser válidos para mitigação do problema: Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste.</p>
 </div>
 </div>
 
@@ -84,18 +781,21 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Router Cisco</a><ul>
+<li><a class="reference internal" href="#">Cisco</a><ul>
 <li><a class="reference internal" href="#comandos-basicos-router-cisco">1. Comandos Básicos Router Cisco</a></li>
+<li><a class="reference internal" href="#comandos-basicos-switch-cisco-sg-300-20">2. Comandos Básicos Switch Cisco SG 300-20</a></li>
+<li><a class="reference internal" href="#comandos-basicos-switch-cisco-me-c3750-24te-powerpc405">3. Comandos Básicos Switch Cisco ME-C3750-24TE (PowerPC405)</a></li>
+<li><a class="reference internal" href="#troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp">3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="avaya.html"
-                        title="previous chapter">Avaya Nortel Ethernet Routing Switch</a></p>
+                        title="previous chapter">BÁSICO</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="usmt.html"
-                        title="next chapter">User State Migration Tool ‘USMT’</a></p>
+  <p class="topless"><a href="juniper.html"
+                        title="next chapter">Router Juniper</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -124,10 +824,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+          <a href="juniper.html" title="Router Juniper"
              >next</a> |</li>
         <li class="right" >
-          <a href="avaya.html" title="Avaya Nortel Ethernet Routing Switch"
+          <a href="avaya.html" title="BÁSICO"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
       </ul>
