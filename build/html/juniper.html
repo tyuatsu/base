@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Router Juniper &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User State Migration Tool ‘USMT’" href="usmt.html" />
+    <link rel="prev" title="Cisco" href="cisco.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cisco.html" title="Cisco"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="router-juniper">
+<h1>Router Juniper<a class="headerlink" href="#router-juniper" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/juniper.jpg"><img alt="Juniper" src="_images/juniper.jpg" style="width: 315.0px; height: 210.0px;" /></a>
+</div>
+<div class="section" id="comandos-basicos-router-juniper">
+<h2>1. Comandos Básicos Router Juniper<a class="headerlink" href="#comandos-basicos-router-juniper" title="Permalink to this headline">¶</a></h2>
+<p>Verificar informações de todas interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span>
+</pre></div>
+</div>
+<p>Verificar últimos logs de quedas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span><span class="n">show</span> <span class="n">log</span> <span class="n">messages</span> <span class="o">|</span> <span class="n">last</span> <span class="mi">200</span>
+</pre></div>
+</div>
+<p>Verificar as informações de todas interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">find</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">find</span> <span class="n">ge</span>
+</pre></div>
+</div>
+<p>Verificar informações da interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">match</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Verificar se está fisicamente up ou down:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">detail</span> <span class="o">|</span> <span class="n">match</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Visualizar todas as interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>Visualizar todas as interfaces com detalhamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">brief</span>
+</pre></div>
+</div>
+<p>Visualiza todos os tipos de erros:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">extensive</span>
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">extensive</span> <span class="o">|</span> <span class="n">match</span> <span class="n">errors</span>
+</pre></div>
+</div>
+<p>Verificar tempo de operação do equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">uptime</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mais-comandos-uteis-para-verificacao">
+<h2>Mais comandos úteis para verificação<a class="headerlink" href="#mais-comandos-uteis-para-verificacao" title="Permalink to this headline">¶</a></h2>
+<p>Verificar tempo de operação do equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">uptime</span>
+</pre></div>
+</div>
+<p>Verificar usuários logados:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">users</span>
+</pre></div>
+</div>
+<p>Verificar armazenamento de dados local:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">storage</span>
+</pre></div>
+</div>
+<p>Verificar a tabela de processos em execução:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">processes</span>
+</pre></div>
+</div>
+<p>Verificar componentes de hardware instalados:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">hardware</span>
+</pre></div>
+</div>
+<p>Verificar status dos componentes e temperatura, e velocidades do sistema de refrigeração:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">environment</span>
+</pre></div>
+</div>
+<p>Verificar status da routing engine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">routing</span><span class="o">-</span><span class="n">engine</span>
+</pre></div>
+</div>
+<p>Verificar alarmes de alertas no equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">alarms</span>
+</pre></div>
+</div>
+<p>Versão do Junos OS que esta rodando no equipamento. Também exibe o host name e o modelo do dispositivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">version</span>
+</pre></div>
+</div>
+<p>Verificar logs relacionados aos alarmes do hardware:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">chassisd</span> <span class="o">|</span> <span class="n">no</span><span class="o">-</span><span class="n">more</span>
+</pre></div>
+</div>
+<p>Verificar mensagens de log:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">messages</span> <span class="o">|</span> <span class="n">no</span><span class="o">-</span><span class="n">more</span>
+</pre></div>
+</div>
+<p>Verificar histórico de login dos usuários:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>Verificar a configuração atual:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o status das interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">terse</span>
+</pre></div>
+</div>
+<p>Descrição sobre uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Descrição detalhada sobre uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interface</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span> <span class="n">extensive</span>
+</pre></div>
+</div>
+<p>Reinicia as estatísticas de uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">clear</span> <span class="n">interfaces</span> <span class="n">statistics</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">bgp</span> <span class="n">summary</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">ospf</span> <span class="n">overview</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">isis</span> <span class="n">overview</span>
+</pre></div>
+</div>
+<p>Descrição detalhada sobre uma rota específica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="mf">216.142</span><span class="o">.</span><span class="mf">248.0</span> <span class="n">extensive</span>
+</pre></div>
+</div>
+<p>Descrição sobre uma rota específica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">68.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+<p>Descrição da tabela de rotas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="n">terse</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Router Juniper</a><ul>
+<li><a class="reference internal" href="#comandos-basicos-router-juniper">1. Comandos Básicos Router Juniper</a></li>
+<li><a class="reference internal" href="#mais-comandos-uteis-para-verificacao">Mais comandos úteis para verificação</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cisco.html"
+                        title="previous chapter">Cisco</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usmt.html"
+                        title="next chapter">User State Migration Tool ‘USMT’</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/juniper.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool ‘USMT’"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cisco.html" title="Cisco"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
