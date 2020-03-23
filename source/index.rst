@@ -6,6 +6,13 @@ Esta é uma documentação pessoal sobre diversos assuntos, inclusive informáti
 
 Conteúdos:
 
+.. _auditoria:
+.. toctree::
+   :maxdepth: 1
+   :caption: Security Auditoria
+
+   auditoria 
+
 .. _avaya:
 .. toctree::
    :maxdepth: 1
