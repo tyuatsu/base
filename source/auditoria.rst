@@ -689,17 +689,17 @@ Verificação do S.M.A.R.T Health::
     SMART Attributes Data Structure revision number: 16
     Vendor Specific SMART Attributes with Thresholds:
     ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
-    1 Raw_Read_Error_Rate     0x002f   100   100   051    Pre-fail  Always       -       2
-    2 Throughput_Performance  0x0026   252   252   000    Old_age   Always       -       0
-    3 Spin_Up_Time            0x0023   091   090   025    Pre-fail  Always       -       3010
-    4 Start_Stop_Count        0x0032   097   097   000    Old_age   Always       -       3357
-    5 Reallocated_Sector_Ct   0x0033   252   252   010    Pre-fail  Always       -       0
-    7 Seek_Error_Rate         0x002e   252   252   051    Old_age   Always       -       0
-    8 Seek_Time_Performance   0x0024   252   252   015    Old_age   Offline      -       0
-    9 Power_On_Hours          0x0032   100   100   000    Old_age   Always       -       20498
-    10 Spin_Retry_Count        0x0032   252   252   051    Old_age   Always       -       0
-    11 Calibration_Retry_Count 0x0032   099   099   000    Old_age   Always       -       1272
-    12 Power_Cycle_Count       0x0032   097   097   000    Old_age   Always       -       3371
+    1   Raw_Read_Error_Rate     0x002f   100   100   051    Pre-fail  Always       -       2
+    2   Throughput_Performance  0x0026   252   252   000    Old_age   Always       -       0
+    3   Spin_Up_Time            0x0023   091   090   025    Pre-fail  Always       -       3010
+    4   Start_Stop_Count        0x0032   097   097   000    Old_age   Always       -       3357
+    5   Reallocated_Sector_Ct   0x0033   252   252   010    Pre-fail  Always       -       0
+    7   Seek_Error_Rate         0x002e   252   252   051    Old_age   Always       -       0
+    8   Seek_Time_Performance   0x0024   252   252   015    Old_age   Offline      -       0
+    9   Power_On_Hours          0x0032   100   100   000    Old_age   Always       -       20498
+    10  Spin_Retry_Count        0x0032   252   252   051    Old_age   Always       -       0
+    11  Calibration_Retry_Count 0x0032   099   099   000    Old_age   Always       -       1272
+    12  Power_Cycle_Count       0x0032   097   097   000    Old_age   Always       -       3371
     191 G-Sense_Error_Rate      0x0022   100   100   000    Old_age   Always       -       831
     192 Power-Off_Retract_Count 0x0022   252   252   000    Old_age   Always       -       0
     194 Temperature_Celsius     0x0002   064   056   000    Old_age   Always       -       36 (Min/Max 15/44)
