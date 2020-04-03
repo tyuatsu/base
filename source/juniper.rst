@@ -54,7 +54,7 @@ Verificar tempo de operação do equipamento::
     Supersonic@C3PO> show system uptime
     
     
-Ping teste:
+Ping teste::
 
     Supersonic@C3PO> ping 200.185.0.60 rapid count 50 size 1500 
     
