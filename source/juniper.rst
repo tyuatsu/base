@@ -15,6 +15,10 @@ Verificar informações de todas interfaces::
 
     Supersonic@C3PO> show interfaces descriptions
 
+Mostrar breve resumo da interface::
+
+    Supersonic@C3PO> show interfaces ge-0/0/1 terse
+
 Verificar últimos logs de quedas::
 
     Supersonic@C3PO>show log messages | last 200
@@ -48,7 +52,17 @@ Visualiza todos os tipos de erros::
 Verificar tempo de operação do equipamento::
 
     Supersonic@C3PO> show system uptime
+    
+    
+Ping teste:
 
+    Supersonic@C3PO> ping 200.185.0.60 rapid count 50 size 1500 
+    
+    PING 200.185.0.60 (200.185.0.60): 1500 data bytes
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    --- 200.185.0.60 ping statistics ---
+    50 packets transmitted, 50 packets received, 0% packet loss
+    round-trip min/avg/max/stddev = 0.163/0.174/0.311/0.024 ms
 
 Mais comandos úteis para verificação
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -109,6 +123,9 @@ Breve descrição sobre o status das interfaces::
 
     Atom@R2D2> show interfaces terse 
 
+    Atom@R2D2> run show interfaces ge-0/0/1.0 terse
+
+
 Descrição sobre uma interface::
 
     Atom@R2D2> show interfaces interface-name 
@@ -144,6 +161,13 @@ Descrição sobre uma rota específica::
 Descrição da tabela de rotas::
 
     Atom@R2D2> show route terse 
+
+ENABLE / DISABLE INTERFACE IN JUNIPER::
+
+    Atom@R2D2# set interfaces ge-0/0/1.0 disable  (This is cisco equivalent of **shutdown**)
+    Atom@R2D2# delete interfaces ge-0/0/1.0 disable (This is cisco equivalent of **no shutdown**)
+    Atom@R2D2# show ge-0/0/1.0
+    Atom@R2D2# run show interfaces ge-0/0/1.0 terse
     
     
     
