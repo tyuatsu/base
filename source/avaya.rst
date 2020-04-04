@@ -1787,6 +1787,11 @@ Exibir configuração geral::
 12. Exemplos de configurção de um switch nortel 4550T-PWR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: swnortel.jpg
+    :scale: 70 %
+    :align: center
+    :alt: SWNortel
+    
 .. note:: Tendo em vista o crescimento operacional, segue os dados para a configuração do novo switch.
 
 (Switch de Acesso)
