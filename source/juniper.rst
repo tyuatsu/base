@@ -168,18 +168,18 @@ Exemplos de comandos (simulação) validar o roteamento entre o router *astronau
     Cumulative transmit rate 7.0 pps, cumulative receive rate 7.0 pps
 
     juca@astronauta008> 
-    juca@astronauta008> show isis adjacency    
+    juca@astronauta008> show isis adjacency
     Interface             System         L State        Hold (secs) SNPA
-    ge-1/0/1.0            RO015          2  Up                   19
-    ge-1/0/2.0            RO035          2  Up                   20
-    ge-1/0/4.0            RO054          2  Up                   20
-    ge-1/0/6.0            RO025          2  Up                   22
-    ge-1/1/1.993          RO105          2  Up                   20
-    ge-1/1/3.0            RO042          2  Up                   24  88:e0:f3:7f:37:79
-    ge-1/1/4.0            RO058          2  Up                   26
-    ge-1/1/5.0            RO027          2  Up                    6  88:e0:f3:7f:44:7f
-    ge-1/1/7.0            RO056          2  Up                   21
-    ge-1/1/8.0            RO063          2  Up                   21
+    ge-1/0/1.0            Daihatsu015       2  Up                   19
+    ge-1/0/2.0            Acura035          2  Up                   20
+    ge-1/0/4.0            Datsun054         2  Up                   20
+    ge-1/0/6.0            Infiniti025       2  Up                   22
+    ge-1/1/1.993          Isuzu105          2  Up                   20
+    ge-1/1/3.0            Lexus042          2  Up                   24  88:e0:f3:7f:37:79
+    ge-1/1/4.0            Toyota058         2  Up                   26
+    ge-1/1/5.0            Nissan027         2  Up                    6  88:e0:f3:7f:44:7f
+    ge-1/1/7.0            Honda056          2  Up                   21
+    ge-1/1/8.0            Mitsubishi063     2  Up                   21
 
     juca@astronauta008> 
     juca@astronauta008> exit
