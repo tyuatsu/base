@@ -82,7 +82,7 @@ Troubleshooting
 * show bfd session brief
 * show isis adjacency 
 
-Exemplos de comandos (simulação) validar o roteamento entre o router astronauta e router magali 171.28.1.210 (Elemento ROTEAMENTO ISIS PEER)::
+Exemplos de comandos (simulação) validar o roteamento entre o router *astronauta* e router *magali* 171.28.1.210 (Elemento ROTEAMENTO ISIS PEER)::
 
     juca@astronauta008> show interfaces ge-1/1/9
     Physical interface: ge-1/1/9, Enabled, Physical link is Up
