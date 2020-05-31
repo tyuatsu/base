@@ -398,7 +398,17 @@ Mostrar as interfaces::
 
     MAC SECURITY EXCCED MACS
     
+
+Desativar Mac-Security da porta::
+    
+    sw6.cosmonaut(config)# interface ethernet 3
+    sw6.cosmonaut(config-if)# no mac-security port 3    
+    
     sw6.cosmonaut# show mac-security port 3
+    
+    Port  Trunk  Security  Auto-Learning  MAC Number Security Locked-out
+    ----  -----  --------  -------------  ---------- -------------------
+     3           Disabled    Disabled          2         Disabled
 
 Dar um reset na base Avaya e configurá-la na Vlan 182 (Voz), para que somente o Notebook esteja na Vlan 88 (dados):: 
 
