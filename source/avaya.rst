@@ -1633,10 +1633,10 @@ Verificar Logs de quedas::
 
 Reativar uma porta de um SW de acesso que perdeu a gerência (não pinga) e o mesmo antes estava conectado na porta 3/35::
 
-.. note:: O SW Core pode derrubar uma porta de um SW de Acesso, a fim de evitar looping na rede. 
-
     CORETESTW001/config/ethernet/3/35# state disable
     CORETESTW001/config/ethernet/3/35# state enable
+
+.. note:: O SW Core pode derrubar uma porta de um SW de Acesso, a fim de evitar looping na rede. 
 
 Verificar status de cada porta::
 
