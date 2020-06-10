@@ -8,7 +8,7 @@ Router Juniper
     :align: center
     :alt: Juniper
     
-A cli – command line interface, do sistema conta com basicamente dois modos::
+A cli – command line interface, do sistema conta com basicamente dois modos:
 
 * Operational Mode - Permite monitorar e realizar troubleshooting no dispositivo.
 
