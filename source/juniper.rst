@@ -10,13 +10,16 @@ Router Juniper
     
 A cli – command line interface, do sistema conta com basicamente dois modos::
 
-* **Operational Mode** - Permite monitorar e realizar troubleshooting no dispositivo.
+* Operational Mode - Permite monitorar e realizar troubleshooting no dispositivo.
 
-* **Configuration Mode** - Permite realizar configurações do equipamento. As configurações realizadas são armazenadas em um estrutura hierárquica, contendo instruções para o dispositivo, incluindo interfaces, informações de roteamento, permissões de acesso e propriedades de sistema e hardware. As alterações realizadas nesse modo, são armazenadas em um arquivo chamado candidate configuration. Esse arquivo permite realizar alterações sem causar mudanças imediatas nas configurações que estão rodando no roteador, chamada active configuration. O dispositivo não irá implementar as mudanças realizadas até você aplicá-las manualmente na active configuration.
+* Configuration Mode - Permite realizar configurações do equipamento. As configurações realizadas são armazenadas em um estrutura hierárquica, contendo instruções para o dispositivo, incluindo interfaces, informações de roteamento, permissões de acesso e propriedades de sistema e hardware. As alterações realizadas nesse modo, são armazenadas em um arquivo chamado candidate configuration. Esse arquivo permite realizar alterações sem causar mudanças imediatas nas configurações que estão rodando no roteador, chamada active configuration. O dispositivo não irá implementar as mudanças realizadas até você aplicá-las manualmente na active configuration.
 
 Quando pressionamos a tecla **'?'**, o sistema nos mostra todos os possíveis comandos que podem ser usados, incluindo uma breve descrição de cada um.
+
 Para configurar um parâmetro usamos o comando **set**, enquanto que para apagar um parâmetro usamos o comando **delete**.
+
 Para editar um parâmetro usamos o comando **edit**, e o comando **show** é utilizados para visualização.
+
 Para salvar as configurações na active configuration utilizamos o comando **commit**.
 
 Configuração básica do dispositivo
