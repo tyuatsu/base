@@ -411,7 +411,7 @@ ENABLE / DISABLE INTERFACE IN JUNIPER::
 
     Atom@R2D2# set interfaces ge-0/0/1.0 disable  (This is cisco equivalent of **shutdown**)
     Atom@R2D2# delete interfaces ge-0/0/1.0 disable (This is cisco equivalent of **no shutdown**)
-    Atom@R2D2# show ge-0/0/1.0
+    Atom@R2D2# run show ge-0/0/1.0
     Atom@R2D2# run show interfaces ge-0/0/1.0 terse
     
     
