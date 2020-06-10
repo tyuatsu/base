@@ -1,15 +1,136 @@
 Router Juniper
 --------------
 
-.. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
+.. note:: Junos é o sistema operacional que roda nos roteadores e switches do fabricante Juniper Networks. O kernel do Junos é baseado no sistema Unix FreeBSD. Vamos a uma rápida introdução aos comandos básicos para roteadores Juniper e depois complementamos com alguns exemplos práticos do cotidiano do ambiente de redes.
 
 .. figure:: juniper.jpg
     :scale: 60 %
     :align: center
     :alt: Juniper
+    
+A cli – command line interface, do sistema conta com basicamente dois modos::
 
-1. Comandos Básicos Router Juniper
+* **Operational Mode** - Permite monitorar e realizar troubleshooting no dispositivo.
+
+* **Configuration Mode** - Permite realizar configurações do equipamento. As configurações realizadas são armazenadas em um estrutura hierárquica, contendo instruções para o dispositivo, incluindo interfaces, informações de roteamento, permissões de acesso e propriedades de sistema e hardware. As alterações realizadas nesse modo, são armazenadas em um arquivo chamado candidate configuration. Esse arquivo permite realizar alterações sem causar mudanças imediatas nas configurações que estão rodando no roteador, chamada active configuration. O dispositivo não irá implementar as mudanças realizadas até você aplicá-las manualmente na active configuration.
+
+Quando pressionamos a tecla **'?'**, o sistema nos mostra todos os possíveis comandos que podem ser usados, incluindo uma breve descrição de cada um.
+Para configurar um parâmetro usamos o comando **set**, enquanto que para apagar um parâmetro usamos o comando **delete**.
+Para editar um parâmetro usamos o comando **edit**, e o comando **show** é utilizados para visualização.
+Para salvar as configurações na active configuration utilizamos o comando **commit**.
+
+Configuração básica do dispositivo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Comandos de verificação::
+
+    root> show system uptime – Verificar tempo de operação do equipamento.
+
+    root> show system users – Verificar usuários logados.
+
+    root> show system storage – Verificar armazenamento de dados local.
+
+    root> show system processes – Verificar a tabela de processos em execução.
+
+    root> show chassis hardware – Verificar componentes de hardware instalados.
+
+    root> show chassis environment – Verificar status dos componentes e temperatura, e velocidades do sistema de refrigeração.
+
+    root> show chassis routing-engine – Verificar status da routing engine.
+
+    root> show chassis alarms – Verificar alarmes de alertas no equipamento
+
+    root> show version – Versão do Junos OS que esta rodando no equipamento. Também exibe o host name e o modelo do dispositivo.
+
+    root> show log chassisd | no-more – Verificar logs relacionados aos alarmes do hardware
+
+    root> show log messages | no-more – Verificar mensagens de log
+
+    root> show log user – Verificar histórico de login dos usuários
+
+    root> show configuration – Verificar a configuração atual
+
+    root> show interfaces terse – Breve descrição sobre o status das interfaces
+
+    root> show interfaces interface-name – Descrição sobre uma interface
+
+    root> show interface interface-name extensive – Descrição detalhada sobre uma interface
+
+    root> clear interfaces statistics interface-name – Reinicia as estatísticas de uma interface
+
+    root> show bgp summary – Breve descrição sobre o estado do protocolo
+
+    root> show ospf overview – Breve descrição sobre o estado do protocolo
+
+    root> show isis overview – Breve descrição sobre o estado do protocolo
+
+    root> show route 216.142.248.0 extensive – Descrição detalhada sobre uma rota específica
+
+    root> show route 192.168.68.0/24 – Descrição sobre uma rota específica
+
+    root> show route terse – Descrição da tabela de rotas
+
+
+Definir host name::
+
+    root# set system host-name juniper
+
+Definir uma senha de acesso ao usuário root::
+
+    root# set system root-authentication plain-text-password
+    New password:
+    Retype new password:
+
+    root# commit
+    commit complete
+
+Adicionar ip a uma interface::
+
+    root@juniper# set interfaces em0 unit 0 family inet address 192.168.1.254/24
+
+Adicionar um rota estática::
+
+    root@juniper# set routing-options static route 192.168.68.0/24 next-hop 192.168.1.1
+
+Habilitar ssh::
+
+    root@juniper# set system services ssh
+
+Data e Hora::
+
+    root@juniper# set system ntp server 200.160.0.8
+
+    root@juniper# set system time-zone America/Sao_Paulo
+
+Ping e Traceroute::
+
+    root@juniper> ping 192.168.1.1
+    root@juniper> ping rapid count 1000 size 1400 192.168.1.1
+    root@juniper> traceroute 192.168.1.1
+
+.. note:: Para utilizar comandos de Operational Mode dentro do Configuration Mode, utilize a sintaxe **run** antes do comando.
+
+Como no exemplo abaixo::
+
+    root@juniper# run ping 192.168.1.1
+
+
+Salvar configuração::
+
+    root@juniper# commit check – Realiza uma checagem de erros na configuração, mas não aplica.
+
+    root@juniper# commit at "2017-09-15 23:59" – Aplica a configuração no dia e horário informado no comando.
+
+    root@juniper# commit confirmed 1 – Aplica a configuração em um "modo de segurança", caso não seja confirmada no tempo pré-definido no comando, a configuração será descartada e voltará ao seu estado original, função rollback.
+
+    root@juniper# commit and-quit – Aplica a configuração e sai do configuration mode.
+
+Aqui abordamos comandos super básicos, e para maiores informações e melhor aprofundamento do conteúdo apresentado, sugiro buscar informações mais detalhadas no site oficial  `www.juniper.net <http://www.juniper.net/documentation/>`_ 
+
+1. Exemplos práticos
+^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.
 
 Verificar informações de todas interfaces::
 
