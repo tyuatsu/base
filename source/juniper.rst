@@ -187,7 +187,59 @@ Ping teste::
     --- 200.185.0.60 ping statistics ---
     50 packets transmitted, 50 packets received, 0% packet loss
     round-trip min/avg/max/stddev = 0.163/0.174/0.311/0.024 ms
+
+Como acessar Juniper de um router para outro, neste caso este procedimento serve para validação de interface::
+
+    Supersonic@C3PO> show interfaces ge-0/0/3 descriptions
+    ge-0/0/3        up    up   To-R2D2
     
+    Supersonic@C3PO> show configuration interfaces ge-0/0/3
+    description To-R2D2;
+    mtu 8900;
+    unit 0 {
+        family inet {
+                    address 182.75.1.67/30;
+                    }
+        family iso;
+        family mpls;
+           }
+    
+    Supersonic@C3PO> ping 182.75.1.68 count 3
+    PING 182.75.1.68 (182.75.1.68): 56 data bytes
+    64 bytes from 182.75.1.68: icmp_seq=0 ttl=64 time=2.507 ms
+    64 bytes from 182.75.1.68: icmp_seq=0 ttl=64 time=2.204 ms
+    64 bytes from 182.75.1.68: icmp_seq=1 ttl=64 time=1.316 ms
+    --- 182.75.1.68 ping statistics ---
+    2 packets transmitted, 2 packets received, 0% packet loss
+    round-trip min/avg/max/stddev = 1.316/1.912/2.507/0.596 ms
+
+    Supersonic@C3PO> ssh root@182.75.1.68 source 182.75.0.47
+    
+    root@182.75.1.68's password:
+    --- JUNOS 12.1X44-D35.5 built 2014-05-19 21:36:43 UTC
+    root@RO016% cli
+
+    root@R2D2> show interfaces ge-0/0/1 descriptions
+    ge-0/0/1        up    up   L2L VIVO TO-C3PO
+    
+    root@R2D2> show interfaces ge-0/0/1
+    root@R2D2> show configuration interfaces ge-0/0/1
+    description L2L VIVO TO-C3PO;
+    mtu 8900;
+    unit 0 {
+        family inet {
+                    address 182.75.1.68/30;
+                    }
+        family iso;
+        family mpls;
+           }
+           
+    root@R2D2> ping 182.75.1.67 count 5 rapid
+    PING 182.75.1.67 (182.75.1.67): 56 data bytes
+    .....
+    --- 182.75.1.67 ping statistics ---
+    5 packets transmitted, 0 packets received, 100% packet loss
+
     
 Troubleshooting    
 ===============

@@ -32,9 +32,10 @@ Router IP: 192.168.131.108 x 192.172.100.102::
     
     TESTRO0075# show int description
     TESTRO0075# show ip int brief
+    TESTRO0075# show int GigabitEhternet0/1
+    TESTRO0075# show logging | include GigabitEhternet0/1
     TESTRO0075# show standby brief
     TESTRO0075# show standby (hscp - hot stanby cisco protocol)
-    TESTRO0075# show int GigabitEhternet0/1
     TESTRO0075# show int GigabitEhternet0/1 | in up | drops
     TESTRO0075# show int summ
     TESTRO0075# show run int GigabitEthernet0/1
@@ -282,7 +283,7 @@ Agora vamos apenas alterar para Vlan 133::
 3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: **Abobrinhas Selvagens**. O pedido é: - 'Verificar a rede até a estação do atendente'.
+Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: **XYZ**. O pedido é: - 'Verificar a rede até a estação do atendente'.
 
 Foi constatado incontáveis erros de ping contra servidores Avaya. (Aprox. às 11h40hs da manhã, houve surtos na comunicação entre cliente e servidor, os quais geraram um conjunto maior de erros de ping. Sendo assim, precisamos que verifiquem especificamente a estação de trabalho cujo IP é 10.0.12.152.
  
