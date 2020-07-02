@@ -213,11 +213,19 @@ Como acessar Juniper de um router para outro, neste caso este procedimento serve
     2 packets transmitted, 2 packets received, 0% packet loss
     round-trip min/avg/max/stddev = 1.316/1.912/2.507/0.596 ms
 
-    Supersonic@C3PO> ssh root@182.75.1.68 source 182.75.0.47
-    
+    Supersonic@C3PO> ssh root@182.75.1.68 source 182.75.0.47 (o source deve ser o endereço de loopback)
+
+    Supersonic@C3PO> show configuration | display set | match lo0 
+    set interfaces lo0 unit 0 family inet filter input router-protect-simplified
+    set interfaces lo0 unit 0 family inet address 182.75.0.47/32
+    set interfaces lo0 unit 0 family iso address 49.0001.2001.8500.0047.00
+    set protocols isis interface lo0.0 level 1 disable
+    set protocols ldp interface lo0.0
+
     root@182.75.1.68's password:
     --- JUNOS 12.1X44-D35.5 built 2014-05-19 21:36:43 UTC
-    root@RO016% cli
+    
+    root@R2D2% cli
 
     root@R2D2> show interfaces ge-0/0/1 descriptions
     ge-0/0/1        up    up   L2L VIVO TO-C3PO
