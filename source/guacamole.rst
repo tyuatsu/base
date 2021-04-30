@@ -39,7 +39,7 @@ Desabilitar serviços que não são necessários e que não serão utilizados::
     systemctl disable postfix
     systemctl stop postix
 
-SELinux -  Se não souber utilizar, desabilite ou coloque em modo permissivo::
+SELinux -  Se não souber utilizar, desabilite ou coloque em modo permissivo assim::
 
     setenforce 0
 
