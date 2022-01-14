@@ -48,6 +48,8 @@ Comandos de verificação::
     root> show log chassisd | no-more – Verificar logs relacionados aos alarmes do hardware
 
     root> show log messages | no-more – Verificar mensagens de log
+    
+    root> show log messages | last 50 – Verificar mensagens de log das últimas 50 linhas
 
     root> show log user – Verificar histórico de login dos usuários
 
