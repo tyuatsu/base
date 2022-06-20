@@ -31,7 +31,7 @@ Agora no desktop windows, abra o **putty.exe** e entre com o IP ou a URL do seu 
 
 No lado esquerdo do painel do putty, vá p/ Connection → SSH → Tunnels
 
-Agora siga as etapas:: selecione **Dynamic**, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois click no botão **Add**
+Agora siga as etapas:: selecione **Dynamic**, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois clique no botão **Add**
 
 Na figura abaixo irá aparecer listado com o formato D{PORT_NUMBER} ou seja **D9999** 
 
@@ -59,11 +59,13 @@ Abra o **cmd** e com o comando netstat veja se o seu SSH está em modo LISTEN na
 Usando um túnel no Google Chrome
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Finalmente chegamos meus caros, na parte mais crucial da configuração! 😛 yeah! Bora configurar o proxy no Chrome! Não é algo tão intuitivo igual o Firefox ou IE, porque quando queremos configurá-lo no Chrome pela GUI dele, infelizmente ele nos redireciona para o maldito Painel de Controle\Rede do Windows. Como não desejamos alterar a configuração de todo o PC, mas apenas do navegador Chrome. Por isso se faz necessário proceder de outra maneira, através do **command prompt** cmd::
+Finalmente chegamos meus caros, na parte mais crucial da configuração! 😛 yeah! Bora configurar o proxy no Chrome! Não é algo tão intuitivo igual o Firefox ou IE, porque quando queremos configurá-lo no Chrome pela GUI dele, infelizmente ele nos redireciona para o maldito Painel de Controle e Rede do Windows. Como não desejamos alterar a configuração de todo o PC, mas apenas do navegador Chrome. Por isso se faz necessário proceder de outra maneira, através do **command prompt** cmd::
 
     "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --proxy-server="socks5://127.0.0.1:9999"
 
-Se o comando não funcionar, pode ser devido seu google chrome estar instalado em outro local diferente **(C:\Program Files\Google\Chrome)**
+Se o comando não funcionar, pode ser devido seu google chrome estar instalado em outro local diferente::
+
+    "C:\Program Files\Google\Chrome\Application\chrome.exe" --proxy-server="socks5://127.0.0.1:9999"
 
 Se tudo der certo o chrome abrirá e você pode validar através do endereço **http://httpbin.org/ip** e ver seu ip::
 
@@ -71,10 +73,10 @@ Se tudo der certo o chrome abrirá e você pode validar através do endereço **
   "origin": "179.55.170.40"
   }
 
-Aqui por exemplo a resposta foi o IP usado pelo meu provedor de internet. 
+Aqui por exemplo a resposta foi o IP **179.55.170.40** do meu provedor de internet. 
 
-Uhhhhuuuuuuuuu!  \😛/ Meus parabéns ^^  agora vc pode navegar livremente via tunel ssh! 
+Uhhhhuuuuuuuuu!  😛 Meus parabéns ^^  agora vc pode navegar livremente via tunel ssh! 
 
-.. note:: Para ficar melhor ainda Pessoal, não esqueça de colocar o número da porta corretamente ok? Lembrem-se que aqui eu usei 9999, porém você pode usar outra que quiser, MAS É IMPORTANTE utilizar o mesmo número de porta nas configurações do PuTTY e do Chrome. Melhoria contínua sempre, vamo que vamo!
+.. note:: Para ficar melhor ainda pessoal, não esqueçam de colocar o número da porta corretamente ok? Lembrem-se que aqui eu usei 9999, porém você pode usar outra que quiser, MAS É IMPORTANTE utilizar sempre o mesmo número de porta nas configurações do PuTTY e do Chrome. Melhoria contínua sempre, vamo que vamo 😛!
 
 
