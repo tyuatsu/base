@@ -184,6 +184,13 @@ Conteúdos:
 
    regras
 
+.. _ssh-tunnel:
+.. toctree::
+   :maxdepth: 1
+   :caption: Supaidaman SSH Tunnel
+
+   ssh-tunnel
+
 .. _guacamole:
 .. toctree::
    :maxdepth: 1

@@ -1,23 +1,24 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>User State Migration Tool ‘USMT’ &#8212; Base de Conhecimento 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Dicas de bash, linha de comando para uso diário." href="bash.html" />
-    <link rel="prev" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”" href="index.html" /> 
+    <link rel="prev" title="Router Juniper" href="juniper.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -29,9 +30,10 @@
           <a href="bash.html" title="Dicas de bash, linha de comando para uso diário."
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
+          <a href="juniper.html" title="Router Juniper"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User State Migration Tool ‘USMT’</a></li> 
       </ul>
     </div>  
 
@@ -40,13 +42,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="user-state-migration-tool-usmt">
+  <section id="user-state-migration-tool-usmt">
 <h1>User State Migration Tool ‘USMT’<a class="headerlink" href="#user-state-migration-tool-usmt" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A Ferramenta de Migração de Estado do Usuário é um programa utilitário de linha de comando desenvolvido pela Microsoft que permite que os usuários se sintam à vontade com linguagens de script para transferir arquivos e configurações entre PCs com Windows.</p>
 </div>
-<div class="section" id="procedimento">
+<section id="procedimento">
 <h2>Procedimento<a class="headerlink" href="#procedimento" title="Permalink to this headline">¶</a></h2>
 <p>Instalação:</p>
 <p>Baixe o adksetup.exe pelo site: <a class="reference external" href="https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install">docs.microsoft.com</a></p>
@@ -56,16 +58,16 @@
 <p class="admonition-title">Note</p>
 <p>Escolha o local de instalação em <strong>C:\ADK-Offline</strong>, e após o seu download, copie esta pasta para um pendrive, pois iremos usá-la para instalar em máquinas sem necessidade de conexão com a internet, manteremos tudo no modo offline.</p>
 </div>
-</div>
-<div class="section" id="instalar-o-usmt">
+</section>
+<section id="instalar-o-usmt">
 <h2>Instalar o USMT<a class="headerlink" href="#instalar-o-usmt" title="Permalink to this headline">¶</a></h2>
 <p>Entre na pasta ADK-Offline e execute o adksetup.exe e coloque no local de instalação o caminho:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">ADK</span>
 </pre></div>
 </div>
 <p>Escolha a primeira opção e em seguida selecione a ferramenta no caso, apenas o usmt.</p>
-</div>
-<div class="section" id="iniciar-o-processo-do-usmt-na-maquina-alvo">
+</section>
+<section id="iniciar-o-processo-do-usmt-na-maquina-alvo">
 <h2>Iniciar o processo do usmt na máquina alvo<a class="headerlink" href="#iniciar-o-processo-do-usmt-na-maquina-alvo" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -87,9 +89,9 @@
 <span class="n">scanstate</span><span class="o">.</span><span class="n">exe</span> \\<span class="n">vboxsrv</span>\<span class="n">andre</span>\<span class="n">Downloads</span>\<span class="n">backup_user</span> <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">andre</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">o</span> <span class="o">/</span><span class="n">c</span> <span class="o">/</span><span class="n">nocompress</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/capture-1-scanstate.png"><img alt="Snipping Tool Capture Scanstate" src="_images/capture-1-scanstate.png" style="width: 511.79999999999995px; height: 251.39999999999998px;" /></a>
-</div>
+</figure>
 <p><strong>OBS</strong>: Isso Irá criar uma pasta nova chamada <strong>USMT</strong> em e:\Downloads\backup_user.</p>
 <p>Restore do perfil em outra máquina, instale o ADK (não esqueça de selecionar apenas o usmt):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;C:\ADK\Assessment and Deployment Kit\User State Migration Tool</span><span class="se">\a</span><span class="s2">md64&quot;</span>
@@ -101,13 +103,13 @@
 <span class="n">loadstate</span><span class="o">.</span><span class="n">exe</span> \\<span class="n">vboxsrv</span>\<span class="n">andre</span>\<span class="n">Downloads</span>\<span class="n">backup_user</span>\<span class="n">USMT</span>\ <span class="o">/</span><span class="n">ue</span><span class="p">:</span><span class="o">*</span>\<span class="o">*</span> <span class="o">/</span><span class="n">ui</span><span class="p">:</span><span class="o">*</span>\<span class="n">andre</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">miguser</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">i</span><span class="p">:</span><span class="n">migapp</span><span class="o">.</span><span class="n">xml</span> <span class="o">/</span><span class="n">nocompress</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/capture-2-loadstate.png"><img alt="Snipping Tool Capture Loadstate" src="_images/capture-2-loadstate.png" style="width: 578.4px; height: 189.0px;" /></a>
-</div>
+</figure>
 <p>Faça um logon com o usuário andre e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..).</p>
-</div>
-</div>
-<div class="section" id="consideracoes-finais">
+</section>
+</section>
+<section id="consideracoes-finais">
 <h1>Considerações Finais<a class="headerlink" href="#consideracoes-finais" title="Permalink to this headline">¶</a></h1>
 <p>No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário… mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.</p>
 <p>Caso a máquina esteja ingressado num Domain, tanto a máquina alvo como a de destino, devem estar sempre no mesmo domain ou grupo de trabalho, antes de se iniciar o restore do loadstate do perfil do usuário!</p>
@@ -115,11 +117,11 @@
 <p class="admonition-title">Note</p>
 <p>Caso queira utilizar a migração com mais segurança, podemos usar a criptografia.</p>
 </div>
-</div>
-<div class="section" id="veja-um-exemplo-abaixo">
+</section>
+<section id="veja-um-exemplo-abaixo">
 <h1>Veja um exemplo abaixo<a class="headerlink" href="#veja-um-exemplo-abaixo" title="Permalink to this headline">¶</a></h1>
 <p>Migração completa do perfil do usuário chamado <strong>karen</strong>, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).</p>
-<div class="section" id="realizar-a-copia-critografada-do-perfil-completo-da-maquina">
+<section id="realizar-a-copia-critografada-do-perfil-completo-da-maquina">
 <h2>Realizar a cópia critografada do perfil completo da máquina.<a class="headerlink" href="#realizar-a-copia-critografada-do-perfil-completo-da-maquina" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Instale o software <strong>adksetup.exe</strong> em ambas as máquinas!</p></li>
@@ -156,17 +158,19 @@
 <ol class="arabic simple" start="3">
 <li><p>Desconecte o hd externo e reinicie o computador. Faça um logon com o usuário karen e veja se tudo está ok (email, imagens, documentos, favoritos, icones, atalhos e etc..)</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">User State Migration Tool ‘USMT’</a><ul>
 <li><a class="reference internal" href="#procedimento">Procedimento</a></li>
 <li><a class="reference internal" href="#instalar-o-usmt">Instalar o USMT</a></li>
@@ -180,12 +184,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Bem-Vindo a “Base de Conhecimento do Tyuatsu”</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="bash.html"
-                        title="next chapter">Dicas de bash, linha de comando para uso diário.</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="juniper.html"
+                          title="previous chapter">Router Juniper</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="bash.html"
+                          title="next chapter">Dicas de bash, linha de comando para uso diário.</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -197,12 +206,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -217,14 +226,15 @@
           <a href="bash.html" title="Dicas de bash, linha de comando para uso diário."
              >next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
+          <a href="juniper.html" title="Router Juniper"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User State Migration Tool ‘USMT’</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

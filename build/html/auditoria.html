@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Security Auditoria &#8212; Base de Conhecimento 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,7 +32,8 @@
         <li class="right" >
           <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Security Auditoria</a></li> 
       </ul>
     </div>  
 
@@ -40,11 +42,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="security-auditoria">
+  <section id="security-auditoria">
 <h1>Security Auditoria<a class="headerlink" href="#security-auditoria" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/fedora.png"><img alt="fedora" src="_images/fedora.png" style="width: 93.60000000000001px; height: 31.6px;" /></a>
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Auditoria para Ambientes com Sistema Operacional Linux (Fedora/RHEL/CentOS)</p>
@@ -107,7 +109,7 @@
 <span class="mi">3</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">vsftpd</span>
 <span class="mi">2</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">passwd</span>
 <span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">gnome</span><span class="o">-</span><span class="n">initial</span><span class="o">-</span><span class="n">setup</span>
-<span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span>
+<span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span>
 <span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">userdel</span>
 <span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">virtualbox</span><span class="o">/</span><span class="n">VirtualBox</span>
 <span class="mi">1</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">gdm</span><span class="o">-</span><span class="n">wayland</span><span class="o">-</span><span class="n">session</span>
@@ -206,7 +208,7 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 <p>SSH Restrito:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Port</span> <span class="mi">22</span>
 <span class="c1">#AddressFamily any</span>
-<span class="n">ListenAddress</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">ListenAddress</span> <span class="mf">0.0.0.0</span>
 <span class="c1">#ListenAddress ::</span>
 
 <span class="c1">#HostKey /etc/ssh/ssh_host_rsa_key</span>
@@ -284,8 +286,8 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 <span class="n">UUID</span><span class="o">=</span><span class="mi">03324</span><span class="n">a37</span><span class="o">-</span><span class="mi">1</span><span class="n">baf</span><span class="o">-</span><span class="mi">478</span><span class="n">c</span><span class="o">-</span><span class="mf">9e63</span><span class="o">-</span><span class="mi">4</span><span class="n">d685d4ea370</span>
 <span class="n">DEVICE</span><span class="o">=</span><span class="n">wlp2s0</span>
 <span class="n">ONBOOT</span><span class="o">=</span><span class="n">yes</span>
-<span class="n">DNS1</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.18</span>
-<span class="n">DNS2</span><span class="o">=</span><span class="mf">208.62</span><span class="o">.</span><span class="mf">220.220</span>
+<span class="n">DNS1</span><span class="o">=</span><span class="mf">192.168.1.18</span>
+<span class="n">DNS2</span><span class="o">=</span><span class="mf">208.62.220.220</span>
 <span class="n">PEERDNS</span><span class="o">=</span><span class="n">no</span>
 <span class="n">ZONE</span><span class="o">=</span><span class="n">FedoraWorkstation</span>
 </pre></div>
@@ -325,7 +327,7 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
   <span class="n">rich</span> <span class="n">rules</span><span class="p">:</span>
 </pre></div>
 </div>
-<p>Hard Disk Analyses:</p>
+<p>Hard Disk Analysis:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[root@otoha ~]# sudo hdparm -C /dev/sda
 /dev/sda:
  drive state is:  active/idle
@@ -656,20 +658,133 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 </pre></div>
 </div>
+<p>Verificação do S.M.A.R.T Health:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="p">[</span><span class="n">root</span><span class="nd">@otoha</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sudo smartctl -H  /dev/sda</span>
+ <span class="n">smartctl</span> <span class="mf">7.1</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">30</span> <span class="n">r5022</span> <span class="p">[</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="mf">5.4.20</span><span class="o">-</span><span class="mf">200.</span><span class="n">fc31</span><span class="o">.</span><span class="n">x86_64</span><span class="p">]</span> <span class="p">(</span><span class="n">local</span> <span class="n">build</span><span class="p">)</span>
+ <span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2002</span><span class="o">-</span><span class="mi">19</span><span class="p">,</span> <span class="n">Bruce</span> <span class="n">Allen</span><span class="p">,</span> <span class="n">Christian</span> <span class="n">Franke</span><span class="p">,</span> <span class="n">www</span><span class="o">.</span><span class="n">smartmontools</span><span class="o">.</span><span class="n">org</span>
+
+ <span class="o">===</span> <span class="n">START</span> <span class="n">OF</span> <span class="n">READ</span> <span class="n">SMART</span> <span class="n">DATA</span> <span class="n">SECTION</span> <span class="o">===</span>
+ <span class="n">SMART</span> <span class="n">overall</span><span class="o">-</span><span class="n">health</span> <span class="bp">self</span><span class="o">-</span><span class="n">assessment</span> <span class="n">test</span> <span class="n">result</span><span class="p">:</span> <span class="n">PASSED</span>
+
+ <span class="p">[</span><span class="n">root</span><span class="nd">@otoha</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sudo smartctl -a -d ata /dev/sda</span>
+ <span class="n">smartctl</span> <span class="mf">7.1</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">30</span> <span class="n">r5022</span> <span class="p">[</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="mf">5.4.20</span><span class="o">-</span><span class="mf">200.</span><span class="n">fc31</span><span class="o">.</span><span class="n">x86_64</span><span class="p">]</span> <span class="p">(</span><span class="n">local</span> <span class="n">build</span><span class="p">)</span>
+ <span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2002</span><span class="o">-</span><span class="mi">19</span><span class="p">,</span> <span class="n">Bruce</span> <span class="n">Allen</span><span class="p">,</span> <span class="n">Christian</span> <span class="n">Franke</span><span class="p">,</span> <span class="n">www</span><span class="o">.</span><span class="n">smartmontools</span><span class="o">.</span><span class="n">org</span>
+
+ <span class="o">===</span> <span class="n">START</span> <span class="n">OF</span> <span class="n">INFORMATION</span> <span class="n">SECTION</span> <span class="o">===</span>
+ <span class="n">Model</span> <span class="n">Family</span><span class="p">:</span>     <span class="n">SAMSUNG</span> <span class="n">SpinPoint</span> <span class="n">M7</span>
+ <span class="n">Device</span> <span class="n">Model</span><span class="p">:</span>     <span class="n">SAMSUNG</span> <span class="n">HM500JI</span>
+ <span class="n">Serial</span> <span class="n">Number</span><span class="p">:</span>    <span class="n">S2NVJ56B704117</span>
+ <span class="n">LU</span> <span class="n">WWN</span> <span class="n">Device</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">5</span> <span class="mf">0024e9</span> <span class="mi">400</span><span class="n">bff8ef</span>
+ <span class="n">Firmware</span> <span class="n">Version</span><span class="p">:</span> <span class="mi">2</span><span class="n">AC101C4</span>
+ <span class="n">User</span> <span class="n">Capacity</span><span class="p">:</span>    <span class="mi">500</span><span class="p">,</span><span class="mi">107</span><span class="p">,</span><span class="mi">862</span><span class="p">,</span><span class="mi">016</span> <span class="nb">bytes</span> <span class="p">[</span><span class="mi">500</span> <span class="n">GB</span><span class="p">]</span>
+ <span class="n">Sector</span> <span class="n">Size</span><span class="p">:</span>      <span class="mi">512</span> <span class="nb">bytes</span> <span class="n">logical</span><span class="o">/</span><span class="n">physical</span>
+ <span class="n">Form</span> <span class="n">Factor</span><span class="p">:</span>      <span class="mf">2.5</span> <span class="n">inches</span>
+ <span class="n">Device</span> <span class="ow">is</span><span class="p">:</span>        <span class="n">In</span> <span class="n">smartctl</span> <span class="n">database</span> <span class="p">[</span><span class="k">for</span> <span class="n">details</span> <span class="n">use</span><span class="p">:</span> <span class="o">-</span><span class="n">P</span> <span class="n">show</span><span class="p">]</span>
+ <span class="n">ATA</span> <span class="n">Version</span> <span class="ow">is</span><span class="p">:</span>   <span class="n">ATA8</span><span class="o">-</span><span class="n">ACS</span> <span class="n">T13</span><span class="o">/</span><span class="mi">1699</span><span class="o">-</span><span class="n">D</span> <span class="n">revision</span> <span class="mi">6</span>
+ <span class="n">SATA</span> <span class="n">Version</span> <span class="ow">is</span><span class="p">:</span>  <span class="n">SATA</span> <span class="mf">2.6</span><span class="p">,</span> <span class="mf">3.0</span> <span class="n">Gb</span><span class="o">/</span><span class="n">s</span>
+ <span class="n">Local</span> <span class="n">Time</span> <span class="ow">is</span><span class="p">:</span>    <span class="n">Mon</span> <span class="n">Mar</span> <span class="mi">23</span> <span class="mi">16</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">32</span> <span class="mi">2020</span> <span class="o">-</span><span class="mi">03</span>
+ <span class="n">SMART</span> <span class="n">support</span> <span class="ow">is</span><span class="p">:</span> <span class="n">Available</span> <span class="o">-</span> <span class="n">device</span> <span class="n">has</span> <span class="n">SMART</span> <span class="n">capability</span><span class="o">.</span>
+ <span class="n">SMART</span> <span class="n">support</span> <span class="ow">is</span><span class="p">:</span> <span class="n">Enabled</span>
+
+ <span class="o">===</span> <span class="n">START</span> <span class="n">OF</span> <span class="n">READ</span> <span class="n">SMART</span> <span class="n">DATA</span> <span class="n">SECTION</span> <span class="o">===</span>
+ <span class="n">SMART</span> <span class="n">overall</span><span class="o">-</span><span class="n">health</span> <span class="bp">self</span><span class="o">-</span><span class="n">assessment</span> <span class="n">test</span> <span class="n">result</span><span class="p">:</span> <span class="n">PASSED</span>
+
+ <span class="n">General</span> <span class="n">SMART</span> <span class="n">Values</span><span class="p">:</span>
+ <span class="n">Offline</span> <span class="n">data</span> <span class="n">collection</span> <span class="n">status</span><span class="p">:</span>     <span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="n">Offline</span> <span class="n">data</span> <span class="n">collection</span> <span class="n">activity</span>
+                                     <span class="n">was</span> <span class="n">never</span> <span class="n">started</span><span class="o">.</span>
+                                     <span class="n">Auto</span> <span class="n">Offline</span> <span class="n">Data</span> <span class="n">Collection</span><span class="p">:</span> <span class="n">Disabled</span><span class="o">.</span>
+ <span class="n">Self</span><span class="o">-</span><span class="n">test</span> <span class="n">execution</span> <span class="n">status</span><span class="p">:</span>         <span class="p">(</span><span class="mi">0</span><span class="p">)</span>     <span class="n">The</span> <span class="n">previous</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">routine</span> <span class="n">completed</span>
+                                     <span class="n">without</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">no</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">has</span> <span class="n">ever</span>
+                                     <span class="n">been</span> <span class="n">run</span><span class="o">.</span>
+ <span class="n">Total</span> <span class="n">time</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">Offline</span>
+ <span class="n">data</span> <span class="n">collection</span><span class="p">:</span>                    <span class="p">(</span><span class="mi">8040</span><span class="p">)</span> <span class="n">seconds</span><span class="o">.</span>
+ <span class="n">Offline</span> <span class="n">data</span> <span class="n">collection</span>
+ <span class="n">capabilities</span><span class="p">:</span>                       <span class="p">(</span><span class="mh">0x5b</span><span class="p">)</span> <span class="n">SMART</span> <span class="n">execute</span> <span class="n">Offline</span> <span class="n">immediate</span><span class="o">.</span>
+                                     <span class="n">Auto</span> <span class="n">Offline</span> <span class="n">data</span> <span class="n">collection</span> <span class="n">on</span><span class="o">/</span><span class="n">off</span> <span class="n">support</span><span class="o">.</span>
+                                     <span class="n">Suspend</span> <span class="n">Offline</span> <span class="n">collection</span> <span class="n">upon</span> <span class="n">new</span>
+                                     <span class="n">command</span><span class="o">.</span>
+                                     <span class="n">Offline</span> <span class="n">surface</span> <span class="n">scan</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">Self</span><span class="o">-</span><span class="n">test</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">No</span> <span class="n">Conveyance</span> <span class="n">Self</span><span class="o">-</span><span class="n">test</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">Selective</span> <span class="n">Self</span><span class="o">-</span><span class="n">test</span> <span class="n">supported</span><span class="o">.</span>
+ <span class="n">SMART</span> <span class="n">capabilities</span><span class="p">:</span>                 <span class="p">(</span><span class="mh">0x0003</span><span class="p">)</span> <span class="n">Saves</span> <span class="n">SMART</span> <span class="n">data</span> <span class="n">before</span> <span class="n">entering</span>
+                                     <span class="n">power</span><span class="o">-</span><span class="n">saving</span> <span class="n">mode</span><span class="o">.</span>
+                                     <span class="n">Supports</span> <span class="n">SMART</span> <span class="n">auto</span> <span class="n">save</span> <span class="n">timer</span><span class="o">.</span>
+ <span class="n">Error</span> <span class="n">logging</span> <span class="n">capability</span><span class="p">:</span>           <span class="p">(</span><span class="mh">0x01</span><span class="p">)</span> <span class="n">Error</span> <span class="n">logging</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">General</span> <span class="n">Purpose</span> <span class="n">Logging</span> <span class="n">supported</span><span class="o">.</span>
+ <span class="n">Short</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">routine</span>
+ <span class="n">recommended</span> <span class="n">polling</span> <span class="n">time</span><span class="p">:</span>           <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">minutes</span><span class="o">.</span>
+ <span class="n">Extended</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">routine</span>
+ <span class="n">recommended</span> <span class="n">polling</span> <span class="n">time</span><span class="p">:</span>           <span class="p">(</span><span class="mi">134</span><span class="p">)</span> <span class="n">minutes</span><span class="o">.</span>
+ <span class="n">SCT</span> <span class="n">capabilities</span><span class="p">:</span>                   <span class="p">(</span><span class="mh">0x003f</span><span class="p">)</span> <span class="n">SCT</span> <span class="n">Status</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">SCT</span> <span class="n">Error</span> <span class="n">Recovery</span> <span class="n">Control</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">SCT</span> <span class="n">Feature</span> <span class="n">Control</span> <span class="n">supported</span><span class="o">.</span>
+                                     <span class="n">SCT</span> <span class="n">Data</span> <span class="n">Table</span> <span class="n">supported</span><span class="o">.</span>
+
+ <span class="n">SMART</span> <span class="n">Attributes</span> <span class="n">Data</span> <span class="n">Structure</span> <span class="n">revision</span> <span class="n">number</span><span class="p">:</span> <span class="mi">16</span>
+ <span class="n">Vendor</span> <span class="n">Specific</span> <span class="n">SMART</span> <span class="n">Attributes</span> <span class="k">with</span> <span class="n">Thresholds</span><span class="p">:</span>
+ <span class="n">ID</span><span class="c1"># ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE</span>
+ <span class="mi">1</span>   <span class="n">Raw_Read_Error_Rate</span>     <span class="mh">0x002f</span>   <span class="mi">100</span>   <span class="mi">100</span>   <span class="mi">051</span>    <span class="n">Pre</span><span class="o">-</span><span class="n">fail</span>  <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">2</span>
+ <span class="mi">2</span>   <span class="n">Throughput_Performance</span>  <span class="mh">0x0026</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">3</span>   <span class="n">Spin_Up_Time</span>            <span class="mh">0x0023</span>   <span class="mi">091</span>   <span class="mi">090</span>   <span class="mi">025</span>    <span class="n">Pre</span><span class="o">-</span><span class="n">fail</span>  <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">3010</span>
+ <span class="mi">4</span>   <span class="n">Start_Stop_Count</span>        <span class="mh">0x0032</span>   <span class="mi">097</span>   <span class="mi">097</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">3357</span>
+ <span class="mi">5</span>   <span class="n">Reallocated_Sector_Ct</span>   <span class="mh">0x0033</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">010</span>    <span class="n">Pre</span><span class="o">-</span><span class="n">fail</span>  <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">7</span>   <span class="n">Seek_Error_Rate</span>         <span class="mh">0x002e</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">051</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">8</span>   <span class="n">Seek_Time_Performance</span>   <span class="mh">0x0024</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">015</span>    <span class="n">Old_age</span>   <span class="n">Offline</span>      <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">9</span>   <span class="n">Power_On_Hours</span>          <span class="mh">0x0032</span>   <span class="mi">100</span>   <span class="mi">100</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">20498</span>
+ <span class="mi">10</span>  <span class="n">Spin_Retry_Count</span>        <span class="mh">0x0032</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">051</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">11</span>  <span class="n">Calibration_Retry_Count</span> <span class="mh">0x0032</span>   <span class="mi">099</span>   <span class="mi">099</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">1272</span>
+ <span class="mi">12</span>  <span class="n">Power_Cycle_Count</span>       <span class="mh">0x0032</span>   <span class="mi">097</span>   <span class="mi">097</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">3371</span>
+ <span class="mi">191</span> <span class="n">G</span><span class="o">-</span><span class="n">Sense_Error_Rate</span>      <span class="mh">0x0022</span>   <span class="mi">100</span>   <span class="mi">100</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">831</span>
+ <span class="mi">192</span> <span class="n">Power</span><span class="o">-</span><span class="n">Off_Retract_Count</span> <span class="mh">0x0022</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">194</span> <span class="n">Temperature_Celsius</span>     <span class="mh">0x0002</span>   <span class="mi">064</span>   <span class="mi">056</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">36</span> <span class="p">(</span><span class="n">Min</span><span class="o">/</span><span class="n">Max</span> <span class="mi">15</span><span class="o">/</span><span class="mi">44</span><span class="p">)</span>
+ <span class="mi">195</span> <span class="n">Hardware_ECC_Recovered</span>  <span class="mh">0x003a</span>   <span class="mi">100</span>   <span class="mi">100</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">196</span> <span class="n">Reallocated_Event_Count</span> <span class="mh">0x0032</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">197</span> <span class="n">Current_Pending_Sector</span>  <span class="mh">0x0032</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">198</span> <span class="n">Offline_Uncorrectable</span>   <span class="mh">0x0030</span>   <span class="mi">252</span>   <span class="mi">252</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Offline</span>      <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">199</span> <span class="n">UDMA_CRC_Error_Count</span>    <span class="mh">0x0036</span>   <span class="mi">200</span>   <span class="mi">200</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">0</span>
+ <span class="mi">200</span> <span class="n">Multi_Zone_Error_Rate</span>   <span class="mh">0x002a</span>   <span class="mi">100</span>   <span class="mi">100</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">555</span>
+ <span class="mi">223</span> <span class="n">Load_Retry_Count</span>        <span class="mh">0x0032</span>   <span class="mi">099</span>   <span class="mi">099</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">1272</span>
+ <span class="mi">225</span> <span class="n">Load_Cycle_Count</span>        <span class="mh">0x0032</span>   <span class="mi">001</span>   <span class="mi">001</span>   <span class="mi">000</span>    <span class="n">Old_age</span>   <span class="n">Always</span>       <span class="o">-</span>       <span class="mi">2257333</span>
+
+ <span class="n">SMART</span> <span class="n">Error</span> <span class="n">Log</span> <span class="n">Version</span><span class="p">:</span> <span class="mi">1</span>
+ <span class="n">No</span> <span class="n">Errors</span> <span class="n">Logged</span>
+
+ <span class="n">SMART</span> <span class="n">Self</span><span class="o">-</span><span class="n">test</span> <span class="n">log</span> <span class="n">structure</span> <span class="n">revision</span> <span class="n">number</span> <span class="mi">1</span>
+ <span class="n">No</span> <span class="bp">self</span><span class="o">-</span><span class="n">tests</span> <span class="n">have</span> <span class="n">been</span> <span class="n">logged</span><span class="o">.</span>  <span class="p">[</span><span class="n">To</span> <span class="n">run</span> <span class="bp">self</span><span class="o">-</span><span class="n">tests</span><span class="p">,</span> <span class="n">use</span><span class="p">:</span> <span class="n">smartctl</span> <span class="o">-</span><span class="n">t</span><span class="p">]</span>
+
+ <span class="n">SMART</span> <span class="n">Selective</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">log</span> <span class="n">data</span> <span class="n">structure</span> <span class="n">revision</span> <span class="n">number</span> <span class="mi">0</span>
+ <span class="n">Note</span><span class="p">:</span> <span class="n">revision</span> <span class="n">number</span> <span class="ow">not</span> <span class="mi">1</span> <span class="n">implies</span> <span class="n">that</span> <span class="n">no</span> <span class="n">selective</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">has</span> <span class="n">ever</span> <span class="n">been</span> <span class="n">run</span>
+ <span class="n">SPAN</span>  <span class="n">MIN_LBA</span>  <span class="n">MAX_LBA</span>  <span class="n">CURRENT_TEST_STATUS</span>
+  <span class="mi">1</span>        <span class="mi">0</span>        <span class="mi">0</span>  <span class="n">Completed</span> <span class="p">[</span><span class="mi">00</span><span class="o">%</span> <span class="n">left</span><span class="p">]</span> <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">65535</span><span class="p">)</span>
+  <span class="mi">2</span>        <span class="mi">0</span>        <span class="mi">0</span>  <span class="n">Not_testing</span>
+  <span class="mi">3</span>        <span class="mi">0</span>        <span class="mi">0</span>  <span class="n">Not_testing</span>
+  <span class="mi">4</span>        <span class="mi">0</span>        <span class="mi">0</span>  <span class="n">Not_testing</span>
+  <span class="mi">5</span>        <span class="mi">0</span>        <span class="mi">0</span>  <span class="n">Not_testing</span>
+<span class="n">Selective</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="n">flags</span> <span class="p">(</span><span class="mh">0x0</span><span class="p">):</span>
+<span class="n">After</span> <span class="n">scanning</span> <span class="n">selected</span> <span class="n">spans</span><span class="p">,</span> <span class="n">do</span> <span class="n">NOT</span> <span class="n">read</span><span class="o">-</span><span class="n">scan</span> <span class="n">remainder</span> <span class="n">of</span> <span class="n">disk</span><span class="o">.</span>
+<span class="n">If</span> <span class="n">Selective</span> <span class="bp">self</span><span class="o">-</span><span class="n">test</span> <span class="ow">is</span> <span class="n">pending</span> <span class="n">on</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span><span class="p">,</span> <span class="n">resume</span> <span class="n">after</span> <span class="mi">0</span> <span class="n">minute</span> <span class="n">delay</span><span class="o">.</span>
+</pre></div>
 </div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Bem-Vindo a “Base de Conhecimento do Tyuatsu”</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="avaya.html"
-                        title="next chapter">BÁSICO</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Bem-Vindo a “Base de Conhecimento do Tyuatsu”</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="avaya.html"
+                          title="next chapter">BÁSICO</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -681,12 +796,12 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -703,12 +818,13 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
         <li class="right" >
           <a href="index.html" title="Bem-Vindo a “Base de Conhecimento do Tyuatsu”"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Security Auditoria</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

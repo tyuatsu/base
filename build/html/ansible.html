@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Ansible &#8212; Base de Conhecimento 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -23,7 +24,8 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ansible</a></li> 
       </ul>
     </div>  
 
@@ -32,11 +34,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ansible">
+  <section id="ansible">
 <h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
 <p>Esta é um guia rápido que mostra como criar receitas no Ansible.
 Ela foi feita com base na <a class="reference external" href="http://docs.ansible.com/ansible/index.html">doc oficial</a>.</p>
-<div class="section" id="instalacao">
+<section id="instalacao">
 <h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
 <p>No momento da instalação foi utilizado:</p>
 <ul class="simple">
@@ -48,20 +50,20 @@ Ela foi feita com base na <a class="reference external" href="http://docs.ansibl
 <span class="c1"># yum install ansible</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="inventarios">
+</section>
+<section id="inventarios">
 <h2>Inventários<a class="headerlink" href="#inventarios" title="Permalink to this headline">¶</a></h2>
 <p>O Ansible conecta nas máquinas de acordo com os endereços registrados no seu arquivo <code class="docutils literal notranslate"><span class="pre">hosts</span></code>. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_inventory.html">documentação</a>.
 Nesta configuração é possível definir hosts individuais ou grupos. Exemplo de um grupo chamado <code class="docutils literal notranslate"><span class="pre">servidores</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ansible</span><span class="o">/</span><span class="n">hosts</span>
 
 <span class="p">[</span><span class="n">servidores</span><span class="p">]</span>
-<span class="mf">192.168</span><span class="o">.</span><span class="mf">25.14</span>
-<span class="mf">192.168</span><span class="o">.</span><span class="mf">25.15</span>
+<span class="mf">192.168.25.14</span>
+<span class="mf">192.168.25.15</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ad-hoc">
+</section>
+<section id="ad-hoc">
 <h2>Ad-Hoc<a class="headerlink" href="#ad-hoc" title="Permalink to this headline">¶</a></h2>
 <p>Uma das formas para executar um comando remotamente pelo Ansible é adicionar nos hosts conhecidos do ssh (known_hosts) os hosts remotos e então executar comandos. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_adhoc.html">documentação</a>.
 Para isto, execute o ssh para host de destino para que ele seja adicionado:</p>
@@ -87,8 +89,8 @@ Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 
 }
 </pre></div>
 </div>
-</div>
-<div class="section" id="receitas-playbook">
+</section>
+<section id="receitas-playbook">
 <h2>Receitas - Playbook<a class="headerlink" href="#receitas-playbook" title="Permalink to this headline">¶</a></h2>
 <p>As playbooks são receitas pré-definidas em arquivos de configuração (formato YAML) a serem utilizadas nos hosts, com abordagem diferente ao
 AD-Hoc, pois podem executar uma série de definições pré-determinadas. Vide documentação <a class="reference external" href="http://docs.ansible.com/ansible/playbooks.html">playbooks</a> e <a class="reference external" href="http://docs.ansible.com/ansible/YAMLSyntax.html">YAML</a>.</p>
@@ -119,17 +121,19 @@ ok: [192.168.25.14] =&gt; {</p>
 192.168.25.15              : ok=0    changed=0    unreachable=1    failed=0</p>
 </div></blockquote>
 <p>..note: Quando há falhas, um arquivo <a class="reference external" href="http://docs.ansible.com/ansible/intro_configuration.html#retry-files-enabled">retry</a> é salvo. Por padráo é necessário definir o caminho ou desativar a função.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Ansible</a><ul>
 <li><a class="reference internal" href="#instalacao">Instalação</a></li>
 <li><a class="reference internal" href="#inventarios">Inventários</a></li>
@@ -139,6 +143,7 @@ ok: [192.168.25.14] =&gt; {</p>
 </li>
 </ul>
 
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -150,12 +155,12 @@ ok: [192.168.25.14] =&gt; {</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -166,12 +171,13 @@ ok: [192.168.25.14] =&gt; {</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ansible</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

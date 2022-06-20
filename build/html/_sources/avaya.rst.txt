@@ -398,7 +398,17 @@ Mostrar as interfaces::
 
     MAC SECURITY EXCCED MACS
     
+
+Desativar Mac-Security da porta::
+    
+    sw6.cosmonaut(config)# interface ethernet 3
+    sw6.cosmonaut(config-if)# no mac-security port 3    
+    
     sw6.cosmonaut# show mac-security port 3
+    
+    Port  Trunk  Security  Auto-Learning  MAC Number Security Locked-out
+    ----  -----  --------  -------------  ---------- -------------------
+     3           Disabled    Disabled          2         Disabled
 
 Dar um reset na base Avaya e configurá-la na Vlan 182 (Voz), para que somente o Notebook esteja na Vlan 88 (dados):: 
 
@@ -605,7 +615,7 @@ IP do PC é **10.221.65.10**
 
 Localização do Switch de acesso no Core::
 
-    CORETESTW001# show ports info vlans port 3/18
+    CORETESTW001.5# show ports info vlans port 3/18
 
     *******************************************************************************
     Command Execution Time: THU JAN 02 10:12:58 2020 GMT
@@ -1259,7 +1269,7 @@ Adicione a Vlan de voz 214 nas portas::
 
 Fazer as validações e analisar as possíveis causas de lentidão na rede::
 
-    CORETESTW001# show ip arp info 10.221.12.45
+    CORETESTW001.5# show ip arp info 10.221.12.45
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:41:21 2020 GMT
@@ -1271,7 +1281,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     --------------------------------------------------------------------------------
     10.221.12.45    d0:94:66:a8:3f:11  21      1/6      DYNAMIC 2148
 
-    CORETESTW001# show vlan info basic 21
+    CORETESTW001.5# show vlan info basic 21
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:42:36 2020 GMT
@@ -1286,7 +1296,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
  
     1 out of 835 ARP entries displayed
 
-    CORETESTW001# show sys topology
+    CORETESTW001.5# show sys topology
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:43:14 2020 GMT
@@ -1315,7 +1325,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     1/18 10.221.15.4     0x000119  001a8f4daf61 BayStack425-24         12 Yes HtBt  1/25
     1/20 10.221.5.6      0x000131  048a1537fc00 ERS4550T-PWR           12 Yes HtBt  1/49
 
-    CORETESTW001# ping 10.221.4.7 -s
+    CORETESTW001.5# ping 10.221.4.7 -s
 
     PING 10.221.4.7: 56 data bytes
     64 bytes from 10.221.4.7: icmp_seq=0. time=1.149 ms
@@ -1351,7 +1361,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     34 packets transmitted, 34 packets received, 0% packet loss
     round-trip (ms)  min/avg/max = 0.979/1.093/1.905
 
-    CORETESTW001/show/ports/error# ?
+    CORETESTW001.5/show/ports/error# ?
 
     Sub-Context:
     Current Context:
@@ -1362,7 +1372,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     ospf [port <value>]
     show-all [file <value>]
 
-    CORETESTW001/show/ports/error# collision
+    CORETESTW001.5/show/ports/error# collision
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:52:51 2020 GMT
@@ -1390,7 +1400,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     1/15  0                 0                 0                 0
     1/16  0                 0                 0                 0
 
-    CORETESTW001/show/ports/error# collision port 1/6
+    CORETESTW001.5/show/ports/error# collision port 1/6
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:53:27 2020 GMT
@@ -1403,7 +1413,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     --------------------------------------------------------------------------------
     1/6   0                 0                 0                 0
 
-    CORETESTW001/show/ports/error# ext port 1/6
+    CORETESTW001.5/show/ports/error# ext port 1/6
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:53:55 2020 GMT
     *******************************************************************************
@@ -1415,7 +1425,7 @@ Fazer as validações e analisar as possíveis causas de lentidão na rede::
     --------------------------------------------------------------------------------
     1/6   0        0        0        0        0        0       0        0
 
-    CORETESTW001/show/ports/error# main port 1/6
+    CORETESTW001.5/show/ports/error# main port 1/6
 
     *******************************************************************************
     Command Execution Time: TUE JAN 07 10:54:03 2020 GMT
@@ -1526,10 +1536,74 @@ Segundo a documentação, e de acordo com a topologia, identificamos o IP do SW 
     Port Trunk Admin   Oper Link LinkTrap Negotiation  Speed   Duplex Control
     ---- ----- ------- ---- ---- -------- ----------- -------- ------ -------
     1/34       Enable  Up   Up   Enabled  Enabled     100Mbps  Full   Disable
+    
+
+9. Para verificar Arp relacionada a VRF
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Existem macs que não aparecem na arp do core devido as operações serem atendidas por VRF, neste caso a arp fica relacionada a cada VRF.
+
+LOCALIZAR VRF DE TODOS OS CLIENTES::
+
+    CORETESTW001.5# show ip vrf info
+    *******************************************************************************
+                Command Execution Time: FRI JUN 26 16:59:26 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                    VRF INFORMATION
+    ================================================================================
+    VRF        OSPF       RIP        BGP        PIM        MVR        ARP
+    COUNT      COUNT      COUNT      COUNT      COUNT      COUNT      COUNT
+    --------------------------------------------------------------------------------
+    6          6          6          6          6          5          2035
+
+    VRF                       VRF                                          VLAN    ARP
+    NAME                      ID   OSPF    RIP     BGP     PIM     MVR     COUNT   COUNT
+    --------------------------------------------------------------------------------
+    GlobalRouter              0    TRUE    TRUE    TRUE    TRUE    TRUE    69      1696
+    vrf_john                  1    TRUE    TRUE    TRUE    TRUE    TRUE    20      78
+    vrf_mary                  2    TRUE    TRUE    TRUE    TRUE    FALSE   2       32
+    vrf_peter                 3    TRUE    TRUE    TRUE    TRUE    TRUE    4       79
+    vrf_jesus                 4    TRUE    TRUE    TRUE    TRUE    TRUE    5       132
+    vrf_zero                  5    TRUE    TRUE    TRUE    TRUE    TRUE    3       18
+
+    6 out of 6 Total Num of VRF Entries displayed.
+    
+    CORETESTW001.5# 
+    CORETESTW001.5#  show ip arp info vrf vrf_jesus
+
+    *******************************************************************************
+               Command Execution Time: FRI JUN 26 16:59:59 2020 GMT
+    *******************************************************************************
+    ================================================================================
+                                  IP Arp - VRF vrf_jesus
+    ================================================================================
+    IP_ADDRESS      MAC_ADDRESS        VLAN    PORT       TYPE    TTL(10 Sec)
+    --------------------------------------------------------------------------------
+    192.168.129.41  2c:6b:f5:5e:10:00  1321    2/45      DYNAMIC 70
+    10.222.64.16    d0:94:66:a8:24:48  364     2/46      DYNAMIC 789
+    10.222.64.2     3c:b1:5b:2d:22:5d  364      -        LOCAL   2160
+    10.222.64.255   ff:ff:ff:ff:ff:ff  364      -        LOCAL   2160
+    10.222.64.1     00:00:5e:00:01:1d  364      -        LOCAL   2160
+    192.168.129.42  3c:b1:5b:2d:22:5e  1321     -        LOCAL   2160
+    192.168.129.43  ff:ff:ff:ff:ff:ff  1321     -        LOCAL   2160
+    10.225.3.1      3c:b1:5b:2d:22:5f  2996     -        LOCAL   2160
+    10.225.3.3      ff:ff:ff:ff:ff:ff  2996     -        LOCAL   2160
+    10.222.64.3     3c:b1:5b:28:c2:48  364     MLT 1     DYNAMIC 363
+    10.225.3.2      3c:b1:5b:28:c2:49  2996    MLT 1     DYNAMIC 1165
+    10.222.64.13    d0:94:66:a8:24:a2  364     2/46      DYNAMIC 327
+    10.222.64.12    d0:94:66:a8:23:c3  364     2/46      DYNAMIC 1965
+    10.222.64.17    d0:94:66:a8:20:bd  364     2/46      DYNAMIC 20
+    10.222.64.14    d0:94:66:a8:22:fb  364     2/46      DYNAMIC 157
+    10.222.64.20    90:b1:1c:f7:a2:f4  364     2/46      DYNAMIC 747
+    10.222.64.11    d0:94:66:a8:14:48  364     2/46      DYNAMIC 823
+    10.222.64.19    74:86:7a:f9:1e:e4  364     2/46      DYNAMIC 1986
+
+    18 out of 2035 ARP entries displayed
 
 
-9. AVAYA CORE VSP 4000 Command Line Reference
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+10. AVAYA CORE VSP 4000 Command Line Reference
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Localizar Mac no Core::
 
@@ -1544,151 +1618,151 @@ Mostrar Topologia::
     
     COREVSPW005# show autotopology nmm-table
 
-10. AVAYA CORE ERS-8806 Command Line Reference
+11. AVAYA CORE ERS-8806 Command Line Reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Localizar Mac no Core::
 
-    CORETESTW001# show vlan info fdb-entry mac f8:bc:12:8e:b2:95
+    CORETESTW001.5# show vlan info fdb-entry mac f8:bc:12:8e:b2:95
 
 Informação da Vlan::
 
-    CORETESTW001# show vlan info advance 44
-    CORETESTW001# show vlan info basic 44
-    CORETESTW001# show vlan info ip 44
+    CORETESTW001.5# show vlan info advance 44
+    CORETESTW001.5# show vlan info basic 44
+    CORETESTW001.5# show vlan info ip 44
 
 Descobrir os Macs atrelados a Vlan 100::
 
-    CORETESTW001# show vlan info srcmac 100
+    CORETESTW001.5# show vlan info srcmac 100
 
 Adicionar e forçar Mac passar na Vlan SRCMAC (BYMAC) em todos os Cores::
 
-    CORETESTW001# vlan 100 srcmac add 5c:f9:dd:ec:a3:5c
+    CORETESTW001.5# vlan 100 srcmac add 5c:f9:dd:ec:a3:5c
 
 Mostrar todos os Macs adicionados por srcmac de todas as Vlans::
 
-    CORETESTW001# show vlan info srcmac
+    CORETESTW001.5# show vlan info srcmac
 
 Achar o IP da Vlan::
 
-    CORETESTW001# show vlan ip 100
+    CORETESTW001.5# show vlan ip 100
 
 Encontrar o Mac através do IP da Estação/Base::
 
-    CORETESTW001# show ip arp info 10.221.79.68
+    CORETESTW001.5# show ip arp info 10.221.79.68
 
 Verificar Vlans que passam na porta::
 
-    CORETESTW001# show ports info vlans port 3/40
+    CORETESTW001.5# show ports info vlans port 3/40
 
 Verificar qual MLT está amarrado na porta::
 
-    CORETESTW001# show smlt
+    CORETESTW001.5# show smlt
 
 Detectar falha entre 2 interfaces ethernet fisicas (ponto a ponto)::
 
-    CORETESTW001# show ports info vlacp port 1/16
+    CORETESTW001.5# show ports info vlacp port 1/16
 
 Mostrar o escopo DHCP::
 
-    CORETESTW001# show ip dhcp-relay fwd-path
+    CORETESTW001.5# show ip dhcp-relay fwd-path
 
 Consumo de CPU::
 
-    CORETESTW001# show cpu utilization
+    CORETESTW001.5# show cpu utilization
 
 Mostrar todas as Vlans::
 
-    CORETESTW001# show vlan info basic 44
+    CORETESTW001.5# show vlan info basic 44
 
 Mostrar informação da porta::
 
-    CORETESTW001# show ports info smlt port 3/40
+    CORETESTW001.5# show ports info smlt port 3/40
 
 Mostar Vlans que passam na porta::
 
-    CORETESTW001# show ports info vlan port 1/43
+    CORETESTW001.5# show ports info vlan port 1/43
 
 Localizar as interfaces::
 
-    CORETESTW001# show ip interface
+    CORETESTW001.5# show ip interface
 
 Localizar o IP do switch de acesso:
 
-    CORETESTW001# show sys topology
+    CORETESTW001.5# show sys topology
 
 Verificar Logs de quedas::
 
-    CORETESTW001# show log file tail
+    CORETESTW001.5# show log file tail
 
 Reativar uma porta de um SW de acesso que perdeu a gerência (não pinga) e o mesmo antes estava conectado na porta 3/35::
 
-.. note:: O SW Core pode derrubar uma porta de um SW de Acesso, a fim de evitar looping na rede. 
+    CORETESTW001.5/config/ethernet/3/35# state disable
+    CORETESTW001.5/config/ethernet/3/35# state enable
 
-    CORETESTW001/config/ethernet/3/35# state disable
-    CORETESTW001/config/ethernet/3/35# state enable
+.. note:: O SW Core pode derrubar uma porta de um SW de Acesso, a fim de evitar looping na rede. 
 
 Verificar status de cada porta::
 
-    CORETESTW001# show bpdu-filter
+    CORETESTW001.5# show bpdu-filter
 
 Resumo de quedas/erros::
 
-    CORETESTW001# show log file tail severity ?
-    CORETESTW001# how log file tail severity warning --> quedas recentes
+    CORETESTW001.5# show log file tail severity ?
+    CORETESTW001.5# how log file tail severity warning --> quedas recentes
 
 Adicionar Vlan-id através da porta (BYPORT) (**atenção** - somente com janela de gmud)::
  
-    CORETESTW001#  vlan 173 ports add 3/35 member portmember
+    CORETESTW001.5#  vlan 173 ports add 3/35 member portmember
 
 Adicionar Vlan-id através da porta (BY SRCMAC) (**atenção** - somente com janela de gmud)::
 
-    CORETESTW001#  vlan 212 ports add 1/41 member static
+    CORETESTW001.5#  vlan 212 ports add 1/41 member static
 
 Tagear Vlan port do Core (**atenção** - somente com janela de gmud)::
 
-    CORETESTW001# config ethernet 1/43 perform-tagging enable
-    CORETESTW001# show ports info vlan port 1/43
+    CORETESTW001.5# config ethernet 1/43 perform-tagging enable
+    CORETESTW001.5# show ports info vlan port 1/43
 
 
 Adicionar uma Vlan Default (padrão)::
 
-    CORETESTW001# config ethernet 1/43 default-vlan-id 109
+    CORETESTW001.5# config ethernet 1/43 default-vlan-id 109
 
 Resumo de status da porta::
 
-    CORETESTW001# show ports info state port 1/4
+    CORETESTW001.5# show ports info state port 1/4
 
 Estatísticas da porta::
 
-    CORETESTW001# show ports stats bridging port 2/13
+    CORETESTW001.5# show ports stats bridging port 2/13
 
 Colisão e erro da porta::
 
-    CORETESTW001# show ports error collision port 2/13
+    CORETESTW001.5# show ports error collision port 2/13
 
 Erro na porta::
 
-    CORETESTW001# show ports error ext port 2/13
+    CORETESTW001.5# show ports error ext port 2/13
 
 Erro principal na porta::
 
-    CORETESTW001# show ports error main port 2/13
+    CORETESTW001.5# show ports error main port 2/13
 
 Limpar dados da porta::
 
-    CORETESTW001# clear ports stats 2/13
+    CORETESTW001.5# clear ports stats 2/13
 
 Saltos::
 
-    CORETESTW001# traceroute 10.221.28.5
+    CORETESTW001.5# traceroute 10.221.28.5
 
 Ping estendido do Core para o switch de acesso::
 
-    CORETESTW001# ping -s 10.221.28.5
+    CORETESTW001.5# ping -s 10.221.28.5
 
 
-11. SW de Acesso - Command Line Reference
+12. SW de Acesso - Command Line Reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Verifica IP de cada Vlan::
@@ -1784,9 +1858,14 @@ Exibir configuração geral::
     sw04cascao# show running-config
 
 
-12. Exemplos de configurção de um switch nortel 4550T-PWR
+13. Exemplos de configurção de um switch nortel 4550T-PWR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: swnortel.jpg
+    :scale: 70 %
+    :align: center
+    :alt: SWNortel
+    
 .. note:: Tendo em vista o crescimento operacional, segue os dados para a configuração do novo switch.
 
 (Switch de Acesso)
@@ -2082,7 +2161,7 @@ Segue as configurações de exemplo::
     !
     ! *** LINK STATE TRACKING ***
 
-12. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
+14. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Iniciaremos com o conceito 'UntagPvidOnly' para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.

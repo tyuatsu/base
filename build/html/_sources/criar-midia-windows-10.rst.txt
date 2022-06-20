@@ -51,11 +51,13 @@ ou se quiser pode rodar tudo num só comando, assim::
 
     sudo dnf -y install wxGTK3-devel git dh-autoreconf.noarch
 
-2.1. Agora temos que fazer o download do source (código fonte) do "WoeUSB", pois ainda não há nem sinal dele nos repositórios do Fedora::
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2.1. Agora temos que fazer o download do source (código fonte) do "WoeUSB", pois ainda não há nem sinal dele nos repositórios do Fedora
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+rode os seguintes comandos::
 
     mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
-    git clone https://github.com/slacka/WoeUSB.git
+    git clone https://github.com/WoeUSB/WoeUSB.git
     cd WoeUSB
     autoreconf --force --install
     ./configure
@@ -68,7 +70,7 @@ Nesse momento você pode carregar o WoeUSB (GUI -- Modo Gráfico) no seu Gnome.
 
 Ou faça como eu, execute o comando direto no shell::
 
-    sudo woeusb --device Win10_1803_BrazilianPortuguese_x64.iso /dev/sdb
+    sudo woeusb --target-filesystem NTFS --device Win10_20H2_v2_BR_PT_x64.iso /dev/sdb
 
 unmounting and removing "/media/woeusb_target_1528352659_2304"...
 You may now safely detach the target device

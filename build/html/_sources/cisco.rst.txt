@@ -32,9 +32,10 @@ Router IP: 192.168.131.108 x 192.172.100.102::
     
     TESTRO0075# show int description
     TESTRO0075# show ip int brief
+    TESTRO0075# show int GigabitEhternet0/1
+    TESTRO0075# show logging | include GigabitEhternet0/1
     TESTRO0075# show standby brief
     TESTRO0075# show standby (hscp - hot stanby cisco protocol)
-    TESTRO0075# show int GigabitEhternet0/1
     TESTRO0075# show int GigabitEhternet0/1 | in up | drops
     TESTRO0075# show int summ
     TESTRO0075# show run int GigabitEthernet0/1
@@ -282,7 +283,7 @@ Agora vamos apenas alterar para Vlan 133::
 3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: **Abobrinhas Selvagens**. O pedido é: - 'Verificar a rede até a estação do atendente'.
+Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: **XYZ**. O pedido é: - 'Verificar a rede até a estação do atendente'.
 
 Foi constatado incontáveis erros de ping contra servidores Avaya. (Aprox. às 11h40hs da manhã, houve surtos na comunicação entre cliente e servidor, os quais geraram um conjunto maior de erros de ping. Sendo assim, precisamos que verifiquem especificamente a estação de trabalho cujo IP é 10.0.12.152.
  
@@ -730,17 +731,17 @@ Não há port security ativado nessa porta::
 
 .. note:: Foi identificado erros de network flapping na porta 45 do switch 10.255.10.4. Onde ocorre um número elevado de conexão e desconexão progressiva da estação, recorrente sempre na mesma porta. Consultamos a documentação do próprio fabricante o qual diz que isso está relacionado à problema de camada física.
 
-**Excess Defer frames**:: - According to Cisco documentation it is the number of frames that are not sent after the time exceeds the maximum-packet time. It means that the port is under heavy load. The device connected to the port is transmitting or receiving more traffic that can be handled by the port.
+**Excess Defer frames**: - According to Cisco documentation it is the number of frames that are not sent after the time exceeds the maximum-packet time. It means that the port is under heavy load. The device connected to the port is transmitting or receiving more traffic that can be handled by the port.
 
-Segue abaixo às recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de **network flapping**::
+.. note:: Veja as recomendações gerais do fabricante Cisco, que ajudam mitigar os erros de **network flapping**.
 
-**Cabo incorreto**:: - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA). Também de preferência, tente conectar um dispositivo fluke e rode um diagnostico completo para checar às medições de impedância do cabo UTP (Veja se há interferencias, do tipo crossstalk no cabeamento).
+**Cabo incorreto**: - Troque o cabo suspeito por um cabo em bom funcionamento (use apenas padrao cat 6). Procure por pinos quebrados ou faltantes nos conectores. É uma boa hora para revisar a pinagem das tomadas em ambos os pontos (da sala tecnica até a PA). Também de preferência, tente conectar um dispositivo fluke e rode um diagnostico completo para checar às medições de impedância do cabo UTP (Veja se há interferencias, do tipo crossstalk no cabeamento).
 
-**Verificar possíveis conexões soltas ou mal encaixadas**:: - Ver se existem conexões soltas porque às vezes, parece que um cabo está colocado na tomada, mas não está. Desconecte o cabo e o reintroduza.
+**Verificar possíveis conexões soltas ou mal encaixadas**: - Ver se existem conexões soltas porque às vezes, parece que um cabo está colocado na tomada, mas não está. Desconecte o cabo e o reintroduza.
 
-**Na estação verifique a placa de rede**:: - Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.
+**Na estação verifique a placa de rede**: - Atualize os drivers de rede através do site do fabricante (Dell Optiplex 3060), desative economia de energia da interface e a mantenha configurada em 1000 full duplex com a opção manual ativada.
 
-'Outros testes possíveis e que podem ser válidos para mitigação do problema':: - Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
+**Outros testes possíveis e que podem ser válidos para mitigação do problema**: - Trocar a porta de conexão com o mesmo SW. Realizar também a mudança da máquina para outro ponto de rede (ponto da máquina ao lado que estiver normal). Checar se o problema ainda persiste. 
 
 
 

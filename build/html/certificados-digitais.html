@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Como usar Certificados Digitais no Linux &#8212; Base de Conhecimento 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -27,7 +28,8 @@
         <li class="right" >
           <a href="docs-readthedocs.html" title="Utilizando o “Read the Docs” by Tyuatsu"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como usar Certificados Digitais no Linux</a></li> 
       </ul>
     </div>  
 
@@ -36,12 +38,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="como-usar-certificados-digitais-no-linux">
+  <section id="como-usar-certificados-digitais-no-linux">
 <h1>Como usar Certificados Digitais no Linux<a class="headerlink" href="#como-usar-certificados-digitais-no-linux" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="linux">
+<section id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>Referências usadas aqui..: <a class="reference external" href="https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs">DigitalOcean</a>.</p>
-<div class="section" id="informacoes-de-um-certificado">
+<section id="informacoes-de-um-certificado">
 <h3>Informações de um Certificado<a class="headerlink" href="#informacoes-de-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>No linux, há algumas formas de verificar informações de certificados, veja algumas formas e suas ferramentas.</p>
 <ul class="simple">
@@ -94,8 +96,8 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
         <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="verificar-certificados">
+</section>
+<section id="verificar-certificados">
 <h3>Verificar Certificados<a class="headerlink" href="#verificar-certificados" title="Permalink to this headline">¶</a></h3>
 <p>Listar somente o certificado em base 64:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
@@ -125,8 +127,8 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHA1</span> <span class="n">Fingerprint</span><span class="o">=</span><span class="mi">89</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">B2</span><span class="p">:</span><span class="n">D1</span><span class="p">:</span><span class="mi">3</span><span class="n">C</span><span class="p">:</span><span class="mi">68</span><span class="p">:</span><span class="n">FC</span><span class="p">:</span><span class="n">A2</span><span class="p">:</span><span class="n">B2</span><span class="p">:</span><span class="n">A6</span><span class="p">:</span><span class="n">EE</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="n">EC</span><span class="p">:</span><span class="mi">6</span><span class="n">B</span><span class="p">:</span><span class="mi">4</span><span class="n">D</span><span class="p">:</span><span class="n">B8</span><span class="p">:</span><span class="mi">5</span><span class="n">B</span><span class="p">:</span><span class="n">C2</span><span class="p">:</span><span class="mi">70</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="importar-um-certificado">
+</section>
+<section id="importar-um-certificado">
 <h3>Importar um certificado<a class="headerlink" href="#importar-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>Veja como importar um certificado.</p>
 <ul>
@@ -146,39 +148,41 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </li>
 </ul>
 <p>Ele ficará armazenado na keystore. Valide pela sua impressão digital (fingerprint)</p>
-</div>
-<div class="section" id="gerar-um-certificado">
+</section>
+<section id="gerar-um-certificado">
 <h3>Gerar um Certificado<a class="headerlink" href="#gerar-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>Certificados Auto-Assinados - utilizando o OpenSSL com chave privada de 2048 (dominio_TESTE.key) e um certificado auto-assinado (dominio_TESTE.crt) para utilização em sites com HTTPS:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">newkey</span> <span class="n">rsa</span><span class="p">:</span><span class="mi">2048</span> <span class="o">-</span><span class="n">nodes</span> <span class="o">-</span><span class="n">keyout</span> <span class="n">dominio_TESTE</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">x509</span> <span class="o">-</span><span class="n">days</span> <span class="mi">365</span> <span class="o">-</span><span class="n">out</span> <span class="o">&lt;</span><span class="n">dominio_TESTE</span><span class="o">&gt;.</span><span class="n">crt</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="exportar-um-certificado">
+</section>
+<section id="exportar-um-certificado">
 <h3>Exportar um Certificado<a class="headerlink" href="#exportar-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>Formato Java Keystore - para exportar um certificado de uma java keystore para formato x509:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">&lt;/</span><span class="n">PASTA</span><span class="o">/.</span><span class="n">keystore</span> <span class="n">OU</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">kjs</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">exportcert</span> <span class="o">-</span><span class="n">alias</span> <span class="n">NOME_CERTIFICADO</span> <span class="o">|</span> <span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">der</span> <span class="o">-</span><span class="n">text</span> <span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="remover-um-certificado">
+</section>
+<section id="remover-um-certificado">
 <h3>Remover um Certificado<a class="headerlink" href="#remover-um-certificado" title="Permalink to this headline">¶</a></h3>
 <p>Para remover certificados:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">delete</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">alias</span> <span class="o">&lt;</span><span class="n">CERTIFICADO_DESEJADO_PARA_EXCLUIR</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Como usar Certificados Digitais no Linux</a><ul>
 <li><a class="reference internal" href="#linux">Linux</a><ul>
 <li><a class="reference internal" href="#informacoes-de-um-certificado">Informações de um Certificado</a></li>
@@ -193,9 +197,12 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="docs-readthedocs.html"
-                        title="previous chapter">Utilizando o “Read the Docs” by Tyuatsu</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="docs-readthedocs.html"
+                          title="previous chapter">Utilizando o “Read the Docs” by Tyuatsu</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -207,12 +214,12 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -226,12 +233,13 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
         <li class="right" >
           <a href="docs-readthedocs.html" title="Utilizando o “Read the Docs” by Tyuatsu"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como usar Certificados Digitais no Linux</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>
