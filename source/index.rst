@@ -187,7 +187,7 @@ Conteúdos:
 .. _ssh-tunnel:
 .. toctree::
    :maxdepth: 1
-   :caption: Supaidaman SSH Tunnel
+   :caption: SSH Tunnel
 
    ssh-tunnel
 
