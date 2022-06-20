@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>SUPAIDAMAN SSH TUNNEL &#8212; Base de Conhecimento 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Moles Moles Guacamoles" href="guacamole.html" />
+    <link rel="prev" title="O Que São Regras?" href="regras.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="guacamole.html" title="Moles Moles Guacamoles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="regras.html" title="O Que São Regras?"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SUPAIDAMAN SSH TUNNEL</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="supaidaman-ssh-tunnel">
+<h1>SUPAIDAMAN SSH TUNNEL<a class="headerlink" href="#supaidaman-ssh-tunnel" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>É raro precisarmos apelar por um singelo túnel para passar todo nosso tráfego web através de algum servidor externo. Pode parecer ridículo, mas nós, meros mortais usuário, costumamos fazer isso na surdina, quando nos deparamos ou temos algumas limitações do provedor de internet e também quando necessitamos urgentemente de entrar em páginas que normalmente não temos acesso. Devido a um bloqueio de proxy server ou webfilter de algum firewall. Neste breve tutorial, mostrarei como fazer isso raidamente usando apenas o PuTTY (SSH) e o navegador Chrome.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/supaidaman.jpg"><img alt="Supaidaman" src="_images/supaidaman.jpg" style="width: 438.0px; height: 229.79999999999998px;" /></a>
+</figure>
+<p><strong>Baixe a versão mais atualizada do putty.exe (free SSH and Telnet client)</strong> - pelo site oficial:: <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">www.putty.org</a></p>
+<section id="configuracao-basica-do-putty">
+<h2>Configuração básica do Putty<a class="headerlink" href="#configuracao-basica-do-putty" title="Permalink to this headline">¶</a></h2>
+<p>Antes de mais nada, segue o comando para carregar o server ssh, aqui eu usarei o fedora linux como exemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># systemctl start sshd</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/putty-05.png"><img alt="service sshd running" src="_images/putty-05.png" style="width: 522.4px; height: 292.0px;" /></a>
+</figure>
+<p>Abra o <strong>putty.exe</strong> e entre com o IP ou a URL do seu servidor remoto ou desktop doméstico remoto, por exemplo:: <strong>supaidaman.dynu.net</strong> sempre resolverá para mim p/ IP dinâmico aleatório 179.55.x.x na porta 22. Esse IP é entregue pelo meu provedor de internet.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/putty-01.png"><img alt="putty.exe" src="_images/putty-01.png" style="width: 528.0px; height: 488.8px;" /></a>
+</figure>
+<p>No lado esquerdo do painel do putty, vá p/ Connection → SSH → Tunnels</p>
+<p>Agora siga as etapas:: selecione <strong>Dynamic</strong>, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois click no botão <strong>Add button</strong></p>
+<p>Na figura abaixo irá aparecer listado com o formato <strong>D{PORT_NUMBER}</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/putty-02.png"><img alt="putty.exe" src="_images/putty-02.png" style="width: 530.4px; height: 493.6px;" /></a>
+</figure>
+<p>Agora para finalizar Click no botão <strong>Open</strong></p>
+<p>Em seguida pode logar no seu servidor como de costume</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/putty-03.png"><img alt="putty.exe" src="_images/putty-03.png" style="width: 658.4000000000001px; height: 482.40000000000003px;" /></a>
+</figure>
+<p>Abra o <strong>cmd</strong> e com o comando netstat veja se o seu SSH está em modo listen na porta 9999 <strong>(127.0.0.1:9999)</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/putty-04.png"><img alt="putty.exe" src="_images/putty-04.png" style="width: 573.6px; height: 268.8px;" /></a>
+</figure>
+</section>
+<section id="usando-um-tunel-no-google-chrome">
+<h2>Usando um túnel no Google Chrome<a class="headerlink" href="#usando-um-tunel-no-google-chrome" title="Permalink to this headline">¶</a></h2>
+<p>Chegou a hora meus caros, na parte crucial da configuração. 😛 Vamos ter que configurar o proxy no Chrome. Não é tão intuitivo igual o Firefox ou IE, porque quando queremos configurá-lo no Chrome pela GUI dele, infelizmente ele nos redireciona para o maldito Painel de Controle do Windows. Como não desejamos alterar a configuração de todo o PC, mas apenas do navegador Chrome.</p>
+<p>Por isso se faz necessário proceder de outra maneira, através do <strong>command prompt</strong> cmd:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</span> <span class="o">--</span><span class="n">proxy</span><span class="o">-</span><span class="n">server</span><span class="o">=</span><span class="s2">&quot;socks5://127.0.0.1:9999&quot;</span>
+</pre></div>
+</div>
+<p>Se o comando não funcionar, pode ser devido seu google chrome estar instalado em outro local diferente:: <strong>C:Program FilesGoogleChrome</strong></p>
+<p>Se tudo der certo o chrome abrirá e você pode abrir o endereço <strong>http://httpbin.org/ip</strong> e ver seu ip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;origin&quot;</span><span class="p">:</span> <span class="s2">&quot;179.55.170.40&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Aqui por exemplo abriu com a resposta do IP usado pelo meu provedor de internet. Pronto vc pode navegar livremente via tunel ssh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Certifique-se de ter fornecido o número de porta correto. Lembrem-se aqui eu usei 9999 porém você pode usar outra que quiser, MAS É IMPORTANTE sempre usar a mesmo número de porta nas configurações do PuTTY e do Chrome.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">SUPAIDAMAN SSH TUNNEL</a><ul>
+<li><a class="reference internal" href="#configuracao-basica-do-putty">Configuração básica do Putty</a></li>
+<li><a class="reference internal" href="#usando-um-tunel-no-google-chrome">Usando um túnel no Google Chrome</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="regras.html"
+                          title="previous chapter">O Que São Regras?</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="guacamole.html"
+                          title="next chapter">Moles Moles Guacamoles</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ssh-tunnel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="guacamole.html" title="Moles Moles Guacamoles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="regras.html" title="O Que São Regras?"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SUPAIDAMAN SSH TUNNEL</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
