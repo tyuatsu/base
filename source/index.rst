@@ -210,4 +210,11 @@ Conteúdos:
     :maxdepth: 1
     :caption: Certificados
 
-    certificados-digitais    
+    certificados-digitais
+    
+.. _configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3:
+.. toctree::
+    :maxdepth: 1
+    :caption: Configurar HUAWEI WiFi AX2S + Technicolor-TG788v v3
+
+    configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3

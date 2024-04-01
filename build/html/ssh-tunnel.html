@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>SUPAIDAMAN SSH TUNNEL &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,62 +42,65 @@
           <div class="body" role="main">
             
   <section id="supaidaman-ssh-tunnel">
-<h1>SUPAIDAMAN SSH TUNNEL<a class="headerlink" href="#supaidaman-ssh-tunnel" title="Permalink to this headline">¶</a></h1>
+<h1>SUPAIDAMAN SSH TUNNEL<a class="headerlink" href="#supaidaman-ssh-tunnel" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>É raro precisarmos apelar por um singelo túnel para passar todo nosso tráfego web através de algum servidor externo. Pode parecer ridículo, mas nós, meros mortais usuário, costumamos fazer isso na surdina, quando nos deparamos ou temos algumas limitações do provedor de internet e também quando necessitamos urgentemente de entrar em páginas que normalmente não temos acesso. Devido a um bloqueio de proxy server ou webfilter de algum firewall. Neste breve tutorial, mostrarei como fazer isso raidamente usando apenas o PuTTY (SSH) e o navegador Chrome.</p>
+<p>É raro precisar apelar p/ um singelo túnel para passar todo nosso tráfego web através de algum servidor externo. Pode até parecer ridículo, mas vez ou outra, nós costumamos fazer isso na surdina. Principalmente quando nos deparamos com as limitações do provedor de internet ou também quando necessitamos urgentemente de entrar em páginas, que normalmente não temos acesso. Isso pode ocorrer devido a um bloqueio de proxy server ou webfilter de algum firewall e pior acontece de repente, sem nenhum aviso prévio.. ou seja num belo dia vc perde o acesso à página e fim de história. Neste breve tutorial, mostrarei como burlar esses bloqueios e ainda fazer isso rapidamente de forma eficiente, usando apenas a ferramenta PuTTY (SSH) e o navegador Chrome.</p>
 </div>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/supaidaman.jpg"><img alt="Supaidaman" src="_images/supaidaman.jpg" style="width: 438.0px; height: 229.79999999999998px;" /></a>
 </figure>
-<p><strong>Baixe a versão mais atualizada do putty.exe (free SSH and Telnet client)</strong> - pelo site oficial:: <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">www.putty.org</a></p>
+<p><strong>Baixe a versão mais atualizada do putty.exe</strong> (free SSH and Telnet client) - pelo site oficial: <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">www.putty.org</a></p>
 <section id="configuracao-basica-do-putty">
-<h2>Configuração básica do Putty<a class="headerlink" href="#configuracao-basica-do-putty" title="Permalink to this headline">¶</a></h2>
-<p>Antes de mais nada, segue o comando para carregar o server ssh, aqui eu usarei o fedora linux como exemplo:</p>
+<h2>Configuração básica do Putty<a class="headerlink" href="#configuracao-basica-do-putty" title="Permalink to this heading">¶</a></h2>
+<p>Antes de mais nada, segue o comando para carregar o server ssh no servidor remoto (externo), aqui eu usarei o fedora linux como exemplo (sobre configuração do server ssh no linux, ficarei devendo pois isso vai além do escopo desse tutorial):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># systemctl start sshd</span>
 </pre></div>
 </div>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/putty-05.png"><img alt="service sshd running" src="_images/putty-05.png" style="width: 522.4px; height: 292.0px;" /></a>
 </figure>
-<p>Abra o <strong>putty.exe</strong> e entre com o IP ou a URL do seu servidor remoto ou desktop doméstico remoto, por exemplo:: <strong>supaidaman.dynu.net</strong> sempre resolverá para mim p/ IP dinâmico aleatório 179.55.x.x na porta 22. Esse IP é entregue pelo meu provedor de internet.</p>
+<p>Agora no desktop windows, abra o <strong>putty.exe</strong> e entre com o IP ou a URL do seu servidor remoto (externo) ou desktop doméstico remoto (externo), por exemplo a url:: <strong>supaidaman.dynu.net</strong> sempre resolverá para mim p/ um IP dinâmico aleatório 179.55.x.x na porta 22. Esse IP é entregue pelo meu provedor de internet.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/putty-01.png"><img alt="putty.exe" src="_images/putty-01.png" style="width: 528.0px; height: 488.8px;" /></a>
 </figure>
 <p>No lado esquerdo do painel do putty, vá p/ Connection → SSH → Tunnels</p>
-<p>Agora siga as etapas:: selecione <strong>Dynamic</strong>, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois click no botão <strong>Add button</strong></p>
-<p>Na figura abaixo irá aparecer listado com o formato <strong>D{PORT_NUMBER}</strong></p>
+<p>Agora siga as etapas:: selecione <strong>Dynamic</strong>, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois clique no botão <strong>Add</strong></p>
+<p>Na figura abaixo irá aparecer listado com o formato D{PORT_NUMBER} ou seja <strong>D9999</strong></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/putty-02.png"><img alt="putty.exe" src="_images/putty-02.png" style="width: 530.4px; height: 493.6px;" /></a>
 </figure>
-<p>Agora para finalizar Click no botão <strong>Open</strong></p>
-<p>Em seguida pode logar no seu servidor como de costume</p>
+<p>Agora para finalizar clique no botão <strong>Open</strong></p>
+<p>Em seguida pode se logar no servidor remoto (externo), como de costume</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/putty-03.png"><img alt="putty.exe" src="_images/putty-03.png" style="width: 658.4000000000001px; height: 482.40000000000003px;" /></a>
 </figure>
-<p>Abra o <strong>cmd</strong> e com o comando netstat veja se o seu SSH está em modo listen na porta 9999 <strong>(127.0.0.1:9999)</strong></p>
+<p>Abra o <strong>cmd</strong> e com o comando netstat veja se o seu SSH está em modo LISTEN na porta 9999 <strong>(127.0.0.1:9999)</strong></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/putty-04.png"><img alt="putty.exe" src="_images/putty-04.png" style="width: 573.6px; height: 268.8px;" /></a>
 </figure>
 </section>
 <section id="usando-um-tunel-no-google-chrome">
-<h2>Usando um túnel no Google Chrome<a class="headerlink" href="#usando-um-tunel-no-google-chrome" title="Permalink to this headline">¶</a></h2>
-<p>Chegou a hora meus caros, na parte crucial da configuração. 😛 Vamos ter que configurar o proxy no Chrome. Não é tão intuitivo igual o Firefox ou IE, porque quando queremos configurá-lo no Chrome pela GUI dele, infelizmente ele nos redireciona para o maldito Painel de Controle do Windows. Como não desejamos alterar a configuração de todo o PC, mas apenas do navegador Chrome.</p>
-<p>Por isso se faz necessário proceder de outra maneira, através do <strong>command prompt</strong> cmd:</p>
+<h2>Usando um túnel no Google Chrome<a class="headerlink" href="#usando-um-tunel-no-google-chrome" title="Permalink to this heading">¶</a></h2>
+<p>Finalmente chegamos meus caros, na parte mais crucial da configuração! 😛 yeah! Bora configurar o proxy no Chrome! Não é algo tão intuitivo igual o Firefox ou IE, porque quando queremos configurá-lo no Chrome pela GUI dele, infelizmente ele nos redireciona para o maldito Painel de Controle e Rede do Windows. Como não desejamos alterar a configuração de todo o PC, mas apenas do navegador Chrome. Por isso se faz necessário proceder de outra maneira, através do <strong>command prompt</strong> cmd:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</span> <span class="o">--</span><span class="n">proxy</span><span class="o">-</span><span class="n">server</span><span class="o">=</span><span class="s2">&quot;socks5://127.0.0.1:9999&quot;</span>
 </pre></div>
 </div>
-<p>Se o comando não funcionar, pode ser devido seu google chrome estar instalado em outro local diferente:: <strong>C:Program FilesGoogleChrome</strong></p>
-<p>Se tudo der certo o chrome abrirá e você pode abrir o endereço <strong>http://httpbin.org/ip</strong> e ver seu ip:</p>
+<p>Se o comando não funcionar, pode ser devido seu google chrome estar instalado em outro local diferente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;</span> <span class="o">--</span><span class="n">proxy</span><span class="o">-</span><span class="n">server</span><span class="o">=</span><span class="s2">&quot;socks5://127.0.0.1:9999&quot;</span>
+</pre></div>
+</div>
+<p>Se tudo der certo o chrome abrirá e você pode validar através do endereço <strong>http://httpbin.org/ip</strong> e ver seu ip:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="s2">&quot;origin&quot;</span><span class="p">:</span> <span class="s2">&quot;179.55.170.40&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Aqui por exemplo abriu com a resposta do IP usado pelo meu provedor de internet. Pronto vc pode navegar livremente via tunel ssh.</p>
+<p>Aqui por exemplo a resposta foi o IP <strong>179.55.170.40</strong> do meu provedor de internet.</p>
+<p>Uhhhhuuuuuuuuu!  😛 Meus parabéns ^^  agora vc pode navegar livremente via tunel ssh!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Certifique-se de ter fornecido o número de porta correto. Lembrem-se aqui eu usei 9999 porém você pode usar outra que quiser, MAS É IMPORTANTE sempre usar a mesmo número de porta nas configurações do PuTTY e do Chrome.</p>
+<p>Para ficar melhor ainda pessoal, não esqueçam de colocar o número da porta corretamente ok? Lembrem-se que aqui eu usei 9999, porém você pode usar outra que quiser, MAS É IMPORTANTE utilizar sempre o mesmo número de porta nas configurações do PuTTY e do Chrome. Melhoria contínua sempre, vamo que vamo 😛!</p>
 </div>
 </section>
 </section>
@@ -147,7 +149,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -170,7 +172,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

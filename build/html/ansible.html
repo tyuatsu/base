@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Ansible &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -35,11 +34,11 @@
           <div class="body" role="main">
             
   <section id="ansible">
-<h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
+<h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this heading">¶</a></h1>
 <p>Esta é um guia rápido que mostra como criar receitas no Ansible.
 Ela foi feita com base na <a class="reference external" href="http://docs.ansible.com/ansible/index.html">doc oficial</a>.</p>
 <section id="instalacao">
-<h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
+<h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this heading">¶</a></h2>
 <p>No momento da instalação foi utilizado:</p>
 <ul class="simple">
 <li><p><strong>SO</strong>: Centos 7.2</p></li>
@@ -52,7 +51,7 @@ Ela foi feita com base na <a class="reference external" href="http://docs.ansibl
 </div>
 </section>
 <section id="inventarios">
-<h2>Inventários<a class="headerlink" href="#inventarios" title="Permalink to this headline">¶</a></h2>
+<h2>Inventários<a class="headerlink" href="#inventarios" title="Permalink to this heading">¶</a></h2>
 <p>O Ansible conecta nas máquinas de acordo com os endereços registrados no seu arquivo <code class="docutils literal notranslate"><span class="pre">hosts</span></code>. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_inventory.html">documentação</a>.
 Nesta configuração é possível definir hosts individuais ou grupos. Exemplo de um grupo chamado <code class="docutils literal notranslate"><span class="pre">servidores</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ansible</span><span class="o">/</span><span class="n">hosts</span>
@@ -64,7 +63,7 @@ Nesta configuração é possível definir hosts individuais ou grupos. Exemplo d
 </div>
 </section>
 <section id="ad-hoc">
-<h2>Ad-Hoc<a class="headerlink" href="#ad-hoc" title="Permalink to this headline">¶</a></h2>
+<h2>Ad-Hoc<a class="headerlink" href="#ad-hoc" title="Permalink to this heading">¶</a></h2>
 <p>Uma das formas para executar um comando remotamente pelo Ansible é adicionar nos hosts conhecidos do ssh (known_hosts) os hosts remotos e então executar comandos. Vide <a class="reference external" href="http://docs.ansible.com/ansible/intro_adhoc.html">documentação</a>.
 Para isto, execute o ssh para host de destino para que ele seja adicionado:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh 192.168.25.14
@@ -91,7 +90,7 @@ Linux servidor1.local 3.10.0-327.28.3.el7.x86_64 #1 SMP Thu Aug 18 19:05:49 UTC 
 </div>
 </section>
 <section id="receitas-playbook">
-<h2>Receitas - Playbook<a class="headerlink" href="#receitas-playbook" title="Permalink to this headline">¶</a></h2>
+<h2>Receitas - Playbook<a class="headerlink" href="#receitas-playbook" title="Permalink to this heading">¶</a></h2>
 <p>As playbooks são receitas pré-definidas em arquivos de configuração (formato YAML) a serem utilizadas nos hosts, com abordagem diferente ao
 AD-Hoc, pois podem executar uma série de definições pré-determinadas. Vide documentação <a class="reference external" href="http://docs.ansible.com/ansible/playbooks.html">playbooks</a> e <a class="reference external" href="http://docs.ansible.com/ansible/YAMLSyntax.html">YAML</a>.</p>
 <blockquote>
@@ -160,7 +159,7 @@ ok: [192.168.25.14] =&gt; {</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -177,7 +176,7 @@ ok: [192.168.25.14] =&gt; {</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

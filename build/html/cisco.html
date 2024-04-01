@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Cisco &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="cisco">
-<h1>Cisco<a class="headerlink" href="#cisco" title="Permalink to this headline">¶</a></h1>
+<h1>Cisco<a class="headerlink" href="#cisco" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.</p>
@@ -52,7 +51,7 @@
 <a class="reference internal image-reference" href="_images/ciscologo.jpg"><img alt="Cisco" src="_images/ciscologo.jpg" style="width: 409.6px; height: 272.0px;" /></a>
 </figure>
 <section id="comandos-basicos-router-cisco">
-<h2>1. Comandos Básicos Router Cisco<a class="headerlink" href="#comandos-basicos-router-cisco" title="Permalink to this headline">¶</a></h2>
+<h2>1. Comandos Básicos Router Cisco<a class="headerlink" href="#comandos-basicos-router-cisco" title="Permalink to this heading">¶</a></h2>
 <p>Router IP: 192.168.131.108 x 192.172.100.102:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TESTRO0075# clear counter int GigabitEhternet0/1
 
@@ -119,7 +118,7 @@ TESTRO0001# show clock
 </div>
 </section>
 <section id="comandos-basicos-switch-cisco-sg-300-20">
-<h2>2. Comandos Básicos Switch Cisco SG 300-20<a class="headerlink" href="#comandos-basicos-switch-cisco-sg-300-20" title="Permalink to this headline">¶</a></h2>
+<h2>2. Comandos Básicos Switch Cisco SG 300-20<a class="headerlink" href="#comandos-basicos-switch-cisco-sg-300-20" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A máquina com o mac f8:0f:41:35:17:22 do setor fac-símiles, não se encontra na vlan abacaxi. Portanto será necessário mudar para a vlan correta que é 10.221.60.0/24 (vlan id 17).</p>
@@ -228,7 +227,7 @@ TESTRO0001# show clock
 </div>
 </section>
 <section id="comandos-basicos-switch-cisco-me-c3750-24te-powerpc405">
-<h2>3. Comandos Básicos Switch Cisco ME-C3750-24TE (PowerPC405)<a class="headerlink" href="#comandos-basicos-switch-cisco-me-c3750-24te-powerpc405" title="Permalink to this headline">¶</a></h2>
+<h2>3. Comandos Básicos Switch Cisco ME-C3750-24TE (PowerPC405)<a class="headerlink" href="#comandos-basicos-switch-cisco-me-c3750-24te-powerpc405" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>O switch Cisco ME-C3750-24TE será nosso SW Core e os SW de acesso será o Nortel Routing Switch 4550T-PWR.</p>
@@ -326,7 +325,7 @@ end
 </div>
 </section>
 <section id="troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp">
-<h2>3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP<a class="headerlink" href="#troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp" title="Permalink to this headline">¶</a></h2>
+<h2>3. Troubleshooting - Queda de conexão com a rede voz - Router Switch Cisco C9404R IGMP<a class="headerlink" href="#troubleshooting-queda-de-conexao-com-a-rede-voz-router-switch-cisco-c9404r-igmp" title="Permalink to this heading">¶</a></h2>
 <p>Eis o alerta vermelho..: - Prezados do conselho deliberativo da TI, precisamos de máximo apoio com relação a solicitação do cliente: <strong>XYZ</strong>. O pedido é: - ‘Verificar a rede até a estação do atendente’.</p>
 <p>Foi constatado incontáveis erros de ping contra servidores Avaya. (Aprox. às 11h40hs da manhã, houve surtos na comunicação entre cliente e servidor, os quais geraram um conjunto maior de erros de ping. Sendo assim, precisamos que verifiquem especificamente a estação de trabalho cujo IP é 10.0.12.152.</p>
 <p>Vale lembrar que tal incidente, tem potencial para gerar crise e virar um grande problema: - O erro é relacionado ao login do insólito operador na aplicação do mal  softwarephone of hell, onde o operador loga e após um determinado tempo (em torno de 6 a 8 ligações) ocorre os erros: Logoff inesperado + comunicação com o servidor imediatamente é perdida. A aplicação fecha abruptamente, deslogando o usuário do sistema. Deve-se frisar que isso não ocorre nas outras máquinas da mesma rede. É algo pontual e afeta apenas uma máquina.</p>
@@ -826,7 +825,7 @@ end
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -849,7 +848,7 @@ end
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>BÁSICO &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,11 +42,11 @@
           <div class="body" role="main">
             
   <section id="basico">
-<h1>BÁSICO<a class="headerlink" href="#basico" title="Permalink to this headline">¶</a></h1>
+<h1>BÁSICO<a class="headerlink" href="#basico" title="Permalink to this heading">¶</a></h1>
 <section id="avaya-nortel">
-<h2>AVAYA NORTEL<a class="headerlink" href="#avaya-nortel" title="Permalink to this headline">¶</a></h2>
+<h2>AVAYA NORTEL<a class="headerlink" href="#avaya-nortel" title="Permalink to this heading">¶</a></h2>
 <section id="ethernet-routing-switch">
-<h3>Ethernet Routing Switch<a class="headerlink" href="#ethernet-routing-switch" title="Permalink to this headline">¶</a></h3>
+<h3>Ethernet Routing Switch<a class="headerlink" href="#ethernet-routing-switch" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Esse é um guia rápido para os iniciantes se familiarizarem com os comandos básicos dos Switches da Nortel.</p>
@@ -63,7 +62,7 @@
 sempre a porta (tag all) com o comando <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">topology</span></code> (nem todos os SW de acesso estão conectados nas portas padrão 49 e 50)
 Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da porta, o Mac e as Vlans da interface.</p>
 <section id="adicionar-nova-vlan-no-sw-core">
-<h4>1. Adicionar nova VLAN no SW Core<a class="headerlink" href="#adicionar-nova-vlan-no-sw-core" title="Permalink to this headline">¶</a></h4>
+<h4>1. Adicionar nova VLAN no SW Core<a class="headerlink" href="#adicionar-nova-vlan-no-sw-core" title="Permalink to this heading">¶</a></h4>
 <p>Configurar o SW IP 10.255.11.28 portas:45 e 46 na vlan-id: <strong>101</strong> (IP 10.221.64.0) e também as portas: 6, 9 ,17, 21 e 39 na vlan-id: <strong>220</strong> (IP 172.31.78.0).</p>
 <p>Acesse o SW CORE (Avaya ERS-8806), digite o comando abaixo e tecle <strong>ENTER</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show ip arp info 10.255.11.28</span>
@@ -382,7 +381,7 @@ Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da
 </div>
 </section>
 <section id="verificar-o-switch-10-255-6-8-na-porta-3-onde-a-mesma-encontra-se-bloqueada">
-<h4>2. Verificar o Switch 10.255.6.8 na porta 3 onde a mesma encontra-se bloqueada<a class="headerlink" href="#verificar-o-switch-10-255-6-8-na-porta-3-onde-a-mesma-encontra-se-bloqueada" title="Permalink to this headline">¶</a></h4>
+<h4>2. Verificar o Switch 10.255.6.8 na porta 3 onde a mesma encontra-se bloqueada<a class="headerlink" href="#verificar-o-switch-10-255-6-8-na-porta-3-onde-a-mesma-encontra-se-bloqueada" title="Permalink to this heading">¶</a></h4>
 <p>Mostrar as interfaces:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw6</span><span class="o">.</span><span class="n">cosmonaut</span><span class="c1"># show interfaces link-down</span>
 
@@ -446,7 +445,7 @@ Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da
 </div>
 </section>
 <section id="proceder-com-a-desabilitacao-de-alimentacao-poe-do-sw-10-221-99-7-porta-45">
-<h4>3. Proceder com a desabilitação de alimentação POE do SW 10.221.99.7 porta 45<a class="headerlink" href="#proceder-com-a-desabilitacao-de-alimentacao-poe-do-sw-10-221-99-7-porta-45" title="Permalink to this headline">¶</a></h4>
+<h4>3. Proceder com a desabilitação de alimentação POE do SW 10.221.99.7 porta 45<a class="headerlink" href="#proceder-com-a-desabilitacao-de-alimentacao-poe-do-sw-10-221-99-7-porta-45" title="Permalink to this heading">¶</a></h4>
 <p>O Motivo principal é que o AP 10.255.7.4 já possui uma fonte de alimentação de energia. E o mesmo está oscilando com interfência na intensidade do sinal WIFI.</p>
 <p>Para desativar o POE:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw4</span><span class="o">.</span><span class="n">cosmonaut</span><span class="c1"># configure terminal</span>
@@ -485,7 +484,7 @@ Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da
 </div>
 </section>
 <section id="efetuar-a-troca-do-ip-10-221-17-220-da-estacao-para-a-rede-ip-10-64-x-x">
-<h4>4. Efetuar a troca do IP 10.221.17.220 da estação, para a rede IP 10.64.x.x.<a class="headerlink" href="#efetuar-a-troca-do-ip-10-221-17-220-da-estacao-para-a-rede-ip-10-64-x-x" title="Permalink to this headline">¶</a></h4>
+<h4>4. Efetuar a troca do IP 10.221.17.220 da estação, para a rede IP 10.64.x.x.<a class="headerlink" href="#efetuar-a-troca-do-ip-10-221-17-220-da-estacao-para-a-rede-ip-10-64-x-x" title="Permalink to this heading">¶</a></h4>
 <p>Mac da estação: 64:31:50:ff:6c:6f:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTSW01</span><span class="c1"># show vlan info fdb-entry mac 64:31:50:ff:6c:6f</span>
 <span class="n">CORETESTSW01</span><span class="c1"># show ip arp info 10.221.17.220</span>
@@ -612,7 +611,7 @@ Uma vez localizado o Switch de acesso, acessá-lo e verificar sempre o status da
 </div>
 </section>
 <section id="configurando-lldp-na-interface">
-<h4>5. Configurando LLDP na interface<a class="headerlink" href="#configurando-lldp-na-interface" title="Permalink to this headline">¶</a></h4>
+<h4>5. Configurando LLDP na interface<a class="headerlink" href="#configurando-lldp-na-interface" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Favor realizar a alteração da Vlan prioritária da base Avaya, onde a mesma está pegando automaticamente a Vlan de voz 214. A Vlan correta é a 265.</p>
@@ -1118,7 +1117,7 @@ Total = 18 Bases Avaya</p>
 </div></blockquote>
 </section>
 <section id="dobradinha-lldp-no-switch-de-acesso">
-<h4>6. Dobradinha LLDP no Switch de Acesso<a class="headerlink" href="#dobradinha-lldp-no-switch-de-acesso" title="Permalink to this headline">¶</a></h4>
+<h4>6. Dobradinha LLDP no Switch de Acesso<a class="headerlink" href="#dobradinha-lldp-no-switch-de-acesso" title="Permalink to this heading">¶</a></h4>
 <p>Estamos migrando a telefonia de Softwarephone para Hardphone Avaya. Se faz necessário a reserva de 4 IP’s no range da Vlan 214.</p>
 <ul class="simple">
 <li><p>Vlan: 214 (srcmac)</p></li>
@@ -1258,7 +1257,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="lentidao-na-internet">
-<h4>7. Lentidão na Internet<a class="headerlink" href="#lentidao-na-internet" title="Permalink to this headline">¶</a></h4>
+<h4>7. Lentidão na Internet<a class="headerlink" href="#lentidao-na-internet" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Dado apenas o IP da estação 10.221.12.45.</p>
@@ -1492,7 +1491,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="desbloqueio-da-porta-34-do-switch-sw016chicobento-do-rack-4-andar-terreo">
-<h4>8. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 (andar térreo)<a class="headerlink" href="#desbloqueio-da-porta-34-do-switch-sw016chicobento-do-rack-4-andar-terreo" title="Permalink to this headline">¶</a></h4>
+<h4>8. Desbloqueio da porta 34 do switch sw016chicobento do rack 4 (andar térreo)<a class="headerlink" href="#desbloqueio-da-porta-34-do-switch-sw016chicobento-do-rack-4-andar-terreo" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Motivo - foi necessário fazer a movimentação de uma máquina (estação do colaborador).</p>
@@ -1537,7 +1536,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="para-verificar-arp-relacionada-a-vrf">
-<h4>9. Para verificar Arp relacionada a VRF<a class="headerlink" href="#para-verificar-arp-relacionada-a-vrf" title="Permalink to this headline">¶</a></h4>
+<h4>9. Para verificar Arp relacionada a VRF<a class="headerlink" href="#para-verificar-arp-relacionada-a-vrf" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Existem macs que não aparecem na arp do core devido as operações serem atendidas por VRF, neste caso a arp fica relacionada a cada VRF.</p>
@@ -1602,7 +1601,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="avaya-core-vsp-4000-command-line-reference">
-<h4>10. AVAYA CORE VSP 4000 Command Line Reference<a class="headerlink" href="#avaya-core-vsp-4000-command-line-reference" title="Permalink to this headline">¶</a></h4>
+<h4>10. AVAYA CORE VSP 4000 Command Line Reference<a class="headerlink" href="#avaya-core-vsp-4000-command-line-reference" title="Permalink to this heading">¶</a></h4>
 <p>Localizar Mac no Core:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COREVSPW005</span><span class="c1"># show vlan mac-address-entry mac f8:bc:12:8e:b2:95</span>
 <span class="n">COREVSPW005</span><span class="c1"># show vlan mac-address-entry port</span>
@@ -1618,7 +1617,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="avaya-core-ers-8806-command-line-reference">
-<h4>11. AVAYA CORE ERS-8806 Command Line Reference<a class="headerlink" href="#avaya-core-ers-8806-command-line-reference" title="Permalink to this headline">¶</a></h4>
+<h4>11. AVAYA CORE ERS-8806 Command Line Reference<a class="headerlink" href="#avaya-core-ers-8806-command-line-reference" title="Permalink to this heading">¶</a></h4>
 <p>Localizar Mac no Core:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORETESTW001</span><span class="mf">.5</span><span class="c1"># show vlan info fdb-entry mac f8:bc:12:8e:b2:95</span>
 </pre></div>
@@ -1762,7 +1761,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="sw-de-acesso-command-line-reference">
-<h4>12. SW de Acesso - Command Line Reference<a class="headerlink" href="#sw-de-acesso-command-line-reference" title="Permalink to this headline">¶</a></h4>
+<h4>12. SW de Acesso - Command Line Reference<a class="headerlink" href="#sw-de-acesso-command-line-reference" title="Permalink to this heading">¶</a></h4>
 <p>Verifica IP de cada Vlan:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sw04cascao</span><span class="c1"># show vlan ip</span>
 </pre></div>
@@ -1857,7 +1856,7 @@ sw011.popcorn# show lldp med-network-policies port 32,33,35,37
 </div>
 </section>
 <section id="exemplos-de-configurcao-de-um-switch-nortel-4550t-pwr">
-<h4>13. Exemplos de configurção de um switch nortel 4550T-PWR<a class="headerlink" href="#exemplos-de-configurcao-de-um-switch-nortel-4550t-pwr" title="Permalink to this headline">¶</a></h4>
+<h4>13. Exemplos de configurção de um switch nortel 4550T-PWR<a class="headerlink" href="#exemplos-de-configurcao-de-um-switch-nortel-4550t-pwr" title="Permalink to this heading">¶</a></h4>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/swnortel.jpg"><img alt="SWNortel" src="_images/swnortel.jpg" style="width: 494.9px; height: 272.29999999999995px;" /></a>
 </figure>
@@ -2158,7 +2157,7 @@ exit
 </div>
 </section>
 <section id="tagging-tagall-untagall-tagpvidonly-e-untagpvidonly">
-<h4>14. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly<a class="headerlink" href="#tagging-tagall-untagall-tagpvidonly-e-untagpvidonly" title="Permalink to this headline">¶</a></h4>
+<h4>14. Tagging, TagAll, UntagAll, TagPvidOnly e UntagPvidOnly<a class="headerlink" href="#tagging-tagall-untagall-tagpvidonly-e-untagpvidonly" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Iniciaremos com o conceito ‘UntagPvidOnly’ para o correto funcionamento do tráfego de dados dos PCs e tráfego de voz em bases de IP Phone Avaya.</p>
@@ -2233,7 +2232,7 @@ exit
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -2256,7 +2255,7 @@ exit
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

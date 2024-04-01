@@ -1,22 +1,22 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Como usar Certificados Digitais no Linux &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM" href="configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3.html" />
     <link rel="prev" title="Utilizando o “Read the Docs” by Tyuatsu" href="docs-readthedocs.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -25,6 +25,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3.html" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="docs-readthedocs.html" title="Utilizando o “Read the Docs” by Tyuatsu"
              accesskey="P">previous</a> |</li>
@@ -39,12 +42,12 @@
           <div class="body" role="main">
             
   <section id="como-usar-certificados-digitais-no-linux">
-<h1>Como usar Certificados Digitais no Linux<a class="headerlink" href="#como-usar-certificados-digitais-no-linux" title="Permalink to this headline">¶</a></h1>
+<h1>Como usar Certificados Digitais no Linux<a class="headerlink" href="#como-usar-certificados-digitais-no-linux" title="Permalink to this heading">¶</a></h1>
 <section id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">¶</a></h2>
 <p>Referências usadas aqui..: <a class="reference external" href="https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs">DigitalOcean</a>.</p>
 <section id="informacoes-de-um-certificado">
-<h3>Informações de um Certificado<a class="headerlink" href="#informacoes-de-um-certificado" title="Permalink to this headline">¶</a></h3>
+<h3>Informações de um Certificado<a class="headerlink" href="#informacoes-de-um-certificado" title="Permalink to this heading">¶</a></h3>
 <p>No linux, há algumas formas de verificar informações de certificados, veja algumas formas e suas ferramentas.</p>
 <ul class="simple">
 <li><p><strong>Keytool</strong></p></li>
@@ -98,7 +101,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </div>
 </section>
 <section id="verificar-certificados">
-<h3>Verificar Certificados<a class="headerlink" href="#verificar-certificados" title="Permalink to this headline">¶</a></h3>
+<h3>Verificar Certificados<a class="headerlink" href="#verificar-certificados" title="Permalink to this heading">¶</a></h3>
 <p>Listar somente o certificado em base 64:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
 </pre></div>
@@ -129,7 +132,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 </div>
 </section>
 <section id="importar-um-certificado">
-<h3>Importar um certificado<a class="headerlink" href="#importar-um-certificado" title="Permalink to this headline">¶</a></h3>
+<h3>Importar um certificado<a class="headerlink" href="#importar-um-certificado" title="Permalink to this heading">¶</a></h3>
 <p>Veja como importar um certificado.</p>
 <ul>
 <li><p><strong>Ubuntu</strong>:</p>
@@ -150,21 +153,21 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
 <p>Ele ficará armazenado na keystore. Valide pela sua impressão digital (fingerprint)</p>
 </section>
 <section id="gerar-um-certificado">
-<h3>Gerar um Certificado<a class="headerlink" href="#gerar-um-certificado" title="Permalink to this headline">¶</a></h3>
+<h3>Gerar um Certificado<a class="headerlink" href="#gerar-um-certificado" title="Permalink to this heading">¶</a></h3>
 <p>Certificados Auto-Assinados - utilizando o OpenSSL com chave privada de 2048 (dominio_TESTE.key) e um certificado auto-assinado (dominio_TESTE.crt) para utilização em sites com HTTPS:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">newkey</span> <span class="n">rsa</span><span class="p">:</span><span class="mi">2048</span> <span class="o">-</span><span class="n">nodes</span> <span class="o">-</span><span class="n">keyout</span> <span class="n">dominio_TESTE</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">x509</span> <span class="o">-</span><span class="n">days</span> <span class="mi">365</span> <span class="o">-</span><span class="n">out</span> <span class="o">&lt;</span><span class="n">dominio_TESTE</span><span class="o">&gt;.</span><span class="n">crt</span>
 </pre></div>
 </div>
 </section>
 <section id="exportar-um-certificado">
-<h3>Exportar um Certificado<a class="headerlink" href="#exportar-um-certificado" title="Permalink to this headline">¶</a></h3>
+<h3>Exportar um Certificado<a class="headerlink" href="#exportar-um-certificado" title="Permalink to this heading">¶</a></h3>
 <p>Formato Java Keystore - para exportar um certificado de uma java keystore para formato x509:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">&lt;/</span><span class="n">PASTA</span><span class="o">/.</span><span class="n">keystore</span> <span class="n">OU</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">kjs</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">exportcert</span> <span class="o">-</span><span class="n">alias</span> <span class="n">NOME_CERTIFICADO</span> <span class="o">|</span> <span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">der</span> <span class="o">-</span><span class="n">text</span> <span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
 </pre></div>
 </div>
 </section>
 <section id="remover-um-certificado">
-<h3>Remover um Certificado<a class="headerlink" href="#remover-um-certificado" title="Permalink to this headline">¶</a></h3>
+<h3>Remover um Certificado<a class="headerlink" href="#remover-um-certificado" title="Permalink to this heading">¶</a></h3>
 <p>Para remover certificados:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">delete</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">alias</span> <span class="o">&lt;</span><span class="n">CERTIFICADO_DESEJADO_PARA_EXCLUIR</span><span class="o">&gt;</span>
 </pre></div>
@@ -203,6 +206,11 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
     <p class="topless"><a href="docs-readthedocs.html"
                           title="previous chapter">Utilizando o “Read the Docs” by Tyuatsu</a></p>
   </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3.html"
+                          title="next chapter">CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -219,7 +227,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -231,6 +239,9 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3.html" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM"
+             >next</a> |</li>
+        <li class="right" >
           <a href="docs-readthedocs.html" title="Utilizando o “Read the Docs” by Tyuatsu"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Base de Conhecimento 0.0.1 documentation</a> &#187;</li>
@@ -239,7 +250,7 @@ Verificar Certificados - listar informação do certificado padrão x509:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Moles Moles Guacamoles &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,14 +42,14 @@
           <div class="body" role="main">
             
   <section id="moles-moles-guacamoles">
-<h1>Moles Moles Guacamoles<a class="headerlink" href="#moles-moles-guacamoles" title="Permalink to this headline">¶</a></h1>
+<h1>Moles Moles Guacamoles<a class="headerlink" href="#moles-moles-guacamoles" title="Permalink to this heading">¶</a></h1>
 <p>Veja como instalar e configurar um gateway de acesso utilizando o software <a class="reference external" href="https://guacamole.incubator.apache.org/">Guacamole</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Para utilizá-lo com a VPN deverá gerar antes, os devidos certificados digitais.</p>
 </div>
 <section id="visao-geral">
-<h2>Visão Geral<a class="headerlink" href="#visao-geral" title="Permalink to this headline">¶</a></h2>
+<h2>Visão Geral<a class="headerlink" href="#visao-geral" title="Permalink to this heading">¶</a></h2>
 <p>Em resumo, a <a class="reference internal" href="#instalacao"><span class="std std-ref">Instalação</span></a> e a <a class="reference internal" href="#configuracao"><span class="std std-ref">Configuração</span></a> da solução será:</p>
 <ul class="simple">
 <li><p><strong>Sistema Operacional</strong>: CentoOS 7</p></li>
@@ -68,7 +67,7 @@
 </figure>
 </section>
 <section id="instalacao">
-<span id="id1"></span><h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this heading">¶</a></h2>
 <p>Desabilitar serviços que não são necessários e que não serão utilizados:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">disable</span> <span class="n">firewalld</span>
 <span class="n">systemctl</span> <span class="n">stop</span> <span class="n">firewalld</span>
@@ -181,7 +180,7 @@
 </li>
 </ul>
 <section id="banco-de-dados">
-<span id="id2"></span><h3>Banco de Dados<a class="headerlink" href="#banco-de-dados" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>Banco de Dados<a class="headerlink" href="#banco-de-dados" title="Permalink to this heading">¶</a></h3>
 <p>A instalação do banco de dados e ajustes iniciais.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -241,10 +240,10 @@
 </section>
 </section>
 <section id="configuracao">
-<span id="id3"></span><h2>Configuração<a class="headerlink" href="#configuracao" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>Configuração<a class="headerlink" href="#configuracao" title="Permalink to this heading">¶</a></h2>
 <p>Após a instalação do serviço, a configuração foi feita com base na documentação do fabricante, fórum e boas práticas.</p>
 <section id="certificados">
-<h3>Certificados<a class="headerlink" href="#certificados" title="Permalink to this headline">¶</a></h3>
+<h3>Certificados<a class="headerlink" href="#certificados" title="Permalink to this heading">¶</a></h3>
 <p>Os certificados aqui gerados e configurados serão utilizados logo a frente, para:</p>
 <ul class="simple">
 <li><p><strong>Servidor Web</strong> - certificado do site (HTTPS). Crie ou importe um certificado (Veja como em <a class="reference external" href="CertificadosDigitais.html#gerar-um-certificado">certificados digitais:</a>)</p></li>
@@ -290,7 +289,7 @@ Enter key password for &lt;tomcat&gt;
 </div>
 </section>
 <section id="apache">
-<span id="id4"></span><h3>Apache<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>Apache<a class="headerlink" href="#apache" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>WebSocket - Mesmo com a configuração de websocket (ws)  no Apache, o Web Socket não funcionou devidamente, porém não impacta na utilização do Guacamole.  É possível também utilizar o <a class="reference internal" href="#nginx"><span class="std std-ref">NGINX</span></a>, faça sua escolha.</p>
@@ -365,7 +364,7 @@ SSLCipherSuite ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:EC
 </div>
 </section>
 <section id="nginx">
-<span id="id5"></span><h3>NGINX<a class="headerlink" href="#nginx" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3>NGINX<a class="headerlink" href="#nginx" title="Permalink to this heading">¶</a></h3>
 <p>Com este servidor web o Web Socket funciona normalmente:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">nginx</span>
 <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">nginx</span>
@@ -425,7 +424,7 @@ server {
 </div>
 </section>
 <section id="tomcat">
-<h3>Tomcat<a class="headerlink" href="#tomcat" title="Permalink to this headline">¶</a></h3>
+<h3>Tomcat<a class="headerlink" href="#tomcat" title="Permalink to this heading">¶</a></h3>
 <p>Para permitir que o tráfego entre o Apache e o Tomcat seja criptografado, as configurações abaixo são feitas.</p>
 <ul>
 <li><p><strong>Server &gt; port</strong> - destivar porta de shutdown</p></li>
@@ -437,7 +436,7 @@ server {
 </li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt;</span>
-    <span class="cm">&lt;!--</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
 <span class="cm">    Licensed to the Apache Software Foundation (ASF) under one or more</span>
 <span class="cm">    contributor license agreements.  See the NOTICE file distributed with</span>
 <span class="cm">    this work for additional information regarding copyright ownership.</span>
@@ -457,141 +456,141 @@ server {
 <span class="cm">     define subcomponents such as &quot;Valves&quot; at this level.</span>
 <span class="cm">     Documentation at /docs/config/server.html</span>
 <span class="cm"> --&gt;</span>
-  <span class="nt">&lt;Server</span> <span class="na">port=</span><span class="s">&quot;-1&quot;</span> <span class="na">shutdown=</span><span class="s">&quot;SHUTDOWN&quot;</span><span class="nt">&gt;</span>
-  <span class="cm">&lt;!-- Security listener. Documentation at /docs/config/listeners.html</span>
+<span class="w">  </span><span class="nt">&lt;Server</span><span class="w"> </span><span class="na">port=</span><span class="s">&quot;-1&quot;</span><span class="w"> </span><span class="na">shutdown=</span><span class="s">&quot;SHUTDOWN&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Security listener. Documentation at /docs/config/listeners.html</span>
 <span class="cm">  &lt;Listener className=&quot;org.apache.catalina.security.SecurityListener&quot; /&gt;</span>
 <span class="cm">  --&gt;</span>
-  <span class="cm">&lt;!--APR library loader. Documentation at /docs/apr.html --&gt;</span>
-  <span class="cm">&lt;!-- Habilita Modulo SSL --&gt;</span>
-  <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.AprLifecycleListener&quot;</span> <span class="na">SSLEngine=</span><span class="s">&quot;on&quot;</span> <span class="nt">/&gt;</span>
-  <span class="cm">&lt;!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html --&gt;</span>
-  <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JasperListener&quot;</span> <span class="nt">/&gt;</span>
-  <span class="cm">&lt;!-- Prevent memory leaks due to use of particular java/javax APIs--&gt;</span>
-  <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JreMemoryLeakPreventionListener&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.mbeans.GlobalResourcesLifecycleListener&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.ThreadLocalLeakPreventionListener&quot;</span> <span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!--APR library loader. Documentation at /docs/apr.html --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Habilita Modulo SSL --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Listener</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.AprLifecycleListener&quot;</span><span class="w"> </span><span class="na">SSLEngine=</span><span class="s">&quot;on&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Listener</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JasperListener&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Prevent memory leaks due to use of particular java/javax APIs--&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Listener</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JreMemoryLeakPreventionListener&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Listener</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.mbeans.GlobalResourcesLifecycleListener&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Listener</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.ThreadLocalLeakPreventionListener&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 
-  <span class="cm">&lt;!-- Global JNDI resources</span>
+<span class="w">  </span><span class="cm">&lt;!-- Global JNDI resources</span>
 <span class="cm">       Documentation at /docs/jndi-resources-howto.html</span>
 <span class="cm">  --&gt;</span>
-  <span class="nt">&lt;GlobalNamingResources&gt;</span>
-    <span class="cm">&lt;!-- Editable user database that can also be used by</span>
+<span class="w">  </span><span class="nt">&lt;GlobalNamingResources&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Editable user database that can also be used by</span>
 <span class="cm">         UserDatabaseRealm to authenticate users</span>
 <span class="cm">    --&gt;</span>
-    <span class="nt">&lt;Resource</span> <span class="na">name=</span><span class="s">&quot;UserDatabase&quot;</span> <span class="na">auth=</span><span class="s">&quot;Container&quot;</span>
-             <span class="na">type=</span><span class="s">&quot;org.apache.catalina.UserDatabase&quot;</span>
-             <span class="na">description=</span><span class="s">&quot;User database that can be updated and saved&quot;</span>
-             <span class="na">factory=</span><span class="s">&quot;org.apache.catalina.users.MemoryUserDatabaseFactory&quot;</span>
-             <span class="na">pathname=</span><span class="s">&quot;conf/tomcat-users.xml&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/GlobalNamingResources&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Resource</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;UserDatabase&quot;</span><span class="w"> </span><span class="na">auth=</span><span class="s">&quot;Container&quot;</span>
+<span class="w">             </span><span class="na">type=</span><span class="s">&quot;org.apache.catalina.UserDatabase&quot;</span>
+<span class="w">             </span><span class="na">description=</span><span class="s">&quot;User database that can be updated and saved&quot;</span>
+<span class="w">             </span><span class="na">factory=</span><span class="s">&quot;org.apache.catalina.users.MemoryUserDatabaseFactory&quot;</span>
+<span class="w">             </span><span class="na">pathname=</span><span class="s">&quot;conf/tomcat-users.xml&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/GlobalNamingResources&gt;</span>
 
-  <span class="cm">&lt;!-- A &quot;Service&quot; is a collection of one or more &quot;Connectors&quot; that share</span>
+<span class="w">  </span><span class="cm">&lt;!-- A &quot;Service&quot; is a collection of one or more &quot;Connectors&quot; that share</span>
 <span class="cm">       a single &quot;Container&quot; Note:  A &quot;Service&quot; is not itself a &quot;Container&quot;,</span>
 <span class="cm">       so you may not define subcomponents such as &quot;Valves&quot; at this level.</span>
 <span class="cm">       Documentation at /docs/config/service.html</span>
 <span class="cm">   --&gt;</span>
-  <span class="nt">&lt;Service</span> <span class="na">name=</span><span class="s">&quot;Catalina&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Service</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Catalina&quot;</span><span class="nt">&gt;</span>
 
-    <span class="cm">&lt;!--The connectors can use a shared executor, you can define one or more named thread pools--&gt;</span>
-    <span class="cm">&lt;!--</span>
+<span class="w">    </span><span class="cm">&lt;!--The connectors can use a shared executor, you can define one or more named thread pools--&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
 <span class="cm">    &lt;Executor name=&quot;tomcatThreadPool&quot; namePrefix=&quot;catalina-exec-&quot;</span>
 <span class="cm">        maxThreads=&quot;150&quot; minSpareThreads=&quot;4&quot;/&gt;</span>
 <span class="cm">    --&gt;</span>
 
 
-    <span class="cm">&lt;!-- A &quot;Connector&quot; represents an endpoint by which requests are received</span>
+<span class="w">    </span><span class="cm">&lt;!-- A &quot;Connector&quot; represents an endpoint by which requests are received</span>
 <span class="cm">         and responses are returned. Documentation at :</span>
 <span class="cm">         Java HTTP Connector: /docs/config/http.html (blocking &amp; non-blocking)</span>
 <span class="cm">         Java AJP  Connector: /docs/config/ajp.html</span>
 <span class="cm">         APR (HTTP/AJP) Connector: /docs/apr.html</span>
 <span class="cm">         Define a non-SSL HTTP/1.1 Connector on port 8080</span>
 <span class="cm">    --&gt;</span>
-    <span class="cm">&lt;!--</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
 <span class="cm">    &lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span>
 <span class="cm">               connectionTimeout=&quot;20000&quot;</span>
 <span class="cm">               redirectPort=&quot;8443&quot; /&gt;</span>
 <span class="cm">    --&gt;</span>
-    <span class="cm">&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</span>
-    <span class="cm">&lt;!--</span>
+<span class="w">    </span><span class="cm">&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
 <span class="cm">    &lt;Connector executor=&quot;tomcatThreadPool&quot;</span>
 <span class="cm">               port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span>
 <span class="cm">               connectionTimeout=&quot;20000&quot;</span>
 <span class="cm">               redirectPort=&quot;8443&quot; /&gt;</span>
 <span class="cm">    --&gt;</span>
-    <span class="cm">&lt;!-- Define a SSL HTTP/1.1 Connector on port 8443</span>
+<span class="w">    </span><span class="cm">&lt;!-- Define a SSL HTTP/1.1 Connector on port 8443</span>
 <span class="cm">         This connector uses the BIO implementation that requires the JSSE</span>
 <span class="cm">         style configuration. When using the APR/native implementation, the</span>
 <span class="cm">         OpenSSL style configuration is required as described in the APR/native</span>
 <span class="cm">         documentation --&gt;</span>
-    <span class="cm">&lt;!--</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
 <span class="cm">    &lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11Protocol&quot;</span>
 <span class="cm">               maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; scheme=&quot;https&quot; secure=&quot;true&quot;</span>
 <span class="cm">               clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot; /&gt;</span>
 <span class="cm">    --&gt;</span>
 
 
-    <span class="nt">&lt;Connector</span>
-              <span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span>  <span class="na">server=</span><span class="s">&quot;Guacamole Server&quot;</span> <span class="na">URIEncoding=</span><span class="s">&quot;UTF-8&quot;</span>
-              <span class="na">port=</span><span class="s">&quot;8443&quot;</span> <span class="na">maxThreads=</span><span class="s">&quot;150&quot;</span> <span class="na">address=</span><span class="s">&quot;127.0.0.1&quot;</span>
-              <span class="na">scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">secure=</span><span class="s">&quot;true&quot;</span> <span class="na">SSLEnabled=</span><span class="s">&quot;true&quot;</span>
-              <span class="na">keystoreFile=</span><span class="s">&quot;/usr/share/tomcat/.keystore&quot;</span> <span class="na">keystorePass=</span><span class="s">&quot;XXX_SENHA_XXX&quot;</span>
-              <span class="na">clientAuth=</span><span class="s">&quot;false&quot;</span> <span class="na">sslProtocol=</span><span class="s">&quot;TLS&quot;</span> <span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Connector</span>
+<span class="w">              </span><span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span><span class="w">  </span><span class="na">server=</span><span class="s">&quot;Guacamole Server&quot;</span><span class="w"> </span><span class="na">URIEncoding=</span><span class="s">&quot;UTF-8&quot;</span>
+<span class="w">              </span><span class="na">port=</span><span class="s">&quot;8443&quot;</span><span class="w"> </span><span class="na">maxThreads=</span><span class="s">&quot;150&quot;</span><span class="w"> </span><span class="na">address=</span><span class="s">&quot;127.0.0.1&quot;</span>
+<span class="w">              </span><span class="na">scheme=</span><span class="s">&quot;https&quot;</span><span class="w"> </span><span class="na">secure=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">SSLEnabled=</span><span class="s">&quot;true&quot;</span>
+<span class="w">              </span><span class="na">keystoreFile=</span><span class="s">&quot;/usr/share/tomcat/.keystore&quot;</span><span class="w"> </span><span class="na">keystorePass=</span><span class="s">&quot;XXX_SENHA_XXX&quot;</span>
+<span class="w">              </span><span class="na">clientAuth=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">sslProtocol=</span><span class="s">&quot;TLS&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 
 
-    <span class="cm">&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</span>
 <span class="cm">&lt;!--    &lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt; --&gt;</span>
 
 
-    <span class="cm">&lt;!-- An Engine represents the entry point (within Catalina) that processes</span>
+<span class="w">    </span><span class="cm">&lt;!-- An Engine represents the entry point (within Catalina) that processes</span>
 <span class="cm">         every request.  The Engine implementation for Tomcat stand alone</span>
 <span class="cm">         analyzes the HTTP headers included with the request, and passes them</span>
 <span class="cm">         on to the appropriate Host (virtual host).</span>
 <span class="cm">         Documentation at /docs/config/engine.html --&gt;</span>
 
-    <span class="cm">&lt;!-- You should set jvmRoute to support load-balancing via AJP ie :</span>
+<span class="w">    </span><span class="cm">&lt;!-- You should set jvmRoute to support load-balancing via AJP ie :</span>
 <span class="cm">    &lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot; jvmRoute=&quot;jvm1&quot;&gt;</span>
 <span class="cm">    --&gt;</span>
-    <span class="nt">&lt;Engine</span> <span class="na">name=</span><span class="s">&quot;Catalina&quot;</span> <span class="na">defaultHost=</span><span class="s">&quot;localhost&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Engine</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Catalina&quot;</span><span class="w"> </span><span class="na">defaultHost=</span><span class="s">&quot;localhost&quot;</span><span class="nt">&gt;</span>
 
-      <span class="cm">&lt;!--For clustering, please take a look at documentation at:</span>
+<span class="w">      </span><span class="cm">&lt;!--For clustering, please take a look at documentation at:</span>
 <span class="cm">          /docs/cluster-howto.html  (simple how to)</span>
 <span class="cm">          /docs/config/cluster.html (reference documentation) --&gt;</span>
-      <span class="cm">&lt;!--</span>
+<span class="w">      </span><span class="cm">&lt;!--</span>
 <span class="cm">      &lt;Cluster className=&quot;org.apache.catalina.ha.IMPACTAp.SimpletcpCluster&quot;/&gt;</span>
 <span class="cm">      --&gt;</span>
 
-      <span class="cm">&lt;!-- Use the LockOutRealm to prevent attempts to guess user passwords</span>
+<span class="w">      </span><span class="cm">&lt;!-- Use the LockOutRealm to prevent attempts to guess user passwords</span>
 <span class="cm">           via a brute-force attack --&gt;</span>
-      <span class="nt">&lt;Realm</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.realm.LockOutRealm&quot;</span><span class="nt">&gt;</span>
-        <span class="cm">&lt;!-- This Realm uses the UserDatabase configured in the global JNDI</span>
+<span class="w">      </span><span class="nt">&lt;Realm</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.realm.LockOutRealm&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- This Realm uses the UserDatabase configured in the global JNDI</span>
 <span class="cm">             resources under the key &quot;UserDatabase&quot;.  Any edits</span>
 <span class="cm">             that are performed against this UserDatabase are immediately</span>
 <span class="cm">             available for use by the Realm.  --&gt;</span>
-        <span class="nt">&lt;Realm</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.realm.UserDatabaseRealm&quot;</span>
-              <span class="na">resourceName=</span><span class="s">&quot;UserDatabase&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;/Realm&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Realm</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.realm.UserDatabaseRealm&quot;</span>
+<span class="w">              </span><span class="na">resourceName=</span><span class="s">&quot;UserDatabase&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Realm&gt;</span>
 
-      <span class="nt">&lt;Host</span> <span class="na">name=</span><span class="s">&quot;localhost&quot;</span>  <span class="na">appBase=</span><span class="s">&quot;webapps&quot;</span>
-           <span class="na">unpackWARs=</span><span class="s">&quot;true&quot;</span> <span class="na">autoDeploy=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Host</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;localhost&quot;</span><span class="w">  </span><span class="na">appBase=</span><span class="s">&quot;webapps&quot;</span>
+<span class="w">           </span><span class="na">unpackWARs=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoDeploy=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
 
-        <span class="cm">&lt;!-- SingleSignOn valve, share authentication between web applications</span>
+<span class="w">        </span><span class="cm">&lt;!-- SingleSignOn valve, share authentication between web applications</span>
 <span class="cm">             Documentation at: /docs/config/valve.html --&gt;</span>
-        <span class="cm">&lt;!--</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
 <span class="cm">        &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;</span>
 <span class="cm">        --&gt;</span>
 
-        <span class="cm">&lt;!-- Access log processes all example.</span>
+<span class="w">        </span><span class="cm">&lt;!-- Access log processes all example.</span>
 <span class="cm">             Documentation at: /docs/config/valve.html</span>
 <span class="cm">             Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;</span>
-        <span class="cm">&lt;!-- Logs estao sendo gravados pelo Apache --&gt;</span>
-        <span class="cm">&lt;!--</span>
+<span class="w">        </span><span class="cm">&lt;!-- Logs estao sendo gravados pelo Apache --&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
 <span class="cm">        &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;</span>
 <span class="cm">               prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;</span>
 <span class="cm">               pattern=&quot;%h %l %u %t &quot;%r&quot; %s %b&quot; /&gt;</span>
 <span class="cm">        --&gt;</span>
-      <span class="nt">&lt;/Host&gt;</span>
-    <span class="nt">&lt;/Engine&gt;</span>
-  <span class="nt">&lt;/Service&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Host&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Engine&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Service&gt;</span>
 <span class="nt">&lt;/Server&gt;</span>
 </pre></div>
 </div>
@@ -602,8 +601,8 @@ server {
 </div>
 </li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll">   <span class="cm">&lt;!-- Restringe Acesso ao Tomcat--&gt;</span>
-</span><span class="hll">     <span class="nt">&lt;Valve</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.valves.RemoteAddrValve&quot;</span> <span class="na">allow=</span><span class="s">&quot;127\.0\.0\.1&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="w">   </span><span class="cm">&lt;!-- Restringe Acesso ao Tomcat--&gt;</span>
+</span><span class="hll"><span class="w">     </span><span class="nt">&lt;Valve</span><span class="w"> </span><span class="na">className=</span><span class="s">&quot;org.apache.catalina.valves.RemoteAddrValve&quot;</span><span class="w"> </span><span class="na">allow=</span><span class="s">&quot;127\.0\.0\.1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 </span></pre></div>
 </div>
 <p>Por fim, caso não seja necessário, remova aplicações exemplo que vem com o Tomcat (<code class="docutils literal notranslate"><span class="pre">examples,</span> <span class="pre">host-manager,</span> <span class="pre">manager,</span> <span class="pre">ROOT,</span> <span class="pre">sample</span></code>):</p>
@@ -617,19 +616,19 @@ server {
 </div>
 </li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>    <span class="cm">&lt;!-- here, so be sure to include any of the default values that you wish  --&gt;</span>
-    <span class="cm">&lt;!-- to use within your application.                                       --&gt;</span>
-   . . .
-      <span class="nt">&lt;welcome-file-list&gt;</span>
-          <span class="nt">&lt;welcome-file&gt;</span>index.html<span class="nt">&lt;/welcome-file&gt;</span>
-          <span class="nt">&lt;welcome-file&gt;</span>index.htm<span class="nt">&lt;/welcome-file&gt;</span>
-          <span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
-      <span class="nt">&lt;/welcome-file-list&gt;</span>
-<span class="hll">          <span class="nt">&lt;error-page&gt;</span>
-</span><span class="hll">                  <span class="nt">&lt;error-code&gt;</span>404<span class="nt">&lt;/error-code&gt;</span>
-</span><span class="hll">                  <span class="nt">&lt;location&gt;</span>/error.html<span class="nt">&lt;/location&gt;</span>
-</span><span class="hll">          <span class="nt">&lt;/error-page&gt;</span>
-</span>  <span class="nt">&lt;/web-app&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cm">&lt;!-- here, so be sure to include any of the default values that you wish  --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- to use within your application.                                       --&gt;</span>
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.
+<span class="w">      </span><span class="nt">&lt;welcome-file-list&gt;</span>
+<span class="w">          </span><span class="nt">&lt;welcome-file&gt;</span>index.html<span class="nt">&lt;/welcome-file&gt;</span>
+<span class="w">          </span><span class="nt">&lt;welcome-file&gt;</span>index.htm<span class="nt">&lt;/welcome-file&gt;</span>
+<span class="w">          </span><span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/welcome-file-list&gt;</span>
+<span class="hll"><span class="w">          </span><span class="nt">&lt;error-page&gt;</span>
+</span><span class="hll"><span class="w">                  </span><span class="nt">&lt;error-code&gt;</span>404<span class="nt">&lt;/error-code&gt;</span>
+</span><span class="hll"><span class="w">                  </span><span class="nt">&lt;location&gt;</span>/error.html<span class="nt">&lt;/location&gt;</span>
+</span><span class="hll"><span class="w">          </span><span class="nt">&lt;/error-page&gt;</span>
+</span><span class="w">  </span><span class="nt">&lt;/web-app&gt;</span>
 </pre></div>
 </div>
 <p>Agora, crie a página de erro com o conteúdo de exemplo.:</p>
@@ -668,7 +667,7 @@ Verifique o nome digitado.
 </div>
 </section>
 <section id="ldap-active-directory">
-<h3>LDAP - Active Directory<a class="headerlink" href="#ldap-active-directory" title="Permalink to this headline">¶</a></h3>
+<h3>LDAP - Active Directory<a class="headerlink" href="#ldap-active-directory" title="Permalink to this heading">¶</a></h3>
 <p>Para permitir a integração ao sistema de diretório (Active Directory) sem a necessidade de alterar seu esquema, o que é considerado um pouco intrusivo, utiliza-se a extensão LDAP da seguinte forma:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">../</span><span class="n">guacamole</span><span class="o">.</span><span class="n">properties</span>
 
@@ -750,7 +749,7 @@ Verifique o nome digitado.
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -773,7 +772,7 @@ Verifique o nome digitado.
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

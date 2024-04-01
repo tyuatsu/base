@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Como Criar Midia de Instalação do Windows 10 &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="como-criar-midia-de-instalacao-do-windows-10">
-<h1>Como Criar Midia de Instalação do Windows 10<a class="headerlink" href="#como-criar-midia-de-instalacao-do-windows-10" title="Permalink to this headline">¶</a></h1>
+<h1>Como Criar Midia de Instalação do Windows 10<a class="headerlink" href="#como-criar-midia-de-instalacao-do-windows-10" title="Permalink to this heading">¶</a></h1>
 <p>com boot pelo Flash Disk USB (Pendrive) no Linux</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -51,14 +50,14 @@
 </div>
 <p>Existem muitos tutorias já prontos para o Ubuntu/Debian por aí na net… só pesquisar que você acham. Mas como não encontrei nada parecido para o Fedora Linux, decidi então postar essa dica aqui.</p>
 <section id="baixe-a-imagem-iso-dvd-de-instalacao">
-<span id="siga-os-passos-abaixo"></span><h2>1. Baixe a imagem .iso (DVD de instalação)<a class="headerlink" href="#baixe-a-imagem-iso-dvd-de-instalacao" title="Permalink to this headline">¶</a></h2>
+<span id="siga-os-passos-abaixo"></span><h2>1. Baixe a imagem .iso (DVD de instalação)<a class="headerlink" href="#baixe-a-imagem-iso-dvd-de-instalacao" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><a class="reference external" href="https://www.microsoft.com/en-us/software-download/">https://www.microsoft.com/en-us/software-download/</a></p>
 </div></blockquote>
 <p>Eu fiz o download da versão PT-BR 64 bits do windows 10: Win10_1803_BrazilianPortuguese_x64.iso (4.4GB).</p>
 <p>Vou usá-la para reinstalar todo o Sistema Operacional no meu notebook, que infelizmente sofreu falhas severas nos seus drivers (tudo corrompido), que nem o restrui.exe e systemreset.exe da vida conseguem dar conta do problema. Isso aconteceu depois de uma parada crítica de energia, no meio de uma atualização do windows update. - E não sei porque cargas d’água ele corrompeu os drivers de video e rede…, algum cazto do universo durante esse processo. Eu sei lá. Tem coisas que só a Microsoft faz por você!</p>
 <section id="preparar-o-pendrive">
-<h3>1.2. Preparar o PenDrive<a class="headerlink" href="#preparar-o-pendrive" title="Permalink to this headline">¶</a></h3>
+<h3>1.2. Preparar o PenDrive<a class="headerlink" href="#preparar-o-pendrive" title="Permalink to this heading">¶</a></h3>
 <p>Aqui eu vou usar um pendrive de 32GB, mas também pode usar um de 8GB se ele estiver disponível.</p>
 <p>Esse flash disk usb de 32GB, eu costumo utilizá-lo para boot do “fedora 28 live usb”. Mas como preciso formatar urgente o meu notebook com windows 10, então vou usá-lo, sem dó e nem piedade!</p>
 <p><strong>CUIDADO!</strong> O processo à seguir irá destruir todos dados do seu Pendrive, muita calma nessa hora.</p>
@@ -79,7 +78,7 @@
 </section>
 </section>
 <section id="vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona">
-<h2>2. Vamos baixar o famoso aplicativo “WoeUSB”, esse eu garanto que funciona<a class="headerlink" href="#vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona" title="Permalink to this headline">¶</a></h2>
+<h2>2. Vamos baixar o famoso aplicativo “WoeUSB”, esse eu garanto que funciona<a class="headerlink" href="#vamos-baixar-o-famoso-aplicativo-woeusb-esse-eu-garanto-que-funciona" title="Permalink to this heading">¶</a></h2>
 <p>Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">wxGTK3</span><span class="o">-</span><span class="n">devel</span>
 <span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">git</span>
@@ -91,7 +90,7 @@
 </pre></div>
 </div>
 <section id="agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora">
-<h3>2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora<a class="headerlink" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora" title="Permalink to this headline">¶</a></h3>
+<h3>2.1. Agora temos que fazer o download do source (código fonte) do “WoeUSB”, pois ainda não há nem sinal dele nos repositórios do Fedora<a class="headerlink" href="#agora-temos-que-fazer-o-download-do-source-codigo-fonte-do-woeusb-pois-ainda-nao-ha-nem-sinal-dele-nos-repositorios-do-fedora" title="Permalink to this heading">¶</a></h3>
 <p>rode os seguintes comandos:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">Apps</span><span class="o">/</span> <span class="p">;</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">Apps</span><span class="o">/</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">WoeUSB</span><span class="o">/</span><span class="n">WoeUSB</span><span class="o">.</span><span class="n">git</span>
@@ -121,9 +120,9 @@ The target device should be bootable now</p>
 </section>
 </section>
 <section id="observacoes">
-<h2>3. Observações<a class="headerlink" href="#observacoes" title="Permalink to this headline">¶</a></h2>
+<h2>3. Observações<a class="headerlink" href="#observacoes" title="Permalink to this heading">¶</a></h2>
 <section id="sobre-o-boot-pelo-pendrive">
-<h3>3.1. Sobre o boot pelo pendrive<a class="headerlink" href="#sobre-o-boot-pelo-pendrive" title="Permalink to this headline">¶</a></h3>
+<h3>3.1. Sobre o boot pelo pendrive<a class="headerlink" href="#sobre-o-boot-pelo-pendrive" title="Permalink to this heading">¶</a></h3>
 <p>Ele costuma demorar bastante até aparecer à tela de instalação do Windows 10.
 Fora isso, o instalador rodou normal e todo o processo de instalação foi suave na nave.</p>
 </section>
@@ -184,7 +183,7 @@ Fora isso, o instalador rodou normal e todo o processo de instalação foi suave
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -207,7 +206,7 @@ Fora isso, o instalador rodou normal e todo o processo de instalação foi suave
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>

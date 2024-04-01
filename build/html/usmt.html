@@ -1,19 +1,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>User State Migration Tool ‘USMT’ &#8212; Base de Conhecimento 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,13 +42,13 @@
           <div class="body" role="main">
             
   <section id="user-state-migration-tool-usmt">
-<h1>User State Migration Tool ‘USMT’<a class="headerlink" href="#user-state-migration-tool-usmt" title="Permalink to this headline">¶</a></h1>
+<h1>User State Migration Tool ‘USMT’<a class="headerlink" href="#user-state-migration-tool-usmt" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A Ferramenta de Migração de Estado do Usuário é um programa utilitário de linha de comando desenvolvido pela Microsoft que permite que os usuários se sintam à vontade com linguagens de script para transferir arquivos e configurações entre PCs com Windows.</p>
 </div>
 <section id="procedimento">
-<h2>Procedimento<a class="headerlink" href="#procedimento" title="Permalink to this headline">¶</a></h2>
+<h2>Procedimento<a class="headerlink" href="#procedimento" title="Permalink to this heading">¶</a></h2>
 <p>Instalação:</p>
 <p>Baixe o adksetup.exe pelo site: <a class="reference external" href="https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install">docs.microsoft.com</a></p>
 <p><strong>Observação:</strong> Nesse exemplo usaremos windows adk, para sistema windows 10 professional.</p>
@@ -60,7 +59,7 @@
 </div>
 </section>
 <section id="instalar-o-usmt">
-<h2>Instalar o USMT<a class="headerlink" href="#instalar-o-usmt" title="Permalink to this headline">¶</a></h2>
+<h2>Instalar o USMT<a class="headerlink" href="#instalar-o-usmt" title="Permalink to this heading">¶</a></h2>
 <p>Entre na pasta ADK-Offline e execute o adksetup.exe e coloque no local de instalação o caminho:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">ADK</span>
 </pre></div>
@@ -68,7 +67,7 @@
 <p>Escolha a primeira opção e em seguida selecione a ferramenta no caso, apenas o usmt.</p>
 </section>
 <section id="iniciar-o-processo-do-usmt-na-maquina-alvo">
-<h2>Iniciar o processo do usmt na máquina alvo<a class="headerlink" href="#iniciar-o-processo-do-usmt-na-maquina-alvo" title="Permalink to this headline">¶</a></h2>
+<h2>Iniciar o processo do usmt na máquina alvo<a class="headerlink" href="#iniciar-o-processo-do-usmt-na-maquina-alvo" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>O teste à seguir foi feito no meu Oracle VM VirtualBOX</p>
@@ -110,7 +109,7 @@
 </section>
 </section>
 <section id="consideracoes-finais">
-<h1>Considerações Finais<a class="headerlink" href="#consideracoes-finais" title="Permalink to this headline">¶</a></h1>
+<h1>Considerações Finais<a class="headerlink" href="#consideracoes-finais" title="Permalink to this heading">¶</a></h1>
 <p>No windows 8.1 professional, foi necessário reconfigurar o wallpaper e a foto do login do usuário… mas do resto, como ícones e área de trabalho estavam OK! bem como emails, docs e images.</p>
 <p>Caso a máquina esteja ingressado num Domain, tanto a máquina alvo como a de destino, devem estar sempre no mesmo domain ou grupo de trabalho, antes de se iniciar o restore do loadstate do perfil do usuário!</p>
 <div class="admonition note">
@@ -119,10 +118,10 @@
 </div>
 </section>
 <section id="veja-um-exemplo-abaixo">
-<h1>Veja um exemplo abaixo<a class="headerlink" href="#veja-um-exemplo-abaixo" title="Permalink to this headline">¶</a></h1>
+<h1>Veja um exemplo abaixo<a class="headerlink" href="#veja-um-exemplo-abaixo" title="Permalink to this heading">¶</a></h1>
 <p>Migração completa do perfil do usuário chamado <strong>karen</strong>, no windows 10 x64 (hostname notedell). iremos migrá-la para outra máquina, tbm com windows 10 x64 e (hostname note-sam).</p>
 <section id="realizar-a-copia-critografada-do-perfil-completo-da-maquina">
-<h2>Realizar a cópia critografada do perfil completo da máquina.<a class="headerlink" href="#realizar-a-copia-critografada-do-perfil-completo-da-maquina" title="Permalink to this headline">¶</a></h2>
+<h2>Realizar a cópia critografada do perfil completo da máquina.<a class="headerlink" href="#realizar-a-copia-critografada-do-perfil-completo-da-maquina" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Instale o software <strong>adksetup.exe</strong> em ambas as máquinas!</p></li>
 </ol>
@@ -211,7 +210,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -234,7 +233,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Tyuatsu.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     </div>
   </body>
 </html>
