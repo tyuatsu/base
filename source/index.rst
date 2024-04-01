@@ -215,3 +215,9 @@ Conteúdos:
     :caption: HUAWEI WiFi AX2S
 
     configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3
+
+.. toctree::
+   :caption: Appendix
+
+   genindex
+       
