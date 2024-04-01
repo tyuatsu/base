@@ -209,15 +209,10 @@ Conteúdos:
 
     certificados-digitais
 
-.. _configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3:
+.. _huawei-wifi-ax2s:
 .. toctree::
     :maxdepth: 1
-    :caption: HUAWEI WiFi AX2S
+    :caption: HUAWEI WiFi AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM
 
-    configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3
+    huawei-wifi-ax2s
 
-.. toctree::
-   :caption: Appendix
-
-   genindex
-       
