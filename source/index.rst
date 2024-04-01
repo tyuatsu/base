@@ -82,8 +82,7 @@ Conteúdos:
    :caption: Fuga das galinhas
 
    galinhas
-   
-   
+      
 .. _Duvidas-mais-frequentes-de-Office-365:
 .. toctree::
    :maxdepth: 1
@@ -133,7 +132,6 @@ Conteúdos:
     
     movies-for-hackers
 
-
 .. _paradoxo:
 .. toctree::
     :maxdepth: 1
@@ -168,7 +166,6 @@ Conteúdos:
    :caption: Antissemitismo
 
    a-forca-da-mentira
-
 
 .. _tenchu:
 .. toctree::
@@ -212,10 +209,9 @@ Conteúdos:
 
     certificados-digitais
 
-    
 .. _configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3:
 .. toctree::
     :maxdepth: 1
-    :caption: Configurar HUAWEI WiFi AX2S + Technicolor-TG788v v3
+    :caption: HUAWEI WiFi AX2S
 
     configurar-router-huawei-wifi-ax2s-e-technicolor-tg788v3
