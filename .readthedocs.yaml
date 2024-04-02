@@ -35,6 +35,5 @@ formats:
 #  python:
 #  install:
 #    - requirements: docs/requirements.txt
- python: 
- install:
+install:
    - requirements: requirements.txt
