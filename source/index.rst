@@ -215,4 +215,3 @@ Conteúdos:
     :caption: HUAWEI WiFi AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM
 
     huawei-wifi-ax2s
-
