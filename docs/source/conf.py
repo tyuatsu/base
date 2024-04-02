@@ -16,9 +16,6 @@ release = '0.1'
 
 extensions = ['sphinx_rtd_theme']
 html_theme = "sphinx_rtd_theme"
-
-sphinx-rtd-theme==7.2.6
-
 templates_path = ['_templates']
 exclude_patterns = []
 
