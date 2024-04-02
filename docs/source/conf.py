@@ -323,3 +323,6 @@ html_theme_options = {
     'titles_only': False
 }
 
+RTD_NEW_THEME = True
+
+
