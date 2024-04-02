@@ -2,12 +2,12 @@
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 # Required
-version: 2
+version: "2"
 
 # Set the OS, Python version and other tools you might need
 build:
     os: ubuntu-20.04 
-    tools:
+    #tools:
     #python: "3.12"
     python: "3.7"
     # You can also specify other tool versions:
@@ -20,7 +20,7 @@ sphinx:
   # configuration: docs/conf.py
   configuration: source/conf.py
   # You can configure Sphinx to use a different builder, for instance use the dirhtml builder for simpler URLs
-  # builder: "dirhtml"
+   builder: "dirhtml"
   # Fail on all warnings to avoid broken references
   # fail_on_warning: true
 
