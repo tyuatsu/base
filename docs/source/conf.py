@@ -309,7 +309,7 @@ source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
 
 html_theme_options = {
     'analytics_anonymize_ip': False,
-    'logo_only': False,
+    'logo_only': True,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
