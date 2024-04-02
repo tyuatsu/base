@@ -1,5 +1,5 @@
 .. Tyuatsu documentation master file, created by
-   sphinx-quickstart on Tue Apr  2 16:24:44 2024.
+   sphinx-quickstart on Tue Apr  2 16:42:00 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
