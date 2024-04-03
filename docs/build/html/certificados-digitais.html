@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="pt" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Como usar Certificados Digitais no Linux &#8212; Documentação Base de Conhecimento 0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=6e1fffae"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=3b002d5c"></script>
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="next" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM" href="huawei-wifi-ax2s.html" />
+    <link rel="prev" title="Utilizando o «Read the Docs» by Tyuatsu" href="docs-readthedocs.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="huawei-wifi-ax2s.html" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM"
+             accesskey="N">próximo</a> |</li>
+        <li class="right" >
+          <a href="docs-readthedocs.html" title="Utilizando o «Read the Docs» by Tyuatsu"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como usar Certificados Digitais no Linux</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="como-usar-certificados-digitais-no-linux">
+<h1>Como usar Certificados Digitais no Linux<a class="headerlink" href="#como-usar-certificados-digitais-no-linux" title="Link to this heading">¶</a></h1>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Link to this heading">¶</a></h2>
+<p>Referências usadas aqui..: <a class="reference external" href="https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs">DigitalOcean</a>.</p>
+<section id="informacoes-de-um-certificado">
+<h3>Informações de um Certificado<a class="headerlink" href="#informacoes-de-um-certificado" title="Link to this heading">¶</a></h3>
+<p>No linux, há algumas formas de verificar informações de certificados, veja algumas formas e suas ferramentas.</p>
+<ul class="simple">
+<li><p><strong>Keytool</strong></p></li>
+</ul>
+<p>No Ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span>
+</pre></div>
+</div>
+<p>No RedHat:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span>
+</pre></div>
+</div>
+<p>Exemplo de saída:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Keystore</span> <span class="nb">type</span><span class="p">:</span> <span class="n">JKS</span>
+<span class="n">Keystore</span> <span class="n">provider</span><span class="p">:</span> <span class="n">SUN</span>
+
+<span class="n">Your</span> <span class="n">keystore</span> <span class="n">contains</span> <span class="mi">174</span> <span class="n">entries</span>
+
+<span class="n">debian</span><span class="p">:</span><span class="n">staat_der_nederlanden_root_ca_</span><span class="o">-</span><span class="n">_g3</span><span class="o">.</span><span class="n">pem</span><span class="p">,</span> <span class="n">Jul</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="n">trustedCertEntry</span><span class="p">,</span>
+<span class="n">Certificate</span> <span class="n">fingerprint</span> <span class="p">(</span><span class="n">SHA1</span><span class="p">):</span> <span class="n">D8</span><span class="p">:</span><span class="n">EB</span><span class="p">:</span><span class="mi">6</span><span class="n">B</span><span class="p">:</span><span class="mi">41</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">92</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="n">E0</span><span class="p">:</span><span class="n">F3</span><span class="p">:</span><span class="n">E7</span><span class="p">:</span><span class="mi">85</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="n">C0</span><span class="p">:</span><span class="mi">3</span><span class="n">D</span><span class="p">:</span><span class="n">B6</span><span class="p">:</span><span class="mi">88</span><span class="p">:</span><span class="mi">97</span><span class="p">:</span><span class="n">C9</span><span class="p">:</span><span class="n">EE</span><span class="p">:</span><span class="n">FC</span>
+<span class="n">debian</span><span class="p">:</span><span class="n">pscprocert</span><span class="o">.</span><span class="n">pem</span><span class="p">,</span> <span class="n">Jul</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="n">trustedCertEntry</span><span class="p">,</span>
+<span class="n">Certificate</span> <span class="n">fingerprint</span> <span class="p">(</span><span class="n">SHA1</span><span class="p">):</span> <span class="mi">70</span><span class="p">:</span><span class="n">C1</span><span class="p">:</span><span class="mi">8</span><span class="n">D</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="n">B4</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="mi">0</span><span class="n">A</span><span class="p">:</span><span class="n">E4</span><span class="p">:</span><span class="n">FD</span><span class="p">:</span><span class="n">A5</span><span class="p">:</span><span class="mi">75</span><span class="p">:</span><span class="n">D7</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">9</span><span class="n">F</span><span class="p">:</span><span class="mi">99</span><span class="p">:</span><span class="n">B0</span><span class="p">:</span><span class="mi">3</span><span class="n">D</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">74</span>
+<span class="n">debian</span><span class="p">:</span><span class="n">chambers_of_commerce_root_</span><span class="o">-</span><span class="n">_2008</span><span class="o">.</span><span class="n">pem</span><span class="p">,</span> <span class="n">Jul</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="n">trustedCertEntry</span><span class="p">,</span>
+<span class="n">Certificate</span> <span class="n">fingerprint</span> <span class="p">(</span><span class="n">SHA1</span><span class="p">):</span> <span class="mi">78</span><span class="p">:</span><span class="mi">6</span><span class="n">A</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="n">AC</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="n">AB</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">7</span><span class="n">F</span><span class="p">:</span><span class="mi">9</span><span class="n">C</span><span class="p">:</span><span class="mi">6</span><span class="n">A</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">BA</span><span class="p">:</span><span class="mi">9</span><span class="n">E</span><span class="p">:</span><span class="n">A8</span><span class="p">:</span><span class="mi">7</span><span class="n">E</span><span class="p">:</span><span class="n">FE</span><span class="p">:</span><span class="mi">9</span><span class="n">A</span><span class="p">:</span><span class="n">CE</span><span class="p">:</span><span class="mi">3</span><span class="n">C</span>
+<span class="n">debian</span><span class="p">:</span><span class="n">ca_disig_root_r2</span><span class="o">.</span><span class="n">pem</span><span class="p">,</span> <span class="n">Jul</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="n">trustedCertEntry</span><span class="p">,</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>OpenSSL</strong></p></li>
+</ul>
+<p>Para verificar informações como fingerprint, versão, algoritmos de assinatura, dentro outros a ferramenta OpenSSL. Algumas <a class="reference external" href="https://www.sslshopper.com/article-most-common-openssl-commands.html">referências sobre</a>.
+Verificar Certificados - listar informação do certificado padrão x509:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span> <span class="o">-</span><span class="n">text</span> <span class="o">-</span><span class="n">noout</span>
+</pre></div>
+</div>
+<p>Exemplo de saída:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Certificate</span><span class="p">:</span>
+<span class="n">Data</span><span class="p">:</span>
+    <span class="n">Version</span><span class="p">:</span> <span class="mi">3</span> <span class="p">(</span><span class="mh">0x2</span><span class="p">)</span>
+    <span class="n">Serial</span> <span class="n">Number</span><span class="p">:</span>
+        <span class="mi">72</span><span class="p">:</span><span class="n">c6</span><span class="p">:</span><span class="mi">63</span><span class="p">:</span><span class="mi">0</span><span class="n">d</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">0</span><span class="n">b</span>
+<span class="n">Signature</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">sha1WithRSAEncryption</span>
+    <span class="n">Issuer</span><span class="p">:</span> <span class="n">DC</span><span class="o">=</span><span class="n">local</span><span class="p">,</span> <span class="n">DC</span><span class="o">=</span><span class="n">kos</span><span class="p">,</span> <span class="n">DC</span><span class="o">=</span><span class="n">teste</span><span class="p">,</span> <span class="n">CN</span><span class="o">=</span><span class="n">TESTE</span><span class="o">-</span><span class="n">CA</span>
+    <span class="n">Validity</span>
+        <span class="n">Not</span> <span class="n">Before</span><span class="p">:</span> <span class="n">Mar</span>  <span class="mi">3</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">45</span> <span class="mi">2016</span> <span class="n">GMT</span>
+        <span class="n">Not</span> <span class="n">After</span> <span class="p">:</span> <span class="n">Mar</span>  <span class="mi">3</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">45</span> <span class="mi">2017</span> <span class="n">GMT</span>
+
+        <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="verificar-certificados">
+<h3>Verificar Certificados<a class="headerlink" href="#verificar-certificados" title="Link to this heading">¶</a></h3>
+<p>Listar somente o certificado em base 64:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
+</pre></div>
+</div>
+<p>Exemplo de saída:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+<span class="n">MIIFxDCCBKygAwIBAgIKcsZjDQAAAAAACzANBgkqhkiG9w0BAQUFADB2MRIwEAYK</span>
+<span class="n">CZImiZPyLGQBGRYCYnIxEzARBgoJkiaJk</span><span class="o">/</span><span class="n">IsZAEZFgNnb3YxFTATBgoJkiaJk</span><span class="o">/</span><span class="n">Is</span>
+<span class="n">ZAEZFgVjYXBlczEVMBMGCgmSJomT8ixkARkWBXRlc3RlMR0wGwYDVQQDExR0ZXN0</span>
+
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+
+<span class="n">RjnZwvaHNvLbgvIaGjaKD9Z78U0O5hapnPZyyjZe7RVa23FZmIVkiR0m0Pk0E</span><span class="o">+</span><span class="n">G2</span>
+<span class="o">/</span><span class="n">Ra4zk0NJyCAtNKN8ERWcmWrU</span><span class="o">+</span><span class="n">CTGCQJuNvmR0zQZTWnytMDMus7</span><span class="o">/</span><span class="n">Q</span><span class="o">==</span>
+<span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+</pre></div>
+</div>
+<ul>
+<li><p><strong>Fingerprint</strong> - para verificar uma impressão digital (fingerprint) de um certificado no linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">noout</span> <span class="o">-</span><span class="ow">in</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">cer</span> <span class="o">-</span><span class="n">fingerprint</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Exemplo de saída:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHA1</span> <span class="n">Fingerprint</span><span class="o">=</span><span class="mi">89</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">B2</span><span class="p">:</span><span class="n">D1</span><span class="p">:</span><span class="mi">3</span><span class="n">C</span><span class="p">:</span><span class="mi">68</span><span class="p">:</span><span class="n">FC</span><span class="p">:</span><span class="n">A2</span><span class="p">:</span><span class="n">B2</span><span class="p">:</span><span class="n">A6</span><span class="p">:</span><span class="n">EE</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="n">EC</span><span class="p">:</span><span class="mi">6</span><span class="n">B</span><span class="p">:</span><span class="mi">4</span><span class="n">D</span><span class="p">:</span><span class="n">B8</span><span class="p">:</span><span class="mi">5</span><span class="n">B</span><span class="p">:</span><span class="n">C2</span><span class="p">:</span><span class="mi">70</span>
+</pre></div>
+</div>
+</section>
+<section id="importar-um-certificado">
+<h3>Importar um certificado<a class="headerlink" href="#importar-um-certificado" title="Link to this heading">¶</a></h3>
+<p>Veja como importar um certificado.</p>
+<ul>
+<li><p><strong>Ubuntu</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\\ <span class="n">Sem</span> <span class="n">alias</span>
+<span class="n">keytool</span> <span class="o">-</span><span class="n">importcert</span> <span class="o">-</span><span class="n">keystore</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">.</span><span class="n">CER</span><span class="o">&gt;</span>
+
+\\ <span class="n">Com</span> <span class="n">alias</span><span class="o">.</span>
+<span class="n">keytool</span> <span class="o">-</span><span class="n">importcert</span> <span class="o">-</span><span class="n">alias</span> <span class="n">activedirectory</span><span class="p">:</span><span class="n">testead</span> <span class="o">-</span><span class="n">keystore</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">.</span><span class="n">CER</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Red Hat</strong>::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">importcert</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">file</span> <span class="n">certificado</span><span class="o">.</span><span class="n">cer</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Ele ficará armazenado na keystore. Valide pela sua impressão digital (fingerprint)</p>
+</section>
+<section id="gerar-um-certificado">
+<h3>Gerar um Certificado<a class="headerlink" href="#gerar-um-certificado" title="Link to this heading">¶</a></h3>
+<p>Certificados Auto-Assinados - utilizando o OpenSSL com chave privada de 2048 (dominio_TESTE.key) e um certificado auto-assinado (dominio_TESTE.crt) para utilização em sites com HTTPS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">newkey</span> <span class="n">rsa</span><span class="p">:</span><span class="mi">2048</span> <span class="o">-</span><span class="n">nodes</span> <span class="o">-</span><span class="n">keyout</span> <span class="n">dominio_TESTE</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">x509</span> <span class="o">-</span><span class="n">days</span> <span class="mi">365</span> <span class="o">-</span><span class="n">out</span> <span class="o">&lt;</span><span class="n">dominio_TESTE</span><span class="o">&gt;.</span><span class="n">crt</span>
+</pre></div>
+</div>
+</section>
+<section id="exportar-um-certificado">
+<h3>Exportar um Certificado<a class="headerlink" href="#exportar-um-certificado" title="Link to this heading">¶</a></h3>
+<p>Formato Java Keystore - para exportar um certificado de uma java keystore para formato x509:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">&lt;/</span><span class="n">PASTA</span><span class="o">/.</span><span class="n">keystore</span> <span class="n">OU</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">kjs</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">exportcert</span> <span class="o">-</span><span class="n">alias</span> <span class="n">NOME_CERTIFICADO</span> <span class="o">|</span> <span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">der</span> <span class="o">-</span><span class="n">text</span> <span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CERTIFICADO</span><span class="o">&gt;.</span><span class="n">crt</span>
+</pre></div>
+</div>
+</section>
+<section id="remover-um-certificado">
+<h3>Remover um Certificado<a class="headerlink" href="#remover-um-certificado" title="Link to this heading">¶</a></h3>
+<p>Para remover certificados:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keytool</span> <span class="o">-</span><span class="n">delete</span> <span class="o">-</span><span class="n">keystore</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">cacerts</span> <span class="o">-</span><span class="n">alias</span> <span class="o">&lt;</span><span class="n">CERTIFICADO_DESEJADO_PARA_EXCLUIR</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Como usar Certificados Digitais no Linux</a><ul>
+<li><a class="reference internal" href="#linux">Linux</a><ul>
+<li><a class="reference internal" href="#informacoes-de-um-certificado">Informações de um Certificado</a></li>
+<li><a class="reference internal" href="#verificar-certificados">Verificar Certificados</a></li>
+<li><a class="reference internal" href="#importar-um-certificado">Importar um certificado</a></li>
+<li><a class="reference internal" href="#gerar-um-certificado">Gerar um Certificado</a></li>
+<li><a class="reference internal" href="#exportar-um-certificado">Exportar um Certificado</a></li>
+<li><a class="reference internal" href="#remover-um-certificado">Remover um Certificado</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Tópico anterior</h4>
+    <p class="topless"><a href="docs-readthedocs.html"
+                          title="capítulo anterior">Utilizando o «Read the Docs» by Tyuatsu</a></p>
+  </div>
+  <div>
+    <h4>Próximo tópico</h4>
+    <p class="topless"><a href="huawei-wifi-ax2s.html"
+                          title="próximo capítulo">CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/certificados-digitais.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Pesquisa rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="huawei-wifi-ax2s.html" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM"
+             >próximo</a> |</li>
+        <li class="right" >
+          <a href="docs-readthedocs.html" title="Utilizando o «Read the Docs» by Tyuatsu"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como usar Certificados Digitais no Linux</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

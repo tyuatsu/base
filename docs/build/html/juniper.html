@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="pt" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Router Juniper &#8212; Documentação Base de Conhecimento 0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=6e1fffae"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=3b002d5c"></script>
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="next" title="User State Migration Tool “USMT”" href="usmt.html" />
+    <link rel="prev" title="Cisco" href="cisco.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool “USMT”"
+             accesskey="N">próximo</a> |</li>
+        <li class="right" >
+          <a href="cisco.html" title="Cisco"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Router Juniper</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="router-juniper">
+<h1>Router Juniper<a class="headerlink" href="#router-juniper" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Junos é o sistema operacional que roda nos roteadores e switches do fabricante Juniper Networks. O kernel do Junos é baseado no sistema Unix FreeBSD. Vamos a uma rápida introdução aos comandos básicos para roteadores Juniper e depois complementamos com alguns exemplos práticos do cotidiano do ambiente de redes.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/juniper.jpg"><img alt="Juniper" src="_images/juniper.jpg" style="width: 315.0px; height: 210.0px;" /></a>
+</figure>
+<p>A cli – command line interface, do sistema conta com basicamente dois modos:</p>
+<ul class="simple">
+<li><p><strong>Operational Mode</strong> - Permite monitorar e realizar troubleshooting no dispositivo.</p></li>
+<li><p><strong>Configuration Mode</strong> - Permite realizar configurações do equipamento. As configurações realizadas são armazenadas em um estrutura hierárquica, contendo instruções para o dispositivo, incluindo interfaces, informações de roteamento, permissões de acesso e propriedades de sistema e hardware. As alterações realizadas nesse modo, são armazenadas em um arquivo chamado candidate configuration. Esse arquivo permite realizar alterações sem causar mudanças imediatas nas configurações que estão rodando no roteador, chamada active configuration. O dispositivo não irá implementar as mudanças realizadas até você aplicá-las manualmente na active configuration.</p></li>
+</ul>
+<p>Quando pressionamos a tecla <strong>“?”</strong>, o sistema nos mostra todos os possíveis comandos que podem ser usados, incluindo uma breve descrição de cada um.</p>
+<p>Para configurar um parâmetro usamos o comando <strong>set</strong>, enquanto que para apagar um parâmetro usamos o comando <strong>delete</strong>.</p>
+<p>Para editar um parâmetro usamos o comando <strong>edit</strong>, e o comando <strong>show</strong> é utilizados para visualização.</p>
+<p>Para salvar as configurações na active configuration utilizamos o comando <strong>commit</strong>.</p>
+<section id="configuracao-basica-do-dispositivo">
+<h2>Configuração básica do dispositivo<a class="headerlink" href="#configuracao-basica-do-dispositivo" title="Link to this heading">¶</a></h2>
+<p>Comandos de verificação:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>root&gt; show system uptime – Verificar tempo de operação do equipamento.
+
+root&gt; show system users – Verificar usuários logados.
+
+root&gt; show system storage – Verificar armazenamento de dados local.
+
+root&gt; show system processes – Verificar a tabela de processos em execução.
+
+root&gt; show chassis hardware – Verificar componentes de hardware instalados.
+
+root&gt; show chassis environment – Verificar status dos componentes e temperatura, e velocidades do sistema de refrigeração.
+
+root&gt; show chassis routing-engine – Verificar status da routing engine.
+
+root&gt; show chassis alarms – Verificar alarmes de alertas no equipamento
+
+root&gt; show version – Versão do Junos OS que esta rodando no equipamento. Também exibe o host name e o modelo do dispositivo.
+
+root&gt; show log chassisd | no-more – Verificar logs relacionados aos alarmes do hardware
+
+root&gt; show log messages | no-more – Verificar mensagens de log
+
+root&gt; show log messages | last 50 – Verificar mensagens de log das últimas 50 linhas
+
+root&gt; show log user – Verificar histórico de login dos usuários
+
+root&gt; show configuration – Verificar a configuração atual
+
+root&gt; show interfaces terse – Breve descrição sobre o status das interfaces
+
+root&gt; show interfaces interface-name – Descrição sobre uma interface
+
+root&gt; show interface interface-name extensive – Descrição detalhada sobre uma interface
+
+root&gt; clear interfaces statistics interface-name – Reinicia as estatísticas de uma interface
+
+root&gt; show bgp summary – Breve descrição sobre o estado do protocolo
+
+root&gt; show ospf overview – Breve descrição sobre o estado do protocolo
+
+root&gt; show isis overview – Breve descrição sobre o estado do protocolo
+
+root&gt; show route 216.142.248.0 extensive – Descrição detalhada sobre uma rota específica
+
+root&gt; show route 192.168.68.0/24 – Descrição sobre uma rota específica
+
+root&gt; show route terse – Descrição da tabela de rotas
+</pre></div>
+</div>
+<p>Definir host name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="c1"># set system host-name juniper</span>
+</pre></div>
+</div>
+<p>Definir uma senha de acesso ao usuário root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="c1"># set system root-authentication plain-text-password</span>
+<span class="n">New</span> <span class="n">password</span><span class="p">:</span>
+<span class="n">Retype</span> <span class="n">new</span> <span class="n">password</span><span class="p">:</span>
+
+<span class="n">root</span><span class="c1"># commit</span>
+<span class="n">commit</span> <span class="n">complete</span>
+</pre></div>
+</div>
+<p>Adicionar ip a uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># set interfaces em0 unit 0 family inet address 192.168.1.254/24</span>
+</pre></div>
+</div>
+<p>Adicionar um rota estática:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># set routing-options static route 192.168.68.0/24 next-hop 192.168.1.1</span>
+</pre></div>
+</div>
+<p>Habilitar ssh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># set system services ssh</span>
+</pre></div>
+</div>
+<p>Data e Hora:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># set system ntp server 200.160.0.8</span>
+
+<span class="n">root</span><span class="nd">@juniper</span><span class="c1"># set system time-zone America/Sao_Paulo</span>
+</pre></div>
+</div>
+<p>Ping e Traceroute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="mf">192.168.1.1</span>
+<span class="n">root</span><span class="nd">@juniper</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="n">rapid</span> <span class="n">count</span> <span class="mi">1000</span> <span class="n">size</span> <span class="mi">1400</span> <span class="mf">192.168.1.1</span>
+<span class="n">root</span><span class="nd">@juniper</span><span class="o">&gt;</span> <span class="n">traceroute</span> <span class="mf">192.168.1.1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Para utilizar comandos de Operational Mode dentro do Configuration Mode, utilize a sintaxe <strong>run</strong> antes do comando.</p>
+</div>
+<p>Como no exemplo abaixo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># run ping 192.168.1.1</span>
+</pre></div>
+</div>
+<p>Salvar configuração:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@juniper</span><span class="c1"># commit check – Realiza uma checagem de erros na configuração, mas não aplica.</span>
+
+<span class="n">root</span><span class="nd">@juniper</span><span class="c1"># commit at &quot;2017-09-15 23:59&quot; – Aplica a configuração no dia e horário informado no comando.</span>
+
+<span class="n">root</span><span class="nd">@juniper</span><span class="c1"># commit confirmed 1 – Aplica a configuração em um &quot;modo de segurança&quot;, caso não seja confirmada no tempo pré-definido no comando, a configuração será descartada e voltará ao seu estado original, função rollback.</span>
+
+<span class="n">root</span><span class="nd">@juniper</span><span class="c1"># commit and-quit – Aplica a configuração e sai do configuration mode.</span>
+</pre></div>
+</div>
+<p>Aqui abordamos comandos super básicos, e para maiores informações e melhor aprofundamento do conteúdo apresentado, sugiro buscar informações mais detalhadas no site oficial  <a class="reference external" href="http://www.juniper.net/documentation/">www.juniper.net</a></p>
+</section>
+<section id="exemplos-praticos">
+<h2>1. Exemplos práticos<a class="headerlink" href="#exemplos-praticos" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Checagem da interface Wan - Análise de perda de pacotes, incremento de erro ou quedas recentes.</p>
+</div>
+<p>Verificar informações de todas interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span>
+</pre></div>
+</div>
+<p>Mostrar breve resumo da interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">terse</span>
+</pre></div>
+</div>
+<p>Verificar últimos logs de quedas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span><span class="n">show</span> <span class="n">log</span> <span class="n">messages</span> <span class="o">|</span> <span class="n">last</span> <span class="mi">200</span>
+</pre></div>
+</div>
+<p>Verificar as informações de todas interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">find</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">find</span> <span class="n">ge</span>
+</pre></div>
+</div>
+<p>Verificar informações da interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">descriptions</span> <span class="o">|</span> <span class="n">match</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Verificar se está fisicamente up ou down:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">detail</span> <span class="o">|</span> <span class="n">match</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Visualizar todas as interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>Visualizar todas as interfaces com detalhamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">brief</span>
+</pre></div>
+</div>
+<p>Visualiza todos os tipos de erros:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">extensive</span>
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">extensive</span> <span class="o">|</span> <span class="n">match</span> <span class="n">errors</span>
+</pre></div>
+</div>
+<p>Verificar tempo de operação do equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">uptime</span>
+</pre></div>
+</div>
+<p>Ping teste:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Supersonic@C3PO&gt; ping 200.185.0.60 rapid count 50 size 1500
+
+PING 200.185.0.60 (200.185.0.60): 1500 data bytes
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--- 200.185.0.60 ping statistics ---
+50 packets transmitted, 50 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.163/0.174/0.311/0.024 ms
+</pre></div>
+</div>
+<p>Como acessar Juniper de um router para outro, neste caso este procedimento serve para validação de interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span> <span class="n">descriptions</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span>        <span class="n">up</span>    <span class="n">up</span>   <span class="n">To</span><span class="o">-</span><span class="n">R2D2</span>
+
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span>
+<span class="n">description</span> <span class="n">To</span><span class="o">-</span><span class="n">R2D2</span><span class="p">;</span>
+<span class="n">mtu</span> <span class="mi">8900</span><span class="p">;</span>
+<span class="n">unit</span> <span class="mi">0</span> <span class="p">{</span>
+    <span class="n">family</span> <span class="n">inet</span> <span class="p">{</span>
+                <span class="n">address</span> <span class="mf">182.75.1.67</span><span class="o">/</span><span class="mi">30</span><span class="p">;</span>
+                <span class="p">}</span>
+    <span class="n">family</span> <span class="n">iso</span><span class="p">;</span>
+    <span class="n">family</span> <span class="n">mpls</span><span class="p">;</span>
+       <span class="p">}</span>
+
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="mf">182.75.1.68</span> <span class="n">count</span> <span class="mi">3</span>
+<span class="n">PING</span> <span class="mf">182.75.1.68</span> <span class="p">(</span><span class="mf">182.75.1.68</span><span class="p">):</span> <span class="mi">56</span> <span class="n">data</span> <span class="nb">bytes</span>
+<span class="mi">64</span> <span class="nb">bytes</span> <span class="kn">from</span> <span class="mf">182.75.1.68</span><span class="p">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">0</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">64</span> <span class="n">time</span><span class="o">=</span><span class="mf">2.507</span> <span class="n">ms</span>
+<span class="mi">64</span> <span class="nb">bytes</span> <span class="kn">from</span> <span class="mf">182.75.1.68</span><span class="p">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">0</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">64</span> <span class="n">time</span><span class="o">=</span><span class="mf">2.204</span> <span class="n">ms</span>
+<span class="mi">64</span> <span class="nb">bytes</span> <span class="kn">from</span> <span class="mf">182.75.1.68</span><span class="p">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">1</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">64</span> <span class="n">time</span><span class="o">=</span><span class="mf">1.316</span> <span class="n">ms</span>
+<span class="o">---</span> <span class="mf">182.75.1.68</span> <span class="n">ping</span> <span class="n">statistics</span> <span class="o">---</span>
+<span class="mi">2</span> <span class="n">packets</span> <span class="n">transmitted</span><span class="p">,</span> <span class="mi">2</span> <span class="n">packets</span> <span class="n">received</span><span class="p">,</span> <span class="mi">0</span><span class="o">%</span> <span class="n">packet</span> <span class="n">loss</span>
+<span class="nb">round</span><span class="o">-</span><span class="n">trip</span> <span class="nb">min</span><span class="o">/</span><span class="n">avg</span><span class="o">/</span><span class="nb">max</span><span class="o">/</span><span class="n">stddev</span> <span class="o">=</span> <span class="mf">1.316</span><span class="o">/</span><span class="mf">1.912</span><span class="o">/</span><span class="mf">2.507</span><span class="o">/</span><span class="mf">0.596</span> <span class="n">ms</span>
+
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">ssh</span> <span class="n">root</span><span class="o">@</span><span class="mf">182.75.1.68</span> <span class="n">source</span> <span class="mf">182.75.0.47</span> <span class="p">(</span><span class="n">o</span> <span class="n">source</span> <span class="n">deve</span> <span class="n">ser</span> <span class="n">o</span> <span class="n">endereço</span> <span class="n">de</span> <span class="n">loopback</span><span class="p">)</span>
+
+<span class="n">Supersonic</span><span class="nd">@C3PO</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span> <span class="o">|</span> <span class="n">display</span> <span class="nb">set</span> <span class="o">|</span> <span class="n">match</span> <span class="n">lo0</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">lo0</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="nb">filter</span> <span class="nb">input</span> <span class="n">router</span><span class="o">-</span><span class="n">protect</span><span class="o">-</span><span class="n">simplified</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">lo0</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">182.75.0.47</span><span class="o">/</span><span class="mi">32</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">lo0</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">iso</span> <span class="n">address</span> <span class="mf">49.0001.2001.8500.0047.00</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">lo0</span><span class="mf">.0</span> <span class="n">level</span> <span class="mi">1</span> <span class="n">disable</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">ldp</span> <span class="n">interface</span> <span class="n">lo0</span><span class="mf">.0</span>
+
+<span class="n">root</span><span class="o">@</span><span class="mf">182.75.1.68</span><span class="s1">&#39;s password:</span>
+<span class="o">---</span> <span class="n">JUNOS</span> <span class="mf">12.1</span><span class="n">X44</span><span class="o">-</span><span class="n">D35</span><span class="mf">.5</span> <span class="n">built</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">19</span> <span class="mi">21</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">43</span> <span class="n">UTC</span>
+
+<span class="n">root</span><span class="nd">@R2D2</span><span class="o">%</span> <span class="n">cli</span>
+
+<span class="n">root</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">descriptions</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>        <span class="n">up</span>    <span class="n">up</span>   <span class="n">L2L</span> <span class="n">VIVO</span> <span class="n">TO</span><span class="o">-</span><span class="n">C3PO</span>
+
+<span class="n">root</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">root</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">description</span> <span class="n">L2L</span> <span class="n">VIVO</span> <span class="n">TO</span><span class="o">-</span><span class="n">C3PO</span><span class="p">;</span>
+<span class="n">mtu</span> <span class="mi">8900</span><span class="p">;</span>
+<span class="n">unit</span> <span class="mi">0</span> <span class="p">{</span>
+    <span class="n">family</span> <span class="n">inet</span> <span class="p">{</span>
+                <span class="n">address</span> <span class="mf">182.75.1.68</span><span class="o">/</span><span class="mi">30</span><span class="p">;</span>
+                <span class="p">}</span>
+    <span class="n">family</span> <span class="n">iso</span><span class="p">;</span>
+    <span class="n">family</span> <span class="n">mpls</span><span class="p">;</span>
+       <span class="p">}</span>
+
+<span class="n">root</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="mf">182.75.1.67</span> <span class="n">count</span> <span class="mi">5</span> <span class="n">rapid</span>
+<span class="n">PING</span> <span class="mf">182.75.1.67</span> <span class="p">(</span><span class="mf">182.75.1.67</span><span class="p">):</span> <span class="mi">56</span> <span class="n">data</span> <span class="nb">bytes</span>
+<span class="o">.....</span>
+<span class="o">---</span> <span class="mf">182.75.1.67</span> <span class="n">ping</span> <span class="n">statistics</span> <span class="o">---</span>
+<span class="mi">5</span> <span class="n">packets</span> <span class="n">transmitted</span><span class="p">,</span> <span class="mi">0</span> <span class="n">packets</span> <span class="n">received</span><span class="p">,</span> <span class="mi">100</span><span class="o">%</span> <span class="n">packet</span> <span class="n">loss</span>
+</pre></div>
+</div>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Coletar evidências - pontos principais</p>
+</div>
+<ul class="simple">
+<li><p>Logs</p></li>
+<li><p>show interface ge-X/Y/Z</p></li>
+<li><p>show bfd session brief</p></li>
+<li><p>show isis adjacency</p></li>
+<li><p>testes de ping</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Complementos da análise</p>
+</div>
+<ul class="simple">
+<li><p>tabela arp</p></li>
+<li><p>show bfd session brief</p></li>
+<li><p>show isis adjacency</p></li>
+</ul>
+<p>Validar o roteamento entre o router <strong>astronauta008</strong> e router <strong>magali006 171.28.1.210</strong> (Elemento ROTEAMENTO ISIS PEER):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span>
+<span class="n">Physical</span> <span class="n">interface</span><span class="p">:</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span><span class="p">,</span> <span class="n">Enabled</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">link</span> <span class="ow">is</span> <span class="n">Up</span>
+  <span class="n">Interface</span> <span class="n">index</span><span class="p">:</span> <span class="mi">159</span><span class="p">,</span> <span class="n">SNMP</span> <span class="n">ifIndex</span><span class="p">:</span> <span class="mi">535</span>
+  <span class="n">Description</span><span class="p">:</span> <span class="n">L2L</span> <span class="n">CenturyLink</span> <span class="n">Boston</span> <span class="n">TO</span><span class="o">-</span><span class="n">magaliO06</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">2</span>
+  <span class="n">Link</span><span class="o">-</span><span class="n">level</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Ethernet</span><span class="p">,</span> <span class="n">MTU</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">Speed</span><span class="p">:</span> <span class="mi">1000</span><span class="n">mbps</span><span class="p">,</span> <span class="n">BPDU</span> <span class="n">Error</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">MAC</span><span class="o">-</span><span class="n">REWRITE</span> <span class="n">Error</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Loopback</span><span class="p">:</span> <span class="n">Disabled</span><span class="p">,</span> <span class="n">Source</span>
+  <span class="n">filtering</span><span class="p">:</span> <span class="n">Disabled</span><span class="p">,</span> <span class="n">Flow</span> <span class="n">control</span><span class="p">:</span> <span class="n">Enabled</span><span class="p">,</span> <span class="n">Auto</span><span class="o">-</span><span class="n">negotiation</span><span class="p">:</span> <span class="n">Enabled</span><span class="p">,</span> <span class="n">Remote</span> <span class="n">fault</span><span class="p">:</span> <span class="n">Online</span>
+  <span class="n">Device</span> <span class="n">flags</span>   <span class="p">:</span> <span class="n">Present</span> <span class="n">Running</span>
+  <span class="n">Interface</span> <span class="n">flags</span><span class="p">:</span> <span class="n">SNMP</span><span class="o">-</span><span class="n">Traps</span> <span class="n">Internal</span><span class="p">:</span> <span class="mh">0x0</span>
+  <span class="n">Link</span> <span class="n">flags</span>     <span class="p">:</span> <span class="kc">None</span>
+  <span class="n">CoS</span> <span class="n">queues</span>     <span class="p">:</span> <span class="mi">8</span> <span class="n">supported</span><span class="p">,</span> <span class="mi">8</span> <span class="n">maximum</span> <span class="n">usable</span> <span class="n">queues</span>
+  <span class="n">Current</span> <span class="n">address</span><span class="p">:</span> <span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">81</span><span class="p">,</span> <span class="n">Hardware</span> <span class="n">address</span><span class="p">:</span> <span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">81</span>
+  <span class="n">Last</span> <span class="n">flapped</span>   <span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="mi">22</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">25</span> <span class="n">ART</span> <span class="p">(</span><span class="mi">28</span><span class="n">w0d</span> <span class="mi">11</span><span class="p">:</span><span class="mi">25</span> <span class="n">ago</span><span class="p">)</span>
+  <span class="n">Input</span> <span class="n">rate</span>     <span class="p">:</span> <span class="mi">256</span> <span class="n">bps</span> <span class="p">(</span><span class="mi">0</span> <span class="n">pps</span><span class="p">)</span>
+  <span class="n">Output</span> <span class="n">rate</span>    <span class="p">:</span> <span class="mi">0</span> <span class="n">bps</span> <span class="p">(</span><span class="mi">0</span> <span class="n">pps</span><span class="p">)</span>
+  <span class="n">Active</span> <span class="n">alarms</span>  <span class="p">:</span> <span class="kc">None</span>
+  <span class="n">Active</span> <span class="n">defects</span> <span class="p">:</span> <span class="kc">None</span>
+  <span class="n">Interface</span> <span class="n">transmit</span> <span class="n">statistics</span><span class="p">:</span> <span class="n">Disabled</span>
+
+  <span class="n">Logical</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="p">(</span><span class="n">Index</span> <span class="mi">328</span><span class="p">)</span> <span class="p">(</span><span class="n">SNMP</span> <span class="n">ifIndex</span> <span class="mi">567</span><span class="p">)</span>
+    <span class="n">Flags</span><span class="p">:</span> <span class="n">SNMP</span><span class="o">-</span><span class="n">Traps</span> <span class="mh">0x0</span> <span class="n">Encapsulation</span><span class="p">:</span> <span class="n">ENET2</span>
+    <span class="n">Input</span> <span class="n">packets</span> <span class="p">:</span> <span class="mi">18648522681</span>
+    <span class="n">Output</span> <span class="n">packets</span><span class="p">:</span> <span class="mi">23471212317</span>
+    <span class="n">Protocol</span> <span class="n">inet</span><span class="p">,</span> <span class="n">MTU</span><span class="p">:</span> <span class="mi">1986</span>
+      <span class="n">Flags</span><span class="p">:</span> <span class="n">Sendbcast</span><span class="o">-</span><span class="n">pkt</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">re</span>
+      <span class="n">Addresses</span><span class="p">,</span> <span class="n">Flags</span><span class="p">:</span> <span class="n">Is</span><span class="o">-</span><span class="n">Preferred</span> <span class="n">Is</span><span class="o">-</span><span class="n">Primary</span>
+        <span class="n">Destination</span><span class="p">:</span> <span class="mf">171.28.1.208</span><span class="o">/</span><span class="mi">30</span><span class="p">,</span> <span class="n">Local</span><span class="p">:</span> <span class="mf">171.28.1.209</span><span class="p">,</span> <span class="n">Broadcast</span><span class="p">:</span> <span class="mf">171.28.1.211</span>
+    <span class="n">Protocol</span> <span class="n">iso</span><span class="p">,</span> <span class="n">MTU</span><span class="p">:</span> <span class="mi">1983</span>
+    <span class="n">Protocol</span> <span class="n">mpls</span><span class="p">,</span> <span class="n">MTU</span><span class="p">:</span> <span class="mi">1974</span><span class="p">,</span> <span class="n">Maximum</span> <span class="n">labels</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="n">Protocol</span> <span class="n">multiservice</span><span class="p">,</span> <span class="n">MTU</span><span class="p">:</span> <span class="n">Unlimited</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span> <span class="o">|</span> <span class="n">display</span> <span class="nb">set</span> <span class="o">|</span> <span class="n">match</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">description</span> <span class="s2">&quot;L2L CenturyLink Boston TO-magaliO06 ge-0/0/2&quot;</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">mtu</span> <span class="mi">2000</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">gigether</span><span class="o">-</span><span class="n">options</span> <span class="n">auto</span><span class="o">-</span><span class="n">negotiation</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">171.28.1.209</span><span class="o">/</span><span class="mi">30</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">iso</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">9</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">mpls</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">rsvp</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">hello</span><span class="o">-</span><span class="n">interval</span> <span class="mi">0</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">mpls</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">point</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">point</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">bfd</span><span class="o">-</span><span class="n">liveness</span><span class="o">-</span><span class="n">detection</span> <span class="n">minimum</span><span class="o">-</span><span class="n">interval</span> <span class="mi">1000</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">bfd</span><span class="o">-</span><span class="n">liveness</span><span class="o">-</span><span class="n">detection</span> <span class="n">minimum</span><span class="o">-</span><span class="n">receive</span><span class="o">-</span><span class="n">interval</span> <span class="mi">1000</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">bfd</span><span class="o">-</span><span class="n">liveness</span><span class="o">-</span><span class="n">detection</span> <span class="n">multiplier</span> <span class="mi">3</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">isis</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span> <span class="n">level</span> <span class="mi">1</span> <span class="n">disable</span>
+<span class="nb">set</span> <span class="n">protocols</span> <span class="n">ldp</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">9.0</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">arp</span> <span class="n">no</span><span class="o">-</span><span class="n">resolve</span> <span class="o">|</span> <span class="n">match</span> <span class="mf">171.28.1</span><span class="o">.</span>
+<span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">79</span> <span class="mf">171.28.1.54</span>     <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">3.0</span>           <span class="n">none</span>
+<span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span> <span class="mf">171.28.1.57</span>     <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">5.0</span>           <span class="n">none</span>
+<span class="n">b8</span><span class="p">:</span><span class="n">c2</span><span class="p">:</span><span class="mi">53</span><span class="p">:</span><span class="n">f4</span><span class="p">:</span><span class="n">e7</span><span class="p">:</span><span class="mi">66</span> <span class="mf">171.28.1.177</span>    <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">4.0</span>           <span class="n">none</span>
+<span class="mi">88</span><span class="p">:</span><span class="n">a2</span><span class="p">:</span><span class="mi">5</span><span class="n">e</span><span class="p">:</span><span class="mi">64</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">71</span> <span class="mf">171.28.1.202</span>    <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">8.0</span>           <span class="n">none</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="n">no</span><span class="o">-</span><span class="n">resolve</span> <span class="mf">171.28.1.210</span> <span class="n">source</span> <span class="mf">171.28.1.209</span>
+<span class="n">PING</span> <span class="mf">171.28.1.210</span> <span class="p">(</span><span class="mf">171.28.1.210</span><span class="p">):</span> <span class="mi">56</span> <span class="n">data</span> <span class="nb">bytes</span>
+<span class="o">^</span><span class="n">C</span>
+<span class="o">---</span> <span class="mf">171.28.1.210</span> <span class="n">ping</span> <span class="n">statistics</span> <span class="o">---</span>
+<span class="mi">8</span> <span class="n">packets</span> <span class="n">transmitted</span><span class="p">,</span> <span class="mi">0</span> <span class="n">packets</span> <span class="n">received</span><span class="p">,</span> <span class="mi">100</span><span class="o">%</span> <span class="n">packet</span> <span class="n">loss</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="n">no</span><span class="o">-</span><span class="n">resolve</span> <span class="mf">171.28.1.210</span> <span class="n">source</span> <span class="mf">171.28.1.209</span> <span class="n">rapid</span>
+<span class="n">PING</span> <span class="mf">171.28.1.210</span> <span class="p">(</span><span class="mf">171.28.1.210</span><span class="p">):</span> <span class="mi">56</span> <span class="n">data</span> <span class="nb">bytes</span>
+<span class="o">.....</span>
+<span class="o">---</span> <span class="mf">171.28.1.210</span> <span class="n">ping</span> <span class="n">statistics</span> <span class="o">---</span>
+<span class="mi">5</span> <span class="n">packets</span> <span class="n">transmitted</span><span class="p">,</span> <span class="mi">0</span> <span class="n">packets</span> <span class="n">received</span><span class="p">,</span> <span class="mi">100</span><span class="o">%</span> <span class="n">packet</span> <span class="n">loss</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">bfd</span> <span class="n">session</span> <span class="n">brief</span>
+                                                  <span class="n">Detect</span>   <span class="n">Transmit</span>
+<span class="n">Address</span>                  <span class="n">State</span>     <span class="n">Interface</span>      <span class="n">Time</span>     <span class="n">Interval</span>  <span class="n">Multiplier</span>
+<span class="mf">171.28.1.177</span>             <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">4.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">171.28.1.202</span>             <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">8.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">31.13.75.94</span>              <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">6.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">31.13.75.109</span>             <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">4.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">31.13.3.21</span>               <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">7.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">31.13.3.146</span>              <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">1.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+<span class="mf">31.13.3.242</span>              <span class="n">Up</span>        <span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">2.0</span>     <span class="mf">3.000</span>     <span class="mf">1.000</span>        <span class="mi">3</span>
+
+<span class="mi">7</span> <span class="n">sessions</span><span class="p">,</span> <span class="mi">7</span> <span class="n">clients</span>
+<span class="n">Cumulative</span> <span class="n">transmit</span> <span class="n">rate</span> <span class="mf">7.0</span> <span class="n">pps</span><span class="p">,</span> <span class="n">cumulative</span> <span class="n">receive</span> <span class="n">rate</span> <span class="mf">7.0</span> <span class="n">pps</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">isis</span> <span class="n">adjacency</span>
+<span class="n">Interface</span>             <span class="n">System</span>         <span class="n">L</span> <span class="n">State</span>        <span class="n">Hold</span> <span class="p">(</span><span class="n">secs</span><span class="p">)</span> <span class="n">SNPA</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">1.0</span>            <span class="n">Daihatsu015</span>       <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">19</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">2.0</span>            <span class="n">Acura035</span>          <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">20</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">4.0</span>            <span class="n">Datsun054</span>         <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">20</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">6.0</span>            <span class="n">Infiniti025</span>       <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">22</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">1.993</span>          <span class="n">Isuzu105</span>          <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">20</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">3.0</span>            <span class="n">Lexus042</span>          <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">24</span>  <span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">79</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">4.0</span>            <span class="n">Toyota058</span>         <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">26</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">5.0</span>            <span class="n">Nissan027</span>         <span class="mi">2</span>  <span class="n">Up</span>                    <span class="mi">6</span>  <span class="mi">88</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">7.0</span>            <span class="n">Honda056</span>          <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">21</span>
+<span class="n">ge</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mf">8.0</span>            <span class="n">Mitsubishi063</span>     <span class="mi">2</span>  <span class="n">Up</span>                   <span class="mi">21</span>
+
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span>
+<span class="n">manuela</span><span class="nd">@astronauta008</span><span class="o">&gt;</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="mais-comandos-uteis-para-verificacao">
+<h2>Mais comandos úteis para verificação<a class="headerlink" href="#mais-comandos-uteis-para-verificacao" title="Link to this heading">¶</a></h2>
+<p>Verificar tempo de operação do equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">uptime</span>
+</pre></div>
+</div>
+<p>Verificar usuários logados:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">users</span>
+</pre></div>
+</div>
+<p>Verificar armazenamento de dados local:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">storage</span>
+</pre></div>
+</div>
+<p>Verificar a tabela de processos em execução:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">system</span> <span class="n">processes</span>
+</pre></div>
+</div>
+<p>Verificar componentes de hardware instalados:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">hardware</span>
+</pre></div>
+</div>
+<p>Verificar status dos componentes e temperatura, e velocidades do sistema de refrigeração:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">environment</span>
+</pre></div>
+</div>
+<p>Verificar status da routing engine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">routing</span><span class="o">-</span><span class="n">engine</span>
+</pre></div>
+</div>
+<p>Verificar alarmes de alertas no equipamento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">chassis</span> <span class="n">alarms</span>
+</pre></div>
+</div>
+<p>Versão do Junos OS que esta rodando no equipamento. Também exibe o host name e o modelo do dispositivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">version</span>
+</pre></div>
+</div>
+<p>Verificar logs relacionados aos alarmes do hardware:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">chassisd</span> <span class="o">|</span> <span class="n">no</span><span class="o">-</span><span class="n">more</span>
+</pre></div>
+</div>
+<p>Verificar mensagens de log:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">messages</span> <span class="o">|</span> <span class="n">no</span><span class="o">-</span><span class="n">more</span>
+</pre></div>
+</div>
+<p>Verificar histórico de login dos usuários:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">log</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>Verificar a configuração atual:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">configuration</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o status das interfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">terse</span>
+
+<span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">run</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">1.0</span> <span class="n">terse</span>
+</pre></div>
+</div>
+<p>Descrição sobre uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interfaces</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Descrição detalhada sobre uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">interface</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span> <span class="n">extensive</span>
+</pre></div>
+</div>
+<p>Reinicia as estatísticas de uma interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">clear</span> <span class="n">interfaces</span> <span class="n">statistics</span> <span class="n">interface</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">bgp</span> <span class="n">summary</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">ospf</span> <span class="n">overview</span>
+</pre></div>
+</div>
+<p>Breve descrição sobre o estado do protocolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">isis</span> <span class="n">overview</span>
+</pre></div>
+</div>
+<p>Descrição detalhada sobre uma rota específica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="mf">216.142.248.0</span> <span class="n">extensive</span>
+</pre></div>
+</div>
+<p>Descrição sobre uma rota específica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="mf">192.168.68.0</span><span class="o">/</span><span class="mi">24</span>
+</pre></div>
+</div>
+<p>Descrição da tabela de rotas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="o">&gt;</span> <span class="n">show</span> <span class="n">route</span> <span class="n">terse</span>
+</pre></div>
+</div>
+<p>ENABLE / DISABLE INTERFACE IN JUNIPER:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Atom</span><span class="nd">@R2D2</span><span class="c1"># set interfaces ge-0/0/1.0 disable  (This is cisco equivalent of **shutdown**)</span>
+<span class="n">Atom</span><span class="nd">@R2D2</span><span class="c1"># delete interfaces ge-0/0/1.0 disable (This is cisco equivalent of **no shutdown**)</span>
+<span class="n">Atom</span><span class="nd">@R2D2</span><span class="c1"># run show ge-0/0/1.0</span>
+<span class="n">Atom</span><span class="nd">@R2D2</span><span class="c1"># run show interfaces ge-0/0/1.0 terse</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Router Juniper</a><ul>
+<li><a class="reference internal" href="#configuracao-basica-do-dispositivo">Configuração básica do dispositivo</a></li>
+<li><a class="reference internal" href="#exemplos-praticos">1. Exemplos práticos</a><ul>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mais-comandos-uteis-para-verificacao">Mais comandos úteis para verificação</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Tópico anterior</h4>
+    <p class="topless"><a href="cisco.html"
+                          title="capítulo anterior">Cisco</a></p>
+  </div>
+  <div>
+    <h4>Próximo tópico</h4>
+    <p class="topless"><a href="usmt.html"
+                          title="próximo capítulo">User State Migration Tool “USMT”</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/juniper.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Pesquisa rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="usmt.html" title="User State Migration Tool “USMT”"
+             >próximo</a> |</li>
+        <li class="right" >
+          <a href="cisco.html" title="Cisco"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Router Juniper</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

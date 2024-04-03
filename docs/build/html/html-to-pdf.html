@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="pt" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Como converter um arquivo HTML para PDF via linha de comando? &#8212; Documentação Base de Conhecimento 0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=6e1fffae"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=3b002d5c"></script>
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="next" title="Educação para adultos x fuga das galinhas" href="galinhas.html" />
+    <link rel="prev" title="Como assinar digitalmente um arquivo PDF?" href="assinar-pdf.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="galinhas.html" title="Educação para adultos x fuga das galinhas"
+             accesskey="N">próximo</a> |</li>
+        <li class="right" >
+          <a href="assinar-pdf.html" title="Como assinar digitalmente um arquivo PDF?"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como converter um arquivo HTML para PDF via linha de comando?</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="como-converter-um-arquivo-html-para-pdf-via-linha-de-comando">
+<h1>Como converter um arquivo HTML para PDF via linha de comando?<a class="headerlink" href="#como-converter-um-arquivo-html-para-pdf-via-linha-de-comando" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Existem muitas formas para se converter um arquivo HTML para o formato PDF, mas a maioria das soluções requer a intervenção do usuário, o que nem sempre é desejável.</p>
+</div>
+<p>Se você necessita de uma conversão automatizada, com um mínimo de intervenção do usuário, então o programa wkhtmltopdf pode ser a solução. Este programa pode ser executado a partir do ambiente de comandos (shell) do sistema operacional (Windows, Linux, etc.), via arquivo de lotes (.bat, .cmd, .sh, etc.), ou a partir de outro programa feito especificamente para este propósito.</p>
+<p>Após instalar o programa wkhtmltopdf em seu computador, você poderá executar um comando simples como este abaixo para gerar um arquivo PDF a partir de um arquivo HTML qualquer.</p>
+<p>«C:Program Fileswkhtmltopdfbinwkhtmltopdf.exe» C:PastaExemplo.html C:PastaExemplo.pdf
+A linha de comando acima considera que o programa foi instalado sob a pasta C:Program Files, mas você deve conferir o local exato de instalação e fazer os ajustes necessários.</p>
+<p>O conteúdo HTML pode estar em um arquivo local ou mesmo em uma página da Internet, como mostra o comando a seguir:</p>
+<p>wkhtmltopdf <a class="reference external" href="http://google.com.br">http://google.com.br</a> google.pdf
+Note que neste último exemplo não foi informado o endereço completo do programa wkhtmltopdf. Por este motivo a linha de comando acima funcionará somente se o sistema operacional estiver configurado para procurar executáveis na pasta deste programa ou se este comando for executado a partir da pasta do próprio programa.</p>
+<p>Junto com o programa wkhtmltopdf é instalado também o programa wkhtmltoimage.exe, que pode ser usado para converter HTML para diversos formatos de imagem.</p>
+<p>Como converter vídeo do formato WebM para AVI, WMV, MP4, MPEG, etc?
+WebM é um formato de vídeo, aberto e livre de royalties, desenvolvido para fornecer vídeo de alta qualidade, em desenvolvimento pela Google.</p>
+<p>Embora seja um ótimo formato de vídeo, talvez você precise converter um vídeo do formato WebM para um outro formato. Para esta tarefa você pode contar com o X Media Recode, um ótimo aplicativo gratuito (freeware) que você pode baixar do site: www.xmedia-recode.de/en/download.html</p>
+<p>Os formatos suportados são estes: 3G2, AAC, AC3, ADX, AIFF, AMR, APE, ASF, AVI, AVISynth, AU, Blu-ray, DVD, DIVX, DTS, E-AC3, FLAC, F4V, FLV, H261, H263, H264, IVF, M2TS, MTS, M1V, M2V, M3U, M3U8, M4A, M4P, M4V, MKA, MKV, MMF, MP2, MP3, MP4, MP4V, MPE, MPEG-1, MPEG-2, MPEG-4, MOV, QT, QCP, OGG, OGM, OGV, PVA, REC, RM, RMVB, SVCD, SWF, SPX, THP, TS, TRP, TP0, VCD, VOB, VRO, WebM, WebA, WMA, WMV, WPL, WTV, Y4M e YUV.</p>
+<p>Com uma enorme variedade de formatos de entrada e saída, este programa pode ser considerado uma ótima alternativa ao Format Factory, Any Video Converter, RMVB Converter e outros.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Tópico anterior</h4>
+    <p class="topless"><a href="assinar-pdf.html"
+                          title="capítulo anterior">Como assinar digitalmente um arquivo PDF?</a></p>
+  </div>
+  <div>
+    <h4>Próximo tópico</h4>
+    <p class="topless"><a href="galinhas.html"
+                          title="próximo capítulo">Educação para adultos x fuga das galinhas</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/html-to-pdf.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Pesquisa rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="galinhas.html" title="Educação para adultos x fuga das galinhas"
+             >próximo</a> |</li>
+        <li class="right" >
+          <a href="assinar-pdf.html" title="Como assinar digitalmente um arquivo PDF?"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentação Base de Conhecimento 0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Como converter um arquivo HTML para PDF via linha de comando?</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2019, Tyuatsu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+A MENTIRA QUE NÃO QUER MORRER
+=============================
+
+.. figure:: mentira.jpg
+    :scale: 80 %
+    :align: center
+    :alt: Cartão postal anti-semita na Alemanha, 1898
+
+
+A farsa da teoria da conspiração judaica para dominar o mundo, descrita no texto forjado dos Protocolos dos Sábios de Sion, ainda mostra sua força, apesar de passado um século desde a sua publicação, pela primeira vez.
+
+A juíza israelense Hadassah Ben-Itto presidiu a sua última sessão no dia 31 de outubro de 1991. Alguns meses antes, ela tomou uma atitude que chocou os seus companheiros: anunciou a decisão de antecipar a sua aposentadoria, para dedicar-se a um novo objetivo – escrever um livro para demonstrar a falsidade presente em cada palavra de Protocolos dos Sábios de Sion, um panfleto que vem sendo usado há décadas para disseminar o anti-semitismo em todo o mundo. Um tema que, para ela, tornou-se uma obsessão.
+
+Em abril de 1998, sete anos após afastar-se do cargo de juíza da Suprema Corte, chegou às livrarias a obra de Ben-Itto – The lie that wouldn’t die – A mentira que não quer morrer, da Editora Dvir. Tendo emigrado da Polônia para Israel, com a família, em 1935, aos nove anos, Ben Otto escreveu no prefácio de seu livro a seguinte dedicatória: 'Em memória de todos os meus parentes que foram mortos no Holocausto e cujo túmulo é desconhecido. Que esse seja o seu monumento'. Em um artigo no The Jerusalem Post Magazine, de maio de 1998 , ela fala de seu projeto.
+
+'Infelizmente, os judeus conhecem muito pouco sobre os Protocolos, um texto que influenciou de forma muito dolorosa sua história nos últimos cem anos. A maioria dos judeus jamais o leu, poucos conhecem o seu conteúdo e a sua história e um número menor ainda está informado sobre a tentativa de bani-los em tribunais. Quando ouvimos falar sobre o tema, costumamos não dar muita atenção ou, então, pensar: ‘Quem vai acreditar nesta bobagem? Quem vai acreditar que um grupo de judeus se reuniu e elaborou um plano para dominar o mundo?’ Mas as pessoas realmente acreditam nisso e continuam espalhando esta história', afirma Ben-Itto.
+
+Como exemplo, cita o fato de o presidente da Malásia ter falado sobre uma conspiração mundial judaica para desvalorizar a moeda de seu país. Homens-bomba palestinos são encontrados com partes do texto em seus bolsos. Além disso, o panfleto completo está disponível na Internet, com vários escritos explicativos.
+
+Na década de 30, houve tentativas por parte dos judeus, para desacreditar o panfleto em tribunais, entre as quais uma ocorrida em Berna, Suíça, que considerou o texto literatura indecente e plágio de um outro documento, além de ter multado os responsáveis por sua publicação. A outra ação ocorreu em Port Elizabeth, África do Sul. Ben-Itto utilizou os documentos referentes a estas ações para escrever seu livro.
+
+Ao longo dos anos, várias outras ações foram apresentadas aos tribunais e diferentes fóruns. Uma subcomissão do Senado americano, por exemplo, declarou que os Protocolos são uma farsa. Em 1993, uma corte russa determinou que o panfleto era uma farsa anti-semita. 'No entanto, os Protocolos sempre encontram solo fértil', afirma Ben-Itto.
+
+Diferença essencial
+===================
+
+Segundo a juíza, há uma diferença fundamental entre a farsa de Os Protocolos e as outras calúnias anti-semitas, que surgiram através dos séculos. Ela explica sua afirmação, dizendo que os Protocolos são, primeiramente e acima de tudo, um documento político e que se apresenta como um documento autêntico escrito por um suposto governo secreto de judeus. Como se não bastasse a acusação, não se trata mais apenas o dizer de que os judeus matam crianças para beber seu sangue, os anti-semitas passaram ainda a dizer que, para 'saber' o que pensam os judeus, basta ler o que 'eles mesmos escreveram: uma receita para controlar o mundo'.
+
+Esta idéia de que os judeus visam conquistar o mundo, mesmo que totalmente falsa, mostrou-se eficiente. 'Os Protocolos foram importantes para incitar multidões. Ninguém deseja matar o seu vizinho. Mas quando se explica que o seu vizinho faz parte de um plano para dominar o mundo, tudo pode ser justificado. Embora o anti-semitismo existisse séculos antes de os Protocolos, não tenho dúvidas que facilitaram e incentivaram o trabalho de muitos anti-semitas contemporâneos', explica Ben-Itto.
+
+Alguns fatos comprovam suas palavras: o panfleto foi usado pelos russos para estimular os pogroms e também foi usado por Hitler, durante a Segunda Guerra Mundial. Ou seja, são uma ferramenta útil. Segundo o rabino Joseph Telushkin, em seu livro Jewish Literacy, milhares, talvez milhões de judeus tenham morrido por causa dessa farsa infame'. E em O Holocausto, Nora Levin também afirma que 'Hitler usou esse livro como um manual em sua guerra para exterminar os judeus'. A juíza complementa: 'Ou seja, ajudam a explicar a tese de que, matando judeus, está-se, realmente, fazendo uma coisa boa, porque eles estão conspirando para tomar conta do mundo'.
+
+Ben-Itto sentiu pela primeira vez a força dos argumentos dos Protocolos quando era representante israelense nas Nações Unidas em 1965. Durante uma sessão da ONU, um delegado da então União Soviética citou um trecho do panfleto para atacar verbalmente o Estado de Israel. Surpreso diante de seu silêncio, um diplomata latino-americano disse-lhe: 'Vocês, judeus, devem aprender mais com o passado. Ignoraram o que Hitler havia escrito em Mein Kampf. É proibido, para vocês, ignorar as calúnias do anti-semitismo, principalmente quando falam de uma conspiração criminosa judaica para dominar o mundo, como esta descrita na farsa dos Protocolos'.
+
+Dez anos mais tarde, em 1975, a Assembléia Geral das Nações Unidas, votou a resolução que equiparou Sionismo a Racismo. Ben-Itto era, então, novamente membro da delegação israelense. Em uma conversa com a então embaixadora americana na ONU, Jeane Kirkpatrick, ouviu as seguintes palavras: 'Eu não posso acreditar que a mesma coisa esteja acontecendo às mesmas pessoas duas vezes em uma geração – vocês não leram Mein Kampf com atenção. Se o tivessem feito, saberiam o que estava por vir'. Ben-Itto disse: 'Devemos tirar uma grande lição deste encontro: os documentos anti-semitas, por mais simples que pareçam, não devem ser considerados levianamente'.
+
+Desmentir a farsa
+=================
+
+Se os judeus não leram atenciosamente Mein Kampf, também não leram os Protocolos. Na noite de lançamento do livro de Ben-Itto, muitos dos ilustres convidados confirmaram esta afirmação. Entre eles, Aharon Barak, atual presidente da Suprema Corte de Israel, e também o ex-presidente da instituição Meir Shamgar reconheceram não ter lido o panfleto. 'Os judeus não levam muito a sério as doutrinas escritas do anti-semitismo. Talvez esta postura seja fruto de um abordagem fatalista de que sempre foi assim e sempre será assim', diz a juíza.
+
+Afirma, no entanto, que seu livro não pretende combater o anti-semitismo. 'Anti-semitismo é uma outra história. O meu objetivo é enfrentar e desmentir uma farsa, um documento que foi forjado. Digamos que alguém esteja espalhando coisas terríveis sobre um indivíduo, que ele é um assassino e um ladrão. Será que este indivíduo diria que não importa o que está se dizendo a seu respeito? É claro que não. Ele lutaria para desmentir as acusações. Será que, enquanto povo, não nos importamos com o que as pessoas pensam sobre nós?'
+
+Para ela, o fato de não se rebater o conteúdo dos Protocolos fez com que a teoria de uma conspiração judaica se espalhasse mesmo entre pessoas esclarecidas. Quando diz que o panfleto é falso e foi forjado, perguntam-lhe por que, então, ninguém o desmente. Portanto, pessoas informadas e desinformadas – judias ou não – são o público alvo de The lie that wouldn’t die. Sua obra não visa sensibilizar os anti-semitas, pois eles não a lerão e, se o fizerem, será para negá-la. Não deixarão de ser anti-semitas.
+
+O livro de Ben-Itto foi lançado originalmente em inglês e, posteriormente, traduzido para o hebraico e para o alemão. O jornal Der Spiegel dedicou-lhe quatro páginas e a televisão alemã enviou um repórter a Israel para fazer uma reportagem com a juíza. 'Os alemães estão particularmente interessados em mostrar a farsa dos Protocolos, pois sabem muito bem quais os danos que pode causar'. Ben-Itto acrescenta:
+
+'As pessoas precisam ter argumentos para refutar uma mentira. É precisar dar-lhes meios para contestar uma mentira. Espero que o livro que escrevi ajude as pessoas a destruir esse instrumento que vem ferindo os judeus há mais de um século. Milhões de cópias dos Protocolos dos Sábios de Sion vêm sendo distribuídas. Será que não temos a responsabilidade de pôr os fatos na mesa, esclarecer os pontos certos e dizer ao mundo que, acredite ou não, esta é a verdade?'
+
+O que são os Protocolos dos Sábios de Sion
+==========================================
+
+Protocolos dos Sábios de Sion, sob a forma como são conhecidos atualmente, é um panfleto baseado em um texto escrito pelo sátiro francês Maurice Joly, em 1864, intitulado Diálogos no inferno entre Maquiavel e Montesquieu. Seu objetivo era atacar Napoleão III e não fazia nenhuma referência aos judeus.
+
+Trinta anos mais tarde, o texto de Joly foi plagiado e modificado por um oficial da polícia secreta russa, a Okhrana. Num esforço para desacreditar a luta pelos direitos civis e pela justiça social, compôs os famosos Protocolos dos Sábios de Sion, divulgando supostas minutas de um governo secreto judaico mundial. Neste texto, os anciãos judeus faziam supostamente uma análise do seu domínio cada vez maior sobre a economia européia, seu controle e manipulação da imprensa, de todos os partidos políticos de oposição ao regime czarista e outros governos autocráticos.
+
+O panfleto foi publicado pela primeira vez na Rússia czarista, em 1905, por um pastor ortodoxo, Sergius Nilus, e era parte de uma campanha anti-semita inspirada pela polícia secreta russa, que acompanhou os pogroms daquele ano. Os Protocolos não foram aceitos em larga escala como autênticos antes da Primeira Guerra Mundial, quando começaram a ter um importante papel na propaganda anti-semita, dando consistência a uma contraditória colagem de acusações contra os judeus e transformando-se em uma potente arma ideológica.
+
+Trazidos para a Alemanha por emigrantes russos a partir de 1917, ganharam considerável crédito. Apesar das provas conclusivas de que eram uma farsa grosseira, conseguiram sensacional popularidade nas décadas de 20 e 30. Foram traduzidos para vários idiomas na Europa e amplamente vendidos nos países árabes, Inglaterra e Estados Unidos, onde Henry Ford, o famoso fabricante de automóveis, divulgou seu conteúdo através do jornal anti-semita The Dear Born Independent.
+
+Foi na Alemanha, no entanto, após 1918, que obtiveram maior sucesso, sendo usados para explicar todos os desastres que atingiram o país: a derrota na guerra, a fome e a inflação. Cerca de 120 mil cópias foram vendidas em todo o país, em 1920. Hitler leu os Protocolos e os citou em Mein Kampf, dizendo: 'O que muitos judeus podem fazer inconscientemente está aqui conscientemente exposto'.
+
+Em seu livro O Holocausto, a destruição do judaísmo europeu 1933-1945, Nora Levin afirma, no entanto, que, se Hitler insistia em dizer que a suposta teoria da conspiração judaica mundial era verdadeira, o líder nazista Erich von dem Bach-Zelewsky admitia que não havia nada de real na chamada 'ameaça judaica'. Levin cita as próprias palavras de Bach-Zelewsky:
+
+'Eu sou a única testemunha viva, mas devo dizer a verdade. Apesar da opinião contrária dos nacionais-socialistas, de que os judeus eram um grupo altamente organizado, o fato real era que eles não tinham nenhum tipo de organização. As massas judaicas foram pegas completamente de surpresa. Elas não sabiam o que fazer; não possuíam nenhuma diretriz sobre como deveriam agir. Esta é a maior mentira do anti-semitismo porque originou a mentira do velho slogan de que eles estariam conspirando para dominar o mundo. Na verdade, não possuíam organização própria, nem serviço de informação. Se tivessem algum tipo de organização, essas pessoas poderiam ter salvo milhões de seres humanos, mas, ao invés disso, foram surpreendidas. Jamais um povo esteve tão desprevenido em relação ao seu próprio desastre. Nada fora preparado. Absolutamente nada'.
+
+Apesar das provas de sua falsidade, cópias de Protocolos dos Sábios de Sion continuaram circulando através das décadas. Em 1937, foi lançada uma edição no Brasil, por Gustavo Barroso. Cinqüenta anos depois, em 1987, o Japão lançou o livro Técnicas efetivas para ler nas entrelinhas dos Protocolos Judaicos, alertando contra a iminente ameaça de um golpe mundial judaico.
+
+Bibliografia
+============
+
+* Levin, Nora, O Holocausto: A destruição do judaísmo europeu 1933-1945
+* Teluskhin, Joseph, Jewish Literacy
+* Poliakov, Leon, História do anti-semitismo
+
