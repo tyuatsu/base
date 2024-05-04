@@ -9,8 +9,6 @@ author = 'Tyuatsu'
 release = '0.1'
 version = '0.1.0'
 
-import sphinx_rtd_theme
-
 # -- General configuration
 
 extensions = [
@@ -35,3 +33,8 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+python:
+   install:
+     - requirements: docs/requirements.txt
+     
