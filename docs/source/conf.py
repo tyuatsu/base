@@ -1,4 +1,12 @@
 # Configuration file for the Sphinx documentation builder.
+# Required
+version: 2
+
+# Set the OS, Python version and other tools you might need
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.12"
 
 # -- Project information
 
@@ -34,7 +42,7 @@ html_theme = 'sphinx_rtd_theme'
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-python:
+ python:
    install:
      - requirements: docs/requirements.txt
      
