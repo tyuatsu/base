@@ -23,6 +23,7 @@ version = '0.1.0'
 #import sphinx_rtd_theme
 
 extensions = [
+    'sphinx_rtd_theme',
     'sphinx.ext.viewcode',
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -62,3 +63,8 @@ html_theme = 'sphinx_rtd_theme'
 #}
 
 html_static_path = ['_static']
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+
