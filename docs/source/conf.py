@@ -30,8 +30,14 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
+import sphinx_rtd_theme
 
-html_theme = "sphinx-rtd-theme"
+extensions = [
+    ...
+    "sphinx_rtd_theme",
+]
+
+html_theme = "sphinx_rtd_theme"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
