@@ -1,6 +1,18 @@
 # Configuration file for the Sphinx documentation builder.
 # Required
 
+version: 2
+
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "3.12"
+    
+    python:
+  install:
+    - requirements: docs/requirements.txt
+
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -63,8 +75,3 @@ html_theme = 'sphinx_rtd_theme'
 #}
 
 html_static_path = ['_static']
-
-python:
-  install:
-    - requirements: docs/requirements.txt
-
