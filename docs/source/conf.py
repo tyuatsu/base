@@ -1,14 +1,6 @@
 # Configuration file for the Sphinx documentation builder.
 # Required
-
-version: 2
-
-build:
-  os: "ubuntu-22.04"
-  tools:
-    python: "3.12"
-    
-    python:
+python:
   install:
     - requirements: docs/requirements.txt
 
