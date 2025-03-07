@@ -38,37 +38,43 @@ O dispositivo do meu drive usb é: "/dev/sdb"::
 
 .. note:: Se tiver na mão, pode usar o gparted para formatar o seu pendrive.
 
-2. Vamos baixar o famoso aplicativo "WoeUSB", esse eu garanto que funciona
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2. Vamos baixar o famoso aplicativo "WoeUSB-ng", esse eu garanto que funciona
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: WoeUSB-ng.png
+    :scale: 60 %
+    :align: center
+    :alt: WoeUSB-ng
 
 Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB::
 
-    sudo dnf -y install wxGTK3-devel
-    sudo dnf -y install git
-    sudo dnf -y install dh-autoreconf.noarch
-
+    sudo dnf install git
+    sudo dnf install p7zip
+    sudo dnf install p7zip-plugins
+    sudo dnf install python3-pip
+    sudo dnf install python3-wxpython4
+    
 ou se quiser pode rodar tudo num só comando, assim::
 
-    sudo dnf -y install wxGTK3-devel git dh-autoreconf.noarch
+    sudo dnf install git p7zip p7zip-plugins python3-pip python3-wxpython4
 
-2.1. Agora temos que fazer o download do source (código fonte) do "WoeUSB", pois ainda não há nem sinal dele nos repositórios do Fedora
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2.1. Pode fazer o download do source no Git do "WoeUSB-ng" ou instalar via pip3 (gerenciador de pacotes Python) - testado com Fedora 41 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    `Windows USB stick installer WoeUSB-ng <https://github.com/WoeUSB/WoeUSB-ng/>`_
 
 rode os seguintes comandos::
 
-    mkdir ~/Downloads/Apps/ ; cd ~/Downloads/Apps/
-    git clone https://github.com/WoeUSB/WoeUSB.git
-    cd WoeUSB
-    autoreconf --force --install
-    ./configure
-    make && sudo make install
-    cd /usr/bin
-    sudo ln -s /usr/local/bin/woeusb
-    sudo ln -s /usr/local/bin/woeusbgui
+    sudo pip3 install WoeUSB-ng
+    
+se quiser desinstalar::
+    
+    sudo pip3 uninstall WoeUSB-ng
+    sudo rm /usr/share/icons/WoeUSB-ng/icon.ico \
+    /usr/share/applications/WoeUSB-ng.desktop \
+    /usr/local/bin/woeusbgui
+    sudo rmdir /usr/share/icons/WoeUSB-ng/
 
-Nesse momento você pode carregar o WoeUSB (GUI -- Modo Gráfico) no seu Gnome.
-
-Ou faça como eu, execute o comando direto no shell::
+Nesse momento você pode carregar o WoeUSB-ng, execute o comando direto no shell::
 
     sudo woeusb --target-filesystem NTFS --device Win10_20H2_v2_BR_PT_x64.iso /dev/sdb
 
