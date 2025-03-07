@@ -215,3 +215,10 @@ Conteúdos:
     :caption: HUAWEI WiFi AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM
 
     huawei-wifi-ax2s
+    
+.. _huawei-wifi-ax2s-2:
+.. toctree::
+    :maxdepth: 1
+    :caption: HUAWEI WiFi AX2S + MODEM SAGEMCOM F@ST3895 CLARO
+
+    huawei-wifi-ax2s-2

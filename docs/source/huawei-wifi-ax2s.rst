@@ -113,7 +113,7 @@ Na sequência vamos providenciar também a ligação entre o Roteador e o Modem.
     :align: center
     :alt: Technicolor Porta 1
     
-Na tela inicial do Huawei WiFi AX2S, entre em **Mais Funções**, vá para o Menu a esquerda na seção **Configurações de Rede** e em Endereço IP da LAN altere o IP para **192.168.1.254**. Na Máscara da sub-rede insira **255.255.255.0**. 	
+Na tela inicial do Huawei WiFi AX2S, entre em **Mais Funções**, vá para o Menu a esquerda na seção **Configurações de Rede** e em Endereço IP da LAN altere o IP para **192.168.1.253**. Na Máscara da sub-rede insira **255.255.255.0**. 	
 
 .. figure:: WiFi-AX2S-DHCP-01.png
     :scale: 60 %
@@ -182,4 +182,4 @@ Se tudo estiver certo, será estabelecido a conexão WAN de Internet Banda Larga
 =======================================================================
 
 Uhhhhuuuuuuuuu!  😛 Meus parabéns ^^  agora vc pode usufruir do padrão de transmissão: **802.11ax**/ac/a/n 2 × 2 e 802.11b/g/n 2 × 2, MU-MIMO, OFDMA, ATF.
-Com uma taxa de transmissão sem fio de até 1500 Mbps, banda de 5 GHz que suporta Wi-Fi 6 e taxa de transmissão máxima de 1201 Mbps1, jogos, streaming e downloads nunca funcionaram tão bem. Para ficar melhor ainda pessoal, quem puder já podem adquirir o Huawei WiFi AX3 Pro Plus 3000 mbps Quad-Core pelo site oficial:: `www.huawei.com <https://consumer.huawei.com/br/routers/ax3-pro/>`_, melhoria contínua sempre, vamo que vamo 😛!
+Com uma taxa de transmissão sem fio de até 1500 Mbps, banda de 5 GHz que suporta Wi-Fi 6 e taxa de transmissão máxima de 1201 Mbps, jogos, streaming e downloads nunca funcionaram tão bem. Para ficar melhor ainda pessoal, quem puder já podem adquirir o Huawei WiFi AX3 Pro Plus 3000 mbps Quad-Core pelo site oficial:: `www.huawei.com <https://consumer.huawei.com/br/routers/ax3-pro/>`_, melhoria contínua sempre, vamo que vamo 😛!

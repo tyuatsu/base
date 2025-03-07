@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,18 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SUPAIDAMAN SSH TUNNEL &mdash; Tyuatsu 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=2709fde1"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +34,6 @@
           <a href="index.html" class="icon icon-home">
             Tyuatsu
           </a>
-              <div class="version">
-                0.1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -184,6 +179,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="huawei-wifi-ax2s.html">CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">HUAWEI WiFi AX2S + MODEM SAGEMCOM F&#64;ST3895 CLARO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="huawei-wifi-ax2s-2.html">CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM SAGEMCOM F&#64;ST3895 CLARO</a></li>
+</ul>
 
         </div>
       </div>
@@ -216,7 +215,8 @@
 <p>É raro precisar apelar p/ um singelo túnel para passar todo nosso tráfego web através de algum servidor externo. Pode até parecer ridículo, mas vez ou outra, nós costumamos fazer isso na surdina. Principalmente quando nos deparamos com as limitações do provedor de internet ou também quando necessitamos urgentemente de entrar em páginas, que normalmente não temos acesso. Isso pode ocorrer devido a um bloqueio de proxy server ou webfilter de algum firewall e pior acontece de repente, sem nenhum aviso prévio.. ou seja num belo dia vc perde o acesso à página e fim de história. Neste breve tutorial, mostrarei como burlar esses bloqueios e ainda fazer isso rapidamente de forma eficiente, usando apenas a ferramenta PuTTY (SSH) e o navegador Chrome.</p>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/supaidaman.jpg"><img alt="Supaidaman" src="_images/supaidaman.jpg" style="width: 438.0px; height: 229.79999999999998px;" /></a>
+<a class="reference internal image-reference" href="_images/supaidaman.jpg"><img alt="Supaidaman" src="_images/supaidaman.jpg" style="width: 438.0px; height: 229.79999999999998px;" />
+</a>
 </figure>
 <p><strong>Baixe a versão mais atualizada do putty.exe</strong> (free SSH and Telnet client) - pelo site oficial: <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">www.putty.org</a></p>
 <section id="configuracao-basica-do-putty">
@@ -226,26 +226,31 @@
 </pre></div>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/putty-05.png"><img alt="service sshd running" src="_images/putty-05.png" style="width: 522.4px; height: 292.0px;" /></a>
+<a class="reference internal image-reference" href="_images/putty-05.png"><img alt="service sshd running" src="_images/putty-05.png" style="width: 522.4px; height: 292.0px;" />
+</a>
 </figure>
 <p>Agora no desktop windows, abra o <strong>putty.exe</strong> e entre com o IP ou a URL do seu servidor remoto (externo) ou desktop doméstico remoto (externo), por exemplo a url:: <strong>supaidaman.dynu.net</strong> sempre resolverá para mim p/ um IP dinâmico aleatório 179.55.x.x na porta 22. Esse IP é entregue pelo meu provedor de internet.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/putty-01.png"><img alt="putty.exe" src="_images/putty-01.png" style="width: 528.0px; height: 488.8px;" /></a>
+<a class="reference internal image-reference" href="_images/putty-01.png"><img alt="putty.exe" src="_images/putty-01.png" style="width: 528.0px; height: 488.8px;" />
+</a>
 </figure>
 <p>No lado esquerdo do painel do putty, vá p/ Connection → SSH → Tunnels</p>
 <p>Agora siga as etapas:: selecione <strong>Dynamic</strong>, preencha a porta de origem (source port) por exemplo 9999, mas caso queira pode-se usar qualquer outra porta livre e depois clique no botão <strong>Add</strong></p>
 <p>Na figura abaixo irá aparecer listado com o formato D{PORT_NUMBER} ou seja <strong>D9999</strong></p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/putty-02.png"><img alt="putty.exe" src="_images/putty-02.png" style="width: 530.4px; height: 493.6px;" /></a>
+<a class="reference internal image-reference" href="_images/putty-02.png"><img alt="putty.exe" src="_images/putty-02.png" style="width: 530.4px; height: 493.6px;" />
+</a>
 </figure>
 <p>Agora para finalizar clique no botão <strong>Open</strong></p>
 <p>Em seguida pode se logar no servidor remoto (externo), como de costume</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/putty-03.png"><img alt="putty.exe" src="_images/putty-03.png" style="width: 658.4000000000001px; height: 482.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="_images/putty-03.png"><img alt="putty.exe" src="_images/putty-03.png" style="width: 658.4000000000001px; height: 482.40000000000003px;" />
+</a>
 </figure>
 <p>Abra o <strong>cmd</strong> e com o comando netstat veja se o seu SSH está em modo LISTEN na porta 9999 <strong>(127.0.0.1:9999)</strong></p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/putty-04.png"><img alt="putty.exe" src="_images/putty-04.png" style="width: 573.6px; height: 268.8px;" /></a>
+<a class="reference internal image-reference" href="_images/putty-04.png"><img alt="putty.exe" src="_images/putty-04.png" style="width: 573.6px; height: 268.8px;" />
+</a>
 </figure>
 </section>
 <section id="usando-um-tunel-no-google-chrome">
