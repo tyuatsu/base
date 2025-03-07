@@ -80,8 +80,6 @@ Volte para tela no Menu Redes, e finalmente vá para **Configurações Básicas*
     :align: center
     :alt: Sagemcom Bridge On
 
-Pronto! O modo bridge do modem foi ativado com sucesso.
-ㅤ
 .. note:: o IP de Gerência usado para acessar as configurações foi alterado para 192.168.100.1. Agora é necessário configurar o IP da placa de rede nas configurações do seu computador, sempre que quiser acessar o modem F@ST3895.  
     
 A **tela no topo da página** deverá ficar assim: 
