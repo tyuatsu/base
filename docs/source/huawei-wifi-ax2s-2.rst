@@ -118,7 +118,7 @@ Finalmente chegamos meus caros, na parte mais crucial da configuração! 😛 ye
 
 Primeiro ligue o Huawei WiFi AX2S. Vamos utilizar o velho acesso via web, com uso do próprio navegador no endereço padrão de fábrica **http://192.168.2.1**. Para isso funcionar, você deve conectar o cabo de rede em qualquer uma das portas Lan. Poderá ser usada as portas 2,3 ou 4, e a outra ponta do cabo vai direto para seu computador/notebook. 
 
-Na sequência vamos providenciar também a ligação entre o Roteador e o Modem. Conecte outro cabo de rede na **porta 1** (WAN) do Huawei WiFi AX2S, e a outra ponta do cabo vai para a **porta 1** do modem Sagemcom F@ST3895.
+Na sequência vamos providenciar também a ligação entre o Roteador e o Modem. Conecte outro cabo de rede na **porta 1** (WAN) do Huawei WiFi AX2S, e a outra ponta do cabo vai para a **porta 4** do modem Sagemcom F@ST3895.
 
 
 .. figure:: WiFi-AX2S-porta-wan.png
@@ -131,7 +131,7 @@ Na sequência vamos providenciar também a ligação entre o Roteador e o Modem.
     :align: center
     :alt: Sagemcom Porta 4
 
-.. note:: As demais portas do modem Sagemcom F@ST3895 permanecerão em desuso. Enquanto ela estiver funcionando em modo Bridge, procure manter as portas 2, 3, e 4 sempre livres. Essas portas deverão ser usadas só para fins de manutenção local ou na necessidade de gerencia do modem.
+.. note:: As demais portas do modem Sagemcom F@ST3895 permanecerão em desuso. Enquanto ela estiver funcionando em modo Bridge, procure manter as portas 1, 2, e 3 sempre livres. Essas portas deverão ser usadas só para fins de manutenção local ou na necessidade de gerencia do modem.
 
 Na tela inicial do Huawei WiFi AX2S, entre em **Mais Funções**, vá para o Menu a esquerda na seção **Configurações de Rede** e em Endereço IP da LAN altere o IP para **192.168.1.253**. Na Máscara da sub-rede insira **255.255.255.0**. 	
 
