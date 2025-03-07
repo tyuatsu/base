@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information
 
 project = 'Tyuatsu'
-copyright = '2024, Tyuatsu'
+copyright = '2025, Tyuatsu'
 author = 'Tyuatsu'
 
 release = '0.1'
