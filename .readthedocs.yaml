@@ -4,8 +4,6 @@
 # Required
 version: 2
 
-configuration: docs/source/conf.py
-
 # Set the OS, Python version and other tools you might need
 build:
   os: ubuntu-22.04
@@ -21,6 +19,7 @@ sphinx:
   # configuration: source/conf.py
   # You can configure Sphinx to use a different builder, for instance use the dirhtml builder for simpler URLs
   # builder: "dirhtml"
+  configuration: docs/source/conf.py
   builder: html 
   # Fail on all warnings to avoid broken references
   #fail_on_warning: true
