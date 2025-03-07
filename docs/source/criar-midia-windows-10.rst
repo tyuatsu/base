@@ -46,7 +46,7 @@ O dispositivo do meu drive usb é: "/dev/sdb"::
     :align: center
     :alt: WoeUSB-ng
 
-Antes precisa instalar 3 dependências para satisfazer os requisitos do software WoeUSB::
+Antes precisa instalar algumas dependências para satisfazer os requisitos do software WoeUSB::
 
     sudo dnf install git
     sudo dnf install p7zip
@@ -58,7 +58,8 @@ ou se quiser pode rodar tudo num só comando, assim::
 
     sudo dnf install git p7zip p7zip-plugins python3-pip python3-wxpython4
 
-2.1. Pode fazer o download do source no Git do "WoeUSB-ng" ou instalar via pip3 (gerenciador de pacotes Python) - testado com Fedora 41 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2.1. Pode fazer o download do source no Git do "WoeUSB-ng" ou instalar via pip3 (gerenciador de pacotes Python) - testado com Fedora 41
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     `Windows USB stick installer WoeUSB-ng <https://github.com/WoeUSB/WoeUSB-ng/>`_
 
@@ -93,7 +94,7 @@ Pronto! Agorá você já pode pegar esse Pendrive e sair formatando tudo com o W
 ^^^^^^^^^^^^^^
 
 3.1. Sobre o boot pelo pendrive
-""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""
 
 Ele costuma demorar bastante até aparecer à tela de instalação do Windows 10.
 Fora isso, o instalador rodou normal e todo o processo de instalação foi suave na nave.
