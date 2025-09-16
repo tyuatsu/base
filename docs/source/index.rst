@@ -222,3 +222,10 @@ Conteúdos:
     :caption: HUAWEI WiFi AX2S + MODEM SAGEMCOM F@ST3895 CLARO
 
     huawei-wifi-ax2s-2
+    
+.. _huawei-wifi-be3:
+.. toctree::
+    :maxdepth: 1
+    :caption: HUAWEI WiFi BE3 + MODEM SAGEMCOM F@ST3895 CLARO
+
+    huawei-wifi-be3

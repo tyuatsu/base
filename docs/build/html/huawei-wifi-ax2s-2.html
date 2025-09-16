@@ -19,6 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CONFIGURAR ROTEADOR HUAWEI WiFi BE3 + MODEM SAGEMCOM F@ST3895 CLARO" href="huawei-wifi-be3.html" />
     <link rel="prev" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM" href="huawei-wifi-ax2s.html" /> 
 </head>
 
@@ -182,6 +183,10 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">HUAWEI WiFi BE3 + MODEM SAGEMCOM F&#64;ST3895 CLARO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="huawei-wifi-be3.html">CONFIGURAR ROTEADOR HUAWEI WiFi BE3 + MODEM SAGEMCOM F&#64;ST3895 CLARO</a></li>
+</ul>
 
         </div>
       </div>
@@ -273,9 +278,10 @@
 <a class="reference internal image-reference" href="_images/Sagemcom-Bridge-On.png"><img alt="Sagemcom Bridge On" src="_images/Sagemcom-Bridge-On.png" style="width: 596.4px; height: 396.59999999999997px;" />
 </a>
 </figure>
-<p>Pronto! O modo bridge do modem foi ativado com sucesso.
-ㅤ
-.. note:: o IP de Gerência usado para acessar as configurações foi alterado para 192.168.100.1. Agora é necessário configurar o IP da placa de rede nas configurações do seu computador, sempre que quiser acessar o modem <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>o IP de Gerência usado para acessar as configurações foi alterado para 192.168.100.1. Agora é necessário configurar o IP da placa de rede nas configurações do seu computador, sempre que quiser acessar o modem <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a>.</p>
+</div>
 <p>A <strong>tela no topo da página</strong> deverá ficar assim:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/Sagemcom-Tela-Principal.png"><img alt="SagemCom Tela Principal" src="_images/Sagemcom-Tela-Principal.png" style="width: 847.1999999999999px; height: 166.2px;" />
@@ -299,7 +305,7 @@
 <h2>Configuração Router Huawei WiFi-AX2S<a class="headerlink" href="#configuracao-router-huawei-wifi-ax2s" title="Link to this heading"></a></h2>
 <p>Finalmente chegamos meus caros, na parte mais crucial da configuração! 😛 yeah! Bora configurar o Roteador Huawei WiFi AX2S!</p>
 <p>Primeiro ligue o Huawei WiFi AX2S. Vamos utilizar o velho acesso via web, com uso do próprio navegador no endereço padrão de fábrica <strong>http://192.168.2.1</strong>. Para isso funcionar, você deve conectar o cabo de rede em qualquer uma das portas Lan. Poderá ser usada as portas 2,3 ou 4, e a outra ponta do cabo vai direto para seu computador/notebook.</p>
-<p>Na sequência vamos providenciar também a ligação entre o Roteador e o Modem. Conecte outro cabo de rede na <strong>porta 1</strong> (WAN) do Huawei WiFi AX2S, e a outra ponta do cabo vai para a <strong>porta 1</strong> do modem Sagemcom <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a>.</p>
+<p>Na sequência vamos providenciar também a ligação entre o Roteador e o Modem. Conecte outro cabo de rede na <strong>porta 1</strong> (WAN) do Huawei WiFi AX2S, e a outra ponta do cabo vai para a <strong>porta 4</strong> do modem Sagemcom <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a>.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/WiFi-AX2S-porta-wan.png"><img alt="WiFi-AX2S porta 1 é Wan" src="_images/WiFi-AX2S-porta-wan.png" style="width: 455.4px; height: 206.4px;" />
 </a>
@@ -310,7 +316,7 @@
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>As demais portas do modem Sagemcom <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a> permanecerão em desuso. Enquanto ela estiver funcionando em modo Bridge, procure manter as portas 2, 3, e 4 sempre livres. Essas portas deverão ser usadas só para fins de manutenção local ou na necessidade de gerencia do modem.</p>
+<p>As demais portas do modem Sagemcom <a class="reference external" href="mailto:F&#37;&#52;&#48;ST3895">F<span>&#64;</span>ST3895</a> permanecerão em desuso. Enquanto ela estiver funcionando em modo Bridge, procure manter as portas 1, 2, e 3 sempre livres. Essas portas deverão ser usadas só para fins de manutenção local ou na necessidade de gerencia do modem.</p>
 </div>
 <p>Na tela inicial do Huawei WiFi AX2S, entre em <strong>Mais Funções</strong>, vá para o Menu a esquerda na seção <strong>Configurações de Rede</strong> e em Endereço IP da LAN altere o IP para <strong>192.168.1.253</strong>. Na Máscara da sub-rede insira <strong>255.255.255.0</strong>.</p>
 <figure class="align-center">
@@ -373,12 +379,13 @@ Com uma taxa de transmissão sem fio de até 1500 Mbps, banda de 5 GHz que supor
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="huawei-wifi-ax2s.html" class="btn btn-neutral float-left" title="CONFIGURAR ROUTER HUAWEI WIFI-AX2S + MODEM TECHNICOLOR TG788V V3 LIVE TIM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="huawei-wifi-be3.html" class="btn btn-neutral float-right" title="CONFIGURAR ROTEADOR HUAWEI WiFi BE3 + MODEM SAGEMCOM F@ST3895 CLARO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Tyuatsu.</p>
+    <p>&#169; Copyright 2025, Tyuatsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
